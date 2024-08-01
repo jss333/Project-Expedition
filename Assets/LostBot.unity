@@ -263,7 +263,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 304649882}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -361,6 +361,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7764e34761121f4e82ef623e3691454, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rb: {fileID: 0}
+  max_vel: 2
+  health: 0
 --- !u!1 &332765319
 GameObject:
   m_ObjectHideFlags: 0
@@ -521,7 +524,7 @@ GameObject:
   - component: {fileID: 931642985}
   - component: {fileID: 931642984}
   m_Layer: 0
-  m_Name: Tilemap
+  m_Name: Level
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
