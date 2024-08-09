@@ -5,13 +5,25 @@ using UnityEngine;
 public class Projectile_Sys : MonoBehaviour
 {
     public string TargetTag = "Player";
-    public Vector2 velocity = Vector2.zero;
+    public float pos_vel = 1F;
+    public float rot_vel = 2F;
+    public ProjectileType type = ProjectileType.Precision;
+    public Rigidbody2D rb;
     // Start is called before the first frame update
 
     // Update is called once per frame
+    void Start(){
+        rb = GetComponent<Rigidbody2D>();
+    }
+    
     void Update()
     {
-        this.transform.position += (Vector3)velocity * Time.deltaTime;
+        if(type == ProjectileType.Tracking){
+            GuideTrackingProjectile();
+        }
+        else{
+            GuidePrecisionProjectile();
+        }
     }
 
     void OnTriggerEnter2D(Collider2D collision){
@@ -26,4 +38,21 @@ public class Projectile_Sys : MonoBehaviour
         Debug.Log("Self-destruct...");
         Destroy(this.gameObject);
     }
+
+    void GuidePrecisionProjectile(){
+        transform.position += transform.right * pos_vel;
+    }
+
+    void GuideTrackingProjectile(){
+
+    }
+
+    private GameObject findNearestTarget(){
+        return null;
+    }
+}
+
+public enum ProjectileType{
+    Precision,
+    Tracking
 }
