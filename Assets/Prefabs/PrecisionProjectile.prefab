@@ -47,10 +47,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1395b082ac3a184ea7334733189f59c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TargetTag: Player
-  velocity: 16
+  TargetTeams: 0100000002000000040000000400000004000000
+  pos_vel: 20
+  pos_acc: 30
+  rot_vel: 2
+  rot_acc: 30
   type: 1
-  rb: {fileID: 0}
 --- !u!212 &5054406633811776107
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -162,7 +164,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 5
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:

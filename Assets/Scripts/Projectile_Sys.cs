@@ -4,21 +4,28 @@ using UnityEngine;
 
 public class Projectile_Sys : MonoBehaviour
 {
-    public string TargetTag = "Player";
-    public float pos_vel = 1F;
-    public float rot_vel = 2F;
+    public Team[] TargetTeams = new Team[5];
+    private GameObject TrackEntity = null;
+    
+    [Header("Movement Properties")]
+    public float pos_vel = 2F;
+    public float pos_acc = 30F;
+    public float rot_vel = 5F;
+    public float rot_acc = 180F;
     public ProjectileType type = ProjectileType.Precision;
-    public Rigidbody2D rb;
+    
+    private Rigidbody2D rb;
     // Start is called before the first frame update
 
     // Update is called once per frame
     void Start(){
         rb = GetComponent<Rigidbody2D>();
+        TrackEntity = FindNearestTarget();
     }
     
-    void Update()
+    void FixedUpdate()
     {
-        if(type == ProjectileType.Tracking){
+        if(type == ProjectileType.Tracking && TrackEntity != null){
             GuideTrackingProjectile();
         }
         else{
@@ -28,7 +35,7 @@ public class Projectile_Sys : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision){
         Debug.Log("Entered collision...");
-        if(collision.gameObject.tag == TargetTag){
+        if(collision.gameObject.tag == "Player"){
             collision.gameObject.GetComponent<Enemy_Sys>().Health -=1;
             Destroy(this.gameObject);
         }
@@ -40,15 +47,32 @@ public class Projectile_Sys : MonoBehaviour
     }
 
     void GuidePrecisionProjectile(){
-        transform.position += transform.right * pos_vel;
+        //rb.AddForce(transform.right * pos_acc);
+        rb.velocity = this.transform.right * pos_vel;
     }
 
     void GuideTrackingProjectile(){
-
+        //Aligns Tracker velocity vec with vec pointing at Target from Tracker by applying Torque
+        Vector2 delta = TrackEntity.transform.position - this.transform.position;
+        float AngularDist = Vector2.SignedAngle(delta, rb.velocity);
+        if(AngularDist > 0){
+            rb.AddTorque(-AngularDist);
+        }
+        else if(AngularDist < 0){
+            rb.AddTorque(-AngularDist);
+        }
+        
+        //rb.AddForce(this.transform.right * pos_acc);
+        rb.velocity = this.transform.right * pos_vel;
     }
 
-    private GameObject findNearestTarget(){
-        return null;
+    private GameObject FindNearestTarget(){
+        //Need to adjust the hierarchy before generalizing this. Consult with Rakshaan.
+        GameObject Target = GameObject.Find("TestOrb");
+        if(Target == null){
+            Debug.Log("Couldn't find target...");
+        }
+        return Target;
     }
 }
 
