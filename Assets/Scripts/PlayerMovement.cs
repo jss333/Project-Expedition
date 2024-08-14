@@ -33,11 +33,11 @@ public class PlayerMovement : MonoBehaviour
         // Flip the player's sprite based on the direction of movement
         if (input < 0)
         {
-            spriteRender.flipX = false; // Face left
+            spriteRender.flipX = true; // Face left
         }
         else if (input > 0)
         {
-            spriteRender.flipX = true;  // Face right
+            spriteRender.flipX = false;  // Face right
         }
 
         // Apply horizontal movement if the player is not wall jumping

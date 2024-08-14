@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - TutorialRequirement
+  - Teleporter
+  - Teleporters
+  - Ground
+  - Wall
   layers:
   - Default
   - TransparentFX
@@ -12,6 +16,11 @@ TagManager:
   - 
   - Water
   - UI
+  - Level
+  - Ground Check
+  - Ground
+  - Wall
+  - Wall Check
   - Follower
   - Team0
   - Team1
