@@ -590,6 +590,7 @@ Transform:
   m_Children:
   - {fileID: 1839881023}
   - {fileID: 565799448}
+  - {fileID: 1656267078}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!70 &304649888
@@ -883,7 +884,6 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1335543626}
-  - {fileID: 1656267078}
   m_Father: {fileID: 304649886}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &565799449
@@ -2440,12 +2440,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1656267077}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.024, z: 0}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 565799448}
+  m_Father: {fileID: 304649886}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1825990925
 GameObject:
@@ -2546,6 +2546,7 @@ GameObject:
   - component: {fileID: 1839881023}
   - component: {fileID: 1839881025}
   - component: {fileID: 1839881024}
+  - component: {fileID: 1839881026}
   m_Layer: 0
   m_Name: Shield_Point
   m_TagString: Untagged
@@ -2563,7 +2564,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.8, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.08, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 304649886}
@@ -2609,15 +2610,16 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 7482667652216324306, guid: 1b1534e240a56d545805ca08ed15303a,
+    type: 3}
+  m_Color: {r: 0.10760409, g: 0.4490565, b: 0.3960643, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!61 &1839881025
@@ -2655,16 +2657,41 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1839881026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1839881022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24ca66b261a89af4e865e0ca8b7fc65e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  charge: 4
+  shield_offset: 1.5
+  cursor_pos: {x: 0, y: 0, z: 0}
+  activate:
+    m_Name: Activate
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 5014c273-2348-4622-9c49-bf9d0a21393b
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  cam: {fileID: 1951850597}
 --- !u!1 &1951850594
 GameObject:
   m_ObjectHideFlags: 0
@@ -3004,7 +3031,6 @@ Rigidbody2D:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 1951850598}
   - {fileID: 695418324}
   - {fileID: 238989457}
   - {fileID: 332765321}
@@ -3012,3 +3038,4 @@ SceneRoots:
   - {fileID: 1982050526}
   - {fileID: 539209213}
   - {fileID: 847148239}
+  - {fileID: 1951850598}
