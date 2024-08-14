@@ -1,0 +1,1205 @@
+fileFormatVersion: 2
+guid: 30e8a8ec09dafe541a5570bfdf68797d
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 500
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ROB_Idle_ROB_Idle_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2735
+        width: 450
+        height: 547
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f4ae154a4268e34d8fd320c011fcfee
+      internalID: 2089479609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_Idle_ROB_Idle_1
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 2735
+        width: 450
+        height: 547
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a17cd0faaa790ce4ab0a4767fbe9669a
+      internalID: -941238779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_Idle_ROB_Idle_2
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 2735
+        width: 450
+        height: 547
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0aef4e5822f201c4fb1d25ac1d7759ca
+      internalID: -531289296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_Idle_ROB_Idle_3
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 2735
+        width: 450
+        height: 547
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13981665130f6094ebadfda4b0891820
+      internalID: 219989105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_Idle_ROB_Idle_4
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 2735
+        width: 450
+        height: 547
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 371923b0473878f4caef1bad57ddf175
+      internalID: -1788381926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_Idle_ROB_Idle_5
+      rect:
+        serializedVersion: 2
+        x: 2250
+        y: 2735
+        width: 450
+        height: 547
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 167ea1e5ce3bcb241968aacba5d73398
+      internalID: -55895882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_Idle_ROB_Idle_6
+      rect:
+        serializedVersion: 2
+        x: 2700
+        y: 2735
+        width: 450
+        height: 547
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fdf2f8158aa7754cbf548c137c7c7a7
+      internalID: -1185337441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_Idle_ROB_Idle_7
+      rect:
+        serializedVersion: 2
+        x: 3150
+        y: 2735
+        width: 450
+        height: 547
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6850e2c73b852a4a986e77e73cf8bfc
+      internalID: 1128540977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_Idle_ROB_Idle_8
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 2735
+        width: 450
+        height: 547
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05cb4737d6667234fbbe5ebba0b11421
+      internalID: 542257444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_Idle_ROB_Idle_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2188
+        width: 450
+        height: 547
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ab5dd03217e91545a44441804b7e3a0
+      internalID: -957073399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_Idle_ROB_Idle_10
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 2188
+        width: 450
+        height: 547
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b251b2988bb523140b91ebcf2f15ae28
+      internalID: -1553186259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_Idle_ROB_Idle_11
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 2188
+        width: 450
+        height: 547
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c88806819b8b5841aad3f36642ae2be
+      internalID: 434059157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_Idle_ROB_Idle_12
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 2188
+        width: 450
+        height: 547
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0971ee93b176d5c42bc432f613ba305f
+      internalID: -1911902616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_Idle_ROB_Idle_13
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 2188
+        width: 450
+        height: 547
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90ae2130ccfa3f14986afe131805e23d
+      internalID: 1357955965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_Idle_ROB_Idle_14
+      rect:
+        serializedVersion: 2
+        x: 2250
+        y: 2188
+        width: 450
+        height: 547
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a75889ed8adebe46838388e8c51ab60
+      internalID: 1309365445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_Idle_ROB_Idle_15
+      rect:
+        serializedVersion: 2
+        x: 2700
+        y: 2188
+        width: 450
+        height: 547
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f94c093df4dc10546ae2e5372be82afa
+      internalID: -2111032656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_Idle_ROB_Idle_16
+      rect:
+        serializedVersion: 2
+        x: 3150
+        y: 2188
+        width: 450
+        height: 547
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6da6ed1d09d3ada44b009960155de753
+      internalID: -1538696437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_Idle_ROB_Idle_17
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 2188
+        width: 450
+        height: 547
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8deb683109dc09145b517b14509b12a6
+      internalID: -861518244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_Idle_ROB_Idle_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1641
+        width: 450
+        height: 547
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f533f90b609cf9a4d959697d13436193
+      internalID: 1074674925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_Idle_ROB_Idle_19
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 1641
+        width: 450
+        height: 547
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfd53302d045ecc4191632047870b0e0
+      internalID: 14686296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_Idle_ROB_Idle_20
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 1641
+        width: 450
+        height: 547
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50224aae7b2e2c44ab6d0c29228507b8
+      internalID: 275464278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_Idle_ROB_Idle_21
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 1641
+        width: 450
+        height: 547
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aac5c7013aef1204e8d146263376c5b2
+      internalID: 1568532628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_Idle_ROB_Idle_22
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 1641
+        width: 450
+        height: 547
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0aed445150933b46b081abea6d5fe4e
+      internalID: -740017958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_Idle_ROB_Idle_23
+      rect:
+        serializedVersion: 2
+        x: 2250
+        y: 1641
+        width: 450
+        height: 547
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1984dc69fb43fae4e8fe46525ce98459
+      internalID: -2013032159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_Idle_ROB_Idle_24
+      rect:
+        serializedVersion: 2
+        x: 2700
+        y: 1641
+        width: 450
+        height: 547
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebc0549c250191545909d44c4ac0538e
+      internalID: -1048275687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_Idle_ROB_Idle_25
+      rect:
+        serializedVersion: 2
+        x: 3150
+        y: 1641
+        width: 450
+        height: 547
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cef4cabe1a18ba94bae2bb1452d86bc3
+      internalID: -407477169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_Idle_ROB_Idle_26
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 1641
+        width: 450
+        height: 547
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cb9309010dfceb4782e52567fe6026b
+      internalID: -728274456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_Idle_ROB_Idle_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1094
+        width: 450
+        height: 547
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2179344f01ff494b92d7e3bbbd50b04
+      internalID: -639117379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_Idle_ROB_Idle_28
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 1094
+        width: 450
+        height: 547
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07c90bf400f37334a9255da65f4d9fb9
+      internalID: 1743467671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_Idle_ROB_Idle_29
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 1094
+        width: 450
+        height: 547
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2a785291cfd83d42b3569f0827bc15c
+      internalID: -474852025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_Idle_ROB_Idle_30
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 1094
+        width: 450
+        height: 547
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c70c5ce07c37e44f8c8f891ec61ef66
+      internalID: 1862454845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_Idle_ROB_Idle_31
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 1094
+        width: 450
+        height: 547
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 154ae30c41af10b4e83e391a2bf91c43
+      internalID: 1931541133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_Idle_ROB_Idle_32
+      rect:
+        serializedVersion: 2
+        x: 2250
+        y: 1094
+        width: 450
+        height: 547
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4785b32819a72fb479390c8819ce832b
+      internalID: -1268490945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_Idle_ROB_Idle_33
+      rect:
+        serializedVersion: 2
+        x: 2700
+        y: 1094
+        width: 450
+        height: 547
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 190fe1fe34798f942ab8c8e08bc6beed
+      internalID: 28242412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_Idle_ROB_Idle_34
+      rect:
+        serializedVersion: 2
+        x: 3150
+        y: 1094
+        width: 450
+        height: 547
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0d87a6df3ea9fe4892a53eb701c2a61
+      internalID: 2054852553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_Idle_ROB_Idle_35
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 1094
+        width: 450
+        height: 547
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b03be8d571f335408ac4a2c1a21176f
+      internalID: 1453487266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_Idle_ROB_Idle_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 547
+        width: 450
+        height: 547
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d123a12a4b4c6aa4eaa25de805dd10b1
+      internalID: -921698613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_Idle_ROB_Idle_37
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 547
+        width: 450
+        height: 547
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc0c27613a9f09d44b6eb4de1d9337e9
+      internalID: -395063505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_Idle_ROB_Idle_38
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 547
+        width: 450
+        height: 547
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fe11535e47527f4a8da7e847d464042
+      internalID: 2126164462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_Idle_ROB_Idle_39
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 547
+        width: 450
+        height: 547
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 815887838e6237d4bb39d49046ca8470
+      internalID: -356895797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_Idle_ROB_Idle_40
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 547
+        width: 450
+        height: 547
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e0ae1f61aea3f849a6fe28fcc53c955
+      internalID: -133443239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_Idle_ROB_Idle_41
+      rect:
+        serializedVersion: 2
+        x: 2250
+        y: 547
+        width: 450
+        height: 547
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 480ade47b17afc047b86127570b3034f
+      internalID: 1629961667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_Idle_ROB_Idle_42
+      rect:
+        serializedVersion: 2
+        x: 2700
+        y: 547
+        width: 450
+        height: 547
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78e16eb4b8e8d7d44b01cf87648d3053
+      internalID: -470451566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_Idle_ROB_Idle_43
+      rect:
+        serializedVersion: 2
+        x: 3150
+        y: 547
+        width: 450
+        height: 547
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10035e00586441640a05ab389be55e6a
+      internalID: -21803119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_Idle_ROB_Idle_44
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 547
+        width: 450
+        height: 547
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 970d9b4bb0f5cd24aa882835a281225c
+      internalID: -1407312538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_Idle_ROB_Idle_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 450
+        height: 547
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a82786a9c6aa66c40a59b35a99417671
+      internalID: -1615844313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_Idle_ROB_Idle_46
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 0
+        width: 450
+        height: 547
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f045945495e18446b7b6916528e7019
+      internalID: 440712033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_Idle_ROB_Idle_47
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 0
+        width: 450
+        height: 547
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2a9b7178248dd94bad13685ebf1b022
+      internalID: -1110999760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_Idle_ROB_Idle_48
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 0
+        width: 450
+        height: 547
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c888a0538decb8143b94becf7042c2da
+      internalID: -1071593188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      ROB_Idle_ROB_Idle_0: 2089479609
+      ROB_Idle_ROB_Idle_1: -941238779
+      ROB_Idle_ROB_Idle_10: -1553186259
+      ROB_Idle_ROB_Idle_11: 434059157
+      ROB_Idle_ROB_Idle_12: -1911902616
+      ROB_Idle_ROB_Idle_13: 1357955965
+      ROB_Idle_ROB_Idle_14: 1309365445
+      ROB_Idle_ROB_Idle_15: -2111032656
+      ROB_Idle_ROB_Idle_16: -1538696437
+      ROB_Idle_ROB_Idle_17: -861518244
+      ROB_Idle_ROB_Idle_18: 1074674925
+      ROB_Idle_ROB_Idle_19: 14686296
+      ROB_Idle_ROB_Idle_2: -531289296
+      ROB_Idle_ROB_Idle_20: 275464278
+      ROB_Idle_ROB_Idle_21: 1568532628
+      ROB_Idle_ROB_Idle_22: -740017958
+      ROB_Idle_ROB_Idle_23: -2013032159
+      ROB_Idle_ROB_Idle_24: -1048275687
+      ROB_Idle_ROB_Idle_25: -407477169
+      ROB_Idle_ROB_Idle_26: -728274456
+      ROB_Idle_ROB_Idle_27: -639117379
+      ROB_Idle_ROB_Idle_28: 1743467671
+      ROB_Idle_ROB_Idle_29: -474852025
+      ROB_Idle_ROB_Idle_3: 219989105
+      ROB_Idle_ROB_Idle_30: 1862454845
+      ROB_Idle_ROB_Idle_31: 1931541133
+      ROB_Idle_ROB_Idle_32: -1268490945
+      ROB_Idle_ROB_Idle_33: 28242412
+      ROB_Idle_ROB_Idle_34: 2054852553
+      ROB_Idle_ROB_Idle_35: 1453487266
+      ROB_Idle_ROB_Idle_36: -921698613
+      ROB_Idle_ROB_Idle_37: -395063505
+      ROB_Idle_ROB_Idle_38: 2126164462
+      ROB_Idle_ROB_Idle_39: -356895797
+      ROB_Idle_ROB_Idle_4: -1788381926
+      ROB_Idle_ROB_Idle_40: -133443239
+      ROB_Idle_ROB_Idle_41: 1629961667
+      ROB_Idle_ROB_Idle_42: -470451566
+      ROB_Idle_ROB_Idle_43: -21803119
+      ROB_Idle_ROB_Idle_44: -1407312538
+      ROB_Idle_ROB_Idle_45: -1615844313
+      ROB_Idle_ROB_Idle_46: 440712033
+      ROB_Idle_ROB_Idle_47: -1110999760
+      ROB_Idle_ROB_Idle_48: -1071593188
+      ROB_Idle_ROB_Idle_5: -55895882
+      ROB_Idle_ROB_Idle_6: -1185337441
+      ROB_Idle_ROB_Idle_7: 1128540977
+      ROB_Idle_ROB_Idle_8: 542257444
+      ROB_Idle_ROB_Idle_9: -957073399
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
