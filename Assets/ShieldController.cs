@@ -5,14 +5,16 @@ using UnityEngine.InputSystem;
 
 public class ShieldController : MonoBehaviour
 {
-    private Rigidbody2D rb;
+    private Collider2D col;
     private SpriteRenderer sr;
+    [SerializeField] private GameObject cursor;
     public float charge = 4;
     public float shield_offset = 1.5F;
     private Mouse mouse;
-    public Vector3 cursor_pos;
+    private Vector3 cursor_pos;
     public InputAction activate;
     [SerializeField] private Camera cam;
+    private bool run = true;
 
 
     // Start is called before the first frame update
@@ -21,18 +23,28 @@ public class ShieldController : MonoBehaviour
         mouse = Mouse.current;
         sr = GetComponent<SpriteRenderer>();
         sr.enabled = false;
+
+        col = GetComponent<Collider2D>();
+        col.enabled = false;
+
         activate.Enable();
+
+        if(cam == null || cursor == null){
+            Debug.Log("Error: Undefined object parameters...");
+            run = false;
+            return;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(cam != null){
-            cursor_pos = (Vector2)mouse.position.ReadValue();
-            Vector2 dir = (Vector2)(cursor_pos - cam.WorldToScreenPoint(this.transform.parent.position)).normalized;
-        }
-        else{
-            Debug.Log("Error: no camera...");
-        }
+        if(!run)    {return;}
+        cursor_pos = mouse.position.ReadValue();
+        Debug.Log(cursor_pos);
+        cursor.transform.position = cam.ScreenToWorldPoint(cursor_pos);
+        Debug.Log(cursor.transform.position);
+        Vector2 dir = (Vector2)(cursor_pos - cam.WorldToScreenPoint(this.transform.parent.position)).normalized;
+        
     }
 }
