@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 137492800}
   - component: {fileID: 137492799}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: Main Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -157,8 +157,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 190.9, y: -246.19989}
-  m_SizeDelta: {x: -518.98, y: 64.73}
+  m_AnchoredPosition: {x: 6579.5005, y: -8438}
+  m_SizeDelta: {x: -17878, y: 2215.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &137492799
 MonoBehaviour:
@@ -242,6 +242,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 137492797}
   m_CullTransparentMesh: 1
+--- !u!1 &172569185 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1762274817380975816, guid: 0131dc79622f64b21855995f8fe12119,
+    type: 3}
+  m_PrefabInstance: {fileID: 6371448913270132583}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &301381584
 GameObject:
   m_ObjectHideFlags: 0
@@ -255,7 +261,7 @@ GameObject:
   - component: {fileID: 301381587}
   - component: {fileID: 301381586}
   m_Layer: 5
-  m_Name: Button (3)
+  m_Name: Quit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -277,8 +283,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 190.9, y: -308.1}
-  m_SizeDelta: {x: -518.98, y: 64.73}
+  m_AnchoredPosition: {x: 6579.5, y: -10694.8}
+  m_SizeDelta: {x: -17878, y: 2010.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &301381586
 MonoBehaviour:
@@ -324,7 +330,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1929639879}
+      - m_Target: {fileID: 1918912100}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1
@@ -374,12 +380,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 301381584}
   m_CullTransparentMesh: 1
---- !u!1 &456550366 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8772004724873112068, guid: 0131dc79622f64b21855995f8fe12119,
-    type: 3}
-  m_PrefabInstance: {fileID: 6371448913270132583}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &456550367 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6316650425095405973, guid: 0131dc79622f64b21855995f8fe12119,
@@ -536,7 +536,7 @@ GameObject:
   - component: {fileID: 1416928259}
   - component: {fileID: 1416928258}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: Settings
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -558,8 +558,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 190.9, y: -182.6}
-  m_SizeDelta: {x: -518.98, y: 64.73}
+  m_AnchoredPosition: {x: 6700.6, y: -6195.4}
+  m_SizeDelta: {x: -17635.9, y: 2269.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1416928258
 MonoBehaviour:
@@ -643,12 +643,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1416928256}
   m_CullTransparentMesh: 1
---- !u!224 &1660407242 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 110550170652004202, guid: 0131dc79622f64b21855995f8fe12119,
-    type: 3}
-  m_PrefabInstance: {fileID: 6371448913270132583}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1785195698
 GameObject:
   m_ObjectHideFlags: 0
@@ -730,7 +724,7 @@ GameObject:
   - component: {fileID: 1889073516}
   - component: {fileID: 1889073515}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Resume
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -752,8 +746,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 190.9, y: -119.22}
-  m_SizeDelta: {x: -518.98, y: 64.73}
+  m_AnchoredPosition: {x: 6626, y: -4057}
+  m_SizeDelta: {x: -17785.2, y: 2128.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1889073515
 MonoBehaviour:
@@ -799,7 +793,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1929639879}
+      - m_Target: {fileID: 1918912100}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: Resume
         m_Mode: 1
@@ -849,51 +843,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1889073513}
   m_CullTransparentMesh: 1
---- !u!1 &1929639878
+--- !u!1 &1918912099 stripped
 GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 8772004724873112068, guid: 0131dc79622f64b21855995f8fe12119,
+    type: 3}
+  m_PrefabInstance: {fileID: 6371448913270132583}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1929639880}
-  - component: {fileID: 1929639879}
-  m_Layer: 0
-  m_Name: 'PauseMenuUI '
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1929639879
+--- !u!114 &1918912100
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1929639878}
+  m_GameObject: {fileID: 1918912099}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1c8698e90d6ba4d11bb407de3a512803, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseMenuUI: {fileID: 456550366}
---- !u!4 &1929639880
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1929639878}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -603.7714, y: 99.25017, z: -3772.688}
-  m_LocalScale: {x: 41.879997, y: 41.879997, z: 41.879997}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1660407242}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  pauseMenuUI: {fileID: 172569185}
 --- !u!1001 &6371448913270132583
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1027,6 +995,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 1762274817380975816, guid: 0131dc79622f64b21855995f8fe12119,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3195830019583544829, guid: 0131dc79622f64b21855995f8fe12119,
         type: 3}
       propertyPath: pauseMenuUI
@@ -1075,7 +1048,7 @@ PrefabInstance:
     - target: {fileID: 6316650425095405973, guid: 0131dc79622f64b21855995f8fe12119,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.000076293945
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6702711667334587795, guid: 0131dc79622f64b21855995f8fe12119,
         type: 3}
@@ -1086,6 +1059,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RenderMode
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6702711667334587795, guid: 0131dc79622f64b21855995f8fe12119,
+        type: 3}
+      propertyPath: m_PixelPerfect
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7070439623091057953, guid: 0131dc79622f64b21855995f8fe12119,
         type: 3}
@@ -1099,8 +1077,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8975995849411251532, guid: 0131dc79622f64b21855995f8fe12119,
         type: 3}
+      propertyPath: m_ScaleFactor
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8975995849411251532, guid: 0131dc79622f64b21855995f8fe12119,
+        type: 3}
+      propertyPath: m_UiScaleMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8975995849411251532, guid: 0131dc79622f64b21855995f8fe12119,
+        type: 3}
       propertyPath: m_PresetInfoIsWorld
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8975995849411251532, guid: 0131dc79622f64b21855995f8fe12119,
+        type: 3}
+      propertyPath: m_ReferencePixelsPerUnit
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7023913129618583279, guid: 0131dc79622f64b21855995f8fe12119, type: 3}
@@ -1111,10 +1104,6 @@ PrefabInstance:
     - {fileID: 1602463892784226571, guid: 0131dc79622f64b21855995f8fe12119, type: 3}
     - {fileID: 1963132107893269502, guid: 0131dc79622f64b21855995f8fe12119, type: 3}
     m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 110550170652004202, guid: 0131dc79622f64b21855995f8fe12119,
-        type: 3}
-      insertIndex: 0
-      addedObject: {fileID: 1929639880}
     - targetCorrespondingSourceObject: {fileID: 6316650425095405973, guid: 0131dc79622f64b21855995f8fe12119,
         type: 3}
       insertIndex: -1
@@ -1131,7 +1120,11 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 301381585}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8772004724873112068, guid: 0131dc79622f64b21855995f8fe12119,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1918912100}
   m_SourcePrefab: {fileID: 100100000, guid: 0131dc79622f64b21855995f8fe12119, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
