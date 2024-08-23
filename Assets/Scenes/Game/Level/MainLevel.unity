@@ -1122,7 +1122,7 @@ MonoBehaviour:
       m_Action: Activate
       m_Flags: 0
     m_Flags: 0
-  cam: {fileID: 0}
+  cam: {fileID: 1706560789}
 --- !u!212 &801276174
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1854,7 +1854,7 @@ PolygonCollider2D:
     m_Bits: 256
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 65527
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
