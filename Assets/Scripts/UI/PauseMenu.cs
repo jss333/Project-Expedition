@@ -5,6 +5,7 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseMenuUI;  // Reference to the UI GameObject
     private bool isPaused;
 
+    
     void Update()
     {
         // Toggle pause when the "Esc" key is pressed
@@ -27,10 +28,13 @@ public class PauseMenu : MonoBehaviour
     // Resume the game
     public void Resume()
     {
+        
         //pauseMenuUI.SetActive(false);  // Hide the pause menu
         //Time.timeScale = 1f;           // Resume time
         isPaused = false;
+        Debug.Log("button pressed");
     }
+
 
     // Pause the game
     //public void Pause()
