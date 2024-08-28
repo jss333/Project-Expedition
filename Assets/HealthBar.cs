@@ -5,39 +5,53 @@ using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour
 {
-    public Image healthBar;
+    //    public Image healthBar;
 
-    float health, maxHealth = 100;
+    //    float health, maxHealth = 100;
 
-    private void Start()
+    //    private void Start()
+    //    {
+    //        health = maxHealth;
+    //    }
+
+    //    private void Update()
+    //    {
+    //        if (health > maxHealth)
+    //        {
+    //            health = maxHealth;
+    //        }
+    //        HealthBarFiller();
+    //    }
+
+    //    void HealthBarFiller()
+    //    {
+    //        healthBar.fillAmount = health / maxHealth;
+    //    }
+
+    //    public void Damage(float damagePoints)
+    //    {
+    //        if(health > 0)
+    //        {
+    //            health -= damagePoints;
+    //        }
+    //    }
+
+    //    public void Heal(float healingPoints)
+    //    {
+    //        health += healingPoints;
+    //    }
+
+    public Slider slider;
+
+    public void SetMaxHealth(int health)
     {
-        health = maxHealth;
+        slider.maxValue = health;
+        slider.value = health;
     }
 
-    private void Update()
+    public void SetHealth(int health)
     {
-        if (health > maxHealth)
-        {
-            health = maxHealth;
-        }
-        HealthBarFiller();
+        slider.value = health;
     }
 
-    void HealthBarFiller()
-    {
-        healthBar.fillAmount = health / maxHealth;
-    }
-
-    public void Damage(float damagePoints)
-    {
-        if(health > 0)
-        {
-            health -= damagePoints;
-        }
-    }
-
-    public void Heal(float healingPoints)
-    {
-        health += healingPoints;
-    }
 }
