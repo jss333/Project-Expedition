@@ -46,6 +46,11 @@ namespace Platformer.Gameplay
             }
             else
             {
+                /*Debug.Log("damaging player");
+                var playerHealth = player.GetComponent<Health>();
+                playerHealth.Decrement();                
+                player.GetComponent<HealthBarManager>().UpdateHealth();*/
+
                 Schedule<PlayerDeath>();
             }
         }
