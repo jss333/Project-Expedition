@@ -36,8 +36,9 @@ public class Projectile_Sys : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision){
         Debug.Log("Entered collision...");
         if(collision.gameObject.tag == "Player"){
-            collision.gameObject.GetComponent<Enemy_Sys>().Health -=1;
+            collision.gameObject.GetComponent<BossController>().bossHealth -= 1;
             Destroy(this.gameObject);
+             
         }
     }
 
@@ -68,7 +69,7 @@ public class Projectile_Sys : MonoBehaviour
 
     private GameObject FindNearestTarget(){
         //Need to adjust the hierarchy before generalizing this. Consult with Rakshaan.
-        GameObject Target = GameObject.Find("TestOrb");
+        GameObject Target = GameObject.Find("Boss");
         if(Target == null){
             Debug.Log("Couldn't find target...");
         }
