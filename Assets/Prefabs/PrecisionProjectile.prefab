@@ -53,6 +53,7 @@ MonoBehaviour:
   rot_vel: 2
   rot_acc: 30
   type: 1
+  damageAmt: 0
 --- !u!212 &5054406633811776107
 SpriteRenderer:
   m_ObjectHideFlags: 0

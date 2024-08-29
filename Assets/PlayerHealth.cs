@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
     public int maxHealth = 100;
-    public int testDamageAmt = 20;
+
     public int currentHealth;
     public int currentEnergy;
     public int currentArmor;
@@ -27,18 +27,18 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.H))
+        if (Input.GetKeyDown(KeyCode.D))
         {
-            TakeHealthDamage(testDamageAmt);
+            TakehealthDamage(2);
             TakeEnergyDamage(10);
             TakeArmorDamage(15);
         }
         
     }
 
-    void TakeHealthDamage(int healthdamage)
+    void TakehealthDamage(int healthdamage)
     {
-        currentHealth = System.Math.Max(0, currentHealth-healthdamage);
+        currentHealth -= healthdamage;
         healthBar.SetHealth(currentHealth);
 
     }
