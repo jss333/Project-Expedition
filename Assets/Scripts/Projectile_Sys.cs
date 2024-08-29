@@ -13,7 +13,8 @@ public class Projectile_Sys : MonoBehaviour
     public float rot_vel = 5F;
     public float rot_acc = 180F;
     public ProjectileType type = ProjectileType.Precision;
-    
+    public int damageAmt = 5;
+
     private Rigidbody2D rb;
     // Start is called before the first frame update
 
@@ -35,10 +36,16 @@ public class Projectile_Sys : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision){
         Debug.Log("Entered collision...");
-        if(collision.gameObject.tag == "Player"){
+        if (collision.gameObject.tag == "Player")
+        {
             collision.gameObject.GetComponent<BossController>().bossHealth -= 1;
+
             Destroy(this.gameObject);
-             
+
+        }
+        else if (collision.gameObject.tag == "Boss")
+        {
+            collision.gameObject.GetComponent<BossController>().TakeDamage(damageAmt);
         }
     }
 

@@ -10,6 +10,7 @@ TagManager:
   - Ground
   - Wall
   - levelchange
+  - Boss
   layers:
   - Default
   - TransparentFX

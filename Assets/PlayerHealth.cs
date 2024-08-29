@@ -29,7 +29,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.D))
         {
-            TakehealthDamage(20);
+            TakehealthDamage(2);
             TakeEnergyDamage(10);
             TakeArmorDamage(15);
         }

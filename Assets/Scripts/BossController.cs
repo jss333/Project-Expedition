@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class BossController : MonoBehaviour
@@ -12,12 +13,18 @@ public class BossController : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     public int bossHealth = 100;
     private Animator bossAnimator;
+    public HealthBar healthBar;
+    
+    public int bossCurrentHealth;
+
 
 
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         bossAnimator = GetComponent<Animator>();
+        bossCurrentHealth = bossHealth;
+        healthBar.SetMaxHealth(bossHealth);
     }
 
     void Update()
@@ -29,9 +36,10 @@ public class BossController : MonoBehaviour
             ShootOrb();
             shootTimer = 0f;
         }
-
-        bossAnimator.SetInteger("bossHealth", bossHealth);
        
+
+        bossAnimator.SetInteger("bossHealth", bossCurrentHealth);
+        
     }
 
 
@@ -54,16 +62,17 @@ public class BossController : MonoBehaviour
 
 public void TakeDamage(int damage)
     {
-        bossHealth -= damage;
-
        
+        bossCurrentHealth = System.Math.Max(0, bossCurrentHealth - damage);
+        healthBar.SetHealth(bossCurrentHealth);
+
 
     }
    
-    void FixedUpdate()
+   /* void FixedUpdate()
     {
-        if (bossHealth < 1)
+        if (bossCurrentHealth < 1)
             //GetComponent<CircleCollider2D>().enabled = false;
             Destroy(this.gameObject);
-    }
+    } */
 }
