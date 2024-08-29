@@ -7,20 +7,21 @@ public class ShieldController : MonoBehaviour
 {
     private Collider2D col;
     private SpriteRenderer sr;
-    [SerializeField] private GameObject cursor;
-    public float charge = 4;
+    [SerializeField] private GameObject pointer;
+    
     public float shield_offset = 1.5F;
-    private Mouse mouse;
-    private Vector3 cursor_pos;
     public InputAction activate;
-    [SerializeField] private Camera cam;
-    private bool run = true;
+    public bool acquired;
+    [SerializeField] private float duration = .3F;
+    [SerializeField] private float charge;
+    [SerializeField] private float regen_rate = .5F;
+    [SerializeField] private bool on_cooldown = false;
+    [SerializeField] private bool active = false;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        mouse = Mouse.current;
         sr = GetComponent<SpriteRenderer>();
         sr.enabled = false;
 
@@ -28,23 +29,43 @@ public class ShieldController : MonoBehaviour
         col.enabled = false;
 
         activate.Enable();
-
-        if(cam == null || cursor == null){
-            Debug.Log("Error: Undefined object parameters...");
-            run = false;
-            return;
-        }
+        charge = duration;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(!run)    {return;}
-        cursor_pos = mouse.position.ReadValue();
-        Debug.Log(cursor_pos);
-        cursor.transform.position = cam.ScreenToWorldPoint(cursor_pos);
-        Debug.Log(cursor.transform.position);
-        Vector2 dir = (Vector2)(cursor_pos - cam.WorldToScreenPoint(this.transform.parent.position)).normalized;
-        
+        if(!acquired){return;}
+        if(!on_cooldown){
+            if(charge <= 0){
+                charge = 0;
+                on_cooldown = true;
+                active = false;
+                sr.enabled = false;
+                col.enabled = false;
+            }
+            else if(active)  {charge -= Time.deltaTime;}
+            else{
+                if(activate.IsPressed()){
+                //Activate ability visuals...
+                    sr.enabled = true;
+                    col.enabled = true;
+                    active = true;
+                    Debug.Log("Whoosh!");
+                }
+            }
+            }
+        else{
+            if(charge < duration)       {charge += regen_rate * Time.deltaTime;}
+            else{
+                on_cooldown = false;
+                charge = duration;
+            }
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D collision){
+        //Needs implementation...
+        return;
     }
 }

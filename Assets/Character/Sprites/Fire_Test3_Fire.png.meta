@@ -1,36 +1,9 @@
 fileFormatVersion: 2
-guid: d7f3ba40c95624407a79329e1af8b953
+guid: 225b30a7a032fe64f80a6de32b5df91f
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: 21300000
-    second: Collectable_Collected_0
-  - first:
-      213: 21300002
-    second: Collectable_Collected_1
-  - first:
-      213: 21300004
-    second: Collectable_Collected_2
-  - first:
-      213: 21300006
-    second: Collectable_Collected_3
-  - first:
-      213: 21300008
-    second: Collectable_Collected_4
-  - first:
-      213: 21300010
-    second: Collectable_Collected_5
-  - first:
-      213: 21300012
-    second: Collectable_Collected_6
-  - first:
-      213: 21300014
-    second: Collectable_Collected_7
-  - first:
-      213: 21300016
-    second: Collectable_Collected_8
+  internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 13
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -47,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -71,10 +45,10 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 300
+  spritePixelsToUnits: 400
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -89,7 +63,9 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
-  applyGammaDecoding: 1
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -101,8 +77,9 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 2048
@@ -113,8 +90,9 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: WebGL
     maxTextureSize: 2048
@@ -125,196 +103,260 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Collectable_Collected_0
+      name: Fire_Test3_Fire_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 252
-        width: 128
-        height: 126
+        y: 1164
+        width: 878
+        height: 388
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba126587c8ace49f3b2d7a8163b470ac
-      internalID: 21300000
+      spriteID: 5ab9200a779e72d4da200b09a84d2cc9
+      internalID: -166192995
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Collectable_Collected_1
+      name: Fire_Test3_Fire_1
       rect:
         serializedVersion: 2
-        x: 128
-        y: 252
-        width: 128
-        height: 126
+        x: 878
+        y: 1164
+        width: 878
+        height: 388
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 15dce7243c5e7414fb1fe9929bfea44c
-      internalID: 21300002
+      spriteID: a05468afa80e0b84d8cfde02015cc0dc
+      internalID: -1621891535
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Collectable_Collected_2
+      name: Fire_Test3_Fire_2
       rect:
         serializedVersion: 2
-        x: 256
-        y: 252
-        width: 128
-        height: 126
+        x: 1756
+        y: 1164
+        width: 878
+        height: 388
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b556ded9e65fd46b3a2b1b010eaba039
-      internalID: 21300004
+      spriteID: dc810f0adbbea934698ebe56ce4d3a05
+      internalID: 1521217862
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Collectable_Collected_3
+      name: Fire_Test3_Fire_3
       rect:
         serializedVersion: 2
         x: 0
-        y: 126
-        width: 128
-        height: 126
+        y: 776
+        width: 878
+        height: 388
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 892dc7345a25346c59620720aa525811
-      internalID: 21300006
+      spriteID: ddc50ef7233db8247bc3bf1187babd78
+      internalID: 1830147488
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Collectable_Collected_4
+      name: Fire_Test3_Fire_4
       rect:
         serializedVersion: 2
-        x: 128
-        y: 126
-        width: 128
-        height: 126
+        x: 878
+        y: 776
+        width: 878
+        height: 388
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3b32313a386c74e5f907b6fc66232d7c
-      internalID: 21300008
+      spriteID: 030e885e3d611f541b800338915cdd45
+      internalID: -1450118169
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Collectable_Collected_5
+      name: Fire_Test3_Fire_5
       rect:
         serializedVersion: 2
-        x: 256
-        y: 126
-        width: 128
-        height: 126
+        x: 1756
+        y: 776
+        width: 878
+        height: 388
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0eea1aeb3ee424045aeeee627664cb63
-      internalID: 21300010
+      spriteID: 36357422371069e4aaf289575ee0e835
+      internalID: 1863522707
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Collectable_Collected_6
+      name: Fire_Test3_Fire_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 388
+        width: 878
+        height: 388
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da9a50cda79469c4682e955e7264113f
+      internalID: 281876474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_Test3_Fire_7
+      rect:
+        serializedVersion: 2
+        x: 878
+        y: 388
+        width: 878
+        height: 388
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 829b48c47b62728418b2a3df0ff87888
+      internalID: -804494854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_Test3_Fire_8
+      rect:
+        serializedVersion: 2
+        x: 1756
+        y: 388
+        width: 878
+        height: 388
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63263504973ea6b4ba9ec24fc48d25eb
+      internalID: 106858812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_Test3_Fire_9
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 128
-        height: 126
+        width: 878
+        height: 388
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 79810ff5da1d64c48a8148c85fea6822
-      internalID: 21300012
+      spriteID: 7affe3fec8143db4ab65b4908f40c265
+      internalID: 439142661
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Collectable_Collected_7
+      name: Fire_Test3_Fire_10
       rect:
         serializedVersion: 2
-        x: 128
+        x: 878
         y: 0
-        width: 128
-        height: 126
+        width: 878
+        height: 388
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 43d24bf78616c482ea7af52fbdaededc
-      internalID: 21300014
+      spriteID: dbdf1c52315c8204995e92a6b274761b
+      internalID: 201252852
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Collectable_Collected_8
+      name: Fire_Test3_Fire_11
       rect:
         serializedVersion: 2
-        x: 256
+        x: 1756
         y: 0
-        width: 128
-        height: 126
+        width: 878
+        height: 388
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 320555581fd434124a91e7c5df6a1bc3
-      internalID: 21300016
+      spriteID: 9375db5c023fdc64fae8a231609c175a
+      internalID: -1245014064
       vertices: []
       indices: 
       edges: []
@@ -322,7 +364,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: f820f6647e7ae435dab69606619639fd
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -330,18 +372,20 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Collectable_Collected_1: 21300002
-      Collectable_Collected_2: 21300004
-      Collectable_Collected_3: 21300006
-      Collectable_Collected_0: 21300000
-      Collectable_Collected_4: 21300008
-      Collectable_Collected_8: 21300016
-      Collectable_Collected_7: 21300014
-      Collectable_Collected_5: 21300010
-      Collectable_Collected_6: 21300012
-  spritePackingTag: 
+      Fire_Test3_Fire_0: -166192995
+      Fire_Test3_Fire_1: -1621891535
+      Fire_Test3_Fire_10: 201252852
+      Fire_Test3_Fire_11: -1245014064
+      Fire_Test3_Fire_2: 1521217862
+      Fire_Test3_Fire_3: 1830147488
+      Fire_Test3_Fire_4: -1450118169
+      Fire_Test3_Fire_5: 1863522707
+      Fire_Test3_Fire_6: 281876474
+      Fire_Test3_Fire_7: -804494854
+      Fire_Test3_Fire_8: 106858812
+      Fire_Test3_Fire_9: 439142661
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
