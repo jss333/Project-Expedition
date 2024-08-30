@@ -14,7 +14,7 @@ public class PlayerHealth : MonoBehaviour
     public HealthBar energyShield;
     public HealthBar armorDial;
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
         currentHealth = maxHealth;
         currentEnergy = maxHealth;
@@ -25,7 +25,7 @@ public class PlayerHealth : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
         if (Input.GetKeyDown(KeyCode.D))
         {
@@ -36,7 +36,7 @@ public class PlayerHealth : MonoBehaviour
         
     }
 
-    void TakehealthDamage(int healthdamage)
+    public void TakehealthDamage(int healthdamage)
     {
         currentHealth -= healthdamage;
         healthBar.SetHealth(currentHealth);

@@ -10,6 +10,7 @@ TagManager:
   - Ground
   - Wall
   - levelchange
+  - Projectile
   layers:
   - Default
   - TransparentFX
@@ -46,4 +47,22 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: BG
+    uniqueID: 970963389
+    locked: 0
+  - name: Platforms
+    uniqueID: 2184460127
+    locked: 0
+  - name: Boss
+    uniqueID: 1294290121
+    locked: 0
+  - name: Minions
+    uniqueID: 1310491101
+    locked: 0
+  - name: R0B
+    uniqueID: 2703174711
+    locked: 0
+  - name: Projectiles
+    uniqueID: 415374157
     locked: 0
