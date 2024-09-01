@@ -5,8 +5,8 @@ using UnityEngine;
 public class MinionController : MonoBehaviour
 {
     //Basic properties and component refs...
-    public Transform anchor;
-    public MinionSpawnerController spawner;
+    public GameObject anchor;
+    public GameObject spawner;
     public float health = 20F;
     public float moveSpeed = 3F;
     public float collisionDmg = 5F;
@@ -24,17 +24,13 @@ public class MinionController : MonoBehaviour
 
     public void Awake(){
         rb = GetComponent<Rigidbody2D>();
-        if(this.transform.position != anchor.position){
+        if(this.transform.position != anchor.transform.position){
             StartCoroutine(moveToAnchor());
         }
         return;
     }
 
     public void Update(){
-        if(awayFromAnchor){
-            checkAtAnchor();
-            return;
-        }
         if(attackTimer >= attackPeriod){
             StartCoroutine(Attack());
         }
@@ -60,10 +56,6 @@ public class MinionController : MonoBehaviour
         yield break;
     }
 
-    private void checkAtAnchor(){
-        
-    }
-
     public void OnTriggerEnter2D(Collider2D collision){
         if(collision.gameObject.tag == "Player"){
             collision.gameObject.GetComponent<PlayerHealth>().TakehealthDamage((int)collisionDmg);
@@ -81,11 +73,11 @@ public class MinionController : MonoBehaviour
     private IEnumerator moveToAnchor(){
         //Describes the movement taken by the minion as it transitions
         //from its spawn point to its anchor point...
-        Vector3 direction = Vector3.Normalize(anchor.position - this.transform.position);
+        Vector3 direction = Vector3.Normalize(anchor.transform.position - this.transform.position);
         rb.velocity = (Vector2)(direction * moveSpeed);
         while(true){
-            if((this.transform.position - anchor.position).magnitude <= .2F){
-                this.transform.position = anchor.position;
+            if((this.transform.position - anchor.transform.position).magnitude <= .2F){
+                this.transform.position = anchor.transform.position;
                 rb.velocity = Vector2.zero;
                 yield break;
             }
@@ -95,6 +87,7 @@ public class MinionController : MonoBehaviour
 
     private void handInResignation(){
         //Self-destruct method that communicates death to the spawner...
+        
     }
 }
 
