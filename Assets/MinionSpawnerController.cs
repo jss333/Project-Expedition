@@ -21,7 +21,6 @@ public class MinionSpawnerController : MonoBehaviour
         if(activeEntityInstances == 0){
             if(timer >= waveCooldown){
                 spawnWave();
-                timer = 0;
             }
             else{
                 timer += Time.deltaTime;
@@ -39,7 +38,7 @@ public class MinionSpawnerController : MonoBehaviour
         if((activeEntityInstances--) < 0)   {activeEntityInstances = 0;}
     }
 
-    private void spawnWave(){
+    public void spawnWave(){
         while(activeEntityInstances < entityCount){
             int randomIndex = Random.Range(0, freeAnchors.Count);
             activeAnchors.Add(freeAnchors[randomIndex]);
@@ -47,6 +46,7 @@ public class MinionSpawnerController : MonoBehaviour
             newMinion.GetComponent<MinionController>().anchor = freeAnchors[randomIndex];
             freeAnchors.RemoveAt(randomIndex);
             activeEntityInstances++;
+            timer = 0;
         }
     }
 }

@@ -15,23 +15,34 @@ public class MinionController : MonoBehaviour
     
     //Parameters describing the minion's attack properties...
     [SerializeField] private GameObject projectile;
-    public AttackPattern firingPattern;
+    public AttackPattern firingPattern = AttackPattern.FixedAlternating;
+    public AttackRotation firingRotation = AttackRotation.Clockwise;
     public float attackPeriod = 2F;
     [SerializeField] private float attackTimer = 0;
     public int burstSize = 3;
     public float burstDensity = .2F;
+    [SerializeField] private float burstTimer = 0;
+    [SerializeField] private int shotNum = 0;
     [SerializeField] private Transform launchPoint;
 
-    public void Awake(){
+    public void Start(){
         rb = GetComponent<Rigidbody2D>();
+        if(projectile == null || launchPoint == null){
+            Debug.Log("Minion Controller: projectile spawn parameters null -- component disabled...");
+            this.gameObject.SetActive(false);
+            return;
+        }
         if(this.transform.position != anchor.transform.position){
             StartCoroutine(moveToAnchor());
         }
+
+        burstTimer = burstDensity;
         return;
     }
 
     public void Update(){
         if(attackTimer >= attackPeriod){
+            attackTimer = 0;
             StartCoroutine(Attack());
         }
         else{
@@ -40,18 +51,18 @@ public class MinionController : MonoBehaviour
     }
 
     public IEnumerator Attack(){
-        float burstTimer = burstDensity;
-        for(int shotNum = 0; shotNum < burstSize;){
+        
+        for(shotNum = 0; shotNum < burstSize;){
             if(burstTimer >= burstDensity){
-                //Instantiate(projectile, )
+                Instantiate(projectile, this.transform.position, this.transform.rotation);
                 burstTimer = 0;
                 shotNum++;
-                yield return null;
             }
-            burstTimer += Time.deltaTime;
+            else{burstTimer += Time.deltaTime;}
             yield return null;
         }
 
+        burstTimer = burstDensity;
         attackTimer = 0;
         yield break;
     }
@@ -93,5 +104,11 @@ public class MinionController : MonoBehaviour
 
 public enum AttackPattern{
     Fixed,
+    FixedAlternating,
     Rotating
+}
+
+public enum AttackRotation{
+    Clockwise,
+    CounterClockwise
 }

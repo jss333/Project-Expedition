@@ -5,6 +5,9 @@ using UnityEngine.InputSystem;
 
 public class Player_CombatSys : MonoBehaviour
 {
+    public float despawnTimer = 0;
+    [SerializeField] private float timeToDespawn = 0;
+
     public Rigidbody2D rb;
     public float max_vel = 2;
     public float health;
