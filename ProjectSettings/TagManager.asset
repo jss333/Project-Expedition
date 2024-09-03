@@ -31,9 +31,9 @@ TagManager:
   - CameraBoundary
   - boundary
   - LevelChange
-  - 
-  - 
-  - 
+  - EnemyProjectile
+  - Boss
+  - Player
   - 
   - 
   - 

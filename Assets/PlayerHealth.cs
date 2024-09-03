@@ -29,20 +29,20 @@ public class PlayerHealth : MonoBehaviour
     {        
     }
 
-    void TakehealthDamage(int healthdamage)
+    public void TakehealthDamage(int healthdamage)
     {
         currentHealth -= healthdamage;
         healthBar.SetHealth(currentHealth);
 
     }
 
-    void TakeEnergyDamage(int energydamage)
+    public void TakeEnergyDamage(int energydamage)
     {
         currentEnergy -= energydamage;
         energyShield.SetHealth(currentEnergy);
     }
 
-    void TakeArmorDamage(int armorDamage)
+    public void TakeArmorDamage(int armorDamage)
     {
         currentArmor -= armorDamage;
         armorDial.SetHealth(currentArmor);
