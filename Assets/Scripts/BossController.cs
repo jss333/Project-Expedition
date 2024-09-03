@@ -223,8 +223,6 @@ public class BossController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        int damage = 2;
-        TakeDamage(damage);
-        Destroy(collision.gameObject);
+        return;
     }
 }
