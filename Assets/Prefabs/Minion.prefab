@@ -108,6 +108,7 @@ MonoBehaviour:
   projectile: {fileID: 4767921678106280535, guid: 5cda2d0d30d07624b85208d0c5ba089e,
     type: 3}
   firingPattern: 0
+  firingRotation: 0
   attackPeriod: 2
   attackTimer: 0
   burstSize: 3
@@ -115,6 +116,7 @@ MonoBehaviour:
   burstTimer: 0
   shotNum: 0
   launchPoint: {fileID: 1003880002372108823}
+  launchAngle: {x: 0, y: 0, z: 0, w: 0}
 --- !u!70 &2358549528649128718
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

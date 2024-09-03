@@ -24,6 +24,7 @@ public class MinionController : MonoBehaviour
     [SerializeField] private float burstTimer = 0;
     [SerializeField] private int shotNum = 0;
     [SerializeField] private Transform launchPoint;
+    [SerializeField] private Quaternion launchAngle;
 
     public void Start(){
         rb = GetComponent<Rigidbody2D>();
@@ -50,8 +51,7 @@ public class MinionController : MonoBehaviour
         }
     }
 
-    public IEnumerator Attack(){
-        
+    public IEnumerator Attack(){        
         for(shotNum = 0; shotNum < burstSize;){
             if(burstTimer >= burstDensity){
                 Instantiate(projectile, this.transform.position, this.transform.rotation);
