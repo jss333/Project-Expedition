@@ -1,3 +1,4 @@
+using Platformer.Mechanics;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -63,7 +64,13 @@ public class SpawnLevel : MonoBehaviour
 
     void RandomizePosition()
     {
-        currentSpawnPoint = spawnPointManager.GetAvailableSpawnPoint(spawnPoints);
+        Transform[] spawnPointTransforms = new Transform[spawnPoints.Length];
+        for (int i = 0; i < spawnPoints.Length; i++)
+        {
+            spawnPointTransforms[i] = spawnPoints[i].transform;
+        }
+
+        currentSpawnPoint = spawnPointManager.GetAvailableSpawnPoint(spawnPointTransforms);
 
         if (currentSpawnPoint != null)
         {
