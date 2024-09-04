@@ -22,7 +22,7 @@ public class Player_CombatSys : MonoBehaviour
 
     public ProjectileType type = ProjectileType.Precision;
     [SerializeField] private float MuzzleSpread = 0;
-    
+   
 
     // Start is called before the first frame update
     void Start()

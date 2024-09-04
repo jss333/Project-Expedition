@@ -28,21 +28,8 @@ public class PauseMenu : MonoBehaviour
     // Resume the game
     public void Resume()
     {
-        
-        //pauseMenuUI.SetActive(false);  // Hide the pause menu
-        //Time.timeScale = 1f;           // Resume time
         isPaused = false;
-        Debug.Log("button pressed");
     }
-
-
-    // Pause the game
-    //public void Pause()
-    //{
-    //    pauseMenuUI.SetActive(true);   // Show the pause menu
-    //    Time.timeScale = 0f;           // Freeze time
-    //    isPaused = true;
-    //}
 
     // Optional: Method to call when a "Quit" button is clicked
     public void QuitGame()
