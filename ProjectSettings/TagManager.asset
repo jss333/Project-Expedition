@@ -11,6 +11,7 @@ TagManager:
   - Wall
   - levelchange
   - Boss
+  - Out Of Bounds
   layers:
   - Default
   - TransparentFX
