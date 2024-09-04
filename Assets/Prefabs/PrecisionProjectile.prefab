@@ -52,8 +52,9 @@ MonoBehaviour:
   pos_acc: 30
   rot_vel: 2
   rot_acc: 30
-  type: 1
+  type: 0
   damageAmt: 0
+  speed: 10
 --- !u!212 &5054406633811776107
 SpriteRenderer:
   m_ObjectHideFlags: 0
