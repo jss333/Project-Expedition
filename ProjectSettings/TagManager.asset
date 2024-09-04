@@ -11,7 +11,7 @@ TagManager:
   - Wall
   - levelchange
   - Boss
-  - Out Of Bounds
+  - Play Space Boundary
   - Projectile
   layers:
   - Default

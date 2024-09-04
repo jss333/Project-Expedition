@@ -13,9 +13,5 @@ public class BossOrb : MonoBehaviour
             other.gameObject.GetComponent<PlayerHealth>().TakeDamage(orbDmg);
             Destroy(this.gameObject);
         }
-        else if (other.gameObject.tag == "Out Of Bounds")
-        {
-            Destroy(this.gameObject);
-        }
     }
 }

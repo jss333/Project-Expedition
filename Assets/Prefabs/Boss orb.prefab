@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1993782994413782750}
   - component: {fileID: 5614702279893687726}
   - component: {fileID: -5740195100075063898}
+  - component: {fileID: 537809063136021004}
   m_Layer: 19
   m_Name: Boss orb
   m_TagString: Untagged
@@ -162,3 +163,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orbDmg: 5
+--- !u!114 &537809063136021004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2522101524757786263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bf0787ed314cc24b80ba4fd8cca5a34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debug: 0
