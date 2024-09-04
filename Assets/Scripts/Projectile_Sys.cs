@@ -35,23 +35,24 @@ public class Projectile_Sys : MonoBehaviour
         }
     }
 
-    //void OnTriggerEnter2D(Collider2D collision)
-    //{
-    //    Debug.Log("Entered collision...");
-    //    if (collision.gameObject.tag == "Player")
-    //    {
-    //        collision.gameObject.GetComponent<BossController>().currentHealth -= 1;
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("Entered collision...");
+        if (collision.gameObject.tag == "Player")
+        {
+            collision.gameObject.GetComponent<BossController>().currentHealth -= 1;
 
-    //        Destroy(this.gameObject);
+            Destroy(this.gameObject);
 
-    //    }
-    //    else if (collision.gameObject.tag == "Boss")
-    //    {
-    //        BossController boss = collision.gameObject.GetComponent<BossController>();
-    //        boss.currentHealth -= 2;
-    //        Destroy(this.gameObject);
-    //    }
-    //}
+        }
+        else if (collision.gameObject.tag == "Boss")
+        {
+            BossController boss = collision.gameObject.GetComponent<BossController>();
+            boss.currentHealth -= 2;
+            Destroy(this.gameObject);
+        }
+    }
+    
     void OnBecameInvisible(){
         Debug.Log("Self-destruct...");
         Destroy(this.gameObject);

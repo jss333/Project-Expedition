@@ -1,0 +1,941 @@
+fileFormatVersion: 2
+guid: 812eb869ac91fbe428bb222b131e7dcf
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 9
+  spritePivot: {x: 0.12, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 136, y: 433, z: 1692, w: 381}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Rock_Kiwi_flames_0
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 808
+        width: 211
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a907d1d44d79f47469eee9acb3f7eb98
+      internalID: -472423997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_Kiwi_flames_1
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 808
+        width: 211
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed15341a3613df14f9f693ba8a3a04a7
+      internalID: -641449906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_Kiwi_flames_2
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 808
+        width: 211
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c321ea27a7b4add4a9b05ee845542c82
+      internalID: -1196235456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_Kiwi_flames_3
+      rect:
+        serializedVersion: 2
+        x: 749
+        y: 808
+        width: 211
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 688f50cd0bf150840903729598fe677f
+      internalID: 163644407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_Kiwi_flames_4
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 808
+        width: 211
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a0a2e3168fc64548b75234b786df548
+      internalID: -576665610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_Kiwi_flames_5
+      rect:
+        serializedVersion: 2
+        x: 1171
+        y: 808
+        width: 211
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83943561d45a85b4e98df345811cb0df
+      internalID: 1811234779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_Kiwi_flames_6
+      rect:
+        serializedVersion: 2
+        x: 1593
+        y: 808
+        width: 211
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31577798fe5e6e349983239f756d10f3
+      internalID: -1186104454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_Kiwi_flames_7
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 616
+        width: 211
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52e7fc501083bcb459d9f5e327f902b8
+      internalID: 491978755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_Kiwi_flames_8
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 616
+        width: 211
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51ec1b42e0957754a8269be8edf31b71
+      internalID: -2001421797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_Kiwi_flames_9
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 616
+        width: 211
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a6133d908ad0d34e8ffd37af9d4d08e
+      internalID: 107977624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_Kiwi_flames_10
+      rect:
+        serializedVersion: 2
+        x: 749
+        y: 616
+        width: 211
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6969aedbc2a89cc469218b5b18d4d221
+      internalID: -64985491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_Kiwi_flames_11
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 616
+        width: 211
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4be08fc25b8709a418c008bbb16c2ce9
+      internalID: -1545223753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_Kiwi_flames_12
+      rect:
+        serializedVersion: 2
+        x: 1171
+        y: 616
+        width: 211
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1478d836e1bb74e4bbdefbdb986b0ef0
+      internalID: -1541619307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_Kiwi_flames_13
+      rect:
+        serializedVersion: 2
+        x: 1382
+        y: 616
+        width: 211
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58af983b0daea7746869224bd776cf81
+      internalID: -257739166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_Kiwi_flames_14
+      rect:
+        serializedVersion: 2
+        x: 1593
+        y: 616
+        width: 211
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 239f6d11e21029a48bb4b5b4f802704e
+      internalID: 161141619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_Kiwi_flames_15
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 424
+        width: 211
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e589ac29ab98a7949a8eeab6d195d748
+      internalID: 1629483580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_Kiwi_flames_16
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 424
+        width: 211
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 076462a93017d1b4a968d6ba1b84141f
+      internalID: 1186527640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_Kiwi_flames_17
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 424
+        width: 211
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ef3a73ca5660d04199baa5a02e0b2d7
+      internalID: 1713749110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_Kiwi_flames_18
+      rect:
+        serializedVersion: 2
+        x: 749
+        y: 424
+        width: 211
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff5e09c8c36ca4b42b21f606bc8616fe
+      internalID: 2046929206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_Kiwi_flames_19
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 424
+        width: 211
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a20d9de77641abe49955859f47592d79
+      internalID: 1251689932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_Kiwi_flames_20
+      rect:
+        serializedVersion: 2
+        x: 1171
+        y: 424
+        width: 211
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f788a04f34e39949a8d6e3d2bfc9d5c
+      internalID: -68847263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_Kiwi_flames_21
+      rect:
+        serializedVersion: 2
+        x: 1382
+        y: 424
+        width: 211
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a4c722427ba12f4d9ae77b975345a72
+      internalID: -773201247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_Kiwi_flames_22
+      rect:
+        serializedVersion: 2
+        x: 1593
+        y: 424
+        width: 211
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c70c1f06f16350a408a2173ca62402c6
+      internalID: -1608082655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_Kiwi_flames_23
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 232
+        width: 211
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9822609e0b95df44d9e4d4b34956920d
+      internalID: -1673285384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_Kiwi_flames_24
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 232
+        width: 211
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09826ad1ff8280e4c8b11d4b6c68e20f
+      internalID: 1761927525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_Kiwi_flames_25
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 232
+        width: 211
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c43a1fd10ed7d5142bbf888c0e314b22
+      internalID: 33116230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_Kiwi_flames_26
+      rect:
+        serializedVersion: 2
+        x: 749
+        y: 232
+        width: 211
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d26b672b070e6443859f96f3fb8487d
+      internalID: -765469010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_Kiwi_flames_27
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 232
+        width: 211
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5eafa012acc6a55408951799cdc0e9f9
+      internalID: 810686079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_Kiwi_flames_28
+      rect:
+        serializedVersion: 2
+        x: 1171
+        y: 232
+        width: 211
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f720179ed44633140bafee64274f07a2
+      internalID: 424077420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_Kiwi_flames_29
+      rect:
+        serializedVersion: 2
+        x: 1382
+        y: 232
+        width: 211
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 051172e22b75e634aabf72ea3dbebf04
+      internalID: -985478525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_Kiwi_flames_30
+      rect:
+        serializedVersion: 2
+        x: 1593
+        y: 232
+        width: 211
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b048dcd466359ed4787d17c473464da2
+      internalID: -777335267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_Kiwi_flames_31
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 40
+        width: 211
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcb852360621cc541ae30ccc33020d85
+      internalID: 1894866153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_Kiwi_flames_32
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 40
+        width: 211
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f73927de68f60d47b9c118d5f690055
+      internalID: -1417653269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_Kiwi_flames_33
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 40
+        width: 211
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66faf01fd7e8cf14696f979d91a6afb0
+      internalID: -888500684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_Kiwi_flames_34
+      rect:
+        serializedVersion: 2
+        x: 749
+        y: 40
+        width: 211
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13b02743f6e81e94f93bd40fb5adc7b6
+      internalID: 1616697002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_Kiwi_flames_35
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 40
+        width: 211
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53f4254b49077094983379d9113b40d6
+      internalID: -1168938151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_Kiwi_flames_36
+      rect:
+        serializedVersion: 2
+        x: 1171
+        y: 40
+        width: 211
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d714dea6e0f15e4783e789a7fd2a2b8
+      internalID: -1707026015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 1537655665
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Rock_Kiwi_flames_0: -472423997
+      Rock_Kiwi_flames_1: -641449906
+      Rock_Kiwi_flames_10: -64985491
+      Rock_Kiwi_flames_11: -1545223753
+      Rock_Kiwi_flames_12: -1541619307
+      Rock_Kiwi_flames_13: -257739166
+      Rock_Kiwi_flames_14: 161141619
+      Rock_Kiwi_flames_15: 1629483580
+      Rock_Kiwi_flames_16: 1186527640
+      Rock_Kiwi_flames_17: 1713749110
+      Rock_Kiwi_flames_18: 2046929206
+      Rock_Kiwi_flames_19: 1251689932
+      Rock_Kiwi_flames_2: -1196235456
+      Rock_Kiwi_flames_20: -68847263
+      Rock_Kiwi_flames_21: -773201247
+      Rock_Kiwi_flames_22: -1608082655
+      Rock_Kiwi_flames_23: -1673285384
+      Rock_Kiwi_flames_24: 1761927525
+      Rock_Kiwi_flames_25: 33116230
+      Rock_Kiwi_flames_26: -765469010
+      Rock_Kiwi_flames_27: 810686079
+      Rock_Kiwi_flames_28: 424077420
+      Rock_Kiwi_flames_29: -985478525
+      Rock_Kiwi_flames_3: 163644407
+      Rock_Kiwi_flames_30: -777335267
+      Rock_Kiwi_flames_31: 1894866153
+      Rock_Kiwi_flames_32: -1417653269
+      Rock_Kiwi_flames_33: -888500684
+      Rock_Kiwi_flames_34: 1616697002
+      Rock_Kiwi_flames_35: -1168938151
+      Rock_Kiwi_flames_36: -1707026015
+      Rock_Kiwi_flames_4: -576665610
+      Rock_Kiwi_flames_5: 1811234779
+      Rock_Kiwi_flames_6: -1186104454
+      Rock_Kiwi_flames_7: 491978755
+      Rock_Kiwi_flames_8: -2001421797
+      Rock_Kiwi_flames_9: 107977624
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
