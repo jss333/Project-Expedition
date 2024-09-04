@@ -5,12 +5,15 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Game/Level/MainLevel.unity
     guid: 4145f7811037e204cb41ffad4e7fb192
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Game/Level/TestLevel.unity
     guid: ff2e2ee8bcd41b94fb58729f94c9c71f
+  - enabled: 1
+    path: Assets/Scenes/Game/Level/ChallengeRoom01.unity
+    guid: 4e078d59cad960e4a94781df14bc374f
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: e4d75b8b4062e4e4fb77d2a7deb22856,
       type: 2}
