@@ -25,8 +25,8 @@ public class Pointer_Sys : MonoBehaviour
     {
         if(hide_pointer)    {return;}
         pointer_pos = mouse.position.ReadValue();
-        Debug.Log(pointer_pos);
-        this.transform.position = cam.ScreenToWorldPoint(pointer_pos);
-        Debug.Log(this.transform.position);
+        //Debug.Log(pointer_pos);
+        this.transform.position = cam.ScreenToWorldPoint(pointer_pos) + new Vector3(0,0,20);
+        //Debug.Log(this.transform.position);
         }
 }

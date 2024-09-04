@@ -10,7 +10,6 @@ public class Player_CombatSys : MonoBehaviour
 
     public Rigidbody2D rb;
     public float max_vel = 2;
-    public float health;
     public GameObject pointer;
     public bool rot_to_pointer = true;
     public InputAction fire;
@@ -45,8 +44,8 @@ public class Player_CombatSys : MonoBehaviour
             cd_rm -= Time.deltaTime;
         }
         if(rot_to_pointer){
-            float angle = Vector3.Angle(Vector3.down, Vector3.Normalize(pointer.transform.position - this.transform.position));
-            this.transform.rotation = Quaternion.Euler(0, 0, angle);
+            float angle = Vector2.SignedAngle(transform.right, Vector3.Normalize(pointer.transform.position - this.transform.position));
+            this.transform.rotation *= Quaternion.Euler(0, 0, angle);
         }
     }
 
