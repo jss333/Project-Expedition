@@ -69,7 +69,7 @@ public class MinionController : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision){
         if(collision.gameObject.tag == "Player"){
-            collision.gameObject.GetComponent<PlayerHealth>().TakehealthDamage((int)collisionDmg);
+            collision.gameObject.GetComponent<PlayerHealth>().TakeDamage((int)collisionDmg);
         }
         return;
     }
