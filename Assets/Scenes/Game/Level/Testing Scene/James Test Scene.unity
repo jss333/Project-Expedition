@@ -210,7 +210,7 @@ Transform:
   m_GameObject: {fileID: 6225117}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.537434, y: 3.9965086, z: -10}
+  m_LocalPosition: {x: -18.537434, y: 3.9976077, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7494,11 +7494,11 @@ MonoBehaviour:
   groundJumpForce: 9
   downGravityScaleFactor: 1.5
   maxVerticalVelocity: 15
-  groundJumpSFX: {fileID: 8300000, guid: 01ebd3dbdfd2b454ea1d7caa8b51291d, type: 3}
+  groundJumpSFX: {fileID: 8300000, guid: 008ad314c531bb049b66663edd12cade, type: 3}
   isAirJumpSkillAcquired: 1
   airJumpForce: 9
   maxTotalNumberOfJumps: 2
-  airJumpSFX: {fileID: 8300000, guid: 01ebd3dbdfd2b454ea1d7caa8b51291d, type: 3}
+  airJumpSFX: {fileID: 8300000, guid: 008ad314c531bb049b66663edd12cade, type: 3}
   isGrounded: 0
   jumpCount: 0
 --- !u!95 &391871778
