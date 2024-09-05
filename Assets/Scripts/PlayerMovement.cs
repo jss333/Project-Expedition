@@ -2,16 +2,18 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = System.Random;
 
 public class PlayerMovement : MonoBehaviour
 {
     [Header("References")]
-    private SpriteRenderer playerSpriteRenderer;
-    private Animator playerAnimator;
-    private Rigidbody2D playerRb;
     public Transform groundCheckObj;
     [Tooltip("Layer to define what is considered 'ground'")]
     public LayerMask groundLayer;
+    private SpriteRenderer playerSpriteRenderer;
+    private Rigidbody2D playerRb;
+    private Animator playerAnimator;
+    private RandomPitchAudioSource audioSource;
 
     [Header("Parameters")]
     public float maxHorizontalVelocity;
@@ -22,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
     private float originalGravityScale;
     [Tooltip("Maximum velocity when falling")]
     public float maxVerticalVelocity = 15f;
+    public AudioClip groundJumpSFX;
 
     [Header("Parameters - Air Jump")]
     public bool isAirJumpSkillAcquired = true;
@@ -29,6 +32,7 @@ public class PlayerMovement : MonoBehaviour
     public float airJumpForce = 9;
     [Tooltip("Includes ground jump and air jump(s)")]
     public int maxTotalNumberOfJumps = 2;
+    public AudioClip airJumpSFX;
 
     [Header("State")]
     [Tooltip("Whether the player is considered to be 'on the ground'")]
@@ -42,6 +46,7 @@ public class PlayerMovement : MonoBehaviour
         playerSpriteRenderer = GetComponent<SpriteRenderer>();
         playerAnimator = GetComponent<Animator>();
         playerRb = GetComponent<Rigidbody2D>();
+        audioSource = GetComponent<RandomPitchAudioSource>();
         jumpCount = 1; //To force grounded check at the start
         originalGravityScale = playerRb.gravityScale;
     }
@@ -116,15 +121,11 @@ public class PlayerMovement : MonoBehaviour
         {
             if (isGrounded)
             {
-                playerRb.velocity = new Vector2(playerRb.velocity.x, groundJumpForce);
-                jumpCount++;
-                playerAnimator.SetTrigger("jumped");
+                EffectJump(groundJumpForce, groundJumpSFX);
             }
             else if (isAirJumpSkillAcquired && (jumpCount < maxTotalNumberOfJumps))
             {
-                playerRb.velocity = new Vector2(playerRb.velocity.x, airJumpForce);
-                jumpCount++;
-                playerAnimator.SetTrigger("jumped");
+                EffectJump(airJumpForce, airJumpSFX);
             }
         }
 
@@ -134,6 +135,15 @@ public class PlayerMovement : MonoBehaviour
             playerRb.velocity = new Vector2(playerRb.velocity.x, Mathf.Min(0, playerRb.velocity.y));
         }
     }
+
+    private void EffectJump(float jumpForce, AudioClip clip)
+    {
+        playerRb.velocity = new Vector2(playerRb.velocity.x, jumpForce);
+        jumpCount++;
+        playerAnimator.SetTrigger("jumped");
+        audioSource.PlayAudioWithRandomPitch(clip);
+    }
+
 
     private void ClampVerticalVelocity()
     {
