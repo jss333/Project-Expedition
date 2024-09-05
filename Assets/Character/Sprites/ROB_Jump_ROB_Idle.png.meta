@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -108,7 +108,280 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: ROB_Jump_ROB_Idle_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1000
+        width: 451
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4a135d59e383974b87f4a703c9107ec
+      internalID: 1466622102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_Jump_ROB_Idle_1
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 1000
+        width: 451
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b270d14767e207940b8e6e14937fdb50
+      internalID: 1245045256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_Jump_ROB_Idle_2
+      rect:
+        serializedVersion: 2
+        x: 902
+        y: 1000
+        width: 451
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb9d1d1ff6777b24fa5c253493ee1f3f
+      internalID: 1766399562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_Jump_ROB_Idle_3
+      rect:
+        serializedVersion: 2
+        x: 1353
+        y: 1000
+        width: 451
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49f71a83f1fb056418d82f5b7f20ea47
+      internalID: -731233103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_Jump_ROB_Idle_4
+      rect:
+        serializedVersion: 2
+        x: 1804
+        y: 1000
+        width: 451
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6aea4f2b4ca41094b9e140758fb62175
+      internalID: -1536543331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_Jump_ROB_Idle_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 500
+        width: 451
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fac9272bd0b1a6b4388e4fa293aeac6b
+      internalID: -1658949464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_Jump_ROB_Idle_6
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 500
+        width: 451
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 224ab9d00d2046a438a5a1a5f2248f36
+      internalID: 676162242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_Jump_ROB_Idle_7
+      rect:
+        serializedVersion: 2
+        x: 902
+        y: 500
+        width: 451
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0498a01c2f24d4c4692758486d82f947
+      internalID: 1755995450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_Jump_ROB_Idle_8
+      rect:
+        serializedVersion: 2
+        x: 1353
+        y: 500
+        width: 451
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed969fd123def854bb4dacdebf1f84b5
+      internalID: 1283817384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_Jump_ROB_Idle_9
+      rect:
+        serializedVersion: 2
+        x: 1804
+        y: 500
+        width: 451
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1720d90710832ee4c8c5a076ca188037
+      internalID: -1671178964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_Jump_ROB_Idle_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 451
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53ee46f555ba3aa4e9cf7728350c6e9f
+      internalID: -1056277423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_Jump_ROB_Idle_11
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 0
+        width: 451
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0a6c899439d48146b5999688eb1e144
+      internalID: -510049330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_Jump_ROB_Idle_12
+      rect:
+        serializedVersion: 2
+        x: 902
+        y: 0
+        width: 451
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f07810c126514d747a1ec3523fe32f8b
+      internalID: 1365452785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +392,20 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ROB_Jump_ROB_Idle_0: 1466622102
+      ROB_Jump_ROB_Idle_1: 1245045256
+      ROB_Jump_ROB_Idle_10: -1056277423
+      ROB_Jump_ROB_Idle_11: -510049330
+      ROB_Jump_ROB_Idle_12: 1365452785
+      ROB_Jump_ROB_Idle_2: 1766399562
+      ROB_Jump_ROB_Idle_3: -731233103
+      ROB_Jump_ROB_Idle_4: -1536543331
+      ROB_Jump_ROB_Idle_5: -1658949464
+      ROB_Jump_ROB_Idle_6: 676162242
+      ROB_Jump_ROB_Idle_7: 1755995450
+      ROB_Jump_ROB_Idle_8: 1283817384
+      ROB_Jump_ROB_Idle_9: -1671178964
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
