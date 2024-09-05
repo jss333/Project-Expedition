@@ -6547,7 +6547,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anchor: {fileID: 813618309}
   follow_offset: 1
-  chase_speed: 15
+  chaseSpeed: 3
+  currentSpeed: 0
+  accelRate: 2
+  R0Brb: {fileID: 0}
 --- !u!212 &168209122
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7442,7 +7445,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.21960784, g: 0.21960784, b: 0.21960784, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -7586,9 +7589,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7764e34761121f4e82ef623e3691454, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  despawnTimer: 0
+  timeToDespawn: 0
   rb: {fileID: 0}
   max_vel: 6
-  health: 0
   pointer: {fileID: 0}
   rot_to_pointer: 1
   fire:
@@ -8324,21 +8328,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d51353745af1b4922a3a135d4626faf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerRb: {fileID: 813618312}
-  speed: 5
-  jumpForce: 9
-  spriteRender: {fileID: 813618314}
-  groundCheck: {fileID: 1744589542}
+  groundCheckObj: {fileID: 0}
   groundLayer:
     serializedVersion: 2
     m_Bits: 256
-  maxJump: 2
-  wallLayer:
-    serializedVersion: 2
-    m_Bits: 512
-  wallCheck: {fileID: 253961404}
-  wallSlideSpeed: 0.5
-  wallJumpForce: 0
+  maxHorizontalVelocity: 0
+  groundJumpForce: 9
+  downGravityScaleFactor: 1.5
+  maxVerticalVelocity: 15
+  isAirJumpSkillAcquired: 1
+  airJumpForce: 9
+  maxTotalNumberOfJumps: 2
+  isGrounded: 0
+  jumpCount: 0
 --- !u!95 &813618311
 Animator:
   serializedVersion: 5
