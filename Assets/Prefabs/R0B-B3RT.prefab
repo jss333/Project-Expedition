@@ -438,21 +438,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d51353745af1b4922a3a135d4626faf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerRb: {fileID: 1625396044149619020}
-  speed: 5
-  jumpForce: 9
   spriteRender: {fileID: 7404772159482370178}
+  playerRb: {fileID: 1625396044149619020}
   groundCheck: {fileID: 7634073678044376022}
   groundLayer:
     serializedVersion: 2
     m_Bits: 256
-  maxJump: 2
+  wallCheck: {fileID: 1220596859696295229}
   wallLayer:
     serializedVersion: 2
     m_Bits: 512
-  wallCheck: {fileID: 1220596859696295229}
+  maxHorizontalVelocity: 5
+  jumpForce: 9
+  maxJump: 2
   wallSlideSpeed: 0.5
   wallJumpForce: 0
+  isGrounded: 0
+  isTouchingWall: 0
+  isWallSliding: 0
+  isWallJumping: 0
+  isFacingRight: 1
+  jumpCount: 0
 --- !u!114 &4569246080999924309
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -749,7 +755,7 @@ MonoBehaviour:
   acquired: 1
   duration: 0.7
   charge: 0
-  regen_rate: 0.1
+  regen_rate: 0.7
   on_cooldown: 0
   active: 0
 --- !u!212 &6363970654142636713

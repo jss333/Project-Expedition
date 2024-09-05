@@ -1,0 +1,1205 @@
+fileFormatVersion: 2
+guid: a1244f3f334c9bb4b9a974f17f671d94
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 500
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ROB_MiniBoss_Idle_ROB_Idle_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2784
+        width: 435
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 304db351931173748999229982e50c4d
+      internalID: -521690578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_MiniBoss_Idle_ROB_Idle_1
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 2784
+        width: 435
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c3c62af5a9db354cb9380f2ff9b0b2c
+      internalID: 1288602551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_MiniBoss_Idle_ROB_Idle_2
+      rect:
+        serializedVersion: 2
+        x: 870
+        y: 2784
+        width: 435
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45eada782d3845c4bb53936eb2dcb993
+      internalID: -646607286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_MiniBoss_Idle_ROB_Idle_3
+      rect:
+        serializedVersion: 2
+        x: 1305
+        y: 2784
+        width: 435
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cc2cebfcdd42614a8401a2d06ddc7f3
+      internalID: 1311562614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_MiniBoss_Idle_ROB_Idle_4
+      rect:
+        serializedVersion: 2
+        x: 1740
+        y: 2784
+        width: 435
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 915e296fddf16bf48a80175d33c5c453
+      internalID: 568962147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_MiniBoss_Idle_ROB_Idle_5
+      rect:
+        serializedVersion: 2
+        x: 2175
+        y: 2784
+        width: 435
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f7f2af02b5bdf9469abc680d4073836
+      internalID: 549604692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_MiniBoss_Idle_ROB_Idle_6
+      rect:
+        serializedVersion: 2
+        x: 2610
+        y: 2784
+        width: 435
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 750b52ee06ac0514ca915a57fac11fcc
+      internalID: 915240168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_MiniBoss_Idle_ROB_Idle_7
+      rect:
+        serializedVersion: 2
+        x: 3045
+        y: 2784
+        width: 435
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3efe833aac50d44db083de721d67454
+      internalID: 90916287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_MiniBoss_Idle_ROB_Idle_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2320
+        width: 435
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db3e9ee88f75f15438452af65ba99981
+      internalID: 2040510243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_MiniBoss_Idle_ROB_Idle_9
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 2320
+        width: 435
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a955f697d44e8504aba62c97c7ae111a
+      internalID: -566372119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_MiniBoss_Idle_ROB_Idle_10
+      rect:
+        serializedVersion: 2
+        x: 870
+        y: 2320
+        width: 435
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe76b704f3d845246b4b6303bd0fe69e
+      internalID: 1967234121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_MiniBoss_Idle_ROB_Idle_11
+      rect:
+        serializedVersion: 2
+        x: 1305
+        y: 2320
+        width: 435
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c3684ac84c59a541a0f84db39d6b864
+      internalID: 358131467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_MiniBoss_Idle_ROB_Idle_12
+      rect:
+        serializedVersion: 2
+        x: 1740
+        y: 2320
+        width: 435
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fa5fc4343a285d4aac359d01ceb51a4
+      internalID: 1176120430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_MiniBoss_Idle_ROB_Idle_13
+      rect:
+        serializedVersion: 2
+        x: 2175
+        y: 2320
+        width: 435
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03b3165f1b45ca44ea1262289b1bb299
+      internalID: -871493442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_MiniBoss_Idle_ROB_Idle_14
+      rect:
+        serializedVersion: 2
+        x: 2610
+        y: 2320
+        width: 435
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a922829aff415df44a6ce4cd60f79bed
+      internalID: -1229182193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_MiniBoss_Idle_ROB_Idle_15
+      rect:
+        serializedVersion: 2
+        x: 3045
+        y: 2320
+        width: 435
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af458e1f037bfe8428e57bdea5ecd773
+      internalID: 244346466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_MiniBoss_Idle_ROB_Idle_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1856
+        width: 435
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1dd3cb48d22a2a43a9d476017704cd0
+      internalID: -1418054039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_MiniBoss_Idle_ROB_Idle_17
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 1856
+        width: 435
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26edd9427682a744f85bf6e9a4eecefb
+      internalID: 933229620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_MiniBoss_Idle_ROB_Idle_18
+      rect:
+        serializedVersion: 2
+        x: 870
+        y: 1856
+        width: 435
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d4823c45173966489655a38cd85157b
+      internalID: -221060775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_MiniBoss_Idle_ROB_Idle_19
+      rect:
+        serializedVersion: 2
+        x: 1305
+        y: 1856
+        width: 435
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ada7a1b6479c9e4c98a3c01124f9652
+      internalID: 1722362923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_MiniBoss_Idle_ROB_Idle_20
+      rect:
+        serializedVersion: 2
+        x: 1740
+        y: 1856
+        width: 435
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 272f1b9dd56e845488999d629d45ddab
+      internalID: -210523362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_MiniBoss_Idle_ROB_Idle_21
+      rect:
+        serializedVersion: 2
+        x: 2175
+        y: 1856
+        width: 435
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12c131758a65faa4098764435ed0938a
+      internalID: -180842760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_MiniBoss_Idle_ROB_Idle_22
+      rect:
+        serializedVersion: 2
+        x: 2610
+        y: 1856
+        width: 435
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5824ba3756b38f4eb22dfb0536ceaa0
+      internalID: -1283104725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_MiniBoss_Idle_ROB_Idle_23
+      rect:
+        serializedVersion: 2
+        x: 3045
+        y: 1856
+        width: 435
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f92c2e233d14f449aec3204feedc359
+      internalID: 205180856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_MiniBoss_Idle_ROB_Idle_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1392
+        width: 435
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bbb0f1446016e04e821d64fb43ca678
+      internalID: -620509891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_MiniBoss_Idle_ROB_Idle_25
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 1392
+        width: 435
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e02e21112913e046a6e2318c38d04ed
+      internalID: -867980071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_MiniBoss_Idle_ROB_Idle_26
+      rect:
+        serializedVersion: 2
+        x: 870
+        y: 1392
+        width: 435
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 412f1da7fef6aa743a81456288d711fc
+      internalID: -721351724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_MiniBoss_Idle_ROB_Idle_27
+      rect:
+        serializedVersion: 2
+        x: 1305
+        y: 1392
+        width: 435
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b56e5b7f79a031d459b913d9380cbc58
+      internalID: -1018903206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_MiniBoss_Idle_ROB_Idle_28
+      rect:
+        serializedVersion: 2
+        x: 1740
+        y: 1392
+        width: 435
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3627e23d43e6b08459c89ffce5d9c234
+      internalID: -1718579132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_MiniBoss_Idle_ROB_Idle_29
+      rect:
+        serializedVersion: 2
+        x: 2175
+        y: 1392
+        width: 435
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e768b8a956d36141b82b86f9ca3c5fb
+      internalID: 177201335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_MiniBoss_Idle_ROB_Idle_30
+      rect:
+        serializedVersion: 2
+        x: 2610
+        y: 1392
+        width: 435
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbe22af49ea7aab42afc11612bf68af5
+      internalID: -1858455592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_MiniBoss_Idle_ROB_Idle_31
+      rect:
+        serializedVersion: 2
+        x: 3045
+        y: 1392
+        width: 435
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e9f54e019c589d4486f398ac0cbc597
+      internalID: -954098333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_MiniBoss_Idle_ROB_Idle_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 928
+        width: 435
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2aadef5ae476c064789a5cb4db9807a7
+      internalID: -1410618310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_MiniBoss_Idle_ROB_Idle_33
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 928
+        width: 435
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c5e43e08c0966346a7f2d0442e047d3
+      internalID: -1682977627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_MiniBoss_Idle_ROB_Idle_34
+      rect:
+        serializedVersion: 2
+        x: 870
+        y: 928
+        width: 435
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd72a13eb2e3c1343a91b0ac913a9b3a
+      internalID: 1708753068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_MiniBoss_Idle_ROB_Idle_35
+      rect:
+        serializedVersion: 2
+        x: 1305
+        y: 928
+        width: 435
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 932186edf2320df47afef898454d45ea
+      internalID: -567748363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_MiniBoss_Idle_ROB_Idle_36
+      rect:
+        serializedVersion: 2
+        x: 1740
+        y: 928
+        width: 435
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c06f991ad8014d4e92f8122f587eb42
+      internalID: -164856999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_MiniBoss_Idle_ROB_Idle_37
+      rect:
+        serializedVersion: 2
+        x: 2175
+        y: 928
+        width: 435
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c408ad511f111134dbc11d22ed7d4abb
+      internalID: 1332339514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_MiniBoss_Idle_ROB_Idle_38
+      rect:
+        serializedVersion: 2
+        x: 2610
+        y: 928
+        width: 435
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4d10fcfecd7eb14b9a7bb63539c5740
+      internalID: -1534874753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_MiniBoss_Idle_ROB_Idle_39
+      rect:
+        serializedVersion: 2
+        x: 3045
+        y: 928
+        width: 435
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd1951c82fd729f4c9781d1ba3019e80
+      internalID: -1247941080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_MiniBoss_Idle_ROB_Idle_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 464
+        width: 435
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7d70498ca91c164db21f05be7fb3323
+      internalID: 741674274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_MiniBoss_Idle_ROB_Idle_41
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 464
+        width: 435
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37663b4fe1fdb9e4db12fad051c18b81
+      internalID: 93032445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_MiniBoss_Idle_ROB_Idle_42
+      rect:
+        serializedVersion: 2
+        x: 870
+        y: 464
+        width: 435
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21eacc340696f884dab8665289a6f38c
+      internalID: -1293174021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_MiniBoss_Idle_ROB_Idle_43
+      rect:
+        serializedVersion: 2
+        x: 1305
+        y: 464
+        width: 435
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da5473006d9ab494ebac1cfe449ce64f
+      internalID: -2010772339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_MiniBoss_Idle_ROB_Idle_44
+      rect:
+        serializedVersion: 2
+        x: 1740
+        y: 464
+        width: 435
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbe55bb94bd5d724eae0fa80bebb0241
+      internalID: 397808154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_MiniBoss_Idle_ROB_Idle_45
+      rect:
+        serializedVersion: 2
+        x: 2175
+        y: 464
+        width: 435
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ed87577e83feb041a737ed12c808b80
+      internalID: -671653367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_MiniBoss_Idle_ROB_Idle_46
+      rect:
+        serializedVersion: 2
+        x: 2610
+        y: 464
+        width: 435
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de2aa2bb92f0aa343a1014697669ab73
+      internalID: -1008660416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_MiniBoss_Idle_ROB_Idle_47
+      rect:
+        serializedVersion: 2
+        x: 3045
+        y: 464
+        width: 435
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36b3bd3b3481a6142bf913048a92463e
+      internalID: 365983014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROB_MiniBoss_Idle_ROB_Idle_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 435
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1996965e7e596044c9f2a130edc7d1dc
+      internalID: -689376184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      ROB_MiniBoss_Idle_ROB_Idle_0: -521690578
+      ROB_MiniBoss_Idle_ROB_Idle_1: 1288602551
+      ROB_MiniBoss_Idle_ROB_Idle_10: 1967234121
+      ROB_MiniBoss_Idle_ROB_Idle_11: 358131467
+      ROB_MiniBoss_Idle_ROB_Idle_12: 1176120430
+      ROB_MiniBoss_Idle_ROB_Idle_13: -871493442
+      ROB_MiniBoss_Idle_ROB_Idle_14: -1229182193
+      ROB_MiniBoss_Idle_ROB_Idle_15: 244346466
+      ROB_MiniBoss_Idle_ROB_Idle_16: -1418054039
+      ROB_MiniBoss_Idle_ROB_Idle_17: 933229620
+      ROB_MiniBoss_Idle_ROB_Idle_18: -221060775
+      ROB_MiniBoss_Idle_ROB_Idle_19: 1722362923
+      ROB_MiniBoss_Idle_ROB_Idle_2: -646607286
+      ROB_MiniBoss_Idle_ROB_Idle_20: -210523362
+      ROB_MiniBoss_Idle_ROB_Idle_21: -180842760
+      ROB_MiniBoss_Idle_ROB_Idle_22: -1283104725
+      ROB_MiniBoss_Idle_ROB_Idle_23: 205180856
+      ROB_MiniBoss_Idle_ROB_Idle_24: -620509891
+      ROB_MiniBoss_Idle_ROB_Idle_25: -867980071
+      ROB_MiniBoss_Idle_ROB_Idle_26: -721351724
+      ROB_MiniBoss_Idle_ROB_Idle_27: -1018903206
+      ROB_MiniBoss_Idle_ROB_Idle_28: -1718579132
+      ROB_MiniBoss_Idle_ROB_Idle_29: 177201335
+      ROB_MiniBoss_Idle_ROB_Idle_3: 1311562614
+      ROB_MiniBoss_Idle_ROB_Idle_30: -1858455592
+      ROB_MiniBoss_Idle_ROB_Idle_31: -954098333
+      ROB_MiniBoss_Idle_ROB_Idle_32: -1410618310
+      ROB_MiniBoss_Idle_ROB_Idle_33: -1682977627
+      ROB_MiniBoss_Idle_ROB_Idle_34: 1708753068
+      ROB_MiniBoss_Idle_ROB_Idle_35: -567748363
+      ROB_MiniBoss_Idle_ROB_Idle_36: -164856999
+      ROB_MiniBoss_Idle_ROB_Idle_37: 1332339514
+      ROB_MiniBoss_Idle_ROB_Idle_38: -1534874753
+      ROB_MiniBoss_Idle_ROB_Idle_39: -1247941080
+      ROB_MiniBoss_Idle_ROB_Idle_4: 568962147
+      ROB_MiniBoss_Idle_ROB_Idle_40: 741674274
+      ROB_MiniBoss_Idle_ROB_Idle_41: 93032445
+      ROB_MiniBoss_Idle_ROB_Idle_42: -1293174021
+      ROB_MiniBoss_Idle_ROB_Idle_43: -2010772339
+      ROB_MiniBoss_Idle_ROB_Idle_44: 397808154
+      ROB_MiniBoss_Idle_ROB_Idle_45: -671653367
+      ROB_MiniBoss_Idle_ROB_Idle_46: -1008660416
+      ROB_MiniBoss_Idle_ROB_Idle_47: 365983014
+      ROB_MiniBoss_Idle_ROB_Idle_48: -689376184
+      ROB_MiniBoss_Idle_ROB_Idle_5: 549604692
+      ROB_MiniBoss_Idle_ROB_Idle_6: 915240168
+      ROB_MiniBoss_Idle_ROB_Idle_7: 90916287
+      ROB_MiniBoss_Idle_ROB_Idle_8: 2040510243
+      ROB_MiniBoss_Idle_ROB_Idle_9: -566372119
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

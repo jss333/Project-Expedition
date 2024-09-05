@@ -6571,6 +6571,12 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &205711569 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 537445668114935222, guid: 0772760fae0ba9942a8467087df62f4a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1064501093}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &235720619
 GameObject:
   m_ObjectHideFlags: 0
@@ -7104,6 +7110,12 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
+--- !u!1 &299361939 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 537445668114935222, guid: 0772760fae0ba9942a8467087df62f4a,
+    type: 3}
+  m_PrefabInstance: {fileID: 49449252}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &374767742
 GameObject:
   m_ObjectHideFlags: 0
@@ -9151,12 +9163,12 @@ PrefabInstance:
         type: 3}
       propertyPath: freeAnchors.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 205711569}
     - target: {fileID: 1339798397504330446, guid: 25133a2bb6d2a574899ebca381414b3d,
         type: 3}
       propertyPath: freeAnchors.Array.data[1]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 299361939}
     - target: {fileID: 1339798397504330446, guid: 25133a2bb6d2a574899ebca381414b3d,
         type: 3}
       propertyPath: freeAnchors.Array.data[2]
