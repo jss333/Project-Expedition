@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1700324868109992721}
   - component: {fileID: 3858255749189079412}
   - component: {fileID: 2768808380936731226}
+  - component: {fileID: 7067599934470063995}
   m_Layer: 6
   m_Name: B3RT
   m_TagString: Untagged
@@ -127,11 +128,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anchor: {fileID: 6148659644534077433}
+  R0Brb: {fileID: 1625396044149619020}
   follow_offset: 0.5
   chaseSpeed: 5
   currentSpeed: 0
   accelRate: 15
-  R0Brb: {fileID: 1625396044149619020}
 --- !u!114 &2768808380936731226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -144,12 +145,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7764e34761121f4e82ef623e3691454, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  despawnTimer: 0
-  timeToDespawn: 0
-  rb: {fileID: 0}
-  max_vel: 2
+  proj: {fileID: 3754720237877630620, guid: 3f882c3a1454e404ab51e926937c5465, type: 3}
   pointer: {fileID: 7671618368361461386}
-  rot_to_pointer: 1
+  rb: {fileID: 0}
   fire:
     m_Name: Fire
     m_Type: 0
@@ -184,10 +182,33 @@ MonoBehaviour:
       m_Action: Aim
       m_Flags: 0
     m_Flags: 0
-  proj: {fileID: 3754720237877630620, guid: 3f882c3a1454e404ab51e926937c5465, type: 3}
+  despawnTimer: 0
+  timeToDespawn: 0
+  max_vel: 2
+  rot_to_pointer: 1
   cd: 0.5
-  type: 0
-  MuzzleSpread: 0
+  cd_rm: 0
+--- !u!95 &7067599934470063995
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3072250601190182420}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5ebd3ebc6a3eb6242b6f3dee603a7b40, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &4283147244315553361
 GameObject:
   m_ObjectHideFlags: 0
@@ -438,26 +459,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d51353745af1b4922a3a135d4626faf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteRender: {fileID: 7404772159482370178}
-  playerRb: {fileID: 1625396044149619020}
-  groundCheck: {fileID: 7634073678044376022}
+  groundCheckObj: {fileID: 7634073678044376022}
   groundLayer:
     serializedVersion: 2
     m_Bits: 256
-  wallCheck: {fileID: 1220596859696295229}
-  wallLayer:
-    serializedVersion: 2
-    m_Bits: 512
   maxHorizontalVelocity: 5
-  jumpForce: 9
-  maxJump: 2
-  wallSlideSpeed: 0.5
-  wallJumpForce: 0
+  groundJumpForce: 9
+  downGravityScaleFactor: 1.5
+  maxVerticalVelocity: 15
+  isAirJumpSkillAcquired: 1
+  airJumpForce: 9
+  maxTotalNumberOfJumps: 2
   isGrounded: 0
-  isTouchingWall: 0
-  isWallSliding: 0
-  isWallJumping: 0
-  isFacingRight: 1
   jumpCount: 0
 --- !u!114 &4569246080999924309
 MonoBehaviour:

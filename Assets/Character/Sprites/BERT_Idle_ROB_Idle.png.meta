@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 979e6cd7967ac7949aa1d99edd8084c1
+guid: eff9a84cb72e2704ba96e4c428af52ea
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 473
+  spritePixelsToUnits: 340
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ROB_WalkTest_ROBWalk_0
+      name: BERT_Idle_ROB_Idle_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 1599
-        width: 433
-        height: 533
+        y: 1497
+        width: 450
+        height: 499
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5ae5e0d86a9f1ff41b953ff784379ebc
-      internalID: 1230847466
+      spriteID: abc9389aeff91bf4b942afd60c5470c6
+      internalID: 2144825499
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ROB_WalkTest_ROBWalk_1
+      name: BERT_Idle_ROB_Idle_1
       rect:
         serializedVersion: 2
-        x: 433
-        y: 1599
-        width: 433
-        height: 533
+        x: 450
+        y: 1497
+        width: 450
+        height: 499
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 78e7d0c49a6a2544bb8a9405798a17cc
-      internalID: 1162209578
+      spriteID: a0ad0d25d945e874787d3c5684947317
+      internalID: -1439257908
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ROB_WalkTest_ROBWalk_2
+      name: BERT_Idle_ROB_Idle_2
       rect:
         serializedVersion: 2
-        x: 866
-        y: 1599
-        width: 433
-        height: 533
+        x: 900
+        y: 1497
+        width: 450
+        height: 499
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f84496173d04ec4478613b79a369f42c
-      internalID: -1545495599
+      spriteID: b8fe986e2d2c8d24a94a38caf1141d8f
+      internalID: 1123916248
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ROB_WalkTest_ROBWalk_3
+      name: BERT_Idle_ROB_Idle_3
       rect:
         serializedVersion: 2
-        x: 1299
-        y: 1599
-        width: 433
-        height: 533
+        x: 1350
+        y: 1497
+        width: 450
+        height: 499
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,20 +187,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a3bd312cde74cc4ca01eb9c8752fa0b
-      internalID: -1895418551
+      spriteID: ce7e730981779224d80117172660dd69
+      internalID: 165412007
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ROB_WalkTest_ROBWalk_4
+      name: BERT_Idle_ROB_Idle_4
       rect:
         serializedVersion: 2
-        x: 1732
-        y: 1599
-        width: 433
-        height: 533
+        x: 1800
+        y: 1497
+        width: 450
+        height: 499
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,20 +208,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 32e4b4de5b5ca1e4baa2e4acb21c8e19
-      internalID: 17877958
+      spriteID: 20a6e9357fa60024599b6b7635ec9436
+      internalID: 669316159
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ROB_WalkTest_ROBWalk_5
+      name: BERT_Idle_ROB_Idle_5
       rect:
         serializedVersion: 2
-        x: 2165
-        y: 1599
-        width: 433
-        height: 533
+        x: 2250
+        y: 1497
+        width: 450
+        height: 499
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,146 +229,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 925ec983b02adca47bf792b6c12f7577
-      internalID: -1988104095
+      spriteID: 9f670e446dfbe0441aa5ef85cad6c8e1
+      internalID: -1255236014
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ROB_WalkTest_ROBWalk_6
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 1066
-        width: 433
-        height: 533
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: eb13209f4304c4f4e927794cf13f6cf1
-      internalID: 1438100091
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ROB_WalkTest_ROBWalk_7
-      rect:
-        serializedVersion: 2
-        x: 433
-        y: 1066
-        width: 433
-        height: 533
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1aa7432fc21ead949ad1f9cc34ade0eb
-      internalID: -163351785
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ROB_WalkTest_ROBWalk_8
-      rect:
-        serializedVersion: 2
-        x: 866
-        y: 1066
-        width: 433
-        height: 533
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b41f0f93ae0823445853d950a2a29a59
-      internalID: -245695938
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ROB_WalkTest_ROBWalk_9
-      rect:
-        serializedVersion: 2
-        x: 1299
-        y: 1066
-        width: 433
-        height: 533
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 593c8c3b44fc19049abc1cbf6311e5af
-      internalID: 1952892974
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ROB_WalkTest_ROBWalk_10
-      rect:
-        serializedVersion: 2
-        x: 1732
-        y: 1066
-        width: 433
-        height: 533
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f62750abfe1a6cf40987540f29fccb22
-      internalID: 421183694
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ROB_WalkTest_ROBWalk_11
-      rect:
-        serializedVersion: 2
-        x: 2165
-        y: 1066
-        width: 433
-        height: 533
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4d7e9bf079d86ee4e8665404161b8b6b
-      internalID: 1852692740
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ROB_WalkTest_ROBWalk_12
+      name: BERT_Idle_ROB_Idle_6
       rect:
         serializedVersion: 2
         x: 0
-        y: 533
-        width: 433
-        height: 533
+        y: 998
+        width: 450
+        height: 499
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -376,20 +250,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1e17a8fc61a3f9a4589198d187be8f2c
-      internalID: -612230646
+      spriteID: ac92b94a9701f5d43a862e6be6223c11
+      internalID: 858269762
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ROB_WalkTest_ROBWalk_13
+      name: BERT_Idle_ROB_Idle_7
       rect:
         serializedVersion: 2
-        x: 433
-        y: 533
-        width: 433
-        height: 533
+        x: 450
+        y: 998
+        width: 450
+        height: 499
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -397,20 +271,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: be0e61fd254dafa42854967e51b1846c
-      internalID: 686521290
+      spriteID: abaab5aab0316b64c8280d00ce1933af
+      internalID: 746274937
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ROB_WalkTest_ROBWalk_14
+      name: BERT_Idle_ROB_Idle_8
       rect:
         serializedVersion: 2
-        x: 866
-        y: 533
-        width: 433
-        height: 533
+        x: 900
+        y: 998
+        width: 450
+        height: 499
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -418,20 +292,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b37841f9de77ca846af15813f6247445
-      internalID: -2117538253
+      spriteID: 4cb213e1dcb919c44a40cf18ba16d294
+      internalID: -900200986
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ROB_WalkTest_ROBWalk_15
+      name: BERT_Idle_ROB_Idle_9
       rect:
         serializedVersion: 2
-        x: 1299
-        y: 533
-        width: 433
-        height: 533
+        x: 1350
+        y: 998
+        width: 450
+        height: 499
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -439,20 +313,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d998be5d4e3d7de4badafcb61fd59c5a
-      internalID: 398181723
+      spriteID: 4da76a5788d3bd14da353a1ab4a95972
+      internalID: -53179274
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ROB_WalkTest_ROBWalk_16
+      name: BERT_Idle_ROB_Idle_10
       rect:
         serializedVersion: 2
-        x: 1732
-        y: 533
-        width: 433
-        height: 533
+        x: 1800
+        y: 998
+        width: 450
+        height: 499
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -460,20 +334,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: efc00866d170f3e49b69020f1e4aad2c
-      internalID: 970801199
+      spriteID: b8c3d430285a0d44a8539129afe12f88
+      internalID: 1511012669
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ROB_WalkTest_ROBWalk_17
+      name: BERT_Idle_ROB_Idle_11
       rect:
         serializedVersion: 2
-        x: 2165
-        y: 533
-        width: 433
-        height: 533
+        x: 2250
+        y: 998
+        width: 450
+        height: 499
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -481,20 +355,146 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 36792ab220526394e80d1e09e3026fd4
-      internalID: -1864167363
+      spriteID: 161504d7bd1d3624395e6835500237c4
+      internalID: 851798348
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ROB_WalkTest_ROBWalk_18
+      name: BERT_Idle_ROB_Idle_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 499
+        width: 450
+        height: 499
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d16b8df3a9f31c8449830b7d83234e1b
+      internalID: 1869247823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BERT_Idle_ROB_Idle_13
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 499
+        width: 450
+        height: 499
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac6dc98caa13336448f8a4dc3867e77c
+      internalID: 2076766559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BERT_Idle_ROB_Idle_14
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 499
+        width: 450
+        height: 499
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a61827d9a9f52a441a3240ffcd420a71
+      internalID: -60346951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BERT_Idle_ROB_Idle_15
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 499
+        width: 450
+        height: 499
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 529564b6b09a32d4d87fce6bbe3e8ede
+      internalID: -59659960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BERT_Idle_ROB_Idle_16
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 499
+        width: 450
+        height: 499
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e5cd0ceacb9f8a45973e67054c15c93
+      internalID: -1378020878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BERT_Idle_ROB_Idle_17
+      rect:
+        serializedVersion: 2
+        x: 2250
+        y: 499
+        width: 450
+        height: 499
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa0bd19b87b24a7408156998e647104d
+      internalID: -423972604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BERT_Idle_ROB_Idle_18
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 433
-        height: 533
+        width: 450
+        height: 499
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -502,20 +502,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 653425ef4cbb8c3438025f5f61b16288
-      internalID: 1818966411
+      spriteID: 471b130abb2784b43a25e44033dabbbd
+      internalID: 1908541955
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ROB_WalkTest_ROBWalk_19
+      name: BERT_Idle_ROB_Idle_19
       rect:
         serializedVersion: 2
-        x: 433
+        x: 450
         y: 0
-        width: 433
-        height: 533
+        width: 450
+        height: 499
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -523,20 +523,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 63ca307100db9e741a4112eb7dd03b80
-      internalID: -1820601588
+      spriteID: 7d7e433d499c29a4687cb656f243d4c9
+      internalID: -1141556514
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ROB_WalkTest_ROBWalk_20
+      name: BERT_Idle_ROB_Idle_20
       rect:
         serializedVersion: 2
-        x: 866
+        x: 900
         y: 0
-        width: 433
-        height: 533
+        width: 450
+        height: 499
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -544,20 +544,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1ac446ee0fcd9ce4da3126dc73bd5193
-      internalID: -1358866253
+      spriteID: b0fe39384fef42547955bf95f3bb5a70
+      internalID: 732911031
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ROB_WalkTest_ROBWalk_21
+      name: BERT_Idle_ROB_Idle_21
       rect:
         serializedVersion: 2
-        x: 1299
+        x: 1350
         y: 0
-        width: 433
-        height: 533
+        width: 450
+        height: 499
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -565,20 +565,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 134f95357ecc0c94a86f801d4cd40cbe
-      internalID: 901717564
+      spriteID: 2a8d6a68c007bb9409ec0a52a61798fc
+      internalID: 1316297276
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ROB_WalkTest_ROBWalk_22
+      name: BERT_Idle_ROB_Idle_22
       rect:
         serializedVersion: 2
-        x: 1732
+        x: 1800
         y: 0
-        width: 433
-        height: 533
+        width: 450
+        height: 499
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -586,20 +586,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 130e81b39b2e21646b4405d7c0f87841
-      internalID: 1177465302
+      spriteID: b7e06b3437720364cb48badc229f52a5
+      internalID: 1174019906
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ROB_WalkTest_ROBWalk_23
+      name: BERT_Idle_ROB_Idle_23
       rect:
         serializedVersion: 2
-        x: 2165
+        x: 2250
         y: 0
-        width: 433
-        height: 533
+        width: 450
+        height: 499
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -607,8 +607,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2466927b6e04d8d4aa72b874dc788b94
-      internalID: -1350206173
+      spriteID: 9cfdf6f4d06e4034c8f7927577cf49ce
+      internalID: -1055683917
       vertices: []
       indices: 
       edges: []
@@ -624,30 +624,30 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      ROB_WalkTest_ROBWalk_0: 1230847466
-      ROB_WalkTest_ROBWalk_1: 1162209578
-      ROB_WalkTest_ROBWalk_10: 421183694
-      ROB_WalkTest_ROBWalk_11: 1852692740
-      ROB_WalkTest_ROBWalk_12: -612230646
-      ROB_WalkTest_ROBWalk_13: 686521290
-      ROB_WalkTest_ROBWalk_14: -2117538253
-      ROB_WalkTest_ROBWalk_15: 398181723
-      ROB_WalkTest_ROBWalk_16: 970801199
-      ROB_WalkTest_ROBWalk_17: -1864167363
-      ROB_WalkTest_ROBWalk_18: 1818966411
-      ROB_WalkTest_ROBWalk_19: -1820601588
-      ROB_WalkTest_ROBWalk_2: -1545495599
-      ROB_WalkTest_ROBWalk_20: -1358866253
-      ROB_WalkTest_ROBWalk_21: 901717564
-      ROB_WalkTest_ROBWalk_22: 1177465302
-      ROB_WalkTest_ROBWalk_23: -1350206173
-      ROB_WalkTest_ROBWalk_3: -1895418551
-      ROB_WalkTest_ROBWalk_4: 17877958
-      ROB_WalkTest_ROBWalk_5: -1988104095
-      ROB_WalkTest_ROBWalk_6: 1438100091
-      ROB_WalkTest_ROBWalk_7: -163351785
-      ROB_WalkTest_ROBWalk_8: -245695938
-      ROB_WalkTest_ROBWalk_9: 1952892974
+      BERT_Idle_ROB_Idle_0: 2144825499
+      BERT_Idle_ROB_Idle_1: -1439257908
+      BERT_Idle_ROB_Idle_10: 1511012669
+      BERT_Idle_ROB_Idle_11: 851798348
+      BERT_Idle_ROB_Idle_12: 1869247823
+      BERT_Idle_ROB_Idle_13: 2076766559
+      BERT_Idle_ROB_Idle_14: -60346951
+      BERT_Idle_ROB_Idle_15: -59659960
+      BERT_Idle_ROB_Idle_16: -1378020878
+      BERT_Idle_ROB_Idle_17: -423972604
+      BERT_Idle_ROB_Idle_18: 1908541955
+      BERT_Idle_ROB_Idle_19: -1141556514
+      BERT_Idle_ROB_Idle_2: 1123916248
+      BERT_Idle_ROB_Idle_20: 732911031
+      BERT_Idle_ROB_Idle_21: 1316297276
+      BERT_Idle_ROB_Idle_22: 1174019906
+      BERT_Idle_ROB_Idle_23: -1055683917
+      BERT_Idle_ROB_Idle_3: 165412007
+      BERT_Idle_ROB_Idle_4: 669316159
+      BERT_Idle_ROB_Idle_5: -1255236014
+      BERT_Idle_ROB_Idle_6: 858269762
+      BERT_Idle_ROB_Idle_7: 746274937
+      BERT_Idle_ROB_Idle_8: -900200986
+      BERT_Idle_ROB_Idle_9: -53179274
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

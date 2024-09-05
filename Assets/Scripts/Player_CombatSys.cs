@@ -3,24 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Player_CombatSys : MonoBehaviour
+public class B3RTCombat : MonoBehaviour
 {
-    public float despawnTimer = 0;
-    [SerializeField] private float timeToDespawn = 0;
-
-    public Rigidbody2D rb;
-    public float max_vel = 2;
+    [Header("References")]
+    public GameObject proj;
     public GameObject pointer;
-    public bool rot_to_pointer = true;
+    public Rigidbody2D rb;
+
+    [Header("Input Controls")]
     public InputAction fire;
     public InputAction aim;
 
-    public GameObject proj;
+    [Header("Parameters")]
+    public float despawnTimer = 0;
+    [SerializeField] private float timeToDespawn = 0;
+    public float max_vel = 2;
+    public bool rot_to_pointer = true;
     public float cd = .5F;
-    private float cd_rm = 0;
+    [SerializeField] private float cd_rm = 0;
 
-    public ProjectileType type = ProjectileType.Precision;
-    [SerializeField] private float MuzzleSpread = 0;
+    //public ProjectileType type = ProjectileType.Precision;
+    //[SerializeField] private float MuzzleSpread = 0;
    
 
     // Start is called before the first frame update
@@ -50,6 +53,11 @@ public class Player_CombatSys : MonoBehaviour
     }
 
     private void LaunchProjectile(){
+        Projectile_Sys p = ((GameObject)Instantiate(proj, transform.position, transform.rotation)).GetComponent<Projectile_Sys>();
+    }
+
+    /*
+    private void LaunchProjectile(){
         Projectile_Sys p;
         if(type == ProjectileType.Tracking){
             p = ((GameObject)Instantiate(proj, transform.position
@@ -61,4 +69,5 @@ public class Player_CombatSys : MonoBehaviour
         }
         p.type = type;
     }
+    */
 }
