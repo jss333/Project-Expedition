@@ -210,7 +210,7 @@ Transform:
   m_GameObject: {fileID: 6225117}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.537434, y: 3.9966712, z: -10}
+  m_LocalPosition: {x: -18.537434, y: 3.996388, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7484,21 +7484,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d51353745af1b4922a3a135d4626faf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerRb: {fileID: 391871779}
-  speed: 5
-  jumpForce: 9
   spriteRender: {fileID: 391871781}
+  playerRb: {fileID: 391871779}
   groundCheck: {fileID: 2145541352}
   groundLayer:
     serializedVersion: 2
     m_Bits: 256
-  maxJump: 2
+  wallCheck: {fileID: 1747790873}
   wallLayer:
     serializedVersion: 2
     m_Bits: 512
-  wallCheck: {fileID: 1747790873}
+  maxHorizontalVelocity: 6
+  jumpForce: 9
+  maxJump: 2
   wallSlideSpeed: 0.5
-  wallJumpForce: 0
+  wallJumpForce: 6
+  isGrounded: 0
+  isTouchingWall: 0
+  isWallSliding: 0
+  isWallJumping: 0
+  isFacingRight: 1
+  jumpCount: 0
 --- !u!95 &391871778
 Animator:
   serializedVersion: 5
@@ -8060,7 +8066,6 @@ MonoBehaviour:
   timeToDespawn: 0
   rb: {fileID: 0}
   max_vel: 2
-  health: 0
   pointer: {fileID: 1689075953}
   rot_to_pointer: 1
   fire:
@@ -8115,7 +8120,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anchor: {fileID: 391871775}
   follow_offset: 1
-  chase_speed: 15
+  chaseSpeed: 3
+  currentSpeed: 0
+  accelRate: 2
+  R0Brb: {fileID: 0}
 --- !u!212 &689884692
 SpriteRenderer:
   m_ObjectHideFlags: 0
