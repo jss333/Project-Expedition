@@ -147,47 +147,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   proj: {fileID: 3754720237877630620, guid: 3f882c3a1454e404ab51e926937c5465, type: 3}
   pointer: {fileID: 7671618368361461386}
-  rb: {fileID: 0}
-  fire:
-    m_Name: Fire
+  fireInput:
+    m_Name: Fire Input
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: 63a11645-0796-4d74-ab81-45857d0fdf50
+    m_Id: f10fbd21-44c5-467a-86df-352697234c8f
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings:
     - m_Name: 
-      m_Id: 48ebfc07-e639-42bc-b4f1-ca8756d2317d
+      m_Id: e187a6cd-b499-4db1-9e16-d76eaa51cc7a
       m_Path: <Mouse>/leftButton
       m_Interactions: 
       m_Processors: 
       m_Groups: 
-      m_Action: Fire
+      m_Action: Fire Input
       m_Flags: 0
     m_Flags: 0
-  aim:
-    m_Name: Aim
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 8b2ede0c-e8ee-4051-b315-681937a2a497
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: 60f6fe77-b656-4eba-8a9a-60c98f04e56d
-      m_Path: <Mouse>/position
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Aim
-      m_Flags: 0
-    m_Flags: 0
-  despawnTimer: 0
-  timeToDespawn: 0
-  max_vel: 2
-  rot_to_pointer: 1
-  cd: 0.5
-  cd_rm: 0
+  shotCooldownSec: 0.1
 --- !u!95 &7067599934470063995
 Animator:
   serializedVersion: 5
@@ -490,11 +467,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   currentHealth: 0
-  currentEnergy: 0
-  currentArmor: 0
   healthBar: {fileID: 0}
-  energyShield: {fileID: 0}
-  armorDial: {fileID: 0}
 --- !u!82 &9066354500192235127
 AudioSource:
   m_ObjectHideFlags: 0

@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 5054406633811776107}
   - component: {fileID: 350023958827863342}
   - component: {fileID: -8503506634843572071}
-  - component: {fileID: -5780242711413554846}
   m_Layer: 0
   m_Name: PrecisionProjectile
   m_TagString: Projectile
@@ -180,15 +179,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!114 &-5780242711413554846
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3754720237877630620}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e6fb0a34c90d4342b7f580fd044e1fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
