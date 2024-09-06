@@ -800,7 +800,7 @@ GameObject:
   - component: {fileID: 3277895438968704545}
   - component: {fileID: 880131468012292517}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Health Bar Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -853,7 +853,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 57682588c42a7624ca2be467445f2515, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e4a8936559d10f6429581e55eacd55a5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -875,7 +875,7 @@ GameObject:
   - component: {fileID: 4729970807209041803}
   - component: {fileID: 2342176316402791918}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: Health Bar Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
