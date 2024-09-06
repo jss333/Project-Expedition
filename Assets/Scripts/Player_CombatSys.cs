@@ -8,19 +8,23 @@ public class B3RTCombat : MonoBehaviour
     [Header("References")]
     public GameObject proj;
     public GameObject pointer;
+    private RandomPitchAudioSource audioSource;
 
     [Header("Input Controls")]
     public InputAction fireInput;
 
     [Header("Parameters")]
-    public float shotCooldownSec = 0.1f;
-    private float shotCoolDownTimer = 0;
+    public float shotCooldownSec = 0.2f;
+    private float timeOfLastShot;
+    public AudioClip shotSFX;
    
 
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = GetComponent<RandomPitchAudioSource>();
         fireInput.Enable();
+        timeOfLastShot = Time.time - shotCooldownSec;
     }
 
 
@@ -34,17 +38,12 @@ public class B3RTCombat : MonoBehaviour
 
     private void HandleFireInput()
     {
-        if (shotCoolDownTimer <= 0)
+        bool canFireAgain = Time.time - timeOfLastShot >= shotCooldownSec;
+        if (fireInput.IsPressed() && canFireAgain)
         {
-            if (fireInput.IsPressed())
-            {
-                LaunchProjectile();
-                shotCoolDownTimer = shotCooldownSec;
-            }
-        }
-        else
-        {
-            shotCoolDownTimer -= Time.deltaTime;
+            timeOfLastShot = Time.time;
+            LaunchProjectile();
+            audioSource.PlayAudioWithRandomPitch(shotSFX);
         }
     }
 
