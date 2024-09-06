@@ -49,29 +49,35 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        CheckIfPlayerIsGrounded();
+        ResetJumpCountIfGrounded();
         UpdateGravityScaleFactor();
-        ResetJumpCountTo0IfPlayerIsGrounded();
         HandleHorizontalInput();
         HandleJumpInput();
         ClampVerticalVelocity();
-        SetAnimatorParameters();
     }
 
-    private void SetAnimatorParameters(){
-        if(isGrounded){
-            if(Input.GetAxisRaw("Horizontal") != 0){
-                playerAnimator.SetBool("isWalking", true);
-            }
-            else{
-                playerAnimator.SetBool("isWalking", false);
-            }
-        }
-        else{
-            if(playerRb.velocity.y > 0){
-                playerAnimator.SetTrigger("isJumping");
-            }
-            else{
-                playerAnimator.SetTrigger("isFalling");
+
+    private void CheckIfPlayerIsGrounded()
+    {
+        bool playerIsAscending = playerRb.velocity.y > 0;
+        isGrounded = !playerIsAscending && IsGroundCheckObjTouchingGroundLayer();
+        playerAnimator.SetBool("isGrounded", isGrounded);
+    }
+
+    private bool IsGroundCheckObjTouchingGroundLayer()
+    {
+        return Physics2D.OverlapCircle(groundCheckObj.position, 0.2f, groundLayer) != null;
+    }
+
+
+    private void ResetJumpCountIfGrounded()
+    {
+        if (jumpCount != 0)
+        {
+            if (isGrounded)
+            {
+                jumpCount = 0;
             }
         }
     }
@@ -81,42 +87,20 @@ public class PlayerMovement : MonoBehaviour
         if(playerRb.velocity.y < 0)
         {
             playerRb.gravityScale = originalGravityScale * downGravityScaleFactor;
+            playerAnimator.SetBool("isFalling", true);
         }
         else
         {
             playerRb.gravityScale = originalGravityScale;
+            playerAnimator.SetBool("isFalling", false);
         }
     }
-
-    private void ResetJumpCountTo0IfPlayerIsGrounded()
-    {
-        if (jumpCount != 0)
-        {
-            if (IsPlayerGrounded())
-            {
-                jumpCount = 0;
-                playerAnimator.SetTrigger("isGrounded");
-            }
-        }
-    }
-
-    private bool IsPlayerGrounded()
-    {
-        bool playerIsAscending = playerRb.velocity.y > 0;
-        isGrounded = !playerIsAscending && IsGroundCheckObjTouchingGroundLayer();
-        return isGrounded;
-    }
-
-    private bool IsGroundCheckObjTouchingGroundLayer()
-    {
-        return Physics2D.OverlapCircle(groundCheckObj.position, 0.2f, groundLayer) != null;
-    }
-
 
     private void HandleHorizontalInput()
     {
         float horizontalInput = Input.GetAxisRaw("Horizontal");
         playerRb.velocity = new Vector2(horizontalInput * maxHorizontalVelocity, playerRb.velocity.y);
+        playerAnimator.SetBool("isWalking", horizontalInput != 0);
         FlipSpriteBasedOnHorizontalInput(horizontalInput);
     }
     private void FlipSpriteBasedOnHorizontalInput(float horizontalInput)
@@ -130,15 +114,17 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetButtonDown("Jump"))
         {
-            if (IsPlayerGrounded())
+            if (isGrounded)
             {
                 playerRb.velocity = new Vector2(playerRb.velocity.x, groundJumpForce);
                 jumpCount++;
+                playerAnimator.SetTrigger("jumped");
             }
             else if (isAirJumpSkillAcquired && (jumpCount < maxTotalNumberOfJumps))
             {
                 playerRb.velocity = new Vector2(playerRb.velocity.x, airJumpForce);
                 jumpCount++;
+                playerAnimator.SetTrigger("jumped");
             }
         }
 
