@@ -25,6 +25,7 @@ public class BossController : MonoBehaviour
 
         // Initialize boss health
         currentHealth = maxHealth;
+        bossAnimator.SetInteger("bossHealth", currentHealth);
         healthBar.SetMaxHealth(maxHealth);  // Set the max health for the health bar
     }
 
@@ -37,10 +38,6 @@ public class BossController : MonoBehaviour
             ShootOrb();
             shootTimer = 0f;
         }
-
-        // Update boss animation based on health
-        bossAnimator.SetInteger("bossHealth", currentHealth);
-
     }
 
     void ShootOrb()
@@ -53,8 +50,7 @@ public class BossController : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
-
-        // Update the health bar UI
+        bossAnimator.SetInteger("bossHealth", currentHealth);
         healthBar.SetHealth(currentHealth);
 
         if (currentHealth <= 0)
@@ -65,12 +61,6 @@ public class BossController : MonoBehaviour
 
     void Die()
     {
-        // Optional: Trigger death animation or state
-        Destroy(this.gameObject);  // Destroy the boss object when health reaches 0
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        return;
+        Destroy(this.gameObject);
     }
 }
