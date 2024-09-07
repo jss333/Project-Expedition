@@ -8221,6 +8221,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1749467903940575023, guid: bfe30e0a894d02d488d00f5203b8ec9a,
+        type: 3}
+      propertyPath: maxPitch
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1749467903940575023, guid: bfe30e0a894d02d488d00f5203b8ec9a,
+        type: 3}
+      propertyPath: minPitch
+      value: 1.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 2768808380936731226, guid: bfe30e0a894d02d488d00f5203b8ec9a,
+        type: 3}
+      propertyPath: shotIntervalSec
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 4569246080999924309, guid: bfe30e0a894d02d488d00f5203b8ec9a,
         type: 3}
       propertyPath: healthBar

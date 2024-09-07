@@ -166,7 +166,7 @@ MonoBehaviour:
       m_Action: Fire Input
       m_Flags: 0
     m_Flags: 0
-  shotCooldownSec: 0.2
+  shotIntervalSec: 0.05
   shotSFX: {fileID: 8300000, guid: f28b44f0ad0579741855d66eeb145a5e, type: 3}
 --- !u!95 &7067599934470063995
 Animator:
@@ -297,8 +297,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13590b08c384fdb458d29e42fe290529, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minPitch: 0.95
-  maxPitch: 1.05
+  minPitch: 1.05
+  maxPitch: 1.25
 --- !u!1 &4283147244315553361
 GameObject:
   m_ObjectHideFlags: 0
