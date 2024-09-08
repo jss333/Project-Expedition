@@ -1,16 +1,15 @@
 using UnityEngine;
 
-public class Projectile_Sys : MonoBehaviour
+public class PlayerProjectile : MonoBehaviour
 {
-    [Header("Movement Properties")]
-    public float speed = 20f;
-    public int damageAmt = 2;
+    private int damageAmt = 2;
 
 
-    void Start()
+    public void SetVelocityAndDamageAmt(float speed, int damageAmt)
     {
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
         rb.velocity = this.transform.right * speed;
+        this.damageAmt = damageAmt;
     }
 
 

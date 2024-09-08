@@ -147,7 +147,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7764e34761121f4e82ef623e3691454, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  proj: {fileID: 3754720237877630620, guid: 3f882c3a1454e404ab51e926937c5465, type: 3}
+  projectilePrefab: {fileID: 3975750347239968239, guid: 3f882c3a1454e404ab51e926937c5465,
+    type: 3}
   pointer: {fileID: 7671618368361461386}
   fireInput:
     m_Name: Fire Input
@@ -166,6 +167,8 @@ MonoBehaviour:
       m_Action: Fire Input
       m_Flags: 0
     m_Flags: 0
+  shotDmg: 10
+  shotSpeed: 20
   shotIntervalSec: 0.05
   shotSFX: {fileID: 8300000, guid: f28b44f0ad0579741855d66eeb145a5e, type: 3}
 --- !u!95 &7067599934470063995

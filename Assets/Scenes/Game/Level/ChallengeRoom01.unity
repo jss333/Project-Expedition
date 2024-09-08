@@ -8231,11 +8231,6 @@ PrefabInstance:
       propertyPath: minPitch
       value: 1.05
       objectReference: {fileID: 0}
-    - target: {fileID: 2768808380936731226, guid: bfe30e0a894d02d488d00f5203b8ec9a,
-        type: 3}
-      propertyPath: shotIntervalSec
-      value: 0.05
-      objectReference: {fileID: 0}
     - target: {fileID: 4569246080999924309, guid: bfe30e0a894d02d488d00f5203b8ec9a,
         type: 3}
       propertyPath: healthBar
@@ -9635,6 +9630,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Boss
+      objectReference: {fileID: 0}
+    - target: {fileID: 2342176316402791918, guid: 88669eb52a11c4f45b479ec3df6d074b,
+        type: 3}
+      propertyPath: m_FillAmount
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3062474991226534520, guid: 88669eb52a11c4f45b479ec3df6d074b,
         type: 3}

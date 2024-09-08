@@ -217,7 +217,7 @@ MonoBehaviour:
   beatenUpSprite: {fileID: 21300000, guid: 133a4b7198ac9f946a30c2990d0ecd84, type: 3}
   orbSpeed: 5
   shootInterval: 1
-  maxHealth: 100
+  maxHealth: 5000
   currentHealth: 0
   healthBar: {fileID: 1064760652760908610}
 --- !u!95 &3074926451981710199

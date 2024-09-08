@@ -3,23 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class B3RTCombat : MonoBehaviour
+public class PlayerBasicShot : MonoBehaviour
 {
     [Header("References")]
-    public GameObject proj;
+    public PlayerProjectile projectilePrefab;
     public GameObject pointer;
     private RandomPitchAudioSource audioSource;
 
     [Header("Input Controls")]
     public InputAction fireInput;
 
-    [Header("Parameters")]
+    [Header("Basic Shot Parameters")]
+    public int shotDmg = 10;
+    public float shotSpeed = 20f;
     public float shotIntervalSec = 0.05f;
     private float timeOfLastShot;
     public AudioClip shotSFX;
    
 
-    // Start is called before the first frame update
     void Start()
     {
         audioSource = GetComponent<RandomPitchAudioSource>();
@@ -28,11 +29,17 @@ public class B3RTCombat : MonoBehaviour
     }
 
 
-    // Update is called once per frame
     void Update()
     {
+        RotateTowardsPointer();
         HandleFireInput();
-        RotateSpriteTowardsPointer();
+    }
+
+
+    private void RotateTowardsPointer()
+    {
+        float angle = Vector2.SignedAngle(transform.right, Vector3.Normalize(pointer.transform.position - this.transform.position));
+        this.transform.rotation *= Quaternion.Euler(0, 0, angle);
     }
 
 
@@ -53,13 +60,7 @@ public class B3RTCombat : MonoBehaviour
 
     private void LaunchProjectile()
     {
-        Instantiate(proj, transform.position, transform.rotation);
-    }
-
-
-    private void RotateSpriteTowardsPointer()
-    {
-        float angle = Vector2.SignedAngle(transform.right, Vector3.Normalize(pointer.transform.position - this.transform.position));
-        this.transform.rotation *= Quaternion.Euler(0, 0, angle);
+        PlayerProjectile proj = Instantiate(projectilePrefab, transform.position, transform.rotation);
+        proj.SetVelocityAndDamageAmt(shotSpeed, shotDmg);
     }
 }
