@@ -9,6 +9,7 @@ public class BossController : MonoBehaviour
     public Transform playerPosition;
     public HealthBar healthBar;
     private Animator bossAnimator;
+    private RandomPitchAudioSource audioSource;
 
     [Header("Parameters")]
     public int maxHealth = 100;
@@ -18,11 +19,13 @@ public class BossController : MonoBehaviour
     public float orbSpeed = 5f;
     public float orbShotIntervalSec = 2f;
     private float shotTimer = 0f;
+    public AudioClip orbShotSFX;
 
-    
+
     void Start()
     {
         bossAnimator = GetComponent<Animator>();
+        audioSource = GetComponent<RandomPitchAudioSource>();
 
         // Initialize boss health
         currentHealth = maxHealth;
@@ -46,6 +49,7 @@ public class BossController : MonoBehaviour
         Vector2 direction = (Vector2)Vector3.Normalize(playerPosition.position - this.transform.position);
         GameObject orb = Instantiate(orbPrefab, transform.position, Quaternion.identity);
         orb.GetComponent<Rigidbody2D>().velocity = direction * orbSpeed;
+        audioSource.PlayAudioWithRandomPitch(orbShotSFX);
     }
 
     public void TakeDamage(int damage)
