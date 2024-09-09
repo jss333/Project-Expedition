@@ -4,14 +4,19 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public int maxHealth = 100;
-
-    public int currentHealth;
-
+    [Header("References")]
     public HealthBar healthBar;
+    private RandomPitchAudioSource audioSource;
+
+    [Header("Parameters")]
+    public int maxHealth = 200;
+    public int currentHealth;
+    public AudioClip damageTakenSFX;
+
 
     void Start()
     {
+        audioSource = GetComponent<RandomPitchAudioSource>();
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
     }
@@ -20,5 +25,6 @@ public class PlayerHealth : MonoBehaviour
     {
         currentHealth -= healthdamage;
         healthBar.SetHealth(currentHealth);
+        audioSource.PlayAudioWithNormalPitch(damageTakenSFX);
     }
 }

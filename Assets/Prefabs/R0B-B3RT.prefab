@@ -581,9 +581,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f859f1b7833944f53a2d879acc8ea528, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
-  currentHealth: 0
   healthBar: {fileID: 0}
+  maxHealth: 200
+  currentHealth: 0
+  damageTakenSFX: {fileID: 8300000, guid: 3a81da651cd427649b01552ba2f905db, type: 3}
 --- !u!82 &9066354500192235127
 AudioSource:
   m_ObjectHideFlags: 0
