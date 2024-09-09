@@ -47,6 +47,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 139219121
+    locked: 0
+  - name: Ground Wall Ceiling
+    uniqueID: 3788151589
+    locked: 0
+  - name: Decoration
+    uniqueID: 385069025
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
