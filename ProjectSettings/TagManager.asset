@@ -17,26 +17,26 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Background
+  - 
   - Water
   - UI
-  - Level
-  - Ground Check
   - Ground
-  - Wall
-  - Wall Check
-  - Follower
-  - Team0
-  - Team1
-  - Team2
-  - Team3
-  - CameraBoundary
-  - boundary
-  - LevelChange
-  - EnemyProjectile
-  - Boss
   - Player
-  - Pointer
+  - Player Projectile
+  - Boss
+  - Enemy Projectile
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 

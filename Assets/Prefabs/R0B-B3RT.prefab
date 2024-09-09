@@ -557,7 +557,7 @@ MonoBehaviour:
   groundCheckObj: {fileID: 7634073678044376022}
   groundLayer:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 64
   maxHorizontalVelocity: 5
   groundJumpForce: 9
   downGravityScaleFactor: 1.5
