@@ -1017,7 +1017,7 @@ GameObject:
   - component: {fileID: 473839900}
   - component: {fileID: 473839899}
   - component: {fileID: 473839898}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Wall and Ceiling
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2257,7 +2257,7 @@ PrefabInstance:
     - target: {fileID: 2430612247497346835, guid: ff445c267f388de4ab957baba456541b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.35
+      value: 1.77
       objectReference: {fileID: 0}
     - target: {fileID: 2430612247497346835, guid: ff445c267f388de4ab957baba456541b,
         type: 3}
@@ -2550,12 +2550,12 @@ PrefabInstance:
     - target: {fileID: 2430612247497346835, guid: ff445c267f388de4ab957baba456541b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.57
+      value: -5.29
       objectReference: {fileID: 0}
     - target: {fileID: 2430612247497346835, guid: ff445c267f388de4ab957baba456541b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.7
+      value: 3.72
       objectReference: {fileID: 0}
     - target: {fileID: 2430612247497346835, guid: ff445c267f388de4ab957baba456541b,
         type: 3}
@@ -10426,7 +10426,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1665804692
 Transform:
   m_ObjectHideFlags: 0

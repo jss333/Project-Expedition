@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -8503506634843572071}
   - component: {fileID: 3975750347239968239}
   - component: {fileID: -5543015421844513631}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PlayerBasicShotProjectile
   m_TagString: Projectile
   m_Icon: {fileID: 0}
@@ -149,7 +149,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 5
   m_GravityScale: 0
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 82e139a332db2f3468d1091d9d8ee29f, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -172,6 +172,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1395b082ac3a184ea7334733189f59c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  layersToCollideWith:
+    serializedVersion: 2
+    m_Bits: 2624
 --- !u!114 &-5543015421844513631
 MonoBehaviour:
   m_ObjectHideFlags: 0
