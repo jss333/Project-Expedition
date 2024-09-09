@@ -8,6 +8,7 @@ public class BossController : MonoBehaviour
     public Transform orbSourcePosition;
     public Transform playerPosition;
     public HealthBar healthBar;
+    public ChallengeRoomBGM challengeRoomBGM;
     private Animator bossAnimator;
     private RandomPitchAudioSource audioSource;
     private System.Random random;
@@ -16,6 +17,9 @@ public class BossController : MonoBehaviour
     public int maxHealth = 5000;
     public int currentHealth;
     public float hurtStateHealthPercent = 50f;
+    private bool hurtStateTriggered = false;
+    public float bgmChangeHealthPercent = 40f;
+    private bool bgmChangeTriggered = false;
     public AudioClip damageTakenSFX;
     public float damageTakenSFXCooldown = 0.2f;
     private float lastDamageTakenSFXPlayTime = -Mathf.Infinity;
@@ -141,14 +145,23 @@ public class BossController : MonoBehaviour
     {
         currentHealth -= damage;
         healthBar.SetHealth(currentHealth);
-        if ((float)currentHealth/maxHealth <= hurtStateHealthPercent/100)
+        PlayDamageTakenSFXIfEnoughCooldownTimeHasPassed();
+
+        if (!hurtStateTriggered && CurrentHealthPercentLessThan(hurtStateHealthPercent))
         {
             bossAnimator.SetTrigger("bossHurt");
+            hurtStateTriggered = true;
         }
-        PlayDamageTakenSFXIfEnoughCooldownTimeHasPassed();
+
+        if (!bgmChangeTriggered && CurrentHealthPercentLessThan(bgmChangeHealthPercent))
+        {
+            challengeRoomBGM.PlaySecondHalfBGM();
+            bgmChangeTriggered = true;
+        }
 
         if (currentHealth <= 0)
         {
+            challengeRoomBGM.PlayVictoryBGM();
             Die();
         }
     }
@@ -160,6 +173,11 @@ public class BossController : MonoBehaviour
             audioSource.PlayAudioWithRandomPitch(damageTakenSFX);
             lastDamageTakenSFXPlayTime = Time.time;
         }
+    }
+
+    private bool CurrentHealthPercentLessThan(float thresholdPercent)
+    {
+        return (float)currentHealth / maxHealth <= thresholdPercent / 100;
     }
 
     private void Die()
