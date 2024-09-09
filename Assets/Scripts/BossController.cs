@@ -10,6 +10,7 @@ public class BossController : MonoBehaviour
     public HealthBar healthBar;
     private Animator bossAnimator;
     private RandomPitchAudioSource audioSource;
+    private System.Random random;
 
     [Header("Parameters")]
     public int maxHealth = 100;
@@ -17,8 +18,9 @@ public class BossController : MonoBehaviour
 
     [Header("Parameters - Orb")]
     public float orbSpeed = 5f;
-    public float orbShotIntervalSec = 2f;
-    private float shotTimer = 0f;
+    public float minShotIntervalSec = 0.7f;
+    public float maxShotIntervalSec = 1.3f;
+    private float nextShotTime = 0f;
     public AudioClip orbShotSFX;
 
 
@@ -26,21 +28,21 @@ public class BossController : MonoBehaviour
     {
         bossAnimator = GetComponent<Animator>();
         audioSource = GetComponent<RandomPitchAudioSource>();
+        random = new System.Random();
 
-        // Initialize boss health
         currentHealth = maxHealth;
         bossAnimator.SetInteger("bossHealth", currentHealth);
-        healthBar.SetMaxHealth(maxHealth);  // Set the max health for the health bar
+        healthBar.SetMaxHealth(maxHealth);
+
+        nextShotTime = Time.time + 3f;
     }
 
     void Update()
     {
-        shotTimer += Time.deltaTime;
-
-        if (shotTimer >= orbShotIntervalSec)
+        if (Time.time >= nextShotTime)
         {
             ShootOrb();
-            shotTimer = 0f;
+            nextShotTime += GetRandomFloat(minShotIntervalSec, maxShotIntervalSec);
         }
     }
 
@@ -50,6 +52,11 @@ public class BossController : MonoBehaviour
         GameObject orb = Instantiate(orbPrefab, transform.position, Quaternion.identity);
         orb.GetComponent<Rigidbody2D>().velocity = direction * orbSpeed;
         audioSource.PlayAudioWithRandomPitch(orbShotSFX);
+    }
+
+    private float GetRandomFloat(float min, float max)
+    {
+        return (float)(min + (random.NextDouble() * (max - min)));
     }
 
     public void TakeDamage(int damage)
