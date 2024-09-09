@@ -17,7 +17,8 @@ public class BossController : MonoBehaviour
     public int currentHealth;
 
     [Header("Parameters - Orb")]
-    public float orbSpeed = 5f;
+    public float minOrbSpeed = 4.5f;
+    public float maxOrbSpeed = 5.5f;
     public float minShotIntervalSec = 0.7f;
     public float maxShotIntervalSec = 1.3f;
     private float nextShotTime = 0f;
@@ -50,7 +51,7 @@ public class BossController : MonoBehaviour
     {
         Vector2 direction = (Vector2)Vector3.Normalize(playerPosition.position - this.transform.position);
         GameObject orb = Instantiate(orbPrefab, transform.position, Quaternion.identity);
-        orb.GetComponent<Rigidbody2D>().velocity = direction * orbSpeed;
+        orb.GetComponent<Rigidbody2D>().velocity = direction * GetRandomFloat(minOrbSpeed, maxOrbSpeed);
         audioSource.PlayAudioWithRandomPitch(orbShotSFX);
     }
 
