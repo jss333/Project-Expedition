@@ -582,7 +582,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 0}
-  maxHealth: 200
+  robBertParentObj: {fileID: 6965143306446923476}
+  challengeRoomBGM: {fileID: 0}
+  maxHealth: 150
   currentHealth: 0
   damageTakenSFX: {fileID: 8300000, guid: 3a81da651cd427649b01552ba2f905db, type: 3}
 --- !u!82 &9066354500192235127

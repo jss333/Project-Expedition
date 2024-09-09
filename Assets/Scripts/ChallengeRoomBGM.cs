@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,7 @@ public class ChallengeRoomBGM : MonoBehaviour
     public AudioClip firstHalfBGM;
     public AudioClip secondHalfBGM;
     public AudioClip victoryBGM;
+    public AudioClip defeatBGM;
 
     void Start()
     {
@@ -24,6 +26,11 @@ public class ChallengeRoomBGM : MonoBehaviour
     public void PlayVictoryBGM()
     {
         StopAndPlayNewClip(victoryBGM);
+    }
+
+    public void PlayDefeatBGM()
+    {
+        StopAndPlayNewClip(defeatBGM);
     }
 
     private void StopAndPlayNewClip(AudioClip clip)

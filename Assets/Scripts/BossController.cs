@@ -55,7 +55,15 @@ public class BossController : MonoBehaviour
 
     void Update()
     {
-        ShootOrbIfTimeForNextShot();
+        if (PlayerIsAlive())
+        {
+            ShootOrbIfTimeForNextShot();
+        }
+    }
+
+    private bool PlayerIsAlive()
+    {
+        return playerPosition != null;
     }
 
     private void ShootOrbIfTimeForNextShot()

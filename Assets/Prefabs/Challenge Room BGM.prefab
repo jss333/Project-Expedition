@@ -144,3 +144,4 @@ MonoBehaviour:
   firstHalfBGM: {fileID: 8300000, guid: 77a4e245bcc6a4a4f8176c6ce12c925e, type: 3}
   secondHalfBGM: {fileID: 8300000, guid: 4981800a94a2f4d42934ade672c41767, type: 3}
   victoryBGM: {fileID: 8300000, guid: 17447c87425e0ee49be88dc04b8db6b8, type: 3}
+  defeatBGM: {fileID: 8300000, guid: 1fb13e6e3a25c594db3766d90b7571bf, type: 3}
