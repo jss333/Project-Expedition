@@ -13,8 +13,11 @@ public class BossController : MonoBehaviour
     private System.Random random;
 
     [Header("Parameters")]
-    public int maxHealth = 100;
+    public int maxHealth = 5000;
     public int currentHealth;
+    public AudioClip damageTakenSFX;
+    public float damageTakenSFXCooldown = 0.2f;
+    private float lastDamageTakenSFXPlayTime = -Mathf.Infinity;
 
     [Header("Parameters - Orb")]
     public GameObject singleOrbPrefab;
@@ -139,10 +142,20 @@ public class BossController : MonoBehaviour
         currentHealth -= damage;
         bossAnimator.SetInteger("bossHealth", currentHealth);
         healthBar.SetHealth(currentHealth);
+        PlayDamageTakenSFXIfEnoughCooldownTimeHasPassed();
 
         if (currentHealth <= 0)
         {
             Die();
+        }
+    }
+
+    private void PlayDamageTakenSFXIfEnoughCooldownTimeHasPassed()
+    {
+        if (Time.time >= lastDamageTakenSFXPlayTime + damageTakenSFXCooldown)
+        {
+            audioSource.PlayAudioWithRandomPitch(damageTakenSFX);
+            lastDamageTakenSFXPlayTime = Time.time;
         }
     }
 

@@ -219,6 +219,8 @@ MonoBehaviour:
   healthBar: {fileID: 1064760652760908610}
   maxHealth: 5000
   currentHealth: 0
+  damageTakenSFX: {fileID: 8300000, guid: a787a6a66f99b9349b7cdaa865e0385d, type: 3}
+  damageTakenSFXCooldown: 0.2
   singleOrbPrefab: {fileID: 2522101524757786263, guid: a0092814f7c0932439272c2ddbb7dcd6,
     type: 3}
   minOrbSpeed: 3.5
