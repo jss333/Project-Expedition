@@ -15,6 +15,7 @@ public class BossController : MonoBehaviour
     [Header("Parameters")]
     public int maxHealth = 5000;
     public int currentHealth;
+    public float hurtStateHealthPercent = 50f;
     public AudioClip damageTakenSFX;
     public float damageTakenSFXCooldown = 0.2f;
     private float lastDamageTakenSFXPlayTime = -Mathf.Infinity;
@@ -43,7 +44,6 @@ public class BossController : MonoBehaviour
         random = new System.Random();
 
         currentHealth = maxHealth;
-        bossAnimator.SetInteger("bossHealth", currentHealth);
         healthBar.SetMaxHealth(maxHealth);
 
         nextShotTime = Time.time + 3f;
@@ -140,8 +140,11 @@ public class BossController : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
-        bossAnimator.SetInteger("bossHealth", currentHealth);
         healthBar.SetHealth(currentHealth);
+        if ((float)currentHealth/maxHealth <= hurtStateHealthPercent/100)
+        {
+            bossAnimator.SetTrigger("bossHurt");
+        }
         PlayDamageTakenSFXIfEnoughCooldownTimeHasPassed();
 
         if (currentHealth <= 0)
