@@ -141,6 +141,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ce24b548a6eb9449800a12f700a4f50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstHalfBGM: {fileID: 8300000, guid: 76ee267622986fa478b640f61a57eb3a, type: 3}
+  firstHalfBGM: {fileID: 8300000, guid: 77a4e245bcc6a4a4f8176c6ce12c925e, type: 3}
   secondHalfBGM: {fileID: 8300000, guid: 4981800a94a2f4d42934ade672c41767, type: 3}
   victoryBGM: {fileID: 8300000, guid: 17447c87425e0ee49be88dc04b8db6b8, type: 3}
