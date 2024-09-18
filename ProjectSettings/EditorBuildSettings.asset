@@ -6,10 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Game/UI/Main Menu.unity
+    path: Assets/Scenes/UI/Main Menu.unity
     guid: 712618aeaf77e4e26841d81576073c16
   - enabled: 1
-    path: Assets/Scenes/Game/Level/ChallengeRoom01.unity
+    path: Assets/Scenes/Level/Boss01.unity
     guid: 4e078d59cad960e4a94781df14bc374f
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: e4d75b8b4062e4e4fb77d2a7deb22856,
