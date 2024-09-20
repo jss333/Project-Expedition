@@ -5,6 +5,10 @@ using UnityEngine;
 
 public class MinionController : MonoBehaviour
 {
+    [Header("References")]
+    public BossInformation BInfo;
+
+    [Header("Properties")]
     //Basic properties and component refs...
     public GameObject anchor;
     public GameObject spawner;
@@ -14,11 +18,11 @@ public class MinionController : MonoBehaviour
     public float collisionDmg = 5F;
     private bool awayFromAnchor = true;
     private Rigidbody2D rb;
+    public float currentHealth;
 
+    [Header("Parameters")]
     //Parameters describing the minion's attack properties...
     [SerializeField] private GameObject projectile;
-    public AttackPattern firingPattern = AttackPattern.FixedAlternating;
-    public AttackRotation firingRotation = AttackRotation.Clockwise;
     public float attackPeriod = 2F;
     [SerializeField] private float attackTimer = 0;
     public int burstSize = 3;
@@ -28,10 +32,12 @@ public class MinionController : MonoBehaviour
     [SerializeField] private Transform launchPoint;
     [SerializeField] private Quaternion launchAngle;
 
-    public float currentHealth;
+    private bool reachedAnchor;
 
     public void Start()
     {
+        reachedAnchor = false;
+        BInfo = FindAnyObjectByType<BossInformation>();
         rb = GetComponent<Rigidbody2D>();
         if (projectile == null || launchPoint == null)
         {
@@ -50,7 +56,7 @@ public class MinionController : MonoBehaviour
 
     public void Update()
     {
-        if (attackTimer >= attackPeriod)
+        if (attackTimer >= attackPeriod && reachedAnchor)
         {
             attackTimer = 0;
             StartCoroutine(Attack());
@@ -93,7 +99,6 @@ public class MinionController : MonoBehaviour
         }
         return;
     }
-
     private IEnumerator moveToAnchor()
     {
         //Describes the movement taken by the minion as it transitions
@@ -105,6 +110,7 @@ public class MinionController : MonoBehaviour
             if ((this.transform.position - anchor.transform.position).magnitude <= .2F)
             {
                 this.transform.position = anchor.transform.position;
+                reachedAnchor = true;
                 rb.velocity = Vector2.zero;
                 yield break;
             }
@@ -124,19 +130,8 @@ public class MinionController : MonoBehaviour
         healthBar.SetHealth((int)(currentHealth/maxhealth*100f));
         if (currentHealth <= 0)
         {
+            BInfo.minionDestroyed();
             Destroy(this.gameObject);
         }
-    }
-    public enum AttackPattern
-    {
-        Fixed,
-        FixedAlternating,
-        Rotating
-    }
-
-    public enum AttackRotation
-    {
-        Clockwise,
-        CounterClockwise
     }
 }

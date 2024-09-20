@@ -6,24 +6,38 @@ public class BossInformation : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    public bool immune;
+    private bool immune;
+    private int minionCount;
+    [SerializeField] private MinionSpawnerController msController;
     void Start()
     {
+        minionCount = msController.entityCount;
         immune = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        var minions = FindAnyObjectByType<MinionController>();
-        if (minions != null)
+        //var minions = FindAnyObjectByType<MinionController>();
+        if (minionCount > 0)
         {
-            immune = true;
+            setImmune(true);
         }
         else
         {
-            immune = false;
+            setImmune(false);
         }
-
+    }
+    public bool getImmune()
+    {
+        return immune;
+    }
+    private void setImmune(bool i)
+    {
+        immune = i;
+    }
+    public void minionDestroyed()
+    {
+        minionCount--;
     }
 }
