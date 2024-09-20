@@ -6,7 +6,7 @@ using UnityEngine;
 public class MinionController : MonoBehaviour
 {
     [Header("References")]
-    public BossInformation BInfo;
+    public BossInformation bossInfo;
 
     [Header("Properties")]
     //Basic properties and component refs...
@@ -37,7 +37,7 @@ public class MinionController : MonoBehaviour
     public void Start()
     {
         reachedAnchor = false;
-        BInfo = FindAnyObjectByType<BossInformation>();
+        bossInfo = FindAnyObjectByType<BossInformation>();
         rb = GetComponent<Rigidbody2D>();
         if (projectile == null || launchPoint == null)
         {
@@ -121,7 +121,6 @@ public class MinionController : MonoBehaviour
     private void handInResignation()
     {
         //Self-destruct method that communicates death to the spawner...
-
     }
 
     public void TakeDamage(int damage)
@@ -130,8 +129,14 @@ public class MinionController : MonoBehaviour
         healthBar.SetHealth((int)(currentHealth/maxhealth*100f));
         if (currentHealth <= 0)
         {
-            BInfo.minionDestroyed();
-            Destroy(this.gameObject);
+            destroyThisMinion();
         }
     }
+    private void destroyThisMinion()
+    {
+        bossInfo.minionDestroyed();
+        Destroy(this.gameObject);
+    }
+
+
 }

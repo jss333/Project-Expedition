@@ -12,22 +12,10 @@ public class BossInformation : MonoBehaviour
     void Start()
     {
         minionCount = msController.entityCount;
-        immune = false;
+        immune = true;
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        //var minions = FindAnyObjectByType<MinionController>();
-        if (minionCount > 0)
-        {
-            setImmune(true);
-        }
-        else
-        {
-            setImmune(false);
-        }
-    }
     public bool getImmune()
     {
         return immune;
@@ -39,5 +27,9 @@ public class BossInformation : MonoBehaviour
     public void minionDestroyed()
     {
         minionCount--;
+        if(minionCount <= 0)
+        {
+            setImmune(false);
+        }
     }
 }

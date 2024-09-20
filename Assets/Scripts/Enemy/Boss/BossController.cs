@@ -155,7 +155,7 @@ public class BossController : MonoBehaviour
     {
         if(info.getImmune())
         {
-            Debug.Log("immune");
+            return;
         }
         else
         {
