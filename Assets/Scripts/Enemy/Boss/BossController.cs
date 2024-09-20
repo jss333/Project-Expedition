@@ -12,6 +12,7 @@ public class BossController : MonoBehaviour
     private Animator bossAnimator;
     private RandomPitchAudioSource audioSource;
     private System.Random random;
+    private BossInformation info;
 
     [Header("Parameters")]
     public int maxHealth = 5000;
@@ -40,12 +41,13 @@ public class BossController : MonoBehaviour
     public float multipleOrbsAngleSpreadDeg = 60;
     public AudioClip multipleOrbShotSFX;
 
-
+    
     void Start()
     {
         bossAnimator = GetComponent<Animator>();
         audioSource = GetComponent<RandomPitchAudioSource>();
         random = new System.Random();
+        info = GetComponent<BossInformation>();
 
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
@@ -151,26 +153,33 @@ public class BossController : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        currentHealth -= damage;
-        healthBar.SetHealth(currentHealth);
-        PlayDamageTakenSFXIfEnoughCooldownTimeHasPassed();
-
-        if (!hurtStateTriggered && CurrentHealthPercentLessThan(hurtStateHealthPercent))
+        if(info.getImmune())
         {
-            bossAnimator.SetTrigger("bossHurt");
-            hurtStateTriggered = true;
+            return;
         }
-
-        if (!bgmChangeTriggered && CurrentHealthPercentLessThan(bgmChangeHealthPercent))
+        else
         {
-            challengeRoomBGM.PlaySecondHalfBGM();
-            bgmChangeTriggered = true;
-        }
+            currentHealth -= damage;
+            healthBar.SetHealth(currentHealth);
+            PlayDamageTakenSFXIfEnoughCooldownTimeHasPassed();
 
-        if (currentHealth <= 0)
-        {
-            challengeRoomBGM.PlayVictoryBGM();
-            Die();
+            if (!hurtStateTriggered && CurrentHealthPercentLessThan(hurtStateHealthPercent))
+            {
+                bossAnimator.SetTrigger("bossHurt");
+                hurtStateTriggered = true;
+            }
+
+            if (!bgmChangeTriggered && CurrentHealthPercentLessThan(bgmChangeHealthPercent))
+            {
+                challengeRoomBGM.PlaySecondHalfBGM();
+                bgmChangeTriggered = true;
+            }
+
+            if (currentHealth <= 0)
+            {
+                challengeRoomBGM.PlayVictoryBGM();
+                Die();
+            }
         }
     }
 
@@ -191,5 +200,15 @@ public class BossController : MonoBehaviour
     private void Die()
     {
         Destroy(this.gameObject);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.layer == 8)
+        {
+            TakeDamage(collision.gameObject.GetComponent<PlayerProjectile>().damageAmt);
+            Destroy(collision.gameObject);
+            
+        }
     }
 }

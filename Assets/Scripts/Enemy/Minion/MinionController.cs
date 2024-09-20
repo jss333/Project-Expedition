@@ -1,22 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class MinionController : MonoBehaviour
 {
+    [Header("References")]
+    public BossInformation bossInfo;
+
+    [Header("Properties")]
     //Basic properties and component refs...
     public GameObject anchor;
     public GameObject spawner;
-    public float health = 20F;
+    public HealthBar healthBar;
+    public float maxhealth = 500;
     public float moveSpeed = 3F;
     public float collisionDmg = 5F;
     private bool awayFromAnchor = true;
     private Rigidbody2D rb;
-    
+    public float currentHealth;
+
+    [Header("Parameters")]
     //Parameters describing the minion's attack properties...
     [SerializeField] private GameObject projectile;
-    public AttackPattern firingPattern = AttackPattern.FixedAlternating;
-    public AttackRotation firingRotation = AttackRotation.Clockwise;
     public float attackPeriod = 2F;
     [SerializeField] private float attackTimer = 0;
     public int burstSize = 3;
@@ -26,39 +32,52 @@ public class MinionController : MonoBehaviour
     [SerializeField] private Transform launchPoint;
     [SerializeField] private Quaternion launchAngle;
 
-    public void Start(){
+    private bool reachedAnchor;
+
+    public void Start()
+    {
+        reachedAnchor = false;
+        bossInfo = FindAnyObjectByType<BossInformation>();
         rb = GetComponent<Rigidbody2D>();
-        if(projectile == null || launchPoint == null){
+        if (projectile == null || launchPoint == null)
+        {
             Debug.Log("Minion Controller: projectile spawn parameters null -- component disabled...");
             this.gameObject.SetActive(false);
             return;
         }
-        if(this.transform.position != anchor.transform.position){
+        if (this.transform.position != anchor.transform.position)
+        {
             StartCoroutine(moveToAnchor());
         }
-
+        currentHealth = maxhealth;
         burstTimer = burstDensity;
         return;
     }
 
-    public void Update(){
-        if(attackTimer >= attackPeriod){
+    public void Update()
+    {
+        if (attackTimer >= attackPeriod && reachedAnchor)
+        {
             attackTimer = 0;
             StartCoroutine(Attack());
         }
-        else{
+        else
+        {
             attackTimer += Time.deltaTime;
         }
     }
 
-    public IEnumerator Attack(){        
-        for(shotNum = 0; shotNum < burstSize;){
-            if(burstTimer >= burstDensity){
+    public IEnumerator Attack()
+    {
+        for (shotNum = 0; shotNum < burstSize;)
+        {
+            if (burstTimer >= burstDensity)
+            {
                 Instantiate(projectile, this.transform.position, this.transform.rotation);
                 burstTimer = 0;
                 shotNum++;
             }
-            else{burstTimer += Time.deltaTime;}
+            else { burstTimer += Time.deltaTime; }
             yield return null;
         }
 
@@ -67,28 +86,31 @@ public class MinionController : MonoBehaviour
         yield break;
     }
 
-    public void OnTriggerEnter2D(Collider2D collision){
-        if(collision.gameObject.tag == "Player"){
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
             collision.gameObject.GetComponent<PlayerHealth>().TakeDamage((int)collisionDmg);
+        }
+        if (collision.gameObject.layer == 8)
+        {
+            TakeDamage(collision.gameObject.GetComponent<PlayerProjectile>().damageAmt);
+            Destroy(collision.gameObject);
         }
         return;
     }
-
-    public void takeDamage(float dmg){
-        health -= dmg;
-        if(health <= 0){
-            Destroy(this.gameObject);
-        }
-    }
-    
-    private IEnumerator moveToAnchor(){
+    private IEnumerator moveToAnchor()
+    {
         //Describes the movement taken by the minion as it transitions
         //from its spawn point to its anchor point...
         Vector3 direction = Vector3.Normalize(anchor.transform.position - this.transform.position);
         rb.velocity = (Vector2)(direction * moveSpeed);
-        while(true){
-            if((this.transform.position - anchor.transform.position).magnitude <= .2F){
+        while (true)
+        {
+            if ((this.transform.position - anchor.transform.position).magnitude <= .2F)
+            {
                 this.transform.position = anchor.transform.position;
+                reachedAnchor = true;
                 rb.velocity = Vector2.zero;
                 yield break;
             }
@@ -96,19 +118,25 @@ public class MinionController : MonoBehaviour
         }
     }
 
-    private void handInResignation(){
+    private void handInResignation()
+    {
         //Self-destruct method that communicates death to the spawner...
-        
     }
-}
 
-public enum AttackPattern{
-    Fixed,
-    FixedAlternating,
-    Rotating
-}
+    public void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+        healthBar.SetHealth((int)(currentHealth/maxhealth*100f));
+        if (currentHealth <= 0)
+        {
+            destroyThisMinion();
+        }
+    }
+    private void destroyThisMinion()
+    {
+        bossInfo.minionDestroyed();
+        Destroy(this.gameObject);
+    }
 
-public enum AttackRotation{
-    Clockwise,
-    CounterClockwise
+
 }

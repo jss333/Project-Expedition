@@ -13,6 +13,7 @@ TagManager:
   - Boss
   - Play Space Boundary
   - Projectile
+  - Platform
   layers:
   - Default
   - TransparentFX
