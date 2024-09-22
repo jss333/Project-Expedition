@@ -5,12 +5,15 @@ using UnityEngine;
 public class BossInformation : MonoBehaviour
 {
     // Start is called before the first frame update
-
+    
     private bool immune;
     private int minionCount;
+    [Header("References")]
     [SerializeField] private MinionSpawnerController msController;
+    private BossShield bossShield;
     void Start()
     {
+        bossShield =  this.gameObject.GetComponentInChildren<BossShield>();
         minionCount = msController.entityCount;
         immune = true;
     }
@@ -27,9 +30,18 @@ public class BossInformation : MonoBehaviour
     public void minionDestroyed()
     {
         minionCount--;
+        if(minionCount == 2)
+        {
+            bossShield.shieldDamaged(1);
+        }
+        else if (minionCount == 1)
+        {
+            bossShield.shieldDamaged(2);
+        }
         if(minionCount <= 0)
         {
             setImmune(false);
+            bossShield.playShieldBreakAnimation();
         }
     }
 }

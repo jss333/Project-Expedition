@@ -1,0 +1,906 @@
+fileFormatVersion: 2
+guid: 7e90f8a3a3cf81940bf467e18e044c06
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: boss-shield-destroying-animation_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4195
+        width: 989
+        height: 839
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43901fb6a76011147b2936c9a2adcf76
+      internalID: 1857643671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shield-destroying-animation_1
+      rect:
+        serializedVersion: 2
+        x: 989
+        y: 4195
+        width: 989
+        height: 839
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ceecedc5f17df0b47ac07343f0094dd8
+      internalID: -672534481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shield-destroying-animation_2
+      rect:
+        serializedVersion: 2
+        x: 1978
+        y: 4195
+        width: 989
+        height: 839
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0eb035c9538d1ff4582b1ecb373bc032
+      internalID: -309885385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shield-destroying-animation_3
+      rect:
+        serializedVersion: 2
+        x: 2967
+        y: 4195
+        width: 989
+        height: 839
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a94cbc3165c5bb42b8cdb7d1f00dad8
+      internalID: 247685964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shield-destroying-animation_4
+      rect:
+        serializedVersion: 2
+        x: 3956
+        y: 4195
+        width: 989
+        height: 839
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acc42f2afc0eb4241800fa4bb5e0f87c
+      internalID: 1356268371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shield-destroying-animation_5
+      rect:
+        serializedVersion: 2
+        x: 4945
+        y: 4195
+        width: 989
+        height: 839
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60c2a40bd081a5e4ab0cb96b74d42de3
+      internalID: 658652542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shield-destroying-animation_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3356
+        width: 989
+        height: 839
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90667940e616a8e4cb881590e1fcd2bb
+      internalID: -890819303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shield-destroying-animation_7
+      rect:
+        serializedVersion: 2
+        x: 989
+        y: 3356
+        width: 989
+        height: 839
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 639785c483e110948babbcf901395626
+      internalID: -1469267218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shield-destroying-animation_8
+      rect:
+        serializedVersion: 2
+        x: 1978
+        y: 3356
+        width: 989
+        height: 839
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e12f5cbffbcc7d24facd541f47f702e5
+      internalID: 1477191222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shield-destroying-animation_9
+      rect:
+        serializedVersion: 2
+        x: 2967
+        y: 3356
+        width: 989
+        height: 839
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d6b94c9d2741f747ae0bb7982fb8d12
+      internalID: -1298324594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shield-destroying-animation_10
+      rect:
+        serializedVersion: 2
+        x: 3956
+        y: 3356
+        width: 989
+        height: 839
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f06a15d755e0ef49a36b2d7d6c6c3bd
+      internalID: -487595348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shield-destroying-animation_11
+      rect:
+        serializedVersion: 2
+        x: 4945
+        y: 3356
+        width: 989
+        height: 839
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b25ebb650c491744e9b1c84b2b8b740e
+      internalID: -1921361493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shield-destroying-animation_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2517
+        width: 989
+        height: 839
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c31661e7f08f7064796521ee47b245a8
+      internalID: -1785108220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shield-destroying-animation_13
+      rect:
+        serializedVersion: 2
+        x: 989
+        y: 2517
+        width: 989
+        height: 839
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56bd739ac7add544db5dd36467fccd7c
+      internalID: 880110402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shield-destroying-animation_14
+      rect:
+        serializedVersion: 2
+        x: 1978
+        y: 2517
+        width: 989
+        height: 839
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 354b021fe833d544f962064083be11b3
+      internalID: 715952010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shield-destroying-animation_15
+      rect:
+        serializedVersion: 2
+        x: 2967
+        y: 2517
+        width: 989
+        height: 839
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0546a9c82e3bc764d960272ec9a92361
+      internalID: -989970441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shield-destroying-animation_16
+      rect:
+        serializedVersion: 2
+        x: 3956
+        y: 2517
+        width: 989
+        height: 839
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d538890da9dc918489f1533cbff2194b
+      internalID: -1531134040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shield-destroying-animation_17
+      rect:
+        serializedVersion: 2
+        x: 4945
+        y: 2517
+        width: 989
+        height: 839
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 960140ddf72559245bd61f3703291074
+      internalID: -1260783717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shield-destroying-animation_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1678
+        width: 989
+        height: 839
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3897869da0a601d4b964cd3e16d47b9f
+      internalID: -1765551797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shield-destroying-animation_19
+      rect:
+        serializedVersion: 2
+        x: 989
+        y: 1678
+        width: 989
+        height: 839
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afd2ff0136460b142803d12ea9cac525
+      internalID: 783412745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shield-destroying-animation_20
+      rect:
+        serializedVersion: 2
+        x: 1978
+        y: 1678
+        width: 989
+        height: 839
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87a3a77ad99d44747a39ef0d1f77c41d
+      internalID: 115365727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shield-destroying-animation_21
+      rect:
+        serializedVersion: 2
+        x: 2967
+        y: 1678
+        width: 989
+        height: 839
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abc7158b1209f894283eb6b005a4dfd0
+      internalID: 1961885537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shield-destroying-animation_22
+      rect:
+        serializedVersion: 2
+        x: 3956
+        y: 1678
+        width: 989
+        height: 839
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e5df487b768e1d49865716b30fb47bf
+      internalID: -1705555274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shield-destroying-animation_23
+      rect:
+        serializedVersion: 2
+        x: 4945
+        y: 1678
+        width: 989
+        height: 839
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86ecaa2374afc554b908960fd107714c
+      internalID: -2090230043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shield-destroying-animation_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 839
+        width: 989
+        height: 839
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76ed5e64eb0c064418f57791484a8edc
+      internalID: 1612843716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shield-destroying-animation_25
+      rect:
+        serializedVersion: 2
+        x: 989
+        y: 839
+        width: 989
+        height: 839
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb5853bfdfbea4342b521b4de54efa1c
+      internalID: 361701290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shield-destroying-animation_26
+      rect:
+        serializedVersion: 2
+        x: 1978
+        y: 839
+        width: 989
+        height: 839
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b21805c139539c442bd2a946e5cd0391
+      internalID: 1196211448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shield-destroying-animation_27
+      rect:
+        serializedVersion: 2
+        x: 2967
+        y: 839
+        width: 989
+        height: 839
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 099cfaa1cd325bc49bcb931e42b90b50
+      internalID: 1657121989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shield-destroying-animation_28
+      rect:
+        serializedVersion: 2
+        x: 3956
+        y: 839
+        width: 989
+        height: 839
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8064ad3b5f18b27479c1b5e802bf819c
+      internalID: -1384637386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shield-destroying-animation_29
+      rect:
+        serializedVersion: 2
+        x: 4945
+        y: 839
+        width: 989
+        height: 839
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd48201ca7d41a245a3103b3725f1748
+      internalID: 1239973779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shield-destroying-animation_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 989
+        height: 839
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80ef28e5edc9b3d4bb297bdaacc07e2c
+      internalID: -1935768437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shield-destroying-animation_31
+      rect:
+        serializedVersion: 2
+        x: 989
+        y: 0
+        width: 989
+        height: 839
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13af0551cd2abd04794b7c49fbad679f
+      internalID: 678195405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shield-destroying-animation_32
+      rect:
+        serializedVersion: 2
+        x: 1978
+        y: 0
+        width: 989
+        height: 839
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2351c3556532e2040b59b6dc66a32e33
+      internalID: 308693642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shield-destroying-animation_33
+      rect:
+        serializedVersion: 2
+        x: 2967
+        y: 0
+        width: 989
+        height: 839
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c343d6d72afc8a740b802a5c6b302c61
+      internalID: 1545744024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shield-destroying-animation_34
+      rect:
+        serializedVersion: 2
+        x: 3956
+        y: 0
+        width: 989
+        height: 839
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1f6714e36c36c646916ddfca058d0a6
+      internalID: -1898295461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shield-destroying-animation_35
+      rect:
+        serializedVersion: 2
+        x: 4945
+        y: 0
+        width: 989
+        height: 839
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c50d653fed1eb4c49a386d8aadc1f3bc
+      internalID: 1081058653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      boss-shield-destroying-animation_0: 1857643671
+      boss-shield-destroying-animation_1: -672534481
+      boss-shield-destroying-animation_10: -487595348
+      boss-shield-destroying-animation_11: -1921361493
+      boss-shield-destroying-animation_12: -1785108220
+      boss-shield-destroying-animation_13: 880110402
+      boss-shield-destroying-animation_14: 715952010
+      boss-shield-destroying-animation_15: -989970441
+      boss-shield-destroying-animation_16: -1531134040
+      boss-shield-destroying-animation_17: -1260783717
+      boss-shield-destroying-animation_18: -1765551797
+      boss-shield-destroying-animation_19: 783412745
+      boss-shield-destroying-animation_2: -309885385
+      boss-shield-destroying-animation_20: 115365727
+      boss-shield-destroying-animation_21: 1961885537
+      boss-shield-destroying-animation_22: -1705555274
+      boss-shield-destroying-animation_23: -2090230043
+      boss-shield-destroying-animation_24: 1612843716
+      boss-shield-destroying-animation_25: 361701290
+      boss-shield-destroying-animation_26: 1196211448
+      boss-shield-destroying-animation_27: 1657121989
+      boss-shield-destroying-animation_28: -1384637386
+      boss-shield-destroying-animation_29: 1239973779
+      boss-shield-destroying-animation_3: 247685964
+      boss-shield-destroying-animation_30: -1935768437
+      boss-shield-destroying-animation_31: 678195405
+      boss-shield-destroying-animation_32: 308693642
+      boss-shield-destroying-animation_33: 1545744024
+      boss-shield-destroying-animation_34: -1898295461
+      boss-shield-destroying-animation_35: 1081058653
+      boss-shield-destroying-animation_4: 1356268371
+      boss-shield-destroying-animation_5: 658652542
+      boss-shield-destroying-animation_6: -890819303
+      boss-shield-destroying-animation_7: -1469267218
+      boss-shield-destroying-animation_8: 1477191222
+      boss-shield-destroying-animation_9: -1298324594
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
