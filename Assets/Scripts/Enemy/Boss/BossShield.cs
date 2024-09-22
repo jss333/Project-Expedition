@@ -7,35 +7,20 @@ public class BossShield : MonoBehaviour
 {
     // Start is called before the first frame update
     [Header("References")]
+    [SerializeField] SpriteRenderer shield;
     private Animator animator;
-    [SerializeField] private AudioClip crack1SFX;
-    [SerializeField] private AudioClip crack2SFX;
-    [SerializeField] private AudioClip shieldBreakSFX;
-    private RandomPitchAudioSource audioSource;
-    private BossController boss;
-
+    [SerializeField] Sprite[] shieldSprites;
+    private Sprite test;
     void Start()
     {
-        boss = FindFirstObjectByType<BossController>();
         animator = GetComponent<Animator>();
-        this.transform.localScale = new Vector3(.55f, .55f, 0);
-        //shield = GetComponent<SpriteRenderer>();
-        audioSource = GetComponent<RandomPitchAudioSource>();
+        shield.sprite = shieldSprites[0];
     }
     //change the damaged stage of the sprite renderer for the shield.
     public void shieldDamaged(int spriteNum)
     {
-        
-        if (spriteNum == 1)
-        {
-            animator.SetTrigger("ShieldBreak1");
-            audioSource.PlayAudioWithNormalPitch(crack1SFX);
-        }
-        else if (spriteNum == 2)
-        {
-            animator.SetTrigger("ShieldBreak2");
-            audioSource.PlayAudioWithNormalPitch(crack2SFX);
-        }
+        Debug.Log("ChangeSprite");
+        shield.sprite = shieldSprites[spriteNum];
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -48,17 +33,13 @@ public class BossShield : MonoBehaviour
     public void playShieldBreakAnimation()
     {
         animator.SetTrigger("BreakShield");
-        audioSource.PlayAudioWithNormalPitch(shieldBreakSFX);
-        boss.setHasShield(false);
+        this.transform.localScale = new Vector3(1.5f,1.5f,0);
         Debug.Log("play sb anim");
     }
     public void endShieldSprite()
     {
-        Destroy(this.gameObject);
+        shield.sprite = shieldSprites[3];
+        this.transform.localScale = Vector3.zero;
     }
-    public void adjustSpriteSize()
-    {
-        this.transform.localScale = new Vector3(.78f, .79f, 0);
-        this.transform.position = new Vector3(-10.46f, 2.57999992f, 0.0150861135f);
-    }
+
 }
