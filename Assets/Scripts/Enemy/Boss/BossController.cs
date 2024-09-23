@@ -13,6 +13,7 @@ public class BossController : MonoBehaviour
     private RandomPitchAudioSource audioSource;
     private System.Random random;
     private BossInformation info;
+    [SerializeField] private GameObject p_BossShield;
 
     [Header("Parameters")]
     public int maxHealth = 5000;
@@ -53,6 +54,7 @@ public class BossController : MonoBehaviour
         healthBar.SetMaxHealth(maxHealth);
 
         nextShotTime = Time.time + 3f;
+        instantiateBossShield(); 
     }
 
     void Update()
@@ -210,5 +212,10 @@ public class BossController : MonoBehaviour
             Destroy(collision.gameObject);
             
         }
+    }
+    private void instantiateBossShield()
+    {
+        Instantiate(p_BossShield, this.transform.position, Quaternion.identity);
+        Debug.Log("BossShield Up");
     }
 }

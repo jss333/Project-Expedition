@@ -13,7 +13,6 @@ public class BossInformation : MonoBehaviour
     private BossShield bossShield;
     void Start()
     {
-        bossShield =  this.gameObject.GetComponentInChildren<BossShield>();
         minionCount = msController.entityCount;
         immune = true;
     }
@@ -29,6 +28,7 @@ public class BossInformation : MonoBehaviour
     }
     public void minionDestroyed()
     {
+        bossShield = FindFirstObjectByType<BossShield>();
         minionCount--;
         if(minionCount == 2)
         {

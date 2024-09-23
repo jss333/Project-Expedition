@@ -7,20 +7,28 @@ public class BossShield : MonoBehaviour
 {
     // Start is called before the first frame update
     [Header("References")]
-    [SerializeField] SpriteRenderer shield;
+    //private SpriteRenderer shield;
     private Animator animator;
-    [SerializeField] Sprite[] shieldSprites;
-    private Sprite test;
+    //[SerializeField] Sprite[] shieldSprites;
+    //private Sprite test;
     void Start()
     {
         animator = GetComponent<Animator>();
-        shield.sprite = shieldSprites[0];
+        this.transform.localScale = new Vector3(.55f, .55f, 0);
+        //shield = GetComponent<SpriteRenderer>();
     }
     //change the damaged stage of the sprite renderer for the shield.
     public void shieldDamaged(int spriteNum)
     {
         Debug.Log("ChangeSprite");
-        shield.sprite = shieldSprites[spriteNum];
+        if (spriteNum == 1)
+        {
+            animator.SetTrigger("ShieldBreak1");
+        }
+        else if (spriteNum == 2)
+        {
+            animator.SetTrigger("ShieldBreak2");
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -33,13 +41,16 @@ public class BossShield : MonoBehaviour
     public void playShieldBreakAnimation()
     {
         animator.SetTrigger("BreakShield");
-        this.transform.localScale = new Vector3(1.5f,1.5f,0);
+        
         Debug.Log("play sb anim");
     }
     public void endShieldSprite()
     {
-        shield.sprite = shieldSprites[3];
-        this.transform.localScale = Vector3.zero;
+        Destroy(this.gameObject);
     }
-    
+    public void adjustSpriteSize()
+    {
+        this.transform.localScale = new Vector3(.78f, .79f, 0);
+        this.transform.position = new Vector3(-10.46f, 2.57999992f, 0.0150861135f);
+    }
 }

@@ -60,6 +60,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Shield
+    uniqueID: 2084354907
+    locked: 0
   - name: Orbs
     uniqueID: 1809145871
     locked: 0

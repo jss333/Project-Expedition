@@ -16,7 +16,7 @@ public class MinionController : MonoBehaviour
     public float maxhealth = 500;
     public float moveSpeed = 3F;
     public float collisionDmg = 5F;
-    private bool awayFromAnchor = true;
+    //private bool awayFromAnchor = true;
     private Rigidbody2D rb;
     public float currentHealth;
 
@@ -140,6 +140,4 @@ public class MinionController : MonoBehaviour
         bossInfo.minionDestroyed();
         Destroy(this.gameObject);
     }
-
-
 }
