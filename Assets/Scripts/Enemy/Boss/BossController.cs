@@ -16,6 +16,7 @@ public class BossController : MonoBehaviour
     private System.Random random;
     private BossInformation info;
     [SerializeField] private GameObject p_BossShield;
+    [SerializeField] private GameObject p_BossShield;
 
     [Header("Parameters")]
     public int maxHealth = 5000;
@@ -60,7 +61,8 @@ public class BossController : MonoBehaviour
         healthBar.SetMaxHealth(maxHealth);
 
         nextShotTime = Time.time + 3f;
-        instantiateBossShield(); 
+        instantiateBossShield();
+        instantiateBossShield();
     }
 
     void Update()
@@ -218,34 +220,12 @@ public class BossController : MonoBehaviour
         {
             TakeDamage(collision.gameObject.GetComponent<PlayerProjectile>().damageAmt);
             Destroy(collision.gameObject);
-            
+
         }
     }
     private void instantiateBossShield()
     {
         Instantiate(p_BossShield, this.transform.position, Quaternion.identity);
-        hasShield = true;
         Debug.Log("BossShield Up");
-    }
-    private void minionRespawn()
-    {
-        if (!hasShield)
-        {
-            for (int i = 0; i < minionRespawnThreasholds.Count(); i++)
-            {
-                if (CurrentHealthPercentLessThan(minionRespawnThreasholds[i]))
-                {
-                    instantiateBossShield();
-                    minionRespawnThreasholds.RemoveAt(i);
-                    FindAnyObjectByType<MinionSpawnerController>().handleMinionRespawn();
-                    audioSource.PlayAudioWithRandomPitch(minionRespawnSFX);
-                    info.setImmune(true);
-                }
-            }
-        }
-    }
-    public void setHasShield(bool value)
-    {
-        hasShield = value;
     }
 }
