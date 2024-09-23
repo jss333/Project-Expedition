@@ -11,7 +11,7 @@ public class MinionController : MonoBehaviour
     [Header("Properties")]
     //Basic properties and component refs...
     public GameObject anchor;
-    public GameObject spawner;
+    public MinionSpawnerController spawner;
     public HealthBar healthBar;
     public float maxhealth = 500;
     public float moveSpeed = 3F;
@@ -37,6 +37,7 @@ public class MinionController : MonoBehaviour
     public void Start()
     {
         reachedAnchor = false;
+        spawner = FindAnyObjectByType<MinionSpawnerController>();
         bossInfo = FindAnyObjectByType<BossInformation>();
         rb = GetComponent<Rigidbody2D>();
         if (projectile == null || launchPoint == null)
@@ -138,6 +139,7 @@ public class MinionController : MonoBehaviour
     private void destroyThisMinion()
     {
         bossInfo.minionDestroyed();
+        spawner.decrementActiveCount(anchor);
         Destroy(this.gameObject);
     }
 }

@@ -22,7 +22,7 @@ public class BossInformation : MonoBehaviour
     {
         return immune;
     }
-    private void setImmune(bool i)
+    public void setImmune(bool i)
     {
         immune = i;
     }
@@ -30,7 +30,7 @@ public class BossInformation : MonoBehaviour
     {
         bossShield = FindFirstObjectByType<BossShield>();
         minionCount--;
-        if(minionCount == 2)
+        if(minionCount >= 2)
         {
             bossShield.shieldDamaged(1);
         }
