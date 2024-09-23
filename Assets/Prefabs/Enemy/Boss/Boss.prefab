@@ -240,6 +240,8 @@ MonoBehaviour:
   playerPosition: {fileID: 0}
   healthBar: {fileID: 1064760652760908610}
   challengeRoomBGM: {fileID: 0}
+  p_BossShield: {fileID: 3970724019627321346, guid: 2a484caf907ff66468343981d89f3cbe,
+    type: 3}
   maxHealth: 5000
   currentHealth: 0
   hurtStateHealthPercent: 50
