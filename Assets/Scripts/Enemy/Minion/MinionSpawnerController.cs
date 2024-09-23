@@ -7,14 +7,14 @@ public class MinionSpawnerController : MonoBehaviour
     public GameObject entityToSpawn;
     private int activeEntityInstances = 0;
     public int entityCount = 2;
-    //private float timer = 0;
+    private float timer = 0;
     [SerializeField] private List<GameObject> freeAnchors; //without minion
     [SerializeField] private List<GameObject> activeAnchors; //with minion
 
 
     void Awake(){
         activeAnchors = new List<GameObject>(freeAnchors.Count);
-        
+
     }
     private void Start()
     {
@@ -43,7 +43,14 @@ public class MinionSpawnerController : MonoBehaviour
     }
     public void handleMinionRespawn()
     {
-        if(activeEntityInstances ==0) 
+        if(activeEntityInstances ==0)
+        {
+            spawnWave();
+        }
+    }
+    public void handleMinionRespawn()
+    {
+        if(activeEntityInstances ==0)
         {
             spawnWave();
         }

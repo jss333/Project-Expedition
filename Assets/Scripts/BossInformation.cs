@@ -31,6 +31,17 @@ public class BossInformation : MonoBehaviour
     {
         bossShield = FindFirstObjectByType<BossShield>();
         minionCount--;
+<<<<<<< HEAD
+=======
+        if(minionCount >= 2)
+        {
+            bossShield.shieldDamaged(1);
+        }
+        else if (minionCount == 1)
+        {
+            bossShield.shieldDamaged(2);
+        }
+>>>>>>> 63d9bd3 (Minion and Shield Respawn Threashhold)
         if(minionCount <= 0)
         {
             setImmune(false);

@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -28,10 +30,6 @@ public class BossController : MonoBehaviour
     public AudioClip damageTakenSFX;
     public float damageTakenSFXCooldown = 0.2f;
     private float lastDamageTakenSFXPlayTime = -Mathf.Infinity;
-
-    [Header("Parameters - Minion/shield respawn")]
-    [SerializeField] private List<float> minionRespawnThreasholds;
-    public AudioClip minionRespawnSFX;
 
     [Header("Parameters - Orb")]
     public GameObject singleOrbPrefab;
@@ -226,6 +224,27 @@ public class BossController : MonoBehaviour
     private void instantiateBossShield()
     {
         Instantiate(p_BossShield, this.transform.position, Quaternion.identity);
+        hasShield = true;
         Debug.Log("BossShield Up");
+    }
+    private void minionRespawn()
+    {
+        if (!hasShield)
+        {
+            for (int i = 0; i < minionRespawnThreasholds.Count(); i++)
+            {
+                if (CurrentHealthPercentLessThan(minionRespawnThreasholds[i]))
+                {
+                    instantiateBossShield();
+                    minionRespawnThreasholds.RemoveAt(i);
+                    FindAnyObjectByType<MinionSpawnerController>().handleMinionRespawn();
+                    info.setImmune(true);
+                }
+            }
+        }
+    }
+    public void setHasShield(bool value)
+    {
+        hasShield = value;
     }
 }
