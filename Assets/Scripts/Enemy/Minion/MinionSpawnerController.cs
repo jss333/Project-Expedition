@@ -7,7 +7,7 @@ public class MinionSpawnerController : MonoBehaviour
     public GameObject entityToSpawn;
     private int activeEntityInstances = 0;
     public int entityCount = 2;
-    private float timer = 0;
+    //private float timer = 0;
     [SerializeField] private List<GameObject> freeAnchors; //without minion
     [SerializeField] private List<GameObject> activeAnchors; //with minion
 
@@ -38,7 +38,7 @@ public class MinionSpawnerController : MonoBehaviour
             newMinion.GetComponent<MinionController>().anchor = freeAnchors[randomIndex];
             freeAnchors.RemoveAt(randomIndex);
             activeEntityInstances++;
-            timer = 0;
+            //timer = 0;
         }
     }
     public void handleMinionRespawn()
