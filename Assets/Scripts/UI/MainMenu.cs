@@ -67,7 +67,7 @@ public class MainMenu : MonoBehaviour
     // Button actions
     void StartNewGame()
     {
-        SceneManager.LoadScene("ChallengeRoom01");
+        SceneManager.LoadScene("Boss01");
     }
 
     void LoadGame()
