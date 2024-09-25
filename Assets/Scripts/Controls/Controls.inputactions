@@ -22,6 +22,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "AcitvateAbility",
+                    "type": "Button",
+                    "id": "694c7c4a-e871-41f7-a87d-221d8cf8186a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -68,6 +77,17 @@
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "2ea900bd-33e4-4d45-8655-a5eec4f7effd",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AcitvateAbility",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
