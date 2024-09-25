@@ -122,9 +122,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02492d296b5116348bb7798a8e48d3ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  crack1SFX: {fileID: 0}
-  crack2SFX: {fileID: 0}
-  shieldbreakSFX: {fileID: 0}
+  crack1SFX: {fileID: 8300000, guid: cc9dc4a6d12d937449d68c32a09652f0, type: 3}
+  crack2SFX: {fileID: 8300000, guid: cc9dc4a6d12d937449d68c32a09652f0, type: 3}
+  shieldBreakSFX: {fileID: 8300000, guid: 1ea439574fb87664e9b2572b05990a87, type: 3}
 --- !u!65 &825978008817250597
 BoxCollider:
   m_ObjectHideFlags: 0
