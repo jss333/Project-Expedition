@@ -27,7 +27,10 @@ public class BossController : MonoBehaviour
     public AudioClip damageTakenSFX;
     public float damageTakenSFXCooldown = 0.2f;
     private float lastDamageTakenSFXPlayTime = -Mathf.Infinity;
+
+    [Header("Parameters - Minion/shield respawn")]
     [SerializeField] private List<float> minionRespawnThreasholds;
+    public AudioClip minionRespawnSFX;
 
     [Header("Parameters - Orb")]
     public GameObject singleOrbPrefab;
@@ -235,6 +238,7 @@ public class BossController : MonoBehaviour
                     instantiateBossShield();
                     minionRespawnThreasholds.RemoveAt(i);
                     FindAnyObjectByType<MinionSpawnerController>().handleMinionRespawn();
+                    audioSource.PlayAudioWithRandomPitch(minionRespawnSFX);
                     info.setImmune(true);
                 }
             }
