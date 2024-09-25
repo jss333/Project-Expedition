@@ -10,19 +10,24 @@ public class PauseMenu : MonoBehaviour
     {
         // Toggle pause when the "Esc" key is pressed
 
-        if (isPaused)
+        if (!PlayerHealth.IsDefeated)
         {
-            pauseMenuUI.SetActive(true);
-            Time.timeScale = 0f;
-        }
-        else
-        {
-            pauseMenuUI.SetActive(false);
-            Time.timeScale = 1f;
-        }
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            isPaused = !isPaused;
+
+            if (isPaused)
+            {
+                pauseMenuUI.SetActive(true);
+                Time.timeScale = 0f;
+            }
+            else
+            {
+                pauseMenuUI.SetActive(false);
+                Time.timeScale = 1f;
+            }
+
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                isPaused = !isPaused;
+            }
         }
     }
     // Resume the game

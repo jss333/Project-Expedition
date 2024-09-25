@@ -10,7 +10,9 @@ public class PlayerHealth : MonoBehaviour
     public GameObject robBertParentObj;
     public ChallengeRoomBGM challengeRoomBGM;
     private RandomPitchAudioSource audioSource;
-
+    public GameObject defeatScreen; // Reference to your defeat screen
+    public GameObject pauseMenu; // Reference to the PauseMenu script
+    public static bool IsDefeated = false; // Track if the player is defeated
     [Header("Parameters")]
     public int maxHealth = 150;
     public int currentHealth;
@@ -22,6 +24,7 @@ public class PlayerHealth : MonoBehaviour
         audioSource = GetComponent<RandomPitchAudioSource>();
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
+        defeatScreen.SetActive(false); // Make sure the defeat screen is hidden initially
     }
 
     public void TakeDamage(int healthdamage)
@@ -30,10 +33,28 @@ public class PlayerHealth : MonoBehaviour
         healthBar.SetHealth(currentHealth);
         audioSource.PlayAudioWithNormalPitch(damageTakenSFX);
 
+
         if(currentHealth <= 0)
         {
-            Destroy(robBertParentObj);
-            challengeRoomBGM.PlayDefeatBGM();
+            ActivateDefeatScreen();
         }
     }
+    private void ActivateDefeatScreen()
+    {
+        IsDefeated = true; // Mark the player as defeated
+
+        // Deactivate the pause menu if it's active
+        if (pauseMenu.activeSelf)
+        {
+            pauseMenu.SetActive(false);
+        }
+
+        defeatScreen.SetActive(true); // Show defeat screen immediately
+        Time.timeScale = 0f; // Pause the game
+        Destroy(robBertParentObj);
+        challengeRoomBGM.PlayDefeatBGM();
+    }
 }
+
+    
+
