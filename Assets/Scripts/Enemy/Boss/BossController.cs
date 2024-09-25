@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,6 +15,7 @@ public class BossController : MonoBehaviour
     private RandomPitchAudioSource audioSource;
     private System.Random random;
     private BossInformation info;
+    [SerializeField] private GameObject p_BossShield;
 
     [Header("Parameters")]
     public int maxHealth = 5000;
@@ -24,6 +27,10 @@ public class BossController : MonoBehaviour
     public AudioClip damageTakenSFX;
     public float damageTakenSFXCooldown = 0.2f;
     private float lastDamageTakenSFXPlayTime = -Mathf.Infinity;
+
+    [Header("Parameters - Minion/shield respawn")]
+    [SerializeField] private List<float> minionRespawnThreasholds;
+    public AudioClip minionRespawnSFX;
 
     [Header("Parameters - Orb")]
     public GameObject singleOrbPrefab;
@@ -41,7 +48,7 @@ public class BossController : MonoBehaviour
     public float multipleOrbsAngleSpreadDeg = 60;
     public AudioClip multipleOrbShotSFX;
 
-    
+    private bool hasShield = false;
     void Start()
     {
         bossAnimator = GetComponent<Animator>();
@@ -53,6 +60,7 @@ public class BossController : MonoBehaviour
         healthBar.SetMaxHealth(maxHealth);
 
         nextShotTime = Time.time + 3f;
+        instantiateBossShield(); 
     }
 
     void Update()
@@ -159,7 +167,9 @@ public class BossController : MonoBehaviour
         }
         else
         {
+
             currentHealth -= damage;
+            minionRespawn();
             healthBar.SetHealth(currentHealth);
             PlayDamageTakenSFXIfEnoughCooldownTimeHasPassed();
 
@@ -210,5 +220,32 @@ public class BossController : MonoBehaviour
             Destroy(collision.gameObject);
             
         }
+    }
+    private void instantiateBossShield()
+    {
+        Instantiate(p_BossShield, this.transform.position, Quaternion.identity);
+        hasShield = true;
+        Debug.Log("BossShield Up");
+    }
+    private void minionRespawn()
+    {
+        if (!hasShield)
+        {
+            for (int i = 0; i < minionRespawnThreasholds.Count(); i++)
+            {
+                if (CurrentHealthPercentLessThan(minionRespawnThreasholds[i]))
+                {
+                    instantiateBossShield();
+                    minionRespawnThreasholds.RemoveAt(i);
+                    FindAnyObjectByType<MinionSpawnerController>().handleMinionRespawn();
+                    audioSource.PlayAudioWithRandomPitch(minionRespawnSFX);
+                    info.setImmune(true);
+                }
+            }
+        }
+    }
+    public void setHasShield(bool value)
+    {
+        hasShield = value;
     }
 }

@@ -102,16 +102,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d27042e14824dc4c897463ef51ddfde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bossInfo: {fileID: 0}
   anchor: {fileID: 0}
   spawner: {fileID: 0}
   healthBar: {fileID: 2918724717463857661}
   maxhealth: 500
   moveSpeed: 3
   collisionDmg: 5
+  currentHealth: 20
   projectile: {fileID: 4767921678106280535, guid: 5cda2d0d30d07624b85208d0c5ba089e,
     type: 3}
-  firingPattern: 0
-  firingRotation: 0
   attackPeriod: 2
   attackTimer: 0
   burstSize: 3
@@ -120,7 +120,6 @@ MonoBehaviour:
   shotNum: 0
   launchPoint: {fileID: 1003880002372108823}
   launchAngle: {x: 0, y: 0, z: 0, w: 0}
-  currentHealth: 20
 --- !u!70 &2358549528649128718
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -153,8 +152,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 3.16, y: 2.655}
+  m_Offset: {x: 0.024086952, y: -0.01605773}
+  m_Size: {x: 1.0885153, y: 1.2972693}
   m_Direction: 0
 --- !u!50 &-3214555015778094342
 Rigidbody2D:
