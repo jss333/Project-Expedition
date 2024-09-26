@@ -21,6 +21,8 @@ public class PlayerHealth : MonoBehaviour
 
     void Start()
     {
+        robBertParentObj.SetActive(true);
+        IsDefeated = false; // Reset defeat state when the scene is reloaded
         audioSource = GetComponent<RandomPitchAudioSource>();
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
@@ -51,7 +53,7 @@ public class PlayerHealth : MonoBehaviour
 
         defeatScreen.SetActive(true); // Show defeat screen immediately
         Time.timeScale = 0f; // Pause the game
-        Destroy(robBertParentObj);
+        robBertParentObj.SetActive(false);
         challengeRoomBGM.PlayDefeatBGM();
     }
 }

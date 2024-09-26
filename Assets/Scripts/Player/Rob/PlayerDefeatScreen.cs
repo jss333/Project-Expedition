@@ -8,6 +8,7 @@ public class DefeatScreenManager : MonoBehaviour
     // Method to reload the current scene
     public void Retry()
     {
+        Time.timeScale = 1f;
         Scene currentScene = SceneManager.GetActiveScene(); // Get the current scene
         SceneManager.LoadScene(currentScene.buildIndex); // Reload the current scene
     }
