@@ -53,6 +53,15 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ActivateSecondAbility"",
+                    ""type"": ""Button"",
+                    ""id"": ""dac6b945-2a24-4885-b2e0-667a80ebbf2a"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -103,11 +112,22 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""2ea900bd-33e4-4d45-8655-a5eec4f7effd"",
-                    ""path"": ""<Mouse>/rightButton"",
+                    ""path"": ""<Keyboard>/e"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""AcitvateAbility"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""49dab366-a251-4793-add3-313c6f05b54d"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ActivateSecondAbility"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -149,6 +169,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         m_Std_Fire = m_Std.FindAction("Fire", throwIfNotFound: true);
         m_Std_Move = m_Std.FindAction("Move", throwIfNotFound: true);
         m_Std_AcitvateAbility = m_Std.FindAction("AcitvateAbility", throwIfNotFound: true);
+        m_Std_ActivateSecondAbility = m_Std.FindAction("ActivateSecondAbility", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Newaction = m_UI.FindAction("New action", throwIfNotFound: true);
@@ -216,6 +237,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Std_Fire;
     private readonly InputAction m_Std_Move;
     private readonly InputAction m_Std_AcitvateAbility;
+    private readonly InputAction m_Std_ActivateSecondAbility;
     public struct StdActions
     {
         private @Controls m_Wrapper;
@@ -223,6 +245,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         public InputAction @Fire => m_Wrapper.m_Std_Fire;
         public InputAction @Move => m_Wrapper.m_Std_Move;
         public InputAction @AcitvateAbility => m_Wrapper.m_Std_AcitvateAbility;
+        public InputAction @ActivateSecondAbility => m_Wrapper.m_Std_ActivateSecondAbility;
         public InputActionMap Get() { return m_Wrapper.m_Std; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -241,6 +264,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @AcitvateAbility.started += instance.OnAcitvateAbility;
             @AcitvateAbility.performed += instance.OnAcitvateAbility;
             @AcitvateAbility.canceled += instance.OnAcitvateAbility;
+            @ActivateSecondAbility.started += instance.OnActivateSecondAbility;
+            @ActivateSecondAbility.performed += instance.OnActivateSecondAbility;
+            @ActivateSecondAbility.canceled += instance.OnActivateSecondAbility;
         }
 
         private void UnregisterCallbacks(IStdActions instance)
@@ -254,6 +280,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @AcitvateAbility.started -= instance.OnAcitvateAbility;
             @AcitvateAbility.performed -= instance.OnAcitvateAbility;
             @AcitvateAbility.canceled -= instance.OnAcitvateAbility;
+            @ActivateSecondAbility.started -= instance.OnActivateSecondAbility;
+            @ActivateSecondAbility.performed -= instance.OnActivateSecondAbility;
+            @ActivateSecondAbility.canceled -= instance.OnActivateSecondAbility;
         }
 
         public void RemoveCallbacks(IStdActions instance)
@@ -322,6 +351,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         void OnFire(InputAction.CallbackContext context);
         void OnMove(InputAction.CallbackContext context);
         void OnAcitvateAbility(InputAction.CallbackContext context);
+        void OnActivateSecondAbility(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

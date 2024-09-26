@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5537235303677232018}
   - component: {fileID: 7508545080807750832}
   - component: {fileID: 345132079119581903}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Ability_ReflectingSheildPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}

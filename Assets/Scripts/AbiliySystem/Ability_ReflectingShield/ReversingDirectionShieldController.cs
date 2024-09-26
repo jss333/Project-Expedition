@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace AbilitySystem
 {
-    public class ReflectingShieldController : MonoBehaviour
+    public class ReversingDirectionShieldController : MonoBehaviour
     {
         [SerializeField] private CircleCollider2D circleCollider;
         private float radius;
@@ -12,19 +12,8 @@ namespace AbilitySystem
         private int damageValue;
         private AbilityType abilityType;
 
-        PlayerHealth playerHealth;
-
-
-        Transform pointerDir;
-
         Vector3 initialDirection;
 
-
-        private void OnEnable()
-        {
-            pointerDir = FindObjectOfType<Pointer_Sys>().transform;
-            playerHealth = FindObjectOfType<PlayerHealth>();
-        }
 
         private void OnDestroy()
         {
@@ -43,7 +32,7 @@ namespace AbilitySystem
 
         public void RemoveAbilityVisualFromScene()
         {
-            if (gameObject != null) 
+            if (gameObject != null)
                 Destroy(gameObject);
         }
 
@@ -71,12 +60,13 @@ namespace AbilitySystem
             {
                 if (collision.CompareTag("Projectile"))
                 {
+                    PlayerProjectile playerProjectile = collision.GetComponent<PlayerProjectile>();
+                    if (playerProjectile != null) return;
+
                     Rigidbody2D rb = collision.GetComponent<Rigidbody2D>();
                     if (rb != null)
                     {
-                        Vector2 reverseDirection = (Vector2)Vector3.Normalize(pointerDir.position - collision.transform.position);
-
-                        rb.velocity = reverseDirection.normalized * reverseSpeed;
+                        rb.velocity = rb.velocity * -reverseSpeed;
                     }
 
                     BossOrb bossOrb = collision.GetComponent<BossOrb>();
@@ -88,6 +78,5 @@ namespace AbilitySystem
                 }
             }
         }
-
     }
 }

@@ -13,6 +13,7 @@ public class InputHandler : MonoBehaviour, IStdActions
 
 
     public Action OnAbilityActivate;
+    public Action OnSecondaryAbilityActivate;
 
 
     private void Awake()
@@ -49,5 +50,10 @@ public class InputHandler : MonoBehaviour, IStdActions
     public void OnAcitvateAbility(InputAction.CallbackContext context)
     {
         OnAbilityActivate?.Invoke();
+    }
+
+    public void OnActivateSecondAbility(InputAction.CallbackContext context)
+    {
+        OnSecondaryAbilityActivate?.Invoke();
     }
 }
