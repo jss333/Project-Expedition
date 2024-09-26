@@ -7,24 +7,24 @@ namespace AbilitySystem
     public abstract class AbilitySo : ScriptableObject
     {
         [Header("General Settings")]
-        [SerializeField] private string _abilityName;
-        [SerializeField] private Sprite _abilityIcon;
+        [SerializeField] private string abilityName;
+        [SerializeField] private Sprite abilityIcon;
 
-        [SerializeField] private float _maxDuration;
-        protected float _duration;
+        [SerializeField] private float maxDuration;
+        protected float duration;
 
-        [SerializeField] private float _maxCoolDownTime;
-        protected float _coolDownTime;
+        [SerializeField] private float maxCoolDownTime;
+        protected float coolDownTime;
 
-        public float MaxDuration => _maxDuration;
-        public float Duration => _duration;
+        public float MaxDuration => maxDuration;
+        public float Duration => duration;
 
-        public float CoolDownTime => _coolDownTime;
-        public float MaxCoolDownTime => _maxCoolDownTime;
+        public float CoolDownTime => coolDownTime;
+        public float MaxCoolDownTime => maxCoolDownTime;
 
-        public string AbilityName => _abilityName;
+        public string AbilityName => abilityName;
 
-        public Sprite AbilityIcon => _abilityIcon;
+        public Sprite AbilityIcon => abilityIcon;
 
 
         private void Awake()
@@ -34,23 +34,23 @@ namespace AbilitySystem
 
         public void InitializeAbility()
         {
-            _duration = _maxDuration;
-            _coolDownTime = _maxCoolDownTime;
+            duration = maxDuration;
+            coolDownTime = maxCoolDownTime;
         }
 
         public bool InUse()
         {
-            return _duration < _maxDuration;
+            return duration < maxDuration;
         }
 
         public bool IsReadyToUse()
         {
-            return (_coolDownTime >= _maxCoolDownTime && _duration >= MaxDuration);
+            return (coolDownTime >= maxCoolDownTime && duration >= MaxDuration);
         }
 
         public bool IsInCoolDown()
         {
-            return _coolDownTime < _maxCoolDownTime;
+            return coolDownTime < maxCoolDownTime;
         }
 
         public abstract void UpdateDuration();
@@ -58,6 +58,7 @@ namespace AbilitySystem
         public abstract void UpdateCoolDownTime();
 
         public abstract void UseAbility(Transform spawnPoint);
+        public abstract void ForceCancelAbility();
         
     }
 }

@@ -10,15 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a6c7629c7af8732438e48f79e58c392b, type: 3}
-  m_Name: New ReflectingShieldAbility
+  m_Name: ReversingDirectionShieldAbility
   m_EditorClassIdentifier: 
-  _abilityName: Reflection Shield
-  _abilityIcon: {fileID: 0}
-  _maxDuration: 5
-  _maxCoolDownTime: 3
+  abilityName: 
+  abilityIcon: {fileID: 0}
+  maxDuration: 3
+  maxCoolDownTime: 3
   reflectingShieldProperties:
     abilityType: 0
-    abilityPrefab: {fileID: 4070371023245784628, guid: 84f0b04700737b147a0b9891e8c34547,
+    abilityPrefab: {fileID: 5776741152520659617, guid: ea23d2a42dd458545a416d1fe5b74b07,
       type: 3}
     radius: 1
+    reverseSpeed: 6
     newDamageValue: 30

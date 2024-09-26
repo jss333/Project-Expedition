@@ -17,10 +17,11 @@ namespace AbilitySystem
 
         private GameObject newShield;
         ReflectingShieldController reflectingShieldController;
+        ReversingDirectionShieldController reversingDirectionShieldController;
 
         public override void UseAbility(Transform spawnPoint)
         {
-            _duration = 0;
+            duration = 0;
 
             newShield = Instantiate(reflectingShieldProperties.abilityPrefab, spawnPoint);
 
@@ -31,37 +32,61 @@ namespace AbilitySystem
                 reflectingShieldController.SetReflectionShieldProperties(reflectingShieldProperties);
 
                 AddListenerToEvent(reflectingShieldController.RemoveAbilityVisualFromScene);
+
+                return;
             }
 
 
+
+            reversingDirectionShieldController = newShield.GetComponent<ReversingDirectionShieldController>();
+
+            if(reversingDirectionShieldController != null )
+            {
+                reversingDirectionShieldController.SetReflectionShieldProperties(reflectingShieldProperties);
+
+                AddListenerToEvent(reversingDirectionShieldController.RemoveAbilityVisualFromScene);
+            }
 
             //Debug.Log("Use Reflect Ability");
         }
 
         public override void UpdateCoolDownTime()
         {
-            _coolDownTime += Time.deltaTime;
+            coolDownTime += Time.deltaTime;
 
-            if (_coolDownTime > MaxCoolDownTime)
-                _coolDownTime = MaxCoolDownTime;
+            if (coolDownTime > MaxCoolDownTime)
+                coolDownTime = MaxCoolDownTime;
             //Debug.Log("Updating CoolDown " + (int)_coolDownTime);
         }
 
         public override void UpdateDuration()
         {
-            _duration += Time.deltaTime;
+            duration += Time.deltaTime;
 
-            if (_duration >= MaxDuration)
+            if (duration >= MaxDuration)
             {
-                _duration = MaxDuration;
-                _coolDownTime = 0;
+                duration = MaxDuration;
+                coolDownTime = 0;
 
                 OnAbilityUsedUp?.Invoke();
 
-                RemoveListenerFromEvent(reflectingShieldController.RemoveAbilityVisualFromScene);
+                if(reflectingShieldController)
+                    RemoveListenerFromEvent(reflectingShieldController.RemoveAbilityVisualFromScene);
+
+                if (reversingDirectionShieldController)
+                    RemoveListenerFromEvent(reversingDirectionShieldController.RemoveAbilityVisualFromScene);
             }
 
             //Debug.Log("Updating Duration " + (int)_duration);
+        }
+
+        public override void ForceCancelAbility()
+        {
+            if (reflectingShieldController)
+                RemoveListenerFromEvent(reflectingShieldController.RemoveAbilityVisualFromScene);
+
+            if (reversingDirectionShieldController)
+                RemoveListenerFromEvent(reversingDirectionShieldController.RemoveAbilityVisualFromScene);
         }
 
         private void AddListenerToEvent(Action _listener)
@@ -73,5 +98,7 @@ namespace AbilitySystem
         {
             OnAbilityUsedUp -= _listener;
         }
+
+        
     }
 }

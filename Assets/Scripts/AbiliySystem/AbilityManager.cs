@@ -8,10 +8,11 @@ namespace AbilitySystem
     {
         public static AbilityManager Singletone;
 
-        [SerializeField] List<AbilitySo> _availableAbilities = new List<AbilitySo>();
-        [SerializeField] AbilitySo _currentAbility;
+        [SerializeField] List<AbilitySo> availableAbilities = new List<AbilitySo>();
+        [SerializeField] AbilitySo firstAbility;
+        [SerializeField] AbilitySo secondaryAbility;
 
-        int _currentAbilityIndex = 0;
+        int currentAbilityIndex = 0;
 
 
         GameObject playerTransform;
@@ -28,20 +29,25 @@ namespace AbilitySystem
             }
 
 
-            InputHandler.Singletone.OnAbilityActivate += UseAbility;
+            InputHandler.Singletone.OnAbilityActivate += UseFirstAbility;
+            InputHandler.Singletone.OnSecondaryAbilityActivate += UseSecondaryAbility;
         }
 
 
         private void OnDestroy()
         {
-            InputHandler.Singletone.OnAbilityActivate -= UseAbility;
+            InputHandler.Singletone.OnAbilityActivate -= UseFirstAbility;
+            InputHandler.Singletone.OnSecondaryAbilityActivate -= UseSecondaryAbility;
         }
 
         private void Start()
         {
             playerTransform = GameObject.FindGameObjectWithTag("Player");
 
-            CycleThroughAbilities();
+            //CycleThroughAbilities();
+
+            firstAbility.InitializeAbility();
+            secondaryAbility.InitializeAbility();
         }
 
 
@@ -49,73 +55,100 @@ namespace AbilitySystem
         {
             //if (_currentAbility == null) return;
 
-            UpdateDurations();
+            /*UpdateDurations();
 
-            UpdateCoolDowns();
+            UpdateCoolDowns(); */
+
+            if(firstAbility.InUse())
+                firstAbility.UpdateDuration();
+
+            if(secondaryAbility.InUse())
+                secondaryAbility.UpdateDuration();
+
+            if (firstAbility.IsInCoolDown())
+                firstAbility.UpdateCoolDownTime();
+            
+            if (secondaryAbility.IsInCoolDown())
+                secondaryAbility.UpdateCoolDownTime();
         }
 
 
         public void AddAbilityToInventory(AbilitySo _ability)
         {
-            _availableAbilities.Add(_ability);
+            availableAbilities.Add(_ability);
         }
 
         public void RemoveAbilityFromInventory(AbilitySo _ability)
         {
-            _availableAbilities.Remove(_ability);
+            availableAbilities.Remove(_ability);
         }
 
 
         [ContextMenu("Use Current Ability")]
-        private void UseAbility()
+        private void UseFirstAbility()
         {
-            if (_currentAbility != null)
+            if (firstAbility != null)
             {
-                if(_currentAbility.IsReadyToUse())
-                    _currentAbility.UseAbility(playerTransform.transform);
+                if (secondaryAbility.InUse())
+                    return;
+
+                if (firstAbility.IsReadyToUse())
+                    firstAbility.UseAbility(playerTransform.transform);
+            }
+        } 
+        
+        private void UseSecondaryAbility()
+        {
+            if (secondaryAbility != null)
+            {
+                if (firstAbility.InUse())
+                    return;
+
+                if (secondaryAbility.IsReadyToUse())
+                    secondaryAbility.UseAbility(playerTransform.transform);
             }
         }
 
         [ContextMenu("Cycle")]
         public void CycleThroughAbilities()
         {
-            if(_currentAbility != null)
+            if(firstAbility != null)
             {
-                if (_currentAbility.InUse()) return;
+                if (firstAbility.InUse()) return;
             }
 
-            _currentAbilityIndex++;
+            currentAbilityIndex++;
 
-            if(_currentAbilityIndex >= _availableAbilities.Count)
+            if(currentAbilityIndex >= availableAbilities.Count)
             {
-                _currentAbilityIndex = 0;
+                currentAbilityIndex = 0;
             }
 
-            if (_currentAbilityIndex < 0)
+            if (currentAbilityIndex < 0)
             {
-                _currentAbilityIndex = _availableAbilities.Count - 1;
+                currentAbilityIndex = availableAbilities.Count - 1;
             }
 
-            _currentAbility = _availableAbilities[_currentAbilityIndex];
+            firstAbility = availableAbilities[currentAbilityIndex];
 
-            _currentAbility.InitializeAbility();
+            firstAbility.InitializeAbility();
         }
 
         private void UpdateDurations()
         {
-            for (int i = 0; i < _availableAbilities.Count; i++)
+            for (int i = 0; i < availableAbilities.Count; i++)
             {
-                if (_availableAbilities[i].InUse())
-                    _availableAbilities[i].UpdateDuration();
+                if (availableAbilities[i].InUse())
+                    availableAbilities[i].UpdateDuration();
             }
         }
 
         private void UpdateCoolDowns()
         {
-            for (int i = 0; i < _availableAbilities.Count; i++)
+            for (int i = 0; i < availableAbilities.Count; i++)
             {
-                if (_availableAbilities[i].IsInCoolDown())
-                    _availableAbilities[i].UpdateCoolDownTime();
+                if (availableAbilities[i].IsInCoolDown())
+                    availableAbilities[i].UpdateCoolDownTime();
             }
         }
     }
@@ -129,6 +162,7 @@ namespace AbilitySystem
         public AbilityType abilityType;
         public GameObject abilityPrefab;
         public float radius;
+        public float reverseSpeed;
 
         [Range(5, 30)]
         public int newDamageValue;
