@@ -18,7 +18,7 @@ public class BossController : MonoBehaviour
     private System.Random random;
     private BossInformation info;
     [SerializeField] private GameObject p_BossShield;
-    [SerializeField] private GameObject p_BossShield;
+    public GameObject VictoryScreen;
 
     [Header("Parameters")]
     public int maxHealth = 5000;
@@ -60,7 +60,7 @@ public class BossController : MonoBehaviour
 
         nextShotTime = Time.time + 3f;
         instantiateBossShield();
-        instantiateBossShield();
+        VictoryScreen.SetActive(false); // Ensure the victory screen is hidden initially
     }
 
     void Update()
@@ -189,8 +189,18 @@ public class BossController : MonoBehaviour
             {
                 challengeRoomBGM.PlayVictoryBGM();
                 Die();
+                TriggerVictory();
             }
         }
+    }
+
+    private void TriggerVictory()
+    {
+        VictoryScreen.SetActive(true);  // Show the victory screen
+        Time.timeScale = 0f; // Pause the game
+
+        // Optionally, you could destroy the boss, but keep it visible until scene reload
+        Destroy(this.gameObject);
     }
 
     private void PlayDamageTakenSFXIfEnoughCooldownTimeHasPassed()
