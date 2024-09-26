@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
 {
     [Header("References")]
     public Transform groundCheckObj;
+    [SerializeField] private AbilityButton JumpToggle;
     [Tooltip("Layer to define what is considered 'ground'")]
     public LayerMask groundLayer;
     private SpriteRenderer playerSpriteRenderer;
@@ -60,6 +61,7 @@ public class PlayerMovement : MonoBehaviour
         HandleHorizontalInput();
         HandleJumpInput();
         ClampVerticalVelocity();
+        isAirJumpSkillAcquired = JumpToggle.isActive;
     }
 
 
