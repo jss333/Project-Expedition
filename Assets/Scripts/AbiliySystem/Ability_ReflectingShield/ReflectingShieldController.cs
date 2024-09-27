@@ -13,12 +13,8 @@ namespace AbilitySystem
         private AbilityType abilityType;
 
         PlayerHealth playerHealth;
-
-
         Transform pointerDir;
-
         Vector3 initialDirection;
-
 
         private void OnEnable()
         {
@@ -31,12 +27,12 @@ namespace AbilitySystem
             RemoveAbilityVisualFromScene();
         }
 
-        public void SetReflectionShieldProperties(ReflectingShieldProperties _reflectingShieldProperties)
+        public void SetReflectionShieldProperties(ReflectingShieldProperties reflectingShieldProperties)
         {
-            radius = _reflectingShieldProperties.radius;
-            abilityType = _reflectingShieldProperties.abilityType;
-            damageValue = _reflectingShieldProperties.newDamageValue;
-            reverseSpeed = _reflectingShieldProperties.reverseSpeed;
+            radius = reflectingShieldProperties.radius;
+            abilityType = reflectingShieldProperties.abilityType;
+            damageValue = reflectingShieldProperties.newDamageValue;
+            reverseSpeed = reflectingShieldProperties.reverseSpeed;
 
             SetUpRadiusDependencies();
         }
@@ -50,7 +46,6 @@ namespace AbilitySystem
         private void SetUpRadiusDependencies()
         {
             SetCollisionRadius();
-
             SetVisualRadius();
         }
 
@@ -64,7 +59,6 @@ namespace AbilitySystem
             transform.localScale = Vector3.one * radius;
         }
 
-
         private void OnTriggerEnter2D(Collider2D collision)
         {
             if (collision != null)
@@ -75,7 +69,6 @@ namespace AbilitySystem
                     if (rb != null)
                     {
                         Vector2 reverseDirection = (Vector2)Vector3.Normalize(pointerDir.position - collision.transform.position);
-
                         rb.velocity = reverseDirection.normalized * reverseSpeed;
                     }
 

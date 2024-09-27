@@ -54,11 +54,8 @@ namespace AbilitySystem
         }
 
         public abstract void UpdateDuration();
-
         public abstract void UpdateCoolDownTime();
-
         public abstract void UseAbility(Transform spawnPoint);
         public abstract void ForceCancelAbility();
-        
     }
 }

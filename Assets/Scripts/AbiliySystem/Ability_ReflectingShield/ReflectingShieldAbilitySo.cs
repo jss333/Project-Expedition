@@ -9,11 +9,8 @@ namespace AbilitySystem
     public class ReflectingShieldAbilitySo : AbilitySo
     {
         [Header("Custom Settings")]
-
         public ReflectingShieldProperties reflectingShieldProperties;
-
         public static Action OnAbilityUsedUp;
-
 
         private GameObject newShield;
         ReflectingShieldController reflectingShieldController;
@@ -22,32 +19,22 @@ namespace AbilitySystem
         public override void UseAbility(Transform spawnPoint)
         {
             duration = 0;
-
             newShield = Instantiate(reflectingShieldProperties.abilityPrefab, spawnPoint);
 
             reflectingShieldController = newShield.GetComponent<ReflectingShieldController>();
-
             if(reflectingShieldController != null )
             {
                 reflectingShieldController.SetReflectionShieldProperties(reflectingShieldProperties);
-
                 AddListenerToEvent(reflectingShieldController.RemoveAbilityVisualFromScene);
-
                 return;
             }
 
-
-
             reversingDirectionShieldController = newShield.GetComponent<ReversingDirectionShieldController>();
-
             if(reversingDirectionShieldController != null )
             {
                 reversingDirectionShieldController.SetReflectionShieldProperties(reflectingShieldProperties);
-
                 AddListenerToEvent(reversingDirectionShieldController.RemoveAbilityVisualFromScene);
             }
-
-            //Debug.Log("Use Reflect Ability");
         }
 
         public override void UpdateCoolDownTime()
@@ -56,7 +43,6 @@ namespace AbilitySystem
 
             if (coolDownTime > MaxCoolDownTime)
                 coolDownTime = MaxCoolDownTime;
-            //Debug.Log("Updating CoolDown " + (int)_coolDownTime);
         }
 
         public override void UpdateDuration()
@@ -76,8 +62,6 @@ namespace AbilitySystem
                 if (reversingDirectionShieldController)
                     RemoveListenerFromEvent(reversingDirectionShieldController.RemoveAbilityVisualFromScene);
             }
-
-            //Debug.Log("Updating Duration " + (int)_duration);
         }
 
         public override void ForceCancelAbility()
@@ -98,7 +82,5 @@ namespace AbilitySystem
         {
             OnAbilityUsedUp -= _listener;
         }
-
-        
     }
 }

@@ -5,7 +5,6 @@ using UnityEngine;
 public class BossOrb : MonoBehaviour
 {
     public int orbDmg = 5;
-
     private bool canDamageBossAndMinions;
 
     public void SetCanDamageBossAndMinions(bool _b)
