@@ -105,5 +105,9 @@ public class BossInformation : MonoBehaviour
             Debug.LogError("BossShield reference not found!");
         }
     }
-
+    
+    public void setMinionCount(int count)
+    {
+        minionCount = count;
+    }
 }

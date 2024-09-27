@@ -51,6 +51,7 @@ public class MinionController : MonoBehaviour
             StartCoroutine(moveToAnchor());
         }
         currentHealth = maxhealth;
+        healthBar.SetHealth((int)(currentHealth / maxhealth * 100f));
         burstTimer = burstDensity;
         return;
     }
