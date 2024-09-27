@@ -1,3 +1,4 @@
+using HealthSystem;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,10 +7,24 @@ public class BossOrb : MonoBehaviour
 {
     public int orbDmg = 5;
     private bool canDamageBossAndMinions;
+    int playerLayerMask;
+    int enemyLayerMask;
+    int minionLayerMask;
+    List<int> damagableLayersIndices = new List<int>();
+
+    private void Start()
+    {
+        playerLayerMask = LayerMask.NameToLayer("Player");
+        enemyLayerMask = LayerMask.NameToLayer("Boss");
+
+        damagableLayersIndices.Add(playerLayerMask);
+    }
 
     public void SetCanDamageBossAndMinions(bool _b)
     {
         canDamageBossAndMinions = _b;
+        damagableLayersIndices.Add(enemyLayerMask);
+
     }
 
     public void SetNewDamagevalue(int _damageValue)
@@ -19,7 +34,12 @@ public class BossOrb : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        if(canDamageBossAndMinions)
+        if(damagableLayersIndices.Contains(other.gameObject.layer))
+        {
+            other.GetComponent<Health>().TakeDamage(orbDmg);
+        }
+
+        /*if(canDamageBossAndMinions)
         {
             if (other.gameObject.tag == "Boss")
             {
@@ -40,6 +60,6 @@ public class BossOrb : MonoBehaviour
         {
             other.gameObject.GetComponent<PlayerHealth>().TakeDamage(orbDmg);
             Destroy(this.gameObject);
-        }
+        } */
     }
 }
