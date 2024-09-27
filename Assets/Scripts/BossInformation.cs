@@ -69,15 +69,10 @@ public class BossInformation : MonoBehaviour
 
     public void minionDestroyed()
     {
-<<<<<<< HEAD
         bossShield = FindFirstObjectByType<BossShield>();
         minionCount--;
-<<<<<<< HEAD
-=======
         if(minionCount >= 2)
-=======
         if (bossShield == null)
->>>>>>> 83c9ade (Defeat Screen)
         {
             bossShield = FindFirstObjectByType<BossShield>();
         }
@@ -99,18 +94,15 @@ public class BossInformation : MonoBehaviour
                 bossShield.playShieldBreakAnimation();
             }
         }
-<<<<<<< HEAD
->>>>>>> 63d9bd3 (Minion and Shield Respawn Threashhold)
-        if(minionCount <= 0)
+        if (minionCount <= 0)
         {
             setImmune(false);
             bossShield.playShieldBreakAnimation();
             bossShield.playShieldBreakAnimation();
-=======
+        }
         else
         {
             Debug.LogError("BossShield reference not found!");
->>>>>>> 83c9ade (Defeat Screen)
         }
     }
 

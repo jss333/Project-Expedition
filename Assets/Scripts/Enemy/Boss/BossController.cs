@@ -31,6 +31,10 @@ public class BossController : MonoBehaviour
     public float damageTakenSFXCooldown = 0.2f;
     private float lastDamageTakenSFXPlayTime = -Mathf.Infinity;
 
+    [Header("Parameters - Minion/shield respawn")]
+    [SerializeField] private List<float> minionRespawnThreasholds;
+    public AudioClip minionRespawnSFX;
+
     [Header("Parameters - Orb")]
     public GameObject singleOrbPrefab;
     public float minOrbSpeed = 4.5f;

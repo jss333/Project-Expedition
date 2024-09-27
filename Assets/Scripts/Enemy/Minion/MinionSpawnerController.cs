@@ -48,7 +48,7 @@ public class MinionSpawnerController : MonoBehaviour
             spawnWave();
         }
     }
-    public void handleMinionRespawn()
+    public void handleMinionRespawn2()
     {
         if(activeEntityInstances ==0)
         {
