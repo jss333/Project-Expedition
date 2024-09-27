@@ -11,21 +11,19 @@ namespace AbilitySystem
         private float reverseSpeed;
         private int damageValue;
         private AbilityType abilityType;
-
-        Vector3 initialDirection;
-
+        private Vector3 initialDirection;
 
         private void OnDestroy()
         {
             RemoveAbilityVisualFromScene();
         }
 
-        public void SetReflectionShieldProperties(ReflectingShieldProperties _reflectingShieldProperties)
+        public void SetReflectionShieldProperties(ReflectingShieldProperties reflectingShieldProperties)
         {
-            radius = _reflectingShieldProperties.radius;
-            abilityType = _reflectingShieldProperties.abilityType;
-            damageValue = _reflectingShieldProperties.newDamageValue;
-            reverseSpeed = _reflectingShieldProperties.reverseSpeed;
+            radius = reflectingShieldProperties.radius;
+            abilityType = reflectingShieldProperties.abilityType;
+            damageValue = reflectingShieldProperties.newDamageValue;
+            reverseSpeed = reflectingShieldProperties.reverseSpeed;
 
             SetUpRadiusDependencies();
         }
@@ -39,7 +37,6 @@ namespace AbilitySystem
         private void SetUpRadiusDependencies()
         {
             SetCollisionRadius();
-
             SetVisualRadius();
         }
 
@@ -52,7 +49,6 @@ namespace AbilitySystem
         {
             transform.localScale = Vector3.one * radius;
         }
-
 
         private void OnTriggerEnter2D(Collider2D collision)
         {

@@ -14,7 +14,6 @@ namespace AbilitySystem
 
         int currentAbilityIndex = 0;
 
-
         GameObject playerTransform;
 
         private void Awake()
@@ -28,11 +27,9 @@ namespace AbilitySystem
                 Singletone = this;
             }
 
-
             InputHandler.Singletone.OnAbilityActivate += UseFirstAbility;
             InputHandler.Singletone.OnSecondaryAbilityActivate += UseSecondaryAbility;
         }
-
 
         private void OnDestroy()
         {
@@ -43,22 +40,12 @@ namespace AbilitySystem
         private void Start()
         {
             playerTransform = GameObject.FindGameObjectWithTag("Player");
-
-            //CycleThroughAbilities();
-
             firstAbility.InitializeAbility();
             secondaryAbility.InitializeAbility();
         }
 
-
         private void Update()
         {
-            //if (_currentAbility == null) return;
-
-            /*UpdateDurations();
-
-            UpdateCoolDowns(); */
-
             if(firstAbility.InUse())
                 firstAbility.UpdateDuration();
 
@@ -72,7 +59,6 @@ namespace AbilitySystem
                 secondaryAbility.UpdateCoolDownTime();
         }
 
-
         public void AddAbilityToInventory(AbilitySo _ability)
         {
             availableAbilities.Add(_ability);
@@ -82,7 +68,6 @@ namespace AbilitySystem
         {
             availableAbilities.Remove(_ability);
         }
-
 
         [ContextMenu("Use Current Ability")]
         private void UseFirstAbility()
@@ -130,7 +115,6 @@ namespace AbilitySystem
             }
 
             firstAbility = availableAbilities[currentAbilityIndex];
-
             firstAbility.InitializeAbility();
         }
 
@@ -155,7 +139,6 @@ namespace AbilitySystem
 
     public enum AbilityType { ReflectingShield, TestAbility}
 
-
     [System.Serializable]
     public struct ReflectingShieldProperties
     {
@@ -164,7 +147,7 @@ namespace AbilitySystem
         public float radius;
         public float reverseSpeed;
 
-        [Range(5, 30)]
+        [Range(5, 300)]
         public int newDamageValue;
     }
 

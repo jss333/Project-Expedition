@@ -8,13 +8,9 @@ using static Controls;
 public class InputHandler : MonoBehaviour, IStdActions
 {
     public static InputHandler Singletone;
-
     public Controls controls;
-
-
     public Action OnAbilityActivate;
     public Action OnSecondaryAbilityActivate;
-
 
     private void Awake()
     {
