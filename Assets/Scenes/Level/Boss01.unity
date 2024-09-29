@@ -3209,29 +3209,9 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2583448413161769738, guid: bfe30e0a894d02d488d00f5203b8ec9a,
         type: 3}
-      propertyPath: debugUI
-      value: 
-      objectReference: {fileID: 1126045169}
-    - target: {fileID: 2583448413161769738, guid: bfe30e0a894d02d488d00f5203b8ec9a,
-        type: 3}
       propertyPath: JumpToggle
       value: 
       objectReference: {fileID: 1109229711}
-    - target: {fileID: 2768808380936731226, guid: bfe30e0a894d02d488d00f5203b8ec9a,
-        type: 3}
-      propertyPath: shotSFX
-      value: 
-      objectReference: {fileID: 8300000, guid: e345b7232526f2c499d89e786a1fbbac, type: 3}
-    - target: {fileID: 3072250601190182420, guid: bfe30e0a894d02d488d00f5203b8ec9a,
-        type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4283147244315553361, guid: bfe30e0a894d02d488d00f5203b8ec9a,
-        type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4569246080999924309, guid: bfe30e0a894d02d488d00f5203b8ec9a,
         type: 3}
       propertyPath: healthBar
@@ -3242,21 +3222,6 @@ PrefabInstance:
       propertyPath: challengeRoomBGM
       value: 
       objectReference: {fileID: 789663009}
-    - target: {fileID: 4699378682750390226, guid: bfe30e0a894d02d488d00f5203b8ec9a,
-        type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5660354252157351010, guid: bfe30e0a894d02d488d00f5203b8ec9a,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6148659644534077433, guid: bfe30e0a894d02d488d00f5203b8ec9a,
-        type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6344666254820012109, guid: bfe30e0a894d02d488d00f5203b8ec9a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3317,11 +3282,6 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 6225119}
-    - target: {fileID: 8968386745279171877, guid: bfe30e0a894d02d488d00f5203b8ec9a,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4045,18 +4005,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7abbdbf1179b68940b755a3138141a97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1126045169 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6124753671517378734, guid: 4109fc878e129ef4c8d722a5dc08b8f2,
-    type: 3}
-  m_PrefabInstance: {fileID: 5865099389292029857}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a132de976dfa98e4d8de633a5bdc98f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1127581826
