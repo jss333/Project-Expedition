@@ -11,7 +11,11 @@ namespace AbilitySystem
         [SerializeField] List<AbilitySo> availableAbilities = new List<AbilitySo>();
         [SerializeField] AbilitySo firstAbility;
         [SerializeField] AbilitySo secondaryAbility;
+        [SerializeField] AbilityToggleUI toggleUI;
 
+
+        private bool toggleSecondAb = false;
+        private bool toggleFirstAb = false;
         int currentAbilityIndex = 0;
 
         GameObject playerTransform;
@@ -39,6 +43,7 @@ namespace AbilitySystem
 
         private void Start()
         {
+            toggleUI = FindFirstObjectByType<AbilityToggleUI>();
             playerTransform = GameObject.FindGameObjectWithTag("Player");
             firstAbility.InitializeAbility();
             secondaryAbility.InitializeAbility();
@@ -57,6 +62,8 @@ namespace AbilitySystem
             
             if (secondaryAbility.IsInCoolDown())
                 secondaryAbility.UpdateCoolDownTime();
+            toggleFirstAb = toggleUI.ShieldAbilityBlue;
+            toggleSecondAb = toggleUI.ShieldAbilityRed;
         }
 
         public void AddAbilityToInventory(AbilitySo _ability)
@@ -72,7 +79,7 @@ namespace AbilitySystem
         [ContextMenu("Use Current Ability")]
         private void UseFirstAbility()
         {
-            if (firstAbility != null)
+            if (firstAbility != null && toggleFirstAb)
             {
                 if (secondaryAbility.InUse())
                     return;
@@ -84,7 +91,7 @@ namespace AbilitySystem
         
         private void UseSecondaryAbility()
         {
-            if (secondaryAbility != null)
+            if (secondaryAbility != null && toggleSecondAb)
             {
                 if (firstAbility.InUse())
                     return;
