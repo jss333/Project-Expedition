@@ -16,6 +16,7 @@ public class BossController : MonoBehaviour
     private System.Random random;
     private BossInformation info;
     [SerializeField] private GameObject p_BossShield;
+    [SerializeField] private GettingDamagedAnimationController gettingDamagedController;
 
     [Header("Parameters")]
     public int maxHealth = 5000;
@@ -174,6 +175,7 @@ public class BossController : MonoBehaviour
             minionRespawn();
             healthBar.SetHealth(currentHealth);
             PlayDamageTakenSFXIfEnoughCooldownTimeHasPassed();
+            gettingDamagedController.ApplyGettingHitAnimation();
 
             if (!hurtStateTriggered && CurrentHealthPercentLessThan(hurtStateHealthPercent))
             {
