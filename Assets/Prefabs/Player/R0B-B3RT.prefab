@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7067599934470063995}
   - component: {fileID: 5430041347143105826}
   - component: {fileID: 1749467903940575023}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: B3RT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -170,7 +170,7 @@ MonoBehaviour:
   shotDmg: 10
   shotSpeed: 20
   shotIntervalSec: 0.05
-  shotSFX: {fileID: 8300000, guid: f28b44f0ad0579741855d66eeb145a5e, type: 3}
+  shotSFX: {fileID: 8300000, guid: e345b7232526f2c499d89e786a1fbbac, type: 3}
 --- !u!95 &7067599934470063995
 Animator:
   serializedVersion: 5
@@ -311,7 +311,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1220596859696295229}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Wall Check
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -342,7 +342,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7634073678044376022}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Ground Check
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -381,6 +381,8 @@ GameObject:
   - component: {fileID: 4569246080999924309}
   - component: {fileID: 9066354500192235127}
   - component: {fileID: 1688233914511036152}
+  - component: {fileID: 596652963021192158}
+  - component: {fileID: 6770448408643650198}
   m_Layer: 7
   m_Name: R0B
   m_TagString: Player
@@ -555,6 +557,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groundCheckObj: {fileID: 7634073678044376022}
+  JumpToggle: {fileID: 0}
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
@@ -697,6 +700,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minPitch: 0.95
   maxPitch: 1.05
+--- !u!114 &596652963021192158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5274791500926242520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56d176c648caa314d8c70bd1cc6d8746, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  renderers:
+  - {fileID: 7404772159482370178}
+  damageColor: {r: 1, g: 0, b: 0, a: 1}
+  normalcolor: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &6770448408643650198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5274791500926242520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11566a80379449d40b3ad276b5ef4311, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6148659644534077433
 GameObject:
   m_ObjectHideFlags: 0
@@ -706,7 +737,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4702342829228138502}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: B3RTAnchor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -879,7 +910,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &502305029403368259
 Transform:
   m_ObjectHideFlags: 0
