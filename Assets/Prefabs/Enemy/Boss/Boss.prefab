@@ -91,7 +91,9 @@ GameObject:
   - component: {fileID: 7799424101485074036}
   - component: {fileID: 8572231004828214337}
   - component: {fileID: 1863408600527210321}
-  m_Layer: 20
+  - component: {fileID: 5027129401144850634}
+  - component: {fileID: 528595403152297450}
+  m_Layer: 9
   m_Name: Boss
   m_TagString: Boss
   m_Icon: {fileID: 0}
@@ -242,6 +244,7 @@ MonoBehaviour:
   challengeRoomBGM: {fileID: 0}
   p_BossShield: {fileID: 3970724019627321346, guid: 2a484caf907ff66468343981d89f3cbe,
     type: 3}
+  gettingDamagedController: {fileID: 528595403152297450}
   maxHealth: 5000
   currentHealth: 0
   hurtStateHealthPercent: 50
@@ -389,6 +392,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   msController: {fileID: 0}
+--- !u!114 &5027129401144850634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1135948589728832962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11566a80379449d40b3ad276b5ef4311, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &528595403152297450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1135948589728832962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11566a80379449d40b3ad276b5ef4311, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1307701130561185487
 GameObject:
   m_ObjectHideFlags: 0
@@ -740,7 +767,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4769236345242613906}
-  m_Layer: 20
+  m_Layer: 0
   m_Name: Orb Source Position
   m_TagString: Untagged
   m_Icon: {fileID: 0}
