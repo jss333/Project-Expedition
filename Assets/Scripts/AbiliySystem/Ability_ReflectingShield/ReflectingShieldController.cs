@@ -7,6 +7,8 @@ namespace AbilitySystem
     public class ReflectingShieldController : MonoBehaviour
     {
         [SerializeField] private CircleCollider2D circleCollider;
+        [SerializeField] private AudioSource audioSource;
+        [SerializeField] private SpriteRenderer spriteRenderer;
         private float radius;
         private float reverseSpeed;
         private int damageValue;
@@ -15,6 +17,8 @@ namespace AbilitySystem
         PlayerHealth playerHealth;
         Transform pointerDir;
         Vector3 initialDirection;
+        private AudioClip rechargeClip;
+
 
         private void OnEnable()
         {
@@ -33,15 +37,34 @@ namespace AbilitySystem
             abilityType = reflectingShieldProperties.abilityType;
             damageValue = reflectingShieldProperties.newDamageValue;
             reverseSpeed = reflectingShieldProperties.reverseSpeed;
+            rechargeClip = reflectingShieldProperties.chargeClip;
 
             SetUpRadiusDependencies();
         }
 
         public void RemoveAbilityVisualFromScene()
         {
-            if (gameObject != null) 
-                Destroy(gameObject);
+            if (gameObject != null)
+            {
+                spriteRenderer.enabled = false;
+                circleCollider.enabled = false;
+            }
+            //Destroy(gameObject);
         }
+
+        public void RemoveAbilityGameObjectFromScene()
+        {
+            if (gameObject != null)
+            {
+                Destroy(gameObject);
+            }
+        }
+
+        public void OnRechargeAbility()
+        {
+            StartCoroutine(PlaySoundAndDestroyObject());
+        }
+
 
         private void SetUpRadiusDependencies()
         {
@@ -80,6 +103,15 @@ namespace AbilitySystem
                     }
                 }
             }
+        }
+
+        IEnumerator PlaySoundAndDestroyObject()
+        {
+            audioSource.PlayOneShot(rechargeClip);
+
+            yield return new WaitForSeconds(1.2f);
+
+            RemoveAbilityGameObjectFromScene();
         }
 
     }
