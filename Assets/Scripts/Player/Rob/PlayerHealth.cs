@@ -32,7 +32,7 @@ public class PlayerHealth : MonoBehaviour
         healthBar.SetHealth(currentHealth);
         audioSource.PlayAudioWithNormalPitch(damageTakenSFX);
         entityActionVisualController.ApplyGettingHitVisuals();
-
+        DamageEventsManager.OnPlayerDamaged?.Invoke((float)healthdamage / maxHealth);
 
         if (currentHealth <= 0)
         {
