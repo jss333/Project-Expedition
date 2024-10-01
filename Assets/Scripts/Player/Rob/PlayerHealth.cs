@@ -34,6 +34,8 @@ public class PlayerHealth : MonoBehaviour
         {
             Destroy(robBertParentObj);
             challengeRoomBGM.PlayDefeatBGM();
+
+            EndGameEventsManager.OnDefeatAchieved?.Invoke();
         }
     }
 }
