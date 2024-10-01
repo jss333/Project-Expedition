@@ -8,18 +8,6 @@ public class LoadGameAssets : MonoBehaviour
 {
     private static LoadGameAssets i;
 
-    public static LoadGameAssets instance
-    {
-        get
-        {
-            if (i == null)
-                i = Instantiate(Resources.Load<LoadGameAssets>("GameAssets"));
-            return i;
-        }
-    }
+    private Transform damageNumbersPopup;
 
-    public Transform damageNumbersPopup;
 }
-
-
-

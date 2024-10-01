@@ -16,6 +16,8 @@ public class BossController : MonoBehaviour
     private System.Random random;
     private BossInformation info;
     [SerializeField] private GameObject p_BossShield;
+    [SerializeField] private GameObject numbers;
+    [SerializeField] private Transform numberSource;
 
     [Header("Parameters")]
     public int maxHealth = 5000;
@@ -163,11 +165,14 @@ public class BossController : MonoBehaviour
     {
         if(info.getImmune())
         {
+            GameObject num = Instantiate(numbers, numberSource.position, Quaternion.identity);
+            num.GetComponent<DamageNumberTesting>().setUpString("Immune");
             return;
         }
         else
         {
-
+            GameObject num = Instantiate(numbers, numberSource.position, Quaternion.identity);
+            num.GetComponent<DamageNumberTesting>().setUpNum(damage);
             currentHealth -= damage;
             minionRespawn();
             healthBar.SetHealth(currentHealth);

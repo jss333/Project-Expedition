@@ -12218,6 +12218,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7144092496311828960, guid: 88669eb52a11c4f45b479ec3df6d074b,
         type: 3}
+      propertyPath: numbers
+      value: 
+      objectReference: {fileID: 1925401383084551538, guid: 829610abb2180f84a92e352045cc7092,
+        type: 3}
+    - target: {fileID: 7144092496311828960, guid: 88669eb52a11c4f45b479ec3df6d074b,
+        type: 3}
       propertyPath: playerPosition
       value: 
       objectReference: {fileID: 901548167}
@@ -12256,7 +12262,8 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3374747734171162549, guid: 88669eb52a11c4f45b479ec3df6d074b, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
