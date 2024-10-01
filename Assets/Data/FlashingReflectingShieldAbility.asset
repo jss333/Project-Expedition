@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abilityName: 
   abilityIcon: {fileID: 0}
-  maxDuration: 0.1
-  maxCoolDownTime: 3
+  maxDuration: 0.25
+  maxCoolDownTime: 1.5
   reflectingShieldProperties:
     abilityType: 0
     abilityPrefab: {fileID: 4070371023245784628, guid: 84f0b04700737b147a0b9891e8c34547,
       type: 3}
     radius: 1
     reverseSpeed: 5
-    newDamageValue: 30
+    newDamageValue: 180

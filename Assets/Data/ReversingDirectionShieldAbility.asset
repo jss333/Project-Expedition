@@ -15,7 +15,7 @@ MonoBehaviour:
   abilityName: 
   abilityIcon: {fileID: 0}
   maxDuration: 3
-  maxCoolDownTime: 3
+  maxCoolDownTime: 5
   reflectingShieldProperties:
     abilityType: 0
     abilityPrefab: {fileID: 5776741152520659617, guid: ea23d2a42dd458545a416d1fe5b74b07,
