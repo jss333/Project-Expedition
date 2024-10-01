@@ -9,7 +9,17 @@ public class PauseMenu : MonoBehaviour
     {
         isPaused = false;
         Time.timeScale = 1;
+
+        EndGameEventsManager.OnVictoryAchieved += StopTime;
+        EndGameEventsManager.OnDefeatAchieved += StopTime;
     }
+
+    private void OnDestroy()
+    {
+        EndGameEventsManager.OnVictoryAchieved -= StopTime;
+        EndGameEventsManager.OnDefeatAchieved -= StopTime;
+    }
+
     void Update()
     {
         // Toggle pause when the "Esc" key is pressed
@@ -46,5 +56,10 @@ public class PauseMenu : MonoBehaviour
     {
         Application.Quit();            // Quit the game
         Debug.Log("Game is quitting...");  // For debugging in the editor
+    }
+
+    private void StopTime()
+    {
+        Time.timeScale = 0;
     }
 }
