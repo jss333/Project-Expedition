@@ -12234,6 +12234,11 @@ PrefabInstance:
       objectReference: {fileID: 789663009}
     - target: {fileID: 7144092496311828960, guid: 88669eb52a11c4f45b479ec3df6d074b,
         type: 3}
+      propertyPath: stopOverflowDamageNumbers
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7144092496311828960, guid: 88669eb52a11c4f45b479ec3df6d074b,
+        type: 3}
       propertyPath: minionRespawnThreasholds.Array.size
       value: 3
       objectReference: {fileID: 0}

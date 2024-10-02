@@ -19,6 +19,7 @@ public class BossController : MonoBehaviour
     [SerializeField] private GameObject numbers;
     [SerializeField] private Transform numberSource;
 
+
     [Header("Parameters")]
     public int maxHealth = 5000;
     public int currentHealth;
@@ -29,6 +30,8 @@ public class BossController : MonoBehaviour
     public AudioClip damageTakenSFX;
     public float damageTakenSFXCooldown = 0.2f;
     private float lastDamageTakenSFXPlayTime = -Mathf.Infinity;
+    public float stopOverflowDamageNumbers = 2f;
+    private float ph;
 
     [Header("Parameters - Minion/shield respawn")]
     [SerializeField] private List<float> minionRespawnThreasholds;
@@ -51,6 +54,7 @@ public class BossController : MonoBehaviour
     public AudioClip multipleOrbShotSFX;
 
     private bool hasShield = false;
+    private bool damageNumActive = false;
     void Start()
     {
         bossAnimator = GetComponent<Animator>();
@@ -62,7 +66,9 @@ public class BossController : MonoBehaviour
         healthBar.SetMaxHealth(maxHealth);
 
         nextShotTime = Time.time + 3f;
-        instantiateBossShield(); 
+        instantiateBossShield();
+
+        ph = stopOverflowDamageNumbers;
     }
 
     void Update()
@@ -70,6 +76,14 @@ public class BossController : MonoBehaviour
         if (PlayerIsAlive())
         {
             ShootOrbIfTimeForNextShot();
+        }
+        if (damageNumActive)
+        {
+            stopOverflowDamageNumbers -= Time.deltaTime;
+            if(stopOverflowDamageNumbers <= -3)
+            {
+                damageNumActive = false;
+            }
         }
     }
 
@@ -160,19 +174,27 @@ public class BossController : MonoBehaviour
     {
         return (float)(min + (random.NextDouble() * (max - min)));
     }
-
     public void TakeDamage(int damage)
     {
         if(info.getImmune())
         {
-            GameObject num = Instantiate(numbers, numberSource.position, Quaternion.identity);
-            num.GetComponent<DamageNumberTesting>().setUpString("Immune");
+            if (damageNumActive == false)
+            {
+                damageNumActive = true;
+                spawnImmuneNumbers();
+            }
+            else if(damageNumActive && stopOverflowDamageNumbers < 0)
+            {
+                spawnImmuneNumbers();
+            }
             return;
         }
         else
         {
+            //quick hits will stack numbers (future)
             GameObject num = Instantiate(numbers, numberSource.position, Quaternion.identity);
             num.GetComponent<DamageNumberTesting>().setUpNum(damage);
+
             currentHealth -= damage;
             minionRespawn();
             healthBar.SetHealth(currentHealth);
@@ -252,5 +274,11 @@ public class BossController : MonoBehaviour
     public void setHasShield(bool value)
     {
         hasShield = value;
+    }
+    private void spawnImmuneNumbers()
+    {
+        GameObject num = Instantiate(numbers, numberSource.position, Quaternion.identity);
+        num.GetComponent<DamageNumberTesting>().setUpString("Immune");
+        stopOverflowDamageNumbers = ph;
     }
 }

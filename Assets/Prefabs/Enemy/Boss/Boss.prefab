@@ -251,6 +251,7 @@ MonoBehaviour:
   bgmChangeHealthPercent: 40
   damageTakenSFX: {fileID: 8300000, guid: a787a6a66f99b9349b7cdaa865e0385d, type: 3}
   damageTakenSFXCooldown: 0.2
+  stopOverflowDamageNumbers: 1
   minionRespawnThreasholds:
   - 90
   - 70
