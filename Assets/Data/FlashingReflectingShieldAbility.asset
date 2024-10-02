@@ -22,5 +22,5 @@ MonoBehaviour:
       type: 3}
     radius: 1
     reverseSpeed: 5
-    chargeClip: {fileID: 8300000, guid: bc5fb1c78de225142b3463b2847ff033, type: 3}
+    chargeClip: {fileID: 8300000, guid: bfbdff909454488498f081bf8ff97dbb, type: 3}
     newDamageValue: 30
