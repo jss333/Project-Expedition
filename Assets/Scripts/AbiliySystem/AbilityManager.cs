@@ -153,6 +153,8 @@ namespace AbilitySystem
         public GameObject abilityPrefab;
         public float radius;
         public float reverseSpeed;
+        public AudioClip chargeClip;
+
 
         [Range(5, 300)]
         public int newDamageValue;

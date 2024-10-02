@@ -284,7 +284,7 @@ Transform:
   m_GameObject: {fileID: 6225117}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.267563, y: 4.0301185, z: -10}
+  m_LocalPosition: {x: -16.081932, y: 4.0301185, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2572,6 +2572,7 @@ GameObject:
   - component: {fileID: 737773443}
   - component: {fileID: 737773445}
   - component: {fileID: 737773444}
+  - component: {fileID: 737773446}
   m_Layer: 0
   m_Name: cm
   m_TagString: Untagged
@@ -2649,6 +2650,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &737773446
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 737773442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68bb026fafb42b14791938953eaace77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_NoiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
+  m_PivotOffset: {x: 0, y: 0, z: 0}
+  m_AmplitudeGain: 1
+  m_FrequencyGain: 1
+  mNoiseOffsets: {x: 0, y: 0, z: 0}
 --- !u!1001 &747732414
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2909,6 +2927,7 @@ MonoBehaviour:
   availableAbilities: []
   firstAbility: {fileID: 11400000, guid: 016f3c8cf524c9b42becb99d2b9e2077, type: 2}
   secondaryAbility: {fileID: 11400000, guid: fc75d966280991549b09fce89f5af747, type: 2}
+  toggleUI: {fileID: 0}
 --- !u!4 &804246507
 Transform:
   m_ObjectHideFlags: 0
@@ -3209,29 +3228,14 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2583448413161769738, guid: bfe30e0a894d02d488d00f5203b8ec9a,
         type: 3}
-      propertyPath: debugUI
-      value: 
-      objectReference: {fileID: 1126045169}
-    - target: {fileID: 2583448413161769738, guid: bfe30e0a894d02d488d00f5203b8ec9a,
-        type: 3}
       propertyPath: JumpToggle
       value: 
       objectReference: {fileID: 1109229711}
-    - target: {fileID: 2768808380936731226, guid: bfe30e0a894d02d488d00f5203b8ec9a,
+    - target: {fileID: 3902266722017391789, guid: bfe30e0a894d02d488d00f5203b8ec9a,
         type: 3}
-      propertyPath: shotSFX
+      propertyPath: virtualCamera
       value: 
-      objectReference: {fileID: 8300000, guid: e345b7232526f2c499d89e786a1fbbac, type: 3}
-    - target: {fileID: 3072250601190182420, guid: bfe30e0a894d02d488d00f5203b8ec9a,
-        type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4283147244315553361, guid: bfe30e0a894d02d488d00f5203b8ec9a,
-        type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1204898065}
     - target: {fileID: 4569246080999924309, guid: bfe30e0a894d02d488d00f5203b8ec9a,
         type: 3}
       propertyPath: healthBar
@@ -3242,21 +3246,6 @@ PrefabInstance:
       propertyPath: challengeRoomBGM
       value: 
       objectReference: {fileID: 789663009}
-    - target: {fileID: 4699378682750390226, guid: bfe30e0a894d02d488d00f5203b8ec9a,
-        type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5660354252157351010, guid: bfe30e0a894d02d488d00f5203b8ec9a,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6148659644534077433, guid: bfe30e0a894d02d488d00f5203b8ec9a,
-        type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6344666254820012109, guid: bfe30e0a894d02d488d00f5203b8ec9a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3317,11 +3306,6 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 6225119}
-    - target: {fileID: 8968386745279171877, guid: bfe30e0a894d02d488d00f5203b8ec9a,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4045,18 +4029,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7abbdbf1179b68940b755a3138141a97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1126045169 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6124753671517378734, guid: 4109fc878e129ef4c8d722a5dc08b8f2,
-    type: 3}
-  m_PrefabInstance: {fileID: 5865099389292029857}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a132de976dfa98e4d8de633a5bdc98f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1127581826
@@ -12160,25 +12132,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1032819265768577545, guid: 88669eb52a11c4f45b479ec3df6d074b,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 9.892182
-      objectReference: {fileID: 0}
-    - target: {fileID: 1032819265768577545, guid: 88669eb52a11c4f45b479ec3df6d074b,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 8.39
-      objectReference: {fileID: 0}
     - target: {fileID: 1135948589728832962, guid: 88669eb52a11c4f45b479ec3df6d074b,
         type: 3}
       propertyPath: m_Name
       value: Boss
-      objectReference: {fileID: 0}
-    - target: {fileID: 1135948589728832962, guid: 88669eb52a11c4f45b479ec3df6d074b,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1863408600527210321, guid: 88669eb52a11c4f45b479ec3df6d074b,
         type: 3}
@@ -12235,11 +12192,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4642582085259598728, guid: 88669eb52a11c4f45b479ec3df6d074b,
-        type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7144092496311828960, guid: 88669eb52a11c4f45b479ec3df6d074b,
         type: 3}
       propertyPath: playerPosition
@@ -12250,26 +12202,6 @@ PrefabInstance:
       propertyPath: challengeRoomBGM
       value: 
       objectReference: {fileID: 789663009}
-    - target: {fileID: 7144092496311828960, guid: 88669eb52a11c4f45b479ec3df6d074b,
-        type: 3}
-      propertyPath: minionRespawnThreasholds.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7144092496311828960, guid: 88669eb52a11c4f45b479ec3df6d074b,
-        type: 3}
-      propertyPath: minionRespawnThreasholds.Array.data[0]
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 7144092496311828960, guid: 88669eb52a11c4f45b479ec3df6d074b,
-        type: 3}
-      propertyPath: minionRespawnThreasholds.Array.data[1]
-      value: 70
-      objectReference: {fileID: 0}
-    - target: {fileID: 7144092496311828960, guid: 88669eb52a11c4f45b479ec3df6d074b,
-        type: 3}
-      propertyPath: minionRespawnThreasholds.Array.data[2]
-      value: 50
-      objectReference: {fileID: 0}
     - target: {fileID: 9141157564233288960, guid: 88669eb52a11c4f45b479ec3df6d074b,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -12293,76 +12225,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 758240261521349557, guid: 4109fc878e129ef4c8d722a5dc08b8f2,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 758240261521349557, guid: 4109fc878e129ef4c8d722a5dc08b8f2,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 758240261521349557, guid: 4109fc878e129ef4c8d722a5dc08b8f2,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 758240261521349557, guid: 4109fc878e129ef4c8d722a5dc08b8f2,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1126045169}
-    - target: {fileID: 758240261521349557, guid: 4109fc878e129ef4c8d722a5dc08b8f2,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 5865099389292029858}
-    - target: {fileID: 758240261521349557, guid: 4109fc878e129ef4c8d722a5dc08b8f2,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 758240261521349557, guid: 4109fc878e129ef4c8d722a5dc08b8f2,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 758240261521349557, guid: 4109fc878e129ef4c8d722a5dc08b8f2,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: toggleAbilityImage
-      objectReference: {fileID: 0}
-    - target: {fileID: 758240261521349557, guid: 4109fc878e129ef4c8d722a5dc08b8f2,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: manageVariableChanges
-      objectReference: {fileID: 0}
-    - target: {fileID: 758240261521349557, guid: 4109fc878e129ef4c8d722a5dc08b8f2,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: DebugMenuUI, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 758240261521349557, guid: 4109fc878e129ef4c8d722a5dc08b8f2,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: AbilityToggleUI, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 758240261521349557, guid: 4109fc878e129ef4c8d722a5dc08b8f2,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: ReflectShieldBlue
-      objectReference: {fileID: 0}
-    - target: {fileID: 758240261521349557, guid: 4109fc878e129ef4c8d722a5dc08b8f2,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 758240261521349557, guid: 4109fc878e129ef4c8d722a5dc08b8f2,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 1982281418855649659, guid: 4109fc878e129ef4c8d722a5dc08b8f2,
         type: 3}
       propertyPath: m_Name
@@ -12399,76 +12261,6 @@ PrefabInstance:
       value: AbilityToggleUI, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3060274114307653974, guid: 4109fc878e129ef4c8d722a5dc08b8f2,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6036763757616872486, guid: 4109fc878e129ef4c8d722a5dc08b8f2,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6036763757616872486, guid: 4109fc878e129ef4c8d722a5dc08b8f2,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6036763757616872486, guid: 4109fc878e129ef4c8d722a5dc08b8f2,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6036763757616872486, guid: 4109fc878e129ef4c8d722a5dc08b8f2,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1126045169}
-    - target: {fileID: 6036763757616872486, guid: 4109fc878e129ef4c8d722a5dc08b8f2,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 5865099389292029858}
-    - target: {fileID: 6036763757616872486, guid: 4109fc878e129ef4c8d722a5dc08b8f2,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6036763757616872486, guid: 4109fc878e129ef4c8d722a5dc08b8f2,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6036763757616872486, guid: 4109fc878e129ef4c8d722a5dc08b8f2,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: toggleAbilityImage
-      objectReference: {fileID: 0}
-    - target: {fileID: 6036763757616872486, guid: 4109fc878e129ef4c8d722a5dc08b8f2,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: manageVariableChanges
-      objectReference: {fileID: 0}
-    - target: {fileID: 6036763757616872486, guid: 4109fc878e129ef4c8d722a5dc08b8f2,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: DebugMenuUI, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 6036763757616872486, guid: 4109fc878e129ef4c8d722a5dc08b8f2,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: AbilityToggleUI, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 6036763757616872486, guid: 4109fc878e129ef4c8d722a5dc08b8f2,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: ReflectShieldRed
-      objectReference: {fileID: 0}
-    - target: {fileID: 6036763757616872486, guid: 4109fc878e129ef4c8d722a5dc08b8f2,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6036763757616872486, guid: 4109fc878e129ef4c8d722a5dc08b8f2,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
