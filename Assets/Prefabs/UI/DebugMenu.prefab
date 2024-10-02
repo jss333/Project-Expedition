@@ -134,6 +134,18 @@ MonoBehaviour:
           m_StringArgument: DoubleJump
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 3289833516835647706}
+        m_TargetAssemblyTypeName: AbilityToggleUI, Assembly-CSharp
+        m_MethodName: manageVariableChanges
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &4209256413673238817
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,6 +172,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6774903477503446815}
   - component: {fileID: 6124753671517378734}
+  - component: {fileID: 3289833516835647706}
   m_Layer: 0
   m_Name: DebugMenu
   m_TagString: Untagged
@@ -201,6 +214,19 @@ MonoBehaviour:
   - {fileID: 4209256413673238817}
   greenButton: {fileID: 21300000, guid: 760e7aa0c12214634b4484966609bbfc, type: 3}
   redButton: {fileID: 21300000, guid: e90050d096506c54bac1c4146671976c, type: 3}
+--- !u!114 &3289833516835647706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1982281418855649659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be522608819ba0d43a3cd9f54849b914, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonList: []
 --- !u!1 &3461308459028098772
 GameObject:
   m_ObjectHideFlags: 0
@@ -322,7 +348,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1558896544776811074}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6124753671517378734}
+        m_TargetAssemblyTypeName: DebugMenuUI, Assembly-CSharp
+        m_MethodName: toggleAbilityImage
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: ReflectShieldBlue
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3289833516835647706}
+        m_TargetAssemblyTypeName: AbilityToggleUI, Assembly-CSharp
+        m_MethodName: manageVariableChanges
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2685628227303813420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -988,7 +1038,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2389770117869523621}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6124753671517378734}
+        m_TargetAssemblyTypeName: DebugMenuUI, Assembly-CSharp
+        m_MethodName: toggleAbilityImage
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: ReflectShieldRed
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3289833516835647706}
+        m_TargetAssemblyTypeName: AbilityToggleUI, Assembly-CSharp
+        m_MethodName: manageVariableChanges
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &3869999356703269376
 MonoBehaviour:
   m_ObjectHideFlags: 0

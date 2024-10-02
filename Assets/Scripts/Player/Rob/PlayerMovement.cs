@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
 {
     [Header("References")]
     public Transform groundCheckObj;
-    [SerializeField] private AbilityButton JumpToggle;
+    [SerializeField] private AbilityToggleUI toggleUI;
     [Tooltip("Layer to define what is considered 'ground'")]
     public LayerMask groundLayer;
     private SpriteRenderer playerSpriteRenderer;
@@ -44,6 +44,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void Start()
     {
+        toggleUI = FindFirstObjectByType<AbilityToggleUI>();
         playerSpriteRenderer = GetComponent<SpriteRenderer>();
         playerAnimator = GetComponent<Animator>();
         playerRb = GetComponent<Rigidbody2D>();
@@ -61,7 +62,7 @@ public class PlayerMovement : MonoBehaviour
         HandleHorizontalInput();
         HandleJumpInput();
         ClampVerticalVelocity();
-        isAirJumpSkillAcquired = JumpToggle.isActive;
+        isAirJumpSkillAcquired = toggleUI.DoubleJump;
     }
 
 
