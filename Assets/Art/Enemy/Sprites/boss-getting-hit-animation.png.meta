@@ -1,0 +1,664 @@
+fileFormatVersion: 2
+guid: 15fd27be85bf47d46ac10368c9d0d139
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: boss-getting-hit-animation_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3408
+        width: 1000
+        height: 852
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9b44d2f75917a3418b92df96fbbb5ef
+      internalID: 1175264669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-getting-hit-animation_1
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 3408
+        width: 1000
+        height: 852
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c4e5ef863ce3854d89c0a985fe1023d
+      internalID: -1848059391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-getting-hit-animation_2
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 3408
+        width: 1000
+        height: 852
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 633fb1c8b2971564b80a84750d46aadc
+      internalID: 1898803202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-getting-hit-animation_3
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 3408
+        width: 1000
+        height: 852
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33ab0f35bae026d4bb5bf47b72946626
+      internalID: 174916972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-getting-hit-animation_4
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 3408
+        width: 1000
+        height: 852
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 600539bd49d04c949881fa0578faead0
+      internalID: -1622980136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-getting-hit-animation_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2556
+        width: 1000
+        height: 845
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f05051bf1a9a0f944ae485542831a1b5
+      internalID: -260982076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-getting-hit-animation_6
+      rect:
+        serializedVersion: 2
+        x: 1001
+        y: 2556
+        width: 1000
+        height: 845
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1c967d0622a555438dde7feff743f57
+      internalID: -243884988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-getting-hit-animation_7
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 2556
+        width: 1000
+        height: 845
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ebdb74f505541b4e8d0be75cb6a6b1c
+      internalID: 2009213029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-getting-hit-animation_8
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 2556
+        width: 1000
+        height: 845
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0760d333856a7fa4f9fa85bed9bb2faf
+      internalID: 2096853622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-getting-hit-animation_9
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 2556
+        width: 1000
+        height: 845
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87e3d189992fe464bb68e4a14318b6e6
+      internalID: 1789738762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-getting-hit-animation_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1704
+        width: 1000
+        height: 837
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0697cf07060e4f24abfafc63b4f75b69
+      internalID: 574526137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-getting-hit-animation_11
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 1704
+        width: 1000
+        height: 838
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91f9c8e2a46ebc04584e30608dc7ac37
+      internalID: 2001816662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-getting-hit-animation_12
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 1704
+        width: 1000
+        height: 838
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe33dcb4da318544c9c1987d95de9e7d
+      internalID: 1908829563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-getting-hit-animation_13
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 1704
+        width: 1000
+        height: 838
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0da5ef308e819ac4b902edd04a851c30
+      internalID: -1599090301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-getting-hit-animation_14
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 1704
+        width: 1000
+        height: 838
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbd341fa2323573489ccec976cf6e7c4
+      internalID: 805858299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-getting-hit-animation_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 852
+        width: 1000
+        height: 836
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99d737a0056d08f47b77266902567678
+      internalID: 1357115598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-getting-hit-animation_16
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 852
+        width: 1000
+        height: 836
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69053dfb5bc431a4298f7cec00f2b8ed
+      internalID: -1364309095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-getting-hit-animation_17
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 852
+        width: 1000
+        height: 836
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6122af0cabd6a3f4abb34e5cd9f89e39
+      internalID: 216678027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-getting-hit-animation_18
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 852
+        width: 1000
+        height: 845
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32e510df24cc6b64d95886dcdf0e3dc5
+      internalID: -851822511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-getting-hit-animation_19
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 852
+        width: 1000
+        height: 845
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7b5a6e9e698c434db8a23455cfb96d3
+      internalID: 911055512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-getting-hit-animation_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1000
+        height: 846
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 587401ea7ab00b84d918257369b03228
+      internalID: 1510844801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-getting-hit-animation_21
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 0
+        width: 1000
+        height: 846
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f376cbc5ffa7d544bcbf1dc1115d87c
+      internalID: -152164832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-getting-hit-animation_22
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 0
+        width: 1000
+        height: 846
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2f42a319a772064ca1f506a0b4d6ee4
+      internalID: 785201446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-getting-hit-animation_23
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 0
+        width: 1000
+        height: 846
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f962eaef001d5e4a8801d38abe521c8
+      internalID: 1921513073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-getting-hit-animation_24
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 0
+        width: 1000
+        height: 852
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b183cde0bdbdf4489a260f5b92d924c
+      internalID: -423603300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      boss-getting-hit-animation_0: 1175264669
+      boss-getting-hit-animation_1: -1848059391
+      boss-getting-hit-animation_10: 574526137
+      boss-getting-hit-animation_11: 2001816662
+      boss-getting-hit-animation_12: 1908829563
+      boss-getting-hit-animation_13: -1599090301
+      boss-getting-hit-animation_14: 805858299
+      boss-getting-hit-animation_15: 1357115598
+      boss-getting-hit-animation_16: -1364309095
+      boss-getting-hit-animation_17: 216678027
+      boss-getting-hit-animation_18: -851822511
+      boss-getting-hit-animation_19: 911055512
+      boss-getting-hit-animation_2: 1898803202
+      boss-getting-hit-animation_20: 1510844801
+      boss-getting-hit-animation_21: -152164832
+      boss-getting-hit-animation_22: 785201446
+      boss-getting-hit-animation_23: 1921513073
+      boss-getting-hit-animation_24: -423603300
+      boss-getting-hit-animation_3: 174916972
+      boss-getting-hit-animation_4: -1622980136
+      boss-getting-hit-animation_5: -260982076
+      boss-getting-hit-animation_6: -243884988
+      boss-getting-hit-animation_7: 2009213029
+      boss-getting-hit-animation_8: 2096853622
+      boss-getting-hit-animation_9: 1789738762
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
