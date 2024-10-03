@@ -17,6 +17,8 @@ public class BossController : MonoBehaviour
     private BossInformation info;
     [SerializeField] private GameObject p_BossShield;
     [SerializeField] private EntityActionVisualController bossAnimationController;
+    [SerializeField] private GameObject numbers;
+    [SerializeField] private Transform numberSource;
 
 
     [Header("Parameters")]
