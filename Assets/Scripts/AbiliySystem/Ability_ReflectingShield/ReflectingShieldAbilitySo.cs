@@ -42,7 +42,10 @@ namespace AbilitySystem
             coolDownTime += Time.deltaTime;
 
             if (coolDownTime > MaxCoolDownTime)
+            {
                 coolDownTime = MaxCoolDownTime;
+                ReCharge();
+            }
         }
 
         public override void UpdateDuration()
@@ -73,6 +76,24 @@ namespace AbilitySystem
                 RemoveListenerFromEvent(reversingDirectionShieldController.RemoveAbilityVisualFromScene);
         }
 
+        private void ReCharge()
+        {
+            if (reflectingShieldController)
+                reflectingShieldController.OnRechargeAbility();
+
+            if (reversingDirectionShieldController)
+                reversingDirectionShieldController.OnRechargeAbility();
+        }
+
+        private void RemoveAbilityObjectFromScene()
+        {
+            if (reflectingShieldController)
+                reflectingShieldController.RemoveAbilityGameObjectFromScene();
+
+            if (reversingDirectionShieldController)
+                reversingDirectionShieldController.RemoveAbilityGameObjectFromScene();
+        }
+
         private void AddListenerToEvent(Action _listener)
         {
             OnAbilityUsedUp += _listener;
@@ -82,5 +103,8 @@ namespace AbilitySystem
         {
             OnAbilityUsedUp -= _listener;
         }
+
+
+        
     }
 }

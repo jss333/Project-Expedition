@@ -10,6 +10,7 @@ public class PlayerHealth : MonoBehaviour
     public GameObject robBertParentObj;
     public ChallengeRoomBGM challengeRoomBGM;
     private RandomPitchAudioSource audioSource;
+    private EntityActionVisualController entityActionVisualController;
 
     [Header("Parameters")]
     public int maxHealth = 150;
@@ -20,6 +21,7 @@ public class PlayerHealth : MonoBehaviour
     void Start()
     {
         audioSource = GetComponent<RandomPitchAudioSource>();
+        entityActionVisualController = GetComponent<EntityActionVisualController>();
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
     }
@@ -29,8 +31,10 @@ public class PlayerHealth : MonoBehaviour
         currentHealth -= healthdamage;
         healthBar.SetHealth(currentHealth);
         audioSource.PlayAudioWithNormalPitch(damageTakenSFX);
+        entityActionVisualController.ApplyGettingHitVisuals();
+        DamageEventsManager.OnPlayerDamaged?.Invoke((float)healthdamage / maxHealth);
 
-        if(currentHealth <= 0)
+        if (currentHealth <= 0)
         {
             Destroy(robBertParentObj);
             challengeRoomBGM.PlayDefeatBGM();
