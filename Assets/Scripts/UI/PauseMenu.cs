@@ -7,8 +7,16 @@ public class PauseMenu : MonoBehaviour
 
     private void Start()
     {
+        EndGameEventManager.OnVictoryAchieved += StopTime;
+        EndGameEventManager.OnDefeatAchieved += StopTime;
         isPaused = false;
         Time.timeScale = 1;
+    }
+
+    private void OnDestroy()
+    {
+        EndGameEventManager.OnVictoryAchieved -= StopTime;
+        EndGameEventManager.OnDefeatAchieved -= StopTime;
     }
     void Update()
     {
@@ -46,5 +54,10 @@ public class PauseMenu : MonoBehaviour
     {
         Application.Quit();            // Quit the game
         Debug.Log("Game is quitting...");  // For debugging in the editor
+    }
+
+    private void StopTime()
+    {
+        Time.timeScale = 0;
     }
 }

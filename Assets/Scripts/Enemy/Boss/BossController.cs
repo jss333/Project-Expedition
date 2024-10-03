@@ -223,6 +223,7 @@ public class BossController : MonoBehaviour
             {
                 challengeRoomBGM.PlayVictoryBGM();
                 Die();
+                EndGameEventManager.OnVictoryAchieved?.Invoke();
             }
         }
     }
