@@ -17,8 +17,11 @@ public class BossController : MonoBehaviour
     private BossInformation info;
     [SerializeField] private GameObject p_BossShield;
     [SerializeField] private EntityActionVisualController bossAnimationController;
-    [SerializeField] private GameObject numbers;
-    [SerializeField] private Transform numberSource;
+
+    [Header("References - Popup labels")]
+    [SerializeField] private PopupLabel damageNumberPopupPrefab;
+    [SerializeField] private PopupLabel immunePopupPrefab;
+    [SerializeField] private Transform popupLabelSource;
 
 
     [Header("Parameters")]
@@ -178,6 +181,7 @@ public class BossController : MonoBehaviour
     {
         return (float)(min + (random.NextDouble() * (max - min)));
     }
+
     public void TakeDamage(int damage)
     {
         if(info.getImmune())
@@ -185,19 +189,17 @@ public class BossController : MonoBehaviour
             if (damageNumActive == false)
             {
                 damageNumActive = true;
-                spawnImmuneNumbers();
+                SpawnImmunePopupLabel();
             }
             else if(damageNumActive && stopOverflowDamageNumbers < 0)
             {
-                spawnImmuneNumbers();
+                SpawnImmunePopupLabel();
             }
             return;
         }
         else
         {
-            //quick hits will stack numbers (future)
-            GameObject num = Instantiate(numbers, numberSource.position, Quaternion.identity);
-            num.GetComponent<DamageNumberTesting>().setUpNum(damage);
+            SpawnDamageNumberPopupLabel(damage);
 
             currentHealth -= damage;
             minionRespawn();
@@ -253,12 +255,14 @@ public class BossController : MonoBehaviour
             
         }
     }
+
     private void instantiateBossShield()
     {
         Instantiate(p_BossShield, this.transform.position, Quaternion.identity);
         hasShield = true;
         Debug.Log("BossShield Up");
     }
+
     private void minionRespawn()
     {
         if (!hasShield)
@@ -276,14 +280,21 @@ public class BossController : MonoBehaviour
             }
         }
     }
+
     public void setHasShield(bool value)
     {
         hasShield = value;
     }
-    private void spawnImmuneNumbers()
+
+    private void SpawnImmunePopupLabel()
     {
-        GameObject num = Instantiate(numbers, numberSource.position, Quaternion.identity);
-        num.GetComponent<DamageNumberTesting>().setUpString("Immune");
+        Instantiate(immunePopupPrefab, popupLabelSource.position, Quaternion.identity);
         stopOverflowDamageNumbers = ph;
+    }
+    private void SpawnDamageNumberPopupLabel(int damage)
+    {
+        //quick hits will stack numbers (future)
+        PopupLabel dmgNumPopup = Instantiate(damageNumberPopupPrefab, popupLabelSource.position, Quaternion.identity);
+        dmgNumPopup.UpdateLabel(damage.ToString());
     }
 }

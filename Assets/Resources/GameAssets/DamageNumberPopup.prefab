@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8990063143412583835}
   - component: {fileID: 1038287333503213384}
   m_Layer: 0
-  m_Name: DamageNumbersPopup
+  m_Name: DamageNumberPopup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -109,8 +109,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278548223
+  m_fontColor: {r: 1, g: 0.46365932, b: 0.020754695, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -127,8 +127,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 8
+  m_fontSizeBase: 8
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -184,5 +184,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a61f44417fbe6e4b8b25f11cd3315bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fontSizeMin: 7
+  fontSizeMin: 8
   fontSizeMax: 10
+  alternateColorProbability: 0.5
+  alternateColor: {r: 1, g: 0, b: 0, a: 1}
+  moveSpeed: {x: 1, y: 1}
+  startFadingTimerSec: 1
+  fadeSpeed: 5
