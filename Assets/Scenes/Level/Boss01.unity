@@ -3761,11 +3761,6 @@ PrefabInstance:
       objectReference: {fileID: 1540650913}
     - target: {fileID: 4569246080999924309, guid: bfe30e0a894d02d488d00f5203b8ec9a,
         type: 3}
-      propertyPath: maxHealth
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4569246080999924309, guid: bfe30e0a894d02d488d00f5203b8ec9a,
-        type: 3}
       propertyPath: challengeRoomBGM
       value: 
       objectReference: {fileID: 789663009}
