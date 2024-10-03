@@ -34,8 +34,8 @@ public class BossController : MonoBehaviour
     public AudioClip damageTakenSFX;
     public float damageTakenSFXCooldown = 0.2f;
     private float lastDamageTakenSFXPlayTime = -Mathf.Infinity;
-    public float stopOverflowDamageNumbers = 2f;
-    private float ph;
+    private float stopOverflowDamageNumbers = 1f;
+    public float overflowDamageCooldown = 1f;
 
     [Header("Parameters - Minion/shield respawn")]
     [SerializeField] private List<float> minionRespawnThreasholds;
@@ -74,7 +74,7 @@ public class BossController : MonoBehaviour
         nextShotTime = Time.time + 3f;
         instantiateBossShield();
 
-        ph = stopOverflowDamageNumbers;
+        stopOverflowDamageNumbers = overflowDamageCooldown;
     }
 
     void Update()
@@ -289,7 +289,7 @@ public class BossController : MonoBehaviour
     private void SpawnImmunePopupLabel()
     {
         Instantiate(immunePopupPrefab, popupLabelSource.position, Quaternion.identity);
-        stopOverflowDamageNumbers = ph;
+        stopOverflowDamageNumbers = overflowDamageCooldown;
     }
     private void SpawnDamageNumberPopupLabel(int damage)
     {
