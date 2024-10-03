@@ -16,8 +16,7 @@ public class BossController : MonoBehaviour
     private System.Random random;
     private BossInformation info;
     [SerializeField] private GameObject p_BossShield;
-    [SerializeField] private GameObject numbers;
-    [SerializeField] private Transform numberSource;
+    [SerializeField] private EntityActionVisualController bossAnimationController;
 
 
     [Header("Parameters")]
@@ -39,11 +38,11 @@ public class BossController : MonoBehaviour
 
     [Header("Parameters - Orb")]
     public GameObject singleOrbPrefab;
-    public float minOrbSpeed = 4.5f;
-    public float maxOrbSpeed = 5.5f;
     public float minShotIntervalSec = 0.7f;
     public float maxShotIntervalSec = 1.3f;
     private float nextShotTime = 0f;
+    public float minSingleOrbSpeed = 4.5f;
+    public float maxSingleOrbSpeed = 5.5f;
     public AudioClip orbShotSFX;
 
     [Header("Parameters - Multiple orbs")]
@@ -51,6 +50,8 @@ public class BossController : MonoBehaviour
     public float multipleOrbsPercent = 10f;
     public float numMultipleOrbs = 5;
     public float multipleOrbsAngleSpreadDeg = 60;
+    public float minMultipleOrbSpeed = 4.5f;
+    public float maxMultipleOrbSpeed = 5.5f;
     public AudioClip multipleOrbShotSFX;
 
     private bool hasShield = false;
@@ -98,12 +99,12 @@ public class BossController : MonoBehaviour
         {
             if (WillShootMultipleOrbs() && numMultipleOrbs > 1)
             {
-                ShootMultipleOrbs(GetDirectionToPlayer(), GetRandomizedSpeed());
+                ShootMultipleOrbs(GetDirectionToPlayer(), GetRandomizedSpeed(minMultipleOrbSpeed, maxMultipleOrbSpeed));
                 audioSource.PlayAudioWithRandomPitch(multipleOrbShotSFX);
             }
             else
             {
-                ShootSingleOrb(GetDirectionToPlayer(), GetRandomizedSpeed(), singleOrbPrefab);
+                ShootSingleOrb(GetDirectionToPlayer(), GetRandomizedSpeed(minSingleOrbSpeed, maxSingleOrbSpeed), singleOrbPrefab);
                 audioSource.PlayAudioWithRandomPitch(orbShotSFX);
             }
 
@@ -135,6 +136,7 @@ public class BossController : MonoBehaviour
     {
         GameObject orb = Instantiate(orbPrefab, orbSourcePosition.position, Quaternion.identity);
         orb.GetComponent<Rigidbody2D>().velocity = directionToPlayer * speed;
+        bossAnimationController.ApplyShootAnimation();
     }
 
     private Vector2 GetDirectionToPlayer()
@@ -142,9 +144,9 @@ public class BossController : MonoBehaviour
         return (Vector2)Vector3.Normalize(playerPosition.position - orbSourcePosition.position);
     }
 
-    private float GetRandomizedSpeed()
+    private float GetRandomizedSpeed(float minSpeed, float maxSpeed)
     {
-        return GetRandomFloat(minOrbSpeed, maxOrbSpeed);
+        return GetRandomFloat(minSpeed, maxSpeed);
     }
 
     public Vector2 Rotate(Vector2 dir, float degrees, bool clockwise)
@@ -199,6 +201,7 @@ public class BossController : MonoBehaviour
             minionRespawn();
             healthBar.SetHealth(currentHealth);
             PlayDamageTakenSFXIfEnoughCooldownTimeHasPassed();
+            bossAnimationController.ApplyGettingHitVisuals();
 
             if (!hurtStateTriggered && CurrentHealthPercentLessThan(hurtStateHealthPercent))
             {

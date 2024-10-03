@@ -57,13 +57,13 @@ public class DebugMenuUI : MonoBehaviour
                 {
                     abilityButtons[i].image.sprite = redButton;
                     abilityButtons[i].isActive = false;
-                    Debug.Log(abilityButtons[i].abilityName +" "+ abilityButtons[i].isActive);
+                    //Debug.Log(abilityButtons[i].abilityName +" "+ abilityButtons[i].isActive);
                 }
                 else
                 {
                     abilityButtons[i].image.sprite = greenButton;
                     abilityButtons[i].isActive = true;
-                    Debug.Log(abilityButtons[i].abilityName + " " + abilityButtons[i].isActive);
+                    //Debug.Log(abilityButtons[i].abilityName + " " + abilityButtons[i].isActive);
                 }
                 
             }
