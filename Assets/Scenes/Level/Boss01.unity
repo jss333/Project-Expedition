@@ -284,7 +284,7 @@ Transform:
   m_GameObject: {fileID: 6225117}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.081932, y: 4.0301185, z: -10}
+  m_LocalPosition: {x: -15.201656, y: 4.0301185, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12192,6 +12192,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6761505178351021020, guid: 88669eb52a11c4f45b479ec3df6d074b,
+        type: 3}
+      propertyPath: m_Name
+      value: Popup Label Source Position
+      objectReference: {fileID: 0}
+    - target: {fileID: 7144092496311828960, guid: 88669eb52a11c4f45b479ec3df6d074b,
+        type: 3}
+      propertyPath: numbers
+      value: 
+      objectReference: {fileID: 1925401383084551538, guid: 829610abb2180f84a92e352045cc7092,
+        type: 3}
     - target: {fileID: 7144092496311828960, guid: 88669eb52a11c4f45b479ec3df6d074b,
         type: 3}
       propertyPath: playerPosition
@@ -12202,6 +12213,12 @@ PrefabInstance:
       propertyPath: challengeRoomBGM
       value: 
       objectReference: {fileID: 789663009}
+    - target: {fileID: 7144092496311828960, guid: 88669eb52a11c4f45b479ec3df6d074b,
+        type: 3}
+      propertyPath: immuneLabelPrefab
+      value: 
+      objectReference: {fileID: 1038287333503213384, guid: 3110b24e1d0c17643857d32cfc303124,
+        type: 3}
     - target: {fileID: 9141157564233288960, guid: 88669eb52a11c4f45b479ec3df6d074b,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -12212,7 +12229,8 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3374747734171162549, guid: 88669eb52a11c4f45b479ec3df6d074b, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
