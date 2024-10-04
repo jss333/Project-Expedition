@@ -47,15 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sfxSource: {fileID: 4026613953541235951}
-  sFXAudioDataSOs:
-  - {fileID: 11400000, guid: 1476efc01e2b007438789aa9b6586101, type: 2}
-  - {fileID: 11400000, guid: b83bd70fdf7f5ef41ba7eb3df2dc7bac, type: 2}
-  - {fileID: 11400000, guid: 02aee0a7a932f314e907abe6f54347dc, type: 2}
-  - {fileID: 11400000, guid: 93750c5a74baf114089128738e2f3537, type: 2}
-  - {fileID: 11400000, guid: a2804a82926eca54e9f8b978b88cf9dc, type: 2}
-  - {fileID: 11400000, guid: 12f02ee08e5023e41b01c7bf6a50b23f, type: 2}
-  - {fileID: 11400000, guid: 28036710512802a49ace1b6789bcd5f3, type: 2}
-  - {fileID: 11400000, guid: 621e17acb7b7d664ea8b7642c72dad77, type: 2}
+  sFXAudioDataSOs: []
   muteMusic: 0
   musicSource: {fileID: 0}
   musicAudioClips: []

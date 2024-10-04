@@ -130,4 +130,13 @@ public class AudioManagerNoMixers : MonoBehaviour {
     {
         PlaySFX(SFX.SFX_EnemyDeath);
     }
+
+
+    public void LoadScriptableObjects()
+    {
+        sFXAudioDataSOs.Clear(); // Clear the list before loading new items
+        SFXAudioDataSO[] objects = Resources.LoadAll<SFXAudioDataSO>("SFXSOs");
+        sFXAudioDataSOs.AddRange(objects);
+        Debug.Log("ScriptableObjects loaded: " + sFXAudioDataSOs.Count);
+    }
 }
