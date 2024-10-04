@@ -6,9 +6,9 @@ public class AbilityToggleUI : MonoBehaviour
 {
     private List<AbilityButton> buttonList = new List<AbilityButton>();
     private DebugMenuUI menuUI;
-    private bool shieldAbilityRed = false;
-    private bool shieldAbilityBlue = false;
-    private bool doubleJump = false;
+    private bool shieldAbilityRed = true;
+    private bool shieldAbilityBlue = true;
+    private bool doubleJump = true;
 
     public bool ShieldAbilityRed { get => shieldAbilityRed; set => shieldAbilityRed = value; }
     public bool ShieldAbilityBlue { get => shieldAbilityBlue; set => shieldAbilityBlue = value; }
