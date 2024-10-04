@@ -252,7 +252,7 @@ public class BossController : MonoBehaviour
         if (collision.gameObject.layer == 8)
         {
             TakeDamage(collision.gameObject.GetComponent<PlayerProjectile>().damageAmt);
-            Destroy(collision.gameObject);
+            //Destroy(collision.gameObject);
             
         }
     }

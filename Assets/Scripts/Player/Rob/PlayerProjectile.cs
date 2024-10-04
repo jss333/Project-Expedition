@@ -32,24 +32,26 @@ public class PlayerProjectile : MonoBehaviour
         }
     }
 
-    /*if(layersToCollideWith == (layersToCollideWith | (1 << other.gameObject.layer)))
-    {
-        if (other.gameObject.tag == "Boss")
-        {
-            BossController boss = other.gameObject.GetComponent<BossController>();
-            boss.TakeDamage(damageAmt);
-        }
-        Destroy(this.gameObject);
-    }
-}*/
+    
 
-    //private void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //    if (collision.collider.gameObject.tag == "Boss")
-    //    {
-    //        BossController boss = collision.collider.gameObject.GetComponent<BossController>();
-    //        boss.TakeDamage(damageAmt);
-    //        Destroy(this.gameObject);
-    //    }
-    //}
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        /*if (collision.collider.gameObject.tag == "Boss")
+        {
+            BossController boss = collision.collider.gameObject.GetComponent<BossController>();
+            boss.TakeDamage(damageAmt);
+            Destroy(this.gameObject);
+        }  */
+
+        if (layersToCollideWith == (layersToCollideWith | (1 << collision.gameObject.layer)))
+        {
+            /*if (collision.gameObject.tag == "Boss")
+            {
+                BossController boss = collision.gameObject.GetComponent<BossController>();
+                boss.TakeDamage(damageAmt);
+            }  */
+            Destroy(this.gameObject);
+        }
+    }
+
 }
