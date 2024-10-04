@@ -967,7 +967,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entityToSpawn: {fileID: 449684760226055840, guid: 5026d7c18267c4c4c9785e382b85218c,
     type: 3}
-  entityCount: 1
+  entityCount: 2
   freeAnchors:
   - {fileID: 2041587276}
   - {fileID: 1886410138}
@@ -3219,9 +3219,24 @@ PrefabInstance:
       objectReference: {fileID: 1109229711}
     - target: {fileID: 2768808380936731226, guid: bfe30e0a894d02d488d00f5203b8ec9a,
         type: 3}
+      propertyPath: shotDmg
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2768808380936731226, guid: bfe30e0a894d02d488d00f5203b8ec9a,
+        type: 3}
       propertyPath: shotSFX
       value: 
       objectReference: {fileID: 8300000, guid: e345b7232526f2c499d89e786a1fbbac, type: 3}
+    - target: {fileID: 2768808380936731226, guid: bfe30e0a894d02d488d00f5203b8ec9a,
+        type: 3}
+      propertyPath: shotSpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2768808380936731226, guid: bfe30e0a894d02d488d00f5203b8ec9a,
+        type: 3}
+      propertyPath: shotIntervalSec
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 3072250601190182420, guid: bfe30e0a894d02d488d00f5203b8ec9a,
         type: 3}
       propertyPath: m_Layer
@@ -12226,6 +12241,36 @@ PrefabInstance:
       propertyPath: challengeRoomBGM
       value: 
       objectReference: {fileID: 789663009}
+    - target: {fileID: 7144092496311828960, guid: 88669eb52a11c4f45b479ec3df6d074b,
+        type: 3}
+      propertyPath: minShotIntervalSec
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7144092496311828960, guid: 88669eb52a11c4f45b479ec3df6d074b,
+        type: 3}
+      propertyPath: minionRespawnThreasholds.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7144092496311828960, guid: 88669eb52a11c4f45b479ec3df6d074b,
+        type: 3}
+      propertyPath: minionRespawnThreasholds.Array.data[0]
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 7144092496311828960, guid: 88669eb52a11c4f45b479ec3df6d074b,
+        type: 3}
+      propertyPath: minionRespawnThreasholds.Array.data[1]
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7144092496311828960, guid: 88669eb52a11c4f45b479ec3df6d074b,
+        type: 3}
+      propertyPath: minionRespawnThreasholds.Array.data[2]
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 7144092496311828960, guid: 88669eb52a11c4f45b479ec3df6d074b,
+        type: 3}
+      propertyPath: minionRespawnThreasholds.Array.data[3]
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 9141157564233288960, guid: 88669eb52a11c4f45b479ec3df6d074b,
         type: 3}
       propertyPath: m_AnchorMax.x

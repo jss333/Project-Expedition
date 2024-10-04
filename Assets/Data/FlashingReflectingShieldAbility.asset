@@ -21,5 +21,5 @@ MonoBehaviour:
     abilityPrefab: {fileID: 4070371023245784628, guid: 84f0b04700737b147a0b9891e8c34547,
       type: 3}
     radius: 1
-    reverseSpeed: 5
+    reverseSpeed: 10
     newDamageValue: 150
