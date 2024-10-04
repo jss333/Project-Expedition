@@ -17,7 +17,6 @@ namespace Platformer.Mechanics
         public AudioClip jumpAudio;
         public AudioClip respawnAudio;
         public AudioClip ouchAudio;
-
         /// <summary>
         /// Max horizontal speed of the player.
         /// </summary>
@@ -28,7 +27,7 @@ namespace Platformer.Mechanics
         public float jumpTakeOffSpeed = 7;
 
         public JumpState jumpState = JumpState.Grounded;
-        private bool stopJump;
+         private bool stopJump;
         /*internal new*/ public Collider2D collider2d;
         /*internal new*/ public AudioSource audioSource;
         public Health health;
@@ -88,6 +87,7 @@ namespace Platformer.Mechanics
                     {
                         Schedule<PlayerJumped>().player = this;
                         jumpState = JumpState.InFlight;
+                        
                     }
                     break;
                 case JumpState.InFlight:
@@ -95,6 +95,7 @@ namespace Platformer.Mechanics
                     {
                         Schedule<PlayerLanded>().player = this;
                         jumpState = JumpState.Landed;
+                        
                     }
                     break;
                 case JumpState.Landed:

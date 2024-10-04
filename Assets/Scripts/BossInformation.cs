@@ -44,4 +44,8 @@ public class BossInformation : MonoBehaviour
             bossShield.playShieldBreakAnimation();
         }
     }
+    public void setMinionCount(int count)
+    {
+        minionCount = count;
+    }
 }

@@ -16,6 +16,13 @@ public class BossController : MonoBehaviour
     private System.Random random;
     private BossInformation info;
     [SerializeField] private GameObject p_BossShield;
+    [SerializeField] private EntityActionVisualController bossAnimationController;
+
+    [Header("References - Popup labels")]
+    [SerializeField] private PopupLabel damageNumberPopupPrefab;
+    [SerializeField] private PopupLabel immunePopupPrefab;
+    [SerializeField] private Transform popupLabelSource;
+
 
     [Header("Parameters")]
     public int maxHealth = 5000;
@@ -27,6 +34,8 @@ public class BossController : MonoBehaviour
     public AudioClip damageTakenSFX;
     public float damageTakenSFXCooldown = 0.2f;
     private float lastDamageTakenSFXPlayTime = -Mathf.Infinity;
+    private float stopOverflowDamageNumbers = 1f;
+    public float overflowDamageCooldown = 1f;
 
     [Header("Parameters - Minion/shield respawn")]
     [SerializeField] private List<float> minionRespawnThreasholds;
@@ -34,11 +43,11 @@ public class BossController : MonoBehaviour
 
     [Header("Parameters - Orb")]
     public GameObject singleOrbPrefab;
-    public float minOrbSpeed = 4.5f;
-    public float maxOrbSpeed = 5.5f;
     public float minShotIntervalSec = 0.7f;
     public float maxShotIntervalSec = 1.3f;
     private float nextShotTime = 0f;
+    public float minSingleOrbSpeed = 4.5f;
+    public float maxSingleOrbSpeed = 5.5f;
     public AudioClip orbShotSFX;
 
     [Header("Parameters - Multiple orbs")]
@@ -46,9 +55,12 @@ public class BossController : MonoBehaviour
     public float multipleOrbsPercent = 10f;
     public float numMultipleOrbs = 5;
     public float multipleOrbsAngleSpreadDeg = 60;
+    public float minMultipleOrbSpeed = 4.5f;
+    public float maxMultipleOrbSpeed = 5.5f;
     public AudioClip multipleOrbShotSFX;
 
     private bool hasShield = false;
+    private bool damageNumActive = false;
     void Start()
     {
         bossAnimator = GetComponent<Animator>();
@@ -60,7 +72,9 @@ public class BossController : MonoBehaviour
         healthBar.SetMaxHealth(maxHealth);
 
         nextShotTime = Time.time + 3f;
-        instantiateBossShield(); 
+        instantiateBossShield();
+
+        stopOverflowDamageNumbers = overflowDamageCooldown;
     }
 
     void Update()
@@ -68,6 +82,14 @@ public class BossController : MonoBehaviour
         if (PlayerIsAlive())
         {
             ShootOrbIfTimeForNextShot();
+        }
+        if (damageNumActive)
+        {
+            stopOverflowDamageNumbers -= Time.deltaTime;
+            if(stopOverflowDamageNumbers <= -3)
+            {
+                damageNumActive = false;
+            }
         }
     }
 
@@ -82,12 +104,12 @@ public class BossController : MonoBehaviour
         {
             if (WillShootMultipleOrbs() && numMultipleOrbs > 1)
             {
-                ShootMultipleOrbs(GetDirectionToPlayer(), GetRandomizedSpeed());
+                ShootMultipleOrbs(GetDirectionToPlayer(), GetRandomizedSpeed(minMultipleOrbSpeed, maxMultipleOrbSpeed));
                 audioSource.PlayAudioWithRandomPitch(multipleOrbShotSFX);
             }
             else
             {
-                ShootSingleOrb(GetDirectionToPlayer(), GetRandomizedSpeed(), singleOrbPrefab);
+                ShootSingleOrb(GetDirectionToPlayer(), GetRandomizedSpeed(minSingleOrbSpeed, maxSingleOrbSpeed), singleOrbPrefab);
                 audioSource.PlayAudioWithRandomPitch(orbShotSFX);
             }
 
@@ -119,6 +141,7 @@ public class BossController : MonoBehaviour
     {
         GameObject orb = Instantiate(orbPrefab, orbSourcePosition.position, Quaternion.identity);
         orb.GetComponent<Rigidbody2D>().velocity = directionToPlayer * speed;
+        bossAnimationController.ApplyShootAnimation();
     }
 
     private Vector2 GetDirectionToPlayer()
@@ -126,9 +149,9 @@ public class BossController : MonoBehaviour
         return (Vector2)Vector3.Normalize(playerPosition.position - orbSourcePosition.position);
     }
 
-    private float GetRandomizedSpeed()
+    private float GetRandomizedSpeed(float minSpeed, float maxSpeed)
     {
-        return GetRandomFloat(minOrbSpeed, maxOrbSpeed);
+        return GetRandomFloat(minSpeed, maxSpeed);
     }
 
     public Vector2 Rotate(Vector2 dir, float degrees, bool clockwise)
@@ -163,15 +186,26 @@ public class BossController : MonoBehaviour
     {
         if(info.getImmune())
         {
+            if (damageNumActive == false)
+            {
+                damageNumActive = true;
+                SpawnImmunePopupLabel();
+            }
+            else if(damageNumActive && stopOverflowDamageNumbers < 0)
+            {
+                SpawnImmunePopupLabel();
+            }
             return;
         }
         else
         {
+            SpawnDamageNumberPopupLabel(damage);
 
             currentHealth -= damage;
             minionRespawn();
             healthBar.SetHealth(currentHealth);
             PlayDamageTakenSFXIfEnoughCooldownTimeHasPassed();
+            bossAnimationController.ApplyGettingHitVisuals();
 
             if (!hurtStateTriggered && CurrentHealthPercentLessThan(hurtStateHealthPercent))
             {
@@ -189,6 +223,7 @@ public class BossController : MonoBehaviour
             {
                 challengeRoomBGM.PlayVictoryBGM();
                 Die();
+                EndGameEventManager.OnVictoryAchieved?.Invoke();
             }
         }
     }
@@ -221,12 +256,14 @@ public class BossController : MonoBehaviour
             
         }
     }
+
     private void instantiateBossShield()
     {
         Instantiate(p_BossShield, this.transform.position, Quaternion.identity);
         hasShield = true;
         Debug.Log("BossShield Up");
     }
+
     private void minionRespawn()
     {
         if (!hasShield)
@@ -244,8 +281,21 @@ public class BossController : MonoBehaviour
             }
         }
     }
+
     public void setHasShield(bool value)
     {
         hasShield = value;
+    }
+
+    private void SpawnImmunePopupLabel()
+    {
+        Instantiate(immunePopupPrefab, popupLabelSource.position, Quaternion.identity);
+        stopOverflowDamageNumbers = overflowDamageCooldown;
+    }
+    private void SpawnDamageNumberPopupLabel(int damage)
+    {
+        //quick hits will stack numbers (future)
+        PopupLabel dmgNumPopup = Instantiate(damageNumberPopupPrefab, popupLabelSource.position, Quaternion.identity);
+        dmgNumPopup.UpdateLabel(damage.ToString());
     }
 }

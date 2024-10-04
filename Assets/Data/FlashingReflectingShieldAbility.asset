@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6c7629c7af8732438e48f79e58c392b, type: 3}
+  m_Name: FlashingReflectingShieldAbility
+  m_EditorClassIdentifier: 
+  abilityName: 
+  abilityIcon: {fileID: 0}
+  maxDuration: 0.25
+  maxCoolDownTime: 1.5
+  reflectingShieldProperties:
+    abilityType: 0
+    abilityPrefab: {fileID: 4070371023245784628, guid: 84f0b04700737b147a0b9891e8c34547,
+      type: 3}
+    radius: 1
+    reverseSpeed: 10
+    chargeClip: {fileID: 8300000, guid: bfbdff909454488498f081bf8ff97dbb, type: 3}
+    newDamageValue: 150

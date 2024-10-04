@@ -5,7 +5,19 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseMenuUI;  // Reference to the UI GameObject
     private bool isPaused;
 
-    
+    private void Start()
+    {
+        EndGameEventManager.OnVictoryAchieved += StopTime;
+        EndGameEventManager.OnDefeatAchieved += StopTime;
+        isPaused = false;
+        Time.timeScale = 1;
+    }
+
+    private void OnDestroy()
+    {
+        EndGameEventManager.OnVictoryAchieved -= StopTime;
+        EndGameEventManager.OnDefeatAchieved -= StopTime;
+    }
     void Update()
     {
         // Toggle pause when the "Esc" key is pressed
@@ -13,16 +25,22 @@ public class PauseMenu : MonoBehaviour
         if (isPaused)
         {
             pauseMenuUI.SetActive(true);
-            Time.timeScale = 0f;
         }
         else
         {
             pauseMenuUI.SetActive(false);
-            Time.timeScale = 1f;
         }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             isPaused = !isPaused;
+            if (isPaused)
+            {
+                Time.timeScale = 0;
+            }
+            else
+            {
+                Time.timeScale = 1;
+            }
         }
     }
     // Resume the game
@@ -36,5 +54,10 @@ public class PauseMenu : MonoBehaviour
     {
         Application.Quit();            // Quit the game
         Debug.Log("Game is quitting...");  // For debugging in the editor
+    }
+
+    private void StopTime()
+    {
+        Time.timeScale = 0;
     }
 }

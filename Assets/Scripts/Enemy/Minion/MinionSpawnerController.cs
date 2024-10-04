@@ -46,6 +46,8 @@ public class MinionSpawnerController : MonoBehaviour
         if(activeEntityInstances ==0) 
         {
             spawnWave();
+            BossInformation info = FindFirstObjectByType<BossInformation>();
+            info.setMinionCount(entityCount);
         }
     }
 }

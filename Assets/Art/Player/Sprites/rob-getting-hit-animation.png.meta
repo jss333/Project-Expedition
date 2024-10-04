@@ -1,0 +1,642 @@
+fileFormatVersion: 2
+guid: b8eee9b9742869b4a832e52c3bf7a296
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: rob-getting-hit-animation_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1500
+        width: 459
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9ed635374409094bad0c838eadf5e85
+      internalID: -198786297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rob-getting-hit-animation_1
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 1500
+        width: 459
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a7979a5d83764c4a98f6498b5270950
+      internalID: 1894686633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rob-getting-hit-animation_2
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 1500
+        width: 459
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e2d79d481742d341b69bb3799dbb2aa
+      internalID: 379778535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rob-getting-hit-animation_3
+      rect:
+        serializedVersion: 2
+        x: 1377
+        y: 1500
+        width: 459
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 896e31469c96a5c40979f1481813b14c
+      internalID: -474839608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rob-getting-hit-animation_4
+      rect:
+        serializedVersion: 2
+        x: 1836
+        y: 1500
+        width: 459
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdfc246ede1ea0843a2fec8d79919dc2
+      internalID: 1305932417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rob-getting-hit-animation_5
+      rect:
+        serializedVersion: 2
+        x: 2295
+        y: 1500
+        width: 459
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff6cb03e26d64b8439ecf77253091b71
+      internalID: 1635106627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rob-getting-hit-animation_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1000
+        width: 459
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cce99441d4862454fa1932b30cf2cc6a
+      internalID: -957157494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rob-getting-hit-animation_7
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 1000
+        width: 459
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce63cb31c7a1a914fbe9b1d409dbc858
+      internalID: 367798051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rob-getting-hit-animation_8
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 1000
+        width: 459
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bcad665a35b9b744b08657fb5dab1cf
+      internalID: -863167058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rob-getting-hit-animation_9
+      rect:
+        serializedVersion: 2
+        x: 1377
+        y: 1000
+        width: 459
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85ab84a413eb5864f82892e08554c394
+      internalID: 535010858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rob-getting-hit-animation_10
+      rect:
+        serializedVersion: 2
+        x: 1836
+        y: 1000
+        width: 459
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0fdf39758b8e8e4ab7e5969ac254fe8
+      internalID: -97034002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rob-getting-hit-animation_11
+      rect:
+        serializedVersion: 2
+        x: 2295
+        y: 1000
+        width: 459
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5a6807561fa1b04eb5dbb82c5aa1329
+      internalID: 2136833637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rob-getting-hit-animation_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 500
+        width: 459
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3ca09304ace08a4ba0f4ecd450d78e1
+      internalID: -463775266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rob-getting-hit-animation_13
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 500
+        width: 459
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0582e45f63aeaa54b8b374d605255c27
+      internalID: 1136482801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rob-getting-hit-animation_14
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 500
+        width: 459
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f395da7a4f492942834aeabf0b5a8ef
+      internalID: -1906059870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rob-getting-hit-animation_15
+      rect:
+        serializedVersion: 2
+        x: 1377
+        y: 500
+        width: 459
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e78cb5d19054124aa493c8bee8ed428
+      internalID: 1813841805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rob-getting-hit-animation_16
+      rect:
+        serializedVersion: 2
+        x: 1836
+        y: 500
+        width: 459
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1db18f3d8857cc43930bac323ac4f29
+      internalID: -187980066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rob-getting-hit-animation_17
+      rect:
+        serializedVersion: 2
+        x: 2295
+        y: 500
+        width: 459
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 335c0f181be4da246b220c2aa9020806
+      internalID: 1428459362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rob-getting-hit-animation_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 459
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f284807a5d18f224ebd1fc5f1aec2b2d
+      internalID: -1938790495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rob-getting-hit-animation_19
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 0
+        width: 459
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f0b102c0a30c9448b725a247374d01b
+      internalID: 1269813719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rob-getting-hit-animation_20
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 0
+        width: 459
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bc7fbf99c0e9774eb4f3dd5f448e61c
+      internalID: 2019195390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rob-getting-hit-animation_21
+      rect:
+        serializedVersion: 2
+        x: 1377
+        y: 0
+        width: 459
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50c586802f367524fa4b4cda714e0db1
+      internalID: -1830361009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rob-getting-hit-animation_22
+      rect:
+        serializedVersion: 2
+        x: 1836
+        y: 0
+        width: 459
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 126920ef7720f1540b349dd660f0e8f3
+      internalID: -2054992196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rob-getting-hit-animation_23
+      rect:
+        serializedVersion: 2
+        x: 2295
+        y: 0
+        width: 459
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba860ecfa9a3da8439bd5ee31948aac4
+      internalID: -1521294293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      rob-getting-hit-animation_0: -198786297
+      rob-getting-hit-animation_1: 1894686633
+      rob-getting-hit-animation_10: -97034002
+      rob-getting-hit-animation_11: 2136833637
+      rob-getting-hit-animation_12: -463775266
+      rob-getting-hit-animation_13: 1136482801
+      rob-getting-hit-animation_14: -1906059870
+      rob-getting-hit-animation_15: 1813841805
+      rob-getting-hit-animation_16: -187980066
+      rob-getting-hit-animation_17: 1428459362
+      rob-getting-hit-animation_18: -1938790495
+      rob-getting-hit-animation_19: 1269813719
+      rob-getting-hit-animation_2: 379778535
+      rob-getting-hit-animation_20: 2019195390
+      rob-getting-hit-animation_21: -1830361009
+      rob-getting-hit-animation_22: -2054992196
+      rob-getting-hit-animation_23: -1521294293
+      rob-getting-hit-animation_3: -474839608
+      rob-getting-hit-animation_4: 1305932417
+      rob-getting-hit-animation_5: 1635106627
+      rob-getting-hit-animation_6: -957157494
+      rob-getting-hit-animation_7: 367798051
+      rob-getting-hit-animation_8: -863167058
+      rob-getting-hit-animation_9: 535010858
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
