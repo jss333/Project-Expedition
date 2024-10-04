@@ -284,7 +284,7 @@ Transform:
   m_GameObject: {fileID: 6225117}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.100029, y: 4.0301185, z: -10}
+  m_LocalPosition: {x: -16.095646, y: 4.0301185, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3753,40 +3753,25 @@ PrefabInstance:
       propertyPath: JumpToggle
       value: 
       objectReference: {fileID: 1109229711}
-    - target: {fileID: 3902266722017391789, guid: bfe30e0a894d02d488d00f5203b8ec9a,
-        type: 3}
-      propertyPath: virtualCamera
-      value: 
-      objectReference: {fileID: 1204898065}
-    - target: {fileID: 4569246080999924309, guid: bfe30e0a894d02d488d00f5203b8ec9a,
-        type: 3}
-      propertyPath: shotDmg
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 2768808380936731226, guid: bfe30e0a894d02d488d00f5203b8ec9a,
-        type: 3}
-      propertyPath: shotSFX
-      value: 
-      objectReference: {fileID: 8300000, guid: e345b7232526f2c499d89e786a1fbbac, type: 3}
-    - target: {fileID: 2768808380936731226, guid: bfe30e0a894d02d488d00f5203b8ec9a,
-        type: 3}
-      propertyPath: shotSpeed
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 2768808380936731226, guid: bfe30e0a894d02d488d00f5203b8ec9a,
-        type: 3}
-      propertyPath: shotIntervalSec
-      value: 0.1
-      objectReference: {fileID: 0}
     - target: {fileID: 3072250601190182420, guid: bfe30e0a894d02d488d00f5203b8ec9a,
         type: 3}
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3902266722017391789, guid: bfe30e0a894d02d488d00f5203b8ec9a,
+        type: 3}
+      propertyPath: virtualCamera
+      value: 
+      objectReference: {fileID: 1204898065}
     - target: {fileID: 4283147244315553361, guid: bfe30e0a894d02d488d00f5203b8ec9a,
         type: 3}
       propertyPath: m_Layer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4569246080999924309, guid: bfe30e0a894d02d488d00f5203b8ec9a,
+        type: 3}
+      propertyPath: shotDmg
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4569246080999924309, guid: bfe30e0a894d02d488d00f5203b8ec9a,
         type: 3}
@@ -13444,36 +13429,6 @@ PrefabInstance:
       propertyPath: challengeRoomBGM
       value: 
       objectReference: {fileID: 789663009}
-    - target: {fileID: 7144092496311828960, guid: 88669eb52a11c4f45b479ec3df6d074b,
-        type: 3}
-      propertyPath: minShotIntervalSec
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 7144092496311828960, guid: 88669eb52a11c4f45b479ec3df6d074b,
-        type: 3}
-      propertyPath: minionRespawnThreasholds.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 7144092496311828960, guid: 88669eb52a11c4f45b479ec3df6d074b,
-        type: 3}
-      propertyPath: minionRespawnThreasholds.Array.data[0]
-      value: 80
-      objectReference: {fileID: 0}
-    - target: {fileID: 7144092496311828960, guid: 88669eb52a11c4f45b479ec3df6d074b,
-        type: 3}
-      propertyPath: minionRespawnThreasholds.Array.data[1]
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 7144092496311828960, guid: 88669eb52a11c4f45b479ec3df6d074b,
-        type: 3}
-      propertyPath: minionRespawnThreasholds.Array.data[2]
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 7144092496311828960, guid: 88669eb52a11c4f45b479ec3df6d074b,
-        type: 3}
-      propertyPath: minionRespawnThreasholds.Array.data[3]
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 7144092496311828960, guid: 88669eb52a11c4f45b479ec3df6d074b,
         type: 3}
       propertyPath: immuneLabelPrefab

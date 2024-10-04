@@ -259,13 +259,14 @@ MonoBehaviour:
   damageTakenSFXCooldown: 0.2
   overflowDamageCooldown: 1.5
   minionRespawnThreasholds:
-  - 90
-  - 70
+  - 80
   - 50
+  - 30
+  - 10
   minionRespawnSFX: {fileID: 8300000, guid: 0dc68d9f7117ec5419896482f59e42b7, type: 3}
   singleOrbPrefab: {fileID: 2522101524757786263, guid: a0092814f7c0932439272c2ddbb7dcd6,
     type: 3}
-  minShotIntervalSec: 0.5
+  minShotIntervalSec: 0.8
   maxShotIntervalSec: 1.3
   minSingleOrbSpeed: 1.5
   maxSingleOrbSpeed: 2.5
