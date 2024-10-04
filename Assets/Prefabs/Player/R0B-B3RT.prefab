@@ -167,9 +167,9 @@ MonoBehaviour:
       m_Action: Fire Input
       m_Flags: 0
     m_Flags: 0
-  shotDmg: 10
+  shotDmg: 15
   shotSpeed: 20
-  shotIntervalSec: 0.05
+  shotIntervalSec: 0.1
   shotSFX: {fileID: 8300000, guid: e345b7232526f2c499d89e786a1fbbac, type: 3}
 --- !u!95 &7067599934470063995
 Animator:
@@ -629,7 +629,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groundCheckObj: {fileID: 7634073678044376022}
-  JumpToggle: {fileID: 0}
+  toggleUI: {fileID: 0}
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
