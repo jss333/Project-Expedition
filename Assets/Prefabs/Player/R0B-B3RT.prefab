@@ -629,10 +629,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groundCheckObj: {fileID: 7634073678044376022}
-  toggleUI: {fileID: 0}
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
+  bossLayer:
+    serializedVersion: 2
+    m_Bits: 512
   maxHorizontalVelocity: 5
   groundJumpForce: 9
   downGravityScaleFactor: 1.5
