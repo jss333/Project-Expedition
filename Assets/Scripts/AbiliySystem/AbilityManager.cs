@@ -66,6 +66,11 @@ namespace AbilitySystem
             toggleSecondAb = toggleUI.ShieldAbilityRed;
         }
 
+        private bool AnyAbilityInUse()
+        {
+            return firstAbility.InUse() || secondaryAbility.InUse();
+        }
+
         public void AddAbilityToInventory(AbilitySo _ability)
         {
             availableAbilities.Add(_ability);
@@ -79,6 +84,9 @@ namespace AbilitySystem
         [ContextMenu("Use Current Ability")]
         private void UseFirstAbility()
         {
+            if (AnyAbilityInUse()) return;
+
+
             if (firstAbility != null && toggleFirstAb)
             {
                 if (secondaryAbility.InUse())
@@ -91,6 +99,9 @@ namespace AbilitySystem
         
         private void UseSecondaryAbility()
         {
+            if (AnyAbilityInUse()) return;
+
+
             if (secondaryAbility != null && toggleSecondAb)
             {
                 if (firstAbility.InUse())
