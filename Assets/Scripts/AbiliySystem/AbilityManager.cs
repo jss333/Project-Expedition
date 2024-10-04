@@ -165,7 +165,7 @@ namespace AbilitySystem
         public float radius;
         public float reverseSpeed;
         public AudioClip chargeClip;
-
+        public bool shouldDestroyProjectileOnImpact;
 
         [Range(5, 300)]
         public int newDamageValue;
