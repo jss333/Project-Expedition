@@ -43,15 +43,15 @@ public class PlayerProjectile : MonoBehaviour
             Destroy(this.gameObject);
         }  */
 
-        if (layersToCollideWith == (layersToCollideWith | (1 << collision.gameObject.layer)))
-        {
+       // if (layersToCollideWith == (layersToCollideWith | (1 << collision.gameObject.layer)))
+       // {
             /*if (collision.gameObject.tag == "Boss")
             {
                 BossController boss = collision.gameObject.GetComponent<BossController>();
                 boss.TakeDamage(damageAmt);
             }  */
-            Destroy(this.gameObject);
-        }
+            //Destroy(this.gameObject);
+       // }
     }
 
 }
