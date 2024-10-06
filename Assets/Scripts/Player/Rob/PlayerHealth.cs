@@ -20,6 +20,8 @@ public class PlayerHealth : MonoBehaviour
 
     void Start()
     {
+        healthBar = GameObject.Find("Health-border").GetComponent<HealthBar>();
+        challengeRoomBGM = FindObjectOfType<ChallengeRoomBGM>();
         audioSource = GetComponent<RandomPitchAudioSource>();
         entityActionVisualController = GetComponent<EntityActionVisualController>();
         currentHealth = maxHealth;
