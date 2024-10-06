@@ -176,6 +176,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 2624
   damageAmt: 2
+  maxRange: 0
 --- !u!114 &-5543015421844513631
 MonoBehaviour:
   m_ObjectHideFlags: 0
