@@ -28,7 +28,7 @@ public class EditorMenus : EditorWindow
     [MenuItem("LevelTools/Core Objects/Create Audio Manager")]
     public static void CreateAudioManager()
     {
-        LoadAssetPrefabFromPath("Assets/Prefabs/Audio/Challenge Room BGM.prefab");
+        LoadAssetPrefabFromPath("Assets/Prefabs/Audio/AudioManager.prefab");
     }
 
     [MenuItem("LevelTools/Core Objects/Create Player")]
