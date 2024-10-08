@@ -15,7 +15,6 @@ public class PlayerMovement : MonoBehaviour
     private SpriteRenderer playerSpriteRenderer;
     private Rigidbody2D playerRb;
     private Animator playerAnimator;
-    private RandomPitchAudioSource audioSource;
 
     [Header("Parameters")]
     public float maxHorizontalVelocity;
@@ -26,7 +25,6 @@ public class PlayerMovement : MonoBehaviour
     private float originalGravityScale;
     [Tooltip("Maximum velocity when falling")]
     public float maxVerticalVelocity = 15f;
-    public AudioClip groundJumpSFX;
 
     [Header("Parameters - Air Jump")]
     public bool isAirJumpSkillAcquired = true;
@@ -34,7 +32,6 @@ public class PlayerMovement : MonoBehaviour
     public float airJumpForce = 9;
     [Tooltip("Includes ground jump and air jump(s)")]
     public int maxTotalNumberOfJumps = 2;
-    public AudioClip airJumpSFX;
 
     [Header("State")]
     [Tooltip("Whether the player is considered to be 'on the ground'")]
@@ -49,7 +46,6 @@ public class PlayerMovement : MonoBehaviour
         playerSpriteRenderer = GetComponent<SpriteRenderer>();
         playerAnimator = GetComponent<Animator>();
         playerRb = GetComponent<Rigidbody2D>();
-        audioSource = GetComponent<RandomPitchAudioSource>();
         jumpCount = 1; //To force grounded check at the start
         originalGravityScale = playerRb.gravityScale;
     }
@@ -126,11 +122,11 @@ public class PlayerMovement : MonoBehaviour
         {
             if (isGrounded)
             {
-                EffectJump(groundJumpForce, groundJumpSFX);
+                EffectJump(groundJumpForce, "PlayerGroundJumps");
             }
             else if (isAirJumpSkillAcquired && (jumpCount < maxTotalNumberOfJumps))
             {
-                EffectJump(airJumpForce, airJumpSFX);
+                EffectJump(airJumpForce, "PlayerAirJumps");
             }
         }
 
@@ -141,12 +137,12 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void EffectJump(float jumpForce, AudioClip clip)
+    private void EffectJump(float jumpForce, string sfxSoName)
     {
         playerRb.velocity = new Vector2(playerRb.velocity.x, jumpForce);
         jumpCount++;
         playerAnimator.SetTrigger("jumped");
-        audioSource.PlayAudioWithRandomPitch(clip);
+        AudioManagerNoMixers.Singleton.PlaySFXByName(sfxSoName);
     }
 
 
