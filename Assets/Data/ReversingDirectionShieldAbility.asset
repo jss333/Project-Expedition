@@ -15,13 +15,13 @@ MonoBehaviour:
   abilityName: 
   abilityIcon: {fileID: 0}
   maxDuration: 3
-  maxCoolDownTime: 3
+  maxCoolDownTime: 5
   reflectingShieldProperties:
     abilityType: 0
     abilityPrefab: {fileID: 5776741152520659617, guid: ea23d2a42dd458545a416d1fe5b74b07,
       type: 3}
     radius: 1
-    reverseSpeed: 6
+    reverseSpeed: 3
     chargeClip: {fileID: 8300000, guid: bfbdff909454488498f081bf8ff97dbb, type: 3}
     shouldDestroyProjectileOnImpact: 1
     newDamageValue: 30
