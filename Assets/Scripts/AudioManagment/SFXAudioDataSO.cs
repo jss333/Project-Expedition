@@ -11,7 +11,7 @@ public class SFXAudioDataSO : ScriptableObject
     public float maxPitch = 1.05f;
     private System.Random random;
 
-    public float GetRandomFloat()
+    public float GetRandomPitch()
     {
         random = new System.Random();
         return (float)(minPitch + (random.NextDouble() * (maxPitch - minPitch)));

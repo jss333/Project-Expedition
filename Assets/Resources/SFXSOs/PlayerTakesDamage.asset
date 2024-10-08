@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 497986f42411ebd4c8e757f3b1cba09d, type: 3}
-  m_Name: BossTakesDamage
+  m_Name: PlayerTakesDamage
   m_EditorClassIdentifier: 
-  SFXClipName: BossTakesDamage
-  audioClip: {fileID: 8300000, guid: a787a6a66f99b9349b7cdaa865e0385d, type: 3}
+  SFXClipName: PlayerTakesDamage
+  audioClip: {fileID: 8300000, guid: 3a81da651cd427649b01552ba2f905db, type: 3}
   minPitch: 0.95
   maxPitch: 1.05

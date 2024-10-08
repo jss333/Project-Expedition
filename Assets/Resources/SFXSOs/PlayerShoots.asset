@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 497986f42411ebd4c8e757f3b1cba09d, type: 3}
-  m_Name: Shot
+  m_Name: PlayerShoots
   m_EditorClassIdentifier: 
-  SFXClipName: shot
+  SFXClipName: PlayerShoots
   audioClip: {fileID: 8300000, guid: e345b7232526f2c499d89e786a1fbbac, type: 3}
   minPitch: 0.95
   maxPitch: 1.05

@@ -15,12 +15,10 @@ public class PlayerHealth : MonoBehaviour
     [Header("Parameters")]
     public int maxHealth = 150;
     public int currentHealth;
-    public AudioClip damageTakenSFX;
 
 
     void Start()
     {
-        audioSource = GetComponent<RandomPitchAudioSource>();
         entityActionVisualController = GetComponent<EntityActionVisualController>();
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
@@ -30,7 +28,7 @@ public class PlayerHealth : MonoBehaviour
     {
         currentHealth -= healthdamage;
         healthBar.SetHealth(currentHealth);
-        audioSource.PlayAudioWithNormalPitch(damageTakenSFX);
+        AudioManagerNoMixers.Singleton.PlaySFXByName("PlayerTakesDamage");
         entityActionVisualController.ApplyGettingHitVisuals();
         DamageEventsManager.OnPlayerDamaged?.Invoke((float)healthdamage / maxHealth);
 

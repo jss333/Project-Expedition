@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 497986f42411ebd4c8e757f3b1cba09d, type: 3}
-  m_Name: MultiOrb
+  m_Name: BossShootsSingleProjectile
   m_EditorClassIdentifier: 
-  SFXClipName: multipleorb
-  audioClip: {fileID: 8300000, guid: 08abdf27be3014a44b0b3ef375b82623, type: 3}
+  SFXClipName: BossShootsSingleProjectile
+  audioClip: {fileID: 8300000, guid: 547f930f4c7ccb44e88e8fd9403d79ef, type: 3}
   minPitch: 0.95
   maxPitch: 1.05

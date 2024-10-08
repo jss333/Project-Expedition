@@ -22,12 +22,9 @@ public class AudioManagerNoMixers : MonoBehaviour {
 
     #endregion
 
-    
     [Header("SFX")]
     [SerializeField] private AudioSource sfxSource;
-    //private List<AudioClip> sfxAudioClips;
-    [SerializeField] private List<SFXAudioDataSO> sFXAudioDataSOs;
-    private List<string> sFXAudioNames = new List<string>();
+    private Dictionary<string, SFXAudioDataSO> sfxAudioClipMap = new Dictionary<string, SFXAudioDataSO>();
 
     [Space(10)]
     [Header("Music")]
@@ -45,43 +42,27 @@ public class AudioManagerNoMixers : MonoBehaviour {
 
     private void Start()
     {
-        for (int i = 0; i < sFXAudioDataSOs.Count; i++)
+        LoadSFXScriptableObjects();
+    }
+
+    public void LoadSFXScriptableObjects()
+    {
+        SFXAudioDataSO[] sfxAudioDataSOs = Resources.LoadAll<SFXAudioDataSO>("SFXSOs");
+        foreach (SFXAudioDataSO audioDataSO in sfxAudioDataSOs)
         {
-            sFXAudioNames.Add(sFXAudioDataSOs[i].SFXClipName);
+            sfxAudioClipMap.Add(audioDataSO.SFXClipName, audioDataSO);
         }
+        Debug.Log("SFXAudioDataSOs loaded: " + sfxAudioClipMap.Count);
     }
 
-    private void Update()
+    public void PlaySFXByName(string sfxAudioClipName)
     {
-
-        if(Input.GetKeyDown(KeyCode.H))
-        {
-            PlaySFXBasedOnSO("charge");
-        } 
-        
-        if(Input.GetKeyDown(KeyCode.J))
-        {
-            PlaySFXBasedOnSO("chime");
-        } 
-        
-        if(Input.GetKeyDown(KeyCode.K))
-        {
-            PlaySFXBasedOnSO("click");
-        }
+        SFXAudioDataSO clipToPlay = sfxAudioClipMap[sfxAudioClipName];
+        sfxSource.pitch = clipToPlay.GetRandomPitch();
+        sfxSource.PlayOneShot(clipToPlay.audioClip, 1);
+        sfxSource.pitch = 1;
     }
 
-    public void PlaySFXBasedOnSO(string audioClip)
-    {
-        int audioClipIndex = sFXAudioNames.IndexOf(audioClip);
-
-        sfxSource.pitch = sFXAudioDataSOs[audioClipIndex].GetRandomFloat();
-        sfxSource.PlayOneShot(sFXAudioDataSOs[audioClipIndex].audioClip, 1);
-    }
-
-    public void PlaySFX(SFX sfx)
-    {
-        //sfxSource.PlayOneShot(sfxAudioClips[(int)sfx], 1);
-    }
 
     public void RunNextMusicClip()
     {
@@ -114,29 +95,5 @@ public class AudioManagerNoMixers : MonoBehaviour {
         //decreaseVolumeBy = maxVolume / ((1 - startFadeOutAt_Percentage) * musicAudioClips[1].length);
         musicSource.volume = PlayerPrefs.GetFloat("MusicVol");
         musicSource.Play();
-    }
-
-    public void OnButtonClick_ButtonClickSound()
-    {
-        PlaySFX(SFX.SFX_ButtonClick);
-    }
-
-    public void OnButtonClick_Activate()
-    {
-        PlaySFX(SFX.SFX_OrbCollected);
-    }
-
-    void PlayEnemyDeathAudio()
-    {
-        PlaySFX(SFX.SFX_EnemyDeath);
-    }
-
-
-    public void LoadScriptableObjects()
-    {
-        sFXAudioDataSOs.Clear(); // Clear the list before loading new items
-        SFXAudioDataSO[] objects = Resources.LoadAll<SFXAudioDataSO>("SFXSOs");
-        sFXAudioDataSOs.AddRange(objects);
-        Debug.Log("ScriptableObjects loaded: " + sFXAudioDataSOs.Count);
     }
 }

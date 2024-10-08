@@ -10,7 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 497986f42411ebd4c8e757f3b1cba09d, type: 3}
-  m_Name: Chime
+  m_Name: BossShieldCracksFirst
   m_EditorClassIdentifier: 
-  SFXClipName: chime
-  audioClip: {fileID: 8300000, guid: bfbdff909454488498f081bf8ff97dbb, type: 3}
+  SFXClipName: BossShieldBreaks
+  audioClip: {fileID: 8300000, guid: 1ea439574fb87664e9b2572b05990a87, type: 3}
+  minPitch: 0.95
+  maxPitch: 1.05

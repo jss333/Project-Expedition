@@ -49,9 +49,7 @@ public class PlayerBasicShot : MonoBehaviour
         {
             timeOfLastShot = Time.time;
             LaunchProjectile();
-            //audioSource.PlayAudioWithRandomPitch(shotSFX);
-
-            AudioManagerNoMixers.Singleton.PlaySFXBasedOnSO("shot");
+            AudioManagerNoMixers.Singleton.PlaySFXByName("PlayerShoots");
         }
 
         bool CanFireAgain()

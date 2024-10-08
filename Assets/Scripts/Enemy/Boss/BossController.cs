@@ -12,7 +12,6 @@ public class BossController : MonoBehaviour
     public HealthBar healthBar;
     public ChallengeRoomBGM challengeRoomBGM;
     private Animator bossAnimator;
-    private RandomPitchAudioSource audioSource;
     private System.Random random;
     private BossInformation info;
     [SerializeField] private GameObject p_BossShield;
@@ -25,13 +24,11 @@ public class BossController : MonoBehaviour
     private bool hurtStateTriggered = false;
     public float bgmChangeHealthPercent = 40f;
     private bool bgmChangeTriggered = false;
-    public AudioClip damageTakenSFX;
     public float damageTakenSFXCooldown = 0.2f;
     private float lastDamageTakenSFXPlayTime = -Mathf.Infinity;
 
     [Header("Parameters - Minion/shield respawn")]
     [SerializeField] private List<float> minionRespawnThreasholds;
-    public AudioClip minionRespawnSFX;
 
     [Header("Parameters - Orb")]
     public GameObject singleOrbPrefab;
@@ -40,7 +37,6 @@ public class BossController : MonoBehaviour
     private float nextShotTime = 0f;
     public float minSingleOrbSpeed = 4.5f;
     public float maxSingleOrbSpeed = 5.5f;
-    public AudioClip orbShotSFX;
 
     [Header("Parameters - Multiple orbs")]
     public GameObject multipleOrbPrefab;
@@ -49,13 +45,11 @@ public class BossController : MonoBehaviour
     public float multipleOrbsAngleSpreadDeg = 60;
     public float minMultipleOrbSpeed = 4.5f;
     public float maxMultipleOrbSpeed = 5.5f;
-    public AudioClip multipleOrbShotSFX;
 
     private bool hasShield = false;
     void Start()
     {
         bossAnimator = GetComponent<Animator>();
-        audioSource = GetComponent<RandomPitchAudioSource>();
         random = new System.Random();
         info = GetComponent<BossInformation>();
 
@@ -86,14 +80,12 @@ public class BossController : MonoBehaviour
             if (WillShootMultipleOrbs() && numMultipleOrbs > 1)
             {
                 ShootMultipleOrbs(GetDirectionToPlayer(), GetRandomizedSpeed(minMultipleOrbSpeed, maxMultipleOrbSpeed));
-                //audioSource.PlayAudioWithRandomPitch(multipleOrbShotSFX);
-                AudioManagerNoMixers.Singleton.PlaySFXBasedOnSO("multipleorb");
+                AudioManagerNoMixers.Singleton.PlaySFXByName("BossShootsMultipleProjectiles");
             }
             else
             {
                 ShootSingleOrb(GetDirectionToPlayer(), GetRandomizedSpeed(minSingleOrbSpeed, maxSingleOrbSpeed), singleOrbPrefab);
-                //audioSource.PlayAudioWithRandomPitch(orbShotSFX);
-                AudioManagerNoMixers.Singleton.PlaySFXBasedOnSO("singleorb");
+                AudioManagerNoMixers.Singleton.PlaySFXByName("BossShootsSingleProjectile");
             }
 
             nextShotTime += GetRandomFloat(minShotIntervalSec, maxShotIntervalSec);
@@ -204,8 +196,7 @@ public class BossController : MonoBehaviour
     {
         if (Time.time >= lastDamageTakenSFXPlayTime + damageTakenSFXCooldown)
         {
-            //audioSource.PlayAudioWithRandomPitch(damageTakenSFX);
-            AudioManagerNoMixers.Singleton.PlaySFXBasedOnSO("bosstakendamage");
+            AudioManagerNoMixers.Singleton.PlaySFXByName("BossTakesDamage");
             lastDamageTakenSFXPlayTime = Time.time;
         }
     }
@@ -246,8 +237,7 @@ public class BossController : MonoBehaviour
                     instantiateBossShield();
                     minionRespawnThreasholds.RemoveAt(i);
                     FindAnyObjectByType<MinionSpawnerController>().handleMinionRespawn();
-                    //audioSource.PlayAudioWithRandomPitch(minionRespawnSFX);
-                    AudioManagerNoMixers.Singleton.PlaySFXBasedOnSO("spawnminion");
+                    AudioManagerNoMixers.Singleton.PlaySFXByName("BossSpawnsMinions");
                     info.setImmune(true);
                 }
             }

@@ -450,8 +450,6 @@ GameObject:
   - component: {fileID: 8216227659021969325}
   - component: {fileID: 2583448413161769738}
   - component: {fileID: 4569246080999924309}
-  - component: {fileID: 9066354500192235127}
-  - component: {fileID: 1688233914511036152}
   - component: {fileID: 596652963021192158}
   - component: {fileID: 6770448408643650198}
   m_Layer: 7
@@ -629,7 +627,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groundCheckObj: {fileID: 7634073678044376022}
-  JumpToggle: {fileID: 0}
+  toggleUI: {fileID: 0}
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
@@ -637,11 +635,9 @@ MonoBehaviour:
   groundJumpForce: 9
   downGravityScaleFactor: 1.5
   maxVerticalVelocity: 15
-  groundJumpSFX: {fileID: 8300000, guid: 008ad314c531bb049b66663edd12cade, type: 3}
   isAirJumpSkillAcquired: 1
   airJumpForce: 9
   maxTotalNumberOfJumps: 2
-  airJumpSFX: {fileID: 8300000, guid: 008ad314c531bb049b66663edd12cade, type: 3}
   isGrounded: 0
   jumpCount: 0
 --- !u!114 &4569246080999924309
@@ -661,117 +657,6 @@ MonoBehaviour:
   challengeRoomBGM: {fileID: 0}
   maxHealth: 150
   currentHealth: 0
-  damageTakenSFX: {fileID: 8300000, guid: 3a81da651cd427649b01552ba2f905db, type: 3}
---- !u!82 &9066354500192235127
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5274791500926242520}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
---- !u!114 &1688233914511036152
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5274791500926242520}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13590b08c384fdb458d29e42fe290529, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minPitch: 0.95
-  maxPitch: 1.05
 --- !u!114 &596652963021192158
 MonoBehaviour:
   m_ObjectHideFlags: 0
