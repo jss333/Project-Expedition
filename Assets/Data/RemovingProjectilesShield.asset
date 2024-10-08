@@ -10,18 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a6c7629c7af8732438e48f79e58c392b, type: 3}
-  m_Name: ReversingDirectionShieldAbility
+  m_Name: RemovingProjectilesShield
   m_EditorClassIdentifier: 
   abilityName: 
   abilityIcon: {fileID: 0}
-  maxDuration: 3
-  maxCoolDownTime: 5
+  maxDuration: 0
+  maxCoolDownTime: 0
   reflectingShieldProperties:
     abilityType: 0
-    abilityPrefab: {fileID: 5776741152520659617, guid: ea23d2a42dd458545a416d1fe5b74b07,
-      type: 3}
-    radius: 1
-    reverseSpeed: 3
-    chargeClip: {fileID: 8300000, guid: bfbdff909454488498f081bf8ff97dbb, type: 3}
-    shouldDestroyProjectileOnImpact: 1
-    newDamageValue: 30
+    abilityPrefab: {fileID: 0}
+    radius: 0
+    reverseSpeed: 0
+    chargeClip: {fileID: 0}
+    newDamageValue: 5
