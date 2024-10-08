@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 497986f42411ebd4c8e757f3b1cba09d, type: 3}
   m_Name: BossShieldCracksFirst
   m_EditorClassIdentifier: 
-  SFXClipName: BossShieldBreaks
-  audioClip: {fileID: 8300000, guid: 1ea439574fb87664e9b2572b05990a87, type: 3}
+  SFXClipName: BossShieldCracksFirst
+  audioClip: {fileID: 8300000, guid: cc9dc4a6d12d937449d68c32a09652f0, type: 3}
   minPitch: 0.95
   maxPitch: 1.05
