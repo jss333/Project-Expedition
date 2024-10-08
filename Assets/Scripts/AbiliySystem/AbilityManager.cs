@@ -66,6 +66,11 @@ namespace AbilitySystem
             toggleSecondAb = toggleUI.ShieldAbilityRed;
         }
 
+        private bool AnyAbilityInUse()
+        {
+            return firstAbility.InUse() || secondaryAbility.InUse();
+        }
+
         public void AddAbilityToInventory(AbilitySo _ability)
         {
             availableAbilities.Add(_ability);
@@ -79,7 +84,11 @@ namespace AbilitySystem
         [ContextMenu("Use Current Ability")]
         private void UseFirstAbility()
         {
+
+            if (AnyAbilityInUse()) return;
+
             toggleFirstAb = toggleUI.ShieldAbilityBlue;
+
             if (firstAbility != null && toggleFirstAb)
             {
                 if (secondaryAbility.InUse())
@@ -92,7 +101,11 @@ namespace AbilitySystem
         
         private void UseSecondaryAbility()
         {
+
+            if (AnyAbilityInUse()) return;
+
             toggleSecondAb = toggleUI.ShieldAbilityRed;
+
             if (secondaryAbility != null && toggleSecondAb)
             {
                 if (firstAbility.InUse())
@@ -156,7 +169,7 @@ namespace AbilitySystem
         public float radius;
         public float reverseSpeed;
         public AudioClip chargeClip;
-
+        public bool shouldDestroyProjectileOnImpact;
 
         [Range(5, 300)]
         public int newDamageValue;

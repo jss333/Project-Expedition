@@ -41,8 +41,11 @@ public class CameraShaker : MonoBehaviour
 
     void StopShake()
     {
-        basicNoise = virtualCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
-        basicNoise.m_AmplitudeGain = 0;
+        if(virtualCamera)
+        {
+            basicNoise = virtualCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
+            basicNoise.m_AmplitudeGain = 0;
+        }
         timer = 0;
     }
 
