@@ -17,6 +17,12 @@ public class BossController : MonoBehaviour
     [SerializeField] private GameObject p_BossShield;
     [SerializeField] private EntityActionVisualController bossAnimationController;
 
+    [Header("References - Popup labels")]
+    [SerializeField] private PopupLabel damageNumberPopupPrefab;
+    [SerializeField] private PopupLabel immunePopupPrefab;
+    [SerializeField] private Transform popupLabelSource;
+
+
     [Header("Parameters")]
     public int maxHealth = 5000;
     public int currentHealth;
@@ -26,6 +32,8 @@ public class BossController : MonoBehaviour
     private bool bgmChangeTriggered = false;
     public float damageTakenSFXCooldown = 0.2f;
     private float lastDamageTakenSFXPlayTime = -Mathf.Infinity;
+    private float stopOverflowDamageNumbers = 1f;
+    public float overflowDamageCooldown = 1f;
 
     [Header("Parameters - Minion/shield respawn")]
     [SerializeField] private List<float> minionRespawnThreasholds;
@@ -47,6 +55,7 @@ public class BossController : MonoBehaviour
     public float maxMultipleOrbSpeed = 5.5f;
 
     private bool hasShield = false;
+    private bool damageNumActive = false;
     void Start()
     {
         bossAnimator = GetComponent<Animator>();
@@ -57,7 +66,9 @@ public class BossController : MonoBehaviour
         healthBar.SetMaxHealth(maxHealth);
 
         nextShotTime = Time.time + 3f;
-        instantiateBossShield(); 
+        instantiateBossShield();
+
+        stopOverflowDamageNumbers = overflowDamageCooldown;
     }
 
     void Update()
@@ -65,6 +76,14 @@ public class BossController : MonoBehaviour
         if (PlayerIsAlive())
         {
             ShootOrbIfTimeForNextShot();
+        }
+        if (damageNumActive)
+        {
+            stopOverflowDamageNumbers -= Time.deltaTime;
+            if(stopOverflowDamageNumbers <= -3)
+            {
+                damageNumActive = false;
+            }
         }
     }
 
@@ -161,10 +180,20 @@ public class BossController : MonoBehaviour
     {
         if(info.getImmune())
         {
+            if (damageNumActive == false)
+            {
+                damageNumActive = true;
+                SpawnImmunePopupLabel();
+            }
+            else if(damageNumActive && stopOverflowDamageNumbers < 0)
+            {
+                SpawnImmunePopupLabel();
+            }
             return;
         }
         else
         {
+            SpawnDamageNumberPopupLabel(damage);
 
             currentHealth -= damage;
             minionRespawn();
@@ -188,6 +217,7 @@ public class BossController : MonoBehaviour
             {
                 challengeRoomBGM.PlayVictoryBGM();
                 Die();
+                EndGameEventManager.OnVictoryAchieved?.Invoke();
             }
         }
     }
@@ -220,12 +250,14 @@ public class BossController : MonoBehaviour
             
         }
     }
+
     private void instantiateBossShield()
     {
         Instantiate(p_BossShield, this.transform.position, Quaternion.identity);
         hasShield = true;
         Debug.Log("BossShield Up");
     }
+
     private void minionRespawn()
     {
         if (!hasShield)
@@ -243,8 +275,21 @@ public class BossController : MonoBehaviour
             }
         }
     }
+
     public void setHasShield(bool value)
     {
         hasShield = value;
+    }
+
+    private void SpawnImmunePopupLabel()
+    {
+        Instantiate(immunePopupPrefab, popupLabelSource.position, Quaternion.identity);
+        stopOverflowDamageNumbers = overflowDamageCooldown;
+    }
+    private void SpawnDamageNumberPopupLabel(int damage)
+    {
+        //quick hits will stack numbers (future)
+        PopupLabel dmgNumPopup = Instantiate(damageNumberPopupPrefab, popupLabelSource.position, Quaternion.identity);
+        dmgNumPopup.UpdateLabel(damage.ToString());
     }
 }

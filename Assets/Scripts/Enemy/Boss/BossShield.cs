@@ -53,6 +53,6 @@ public class BossShield : MonoBehaviour
     public void adjustSpriteSize()
     {
         this.transform.localScale = new Vector3(.78f, .79f, 0);
-        this.transform.position = new Vector3(-10.46f, 2.57999992f, 0.0150861135f);
+        this.transform.position = FindFirstObjectByType<BossController>().transform.position;
     }
 }

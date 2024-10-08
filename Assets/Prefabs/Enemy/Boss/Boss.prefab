@@ -112,6 +112,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4769236345242613906}
+  - {fileID: 569214277671105002}
   - {fileID: 3113514766982707957}
   - {fileID: 5263583982968190836}
   m_Father: {fileID: 0}
@@ -243,24 +244,31 @@ MonoBehaviour:
   p_BossShield: {fileID: 3970724019627321346, guid: 2a484caf907ff66468343981d89f3cbe,
     type: 3}
   bossAnimationController: {fileID: 5027129401144850634}
+  damageNumberPopupPrefab: {fileID: 1038287333503213384, guid: 829610abb2180f84a92e352045cc7092,
+    type: 3}
+  immunePopupPrefab: {fileID: 1038287333503213384, guid: 3110b24e1d0c17643857d32cfc303124,
+    type: 3}
+  popupLabelSource: {fileID: 569214277671105002}
   maxHealth: 5000
   currentHealth: 0
   hurtStateHealthPercent: 50
   bgmChangeHealthPercent: 40
   damageTakenSFXCooldown: 0.2
+  overflowDamageCooldown: 1.5
   minionRespawnThreasholds:
-  - 90
-  - 70
+  - 80
   - 50
+  - 30
+  - 10
   singleOrbPrefab: {fileID: 2522101524757786263, guid: a0092814f7c0932439272c2ddbb7dcd6,
     type: 3}
   minShotIntervalSec: 0.8
-  maxShotIntervalSec: 1.7
-  minSingleOrbSpeed: 4.5
-  maxSingleOrbSpeed: 5.5
+  maxShotIntervalSec: 1.3
+  minSingleOrbSpeed: 1.5
+  maxSingleOrbSpeed: 2.5
   multipleOrbPrefab: {fileID: 2522101524757786263, guid: d92236d97d3171d4384564f908974f71,
     type: 3}
-  multipleOrbsPercent: 10
+  multipleOrbsPercent: 8
   numMultipleOrbs: 5
   multipleOrbsAngleSpreadDeg: 60
   minMultipleOrbSpeed: 4.5
@@ -959,6 +967,37 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &6761505178351021020
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 569214277671105002}
+  m_Layer: 20
+  m_Name: DamageNumberSource
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &569214277671105002
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6761505178351021020}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.54, y: 0.67, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3062474991226534520}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8384359254143830461
 GameObject:
   m_ObjectHideFlags: 0

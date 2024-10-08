@@ -8,9 +8,10 @@ public class PlayerMovement : MonoBehaviour
 {
     [Header("References")]
     public Transform groundCheckObj;
-    [SerializeField] private AbilityToggleUI toggleUI;
+    private AbilityToggleUI toggleUI;
     [Tooltip("Layer to define what is considered 'ground'")]
     public LayerMask groundLayer;
+    public LayerMask bossLayer;
     private SpriteRenderer playerSpriteRenderer;
     private Rigidbody2D playerRb;
     private Animator playerAnimator;
@@ -71,7 +72,8 @@ public class PlayerMovement : MonoBehaviour
 
     private bool IsGroundCheckObjTouchingGroundLayer()
     {
-        return Physics2D.OverlapCircle(groundCheckObj.position, 0.2f, groundLayer) != null;
+        return Physics2D.OverlapCircle(groundCheckObj.position, 0.2f, groundLayer) != null 
+            || Physics2D.OverlapCircle(groundCheckObj.position, 0.2f, bossLayer) != null;
     }
 
 

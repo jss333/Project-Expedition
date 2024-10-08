@@ -15,6 +15,7 @@ namespace AbilitySystem
         private GameObject newShield;
         ReflectingShieldController reflectingShieldController;
         ReversingDirectionShieldController reversingDirectionShieldController;
+        RemovingProjectileShieldController removingProjectileShieldController;
 
         public override void UseAbility(Transform spawnPoint)
         {
@@ -34,6 +35,13 @@ namespace AbilitySystem
             {
                 reversingDirectionShieldController.SetReflectionShieldProperties(reflectingShieldProperties);
                 AddListenerToEvent(reversingDirectionShieldController.RemoveAbilityVisualFromScene);
+            }
+            
+            removingProjectileShieldController = newShield.GetComponent<RemovingProjectileShieldController>();
+            if (removingProjectileShieldController != null)
+            {
+                removingProjectileShieldController.SetReflectionShieldProperties(reflectingShieldProperties);
+                AddListenerToEvent(removingProjectileShieldController.RemoveAbilityVisualFromScene);
             }
         }
 
@@ -64,6 +72,9 @@ namespace AbilitySystem
 
                 if (reversingDirectionShieldController)
                     RemoveListenerFromEvent(reversingDirectionShieldController.RemoveAbilityVisualFromScene);
+
+                if (removingProjectileShieldController)
+                    RemoveListenerFromEvent(removingProjectileShieldController.RemoveAbilityVisualFromScene);
             }
         }
 
@@ -74,6 +85,9 @@ namespace AbilitySystem
 
             if (reversingDirectionShieldController)
                 RemoveListenerFromEvent(reversingDirectionShieldController.RemoveAbilityVisualFromScene);
+            
+            if (removingProjectileShieldController)
+                RemoveListenerFromEvent(removingProjectileShieldController.RemoveAbilityVisualFromScene);
         }
 
         private void ReCharge()
@@ -82,7 +96,10 @@ namespace AbilitySystem
                 reflectingShieldController.OnRechargeAbility();
 
             if (reversingDirectionShieldController)
-                reversingDirectionShieldController.OnRechargeAbility();
+                reversingDirectionShieldController.OnRechargeAbility(); 
+            
+            if (removingProjectileShieldController)
+                removingProjectileShieldController.OnRechargeAbility();
         }
 
         private void RemoveAbilityObjectFromScene()
@@ -92,6 +109,9 @@ namespace AbilitySystem
 
             if (reversingDirectionShieldController)
                 reversingDirectionShieldController.RemoveAbilityGameObjectFromScene();
+            
+            if (removingProjectileShieldController)
+                removingProjectileShieldController.RemoveAbilityGameObjectFromScene();
         }
 
         private void AddListenerToEvent(Action _listener)
