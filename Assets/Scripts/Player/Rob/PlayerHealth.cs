@@ -9,16 +9,16 @@ public class PlayerHealth : MonoBehaviour
     public HealthBar healthBar;
     public GameObject robBertParentObj;
     public ChallengeRoomBGM challengeRoomBGM;
-    private RandomPitchAudioSource audioSource;
     private EntityActionVisualController entityActionVisualController;
 
     [Header("Parameters")]
     public int maxHealth = 150;
     public int currentHealth;
 
-
     void Start()
     {
+        healthBar = GameObject.Find("Health-border").GetComponent<HealthBar>();
+        challengeRoomBGM = FindObjectOfType<ChallengeRoomBGM>();
         entityActionVisualController = GetComponent<EntityActionVisualController>();
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
