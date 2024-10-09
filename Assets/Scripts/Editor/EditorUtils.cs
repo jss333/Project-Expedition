@@ -7,38 +7,35 @@ using System.Reflection;
 
 public static class EditorUtils
 {
-    //Display Dialog Box
     public static void DisplayDialogBox(string aMessage)
     {
         EditorUtility.DisplayDialog("Warning", aMessage, "OK");
     }
 
-
-    //Get the selected Game object
     public static GameObject GetSelectedObject(string aWarningMessage)
     {
-        GameObject selectedGO = Selection.activeGameObject;
-        if (!selectedGO)
+        GameObject selectedObject = Selection.activeGameObject;
+        if (!selectedObject)
         {
             EditorUtility.DisplayDialog("Warning", aWarningMessage, "OK");
             return null;
         }
         else
         {
-            return selectedGO;
+            return selectedObject;
         }
     }
 
     public static GameObject GetSelectedObject()
     {
-        GameObject selectedGO = Selection.activeGameObject;
-        if (!selectedGO)
+        GameObject selectedObject = Selection.activeGameObject;
+        if (!selectedObject)
         {
             return null;
         }
         else
         {
-            return selectedGO;
+            return selectedObject;
         }
     }
 }

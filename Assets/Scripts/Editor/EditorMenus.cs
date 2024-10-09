@@ -5,8 +5,7 @@ using UnityEngine.EventSystems;
 
 public class EditorMenus : EditorWindow
 {
-    [MenuItem("GameObject/Core Objects/Setup Level Objects", false, 0)]
-    [MenuItem("LevelTools/Core Objects/Setup Level Objects", false, 0)]
+    [MenuItem("Level Tools/Core Objects/Set Up Level Objects", false, 0)]
     public static void CreateAllObjects()
     {
         CreatePlayer();
@@ -19,43 +18,41 @@ public class EditorMenus : EditorWindow
         CreateInputHandler();
         CreateHealthBars();
         CreateLevelManager();
-        CreatePlatform();
+        CreateHorizontalPlatform();
     }
 
-
-
-
-    [MenuItem("LevelTools/Core Objects/Create Audio Manager")]
+    [MenuItem("Level Tools/Core Objects/Create Audio Manager")]
     public static void CreateAudioManager()
     {
         LoadAssetPrefabFromPath("Assets/Prefabs/Audio/AudioManager.prefab");
     }
 
-    [MenuItem("LevelTools/Core Objects/Create Player")]
+    [MenuItem("Level Tools/Core Objects/Create Player")]
     public static void CreatePlayer()
     {
         LoadAssetPrefabFromPath("Assets/Prefabs/Player/R0B-B3RT.prefab");
     }
 
-    [MenuItem("LevelTools/Core Objects/Create Ability Manager")]
+    [MenuItem("Level Tools/Core Objects/Create Ability Manager")]
     public static void CreateAbilityManager()
     {
         LoadAssetPrefabFromPath("Assets/Prefabs/AbilitySystem/AbilityManager.prefab");
     }
 
-    [MenuItem("LevelTools/Core Objects/Create Input Handler")]
+    [MenuItem("Level Tools/Core Objects/Create Input Handler")]
     public static void CreateInputHandler()
     {
         LoadAssetPrefabFromPath("Assets/Prefabs/InputHandler/InputHandler.prefab");
     }
 
-    [MenuItem("LevelTools/Core Objects/Create Boss")]
+    [MenuItem("Level Tools/Core Objects/Create Boss")]
     public static void CreateBoss()
     {
         LoadAssetPrefabFromPath("Assets/Prefabs/Enemy/Boss/Boss.prefab");
     }
 
-    [MenuItem("LevelTools/Core Objects/Create Camera System")]
+
+    [MenuItem("Level Tools/Core Objects/Create Camera System")]
     public static void CreateCameraSystem()
     {
         CreateCameraConfine();
@@ -63,96 +60,112 @@ public class EditorMenus : EditorWindow
         CreateVirtualCamera();
     }
 
-    public static void CreateCameraObject()
+    private static void CreateCameraConfine()
+    {
+        LoadAssetPrefabFromPath("Assets/Prefabs/Camera/CameraConfine.prefab");
+    }
+
+    private static void CreateCameraObject()
     {
         GameObject oldCamera = GameObject.FindObjectOfType<Camera>().gameObject;
-        if(oldCamera != null) 
+        if(oldCamera != null)
+        {
             DestroyImmediate(oldCamera);
+        }
 
         LoadAssetPrefabFromPath("Assets/Prefabs/Camera/Main Camera.prefab");
     }
 
-    public static void CreateVirtualCamera()
+    private static void CreateVirtualCamera()
     {
-        GameObject prefab = (GameObject)AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Camera/Virtual Camera.prefab", typeof(GameObject));
-        if (prefab)
+        GameObject virtualCameraPrefab = (GameObject)AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Camera/Virtual Camera.prefab", typeof(GameObject));
+        if (virtualCameraPrefab)
         {
-            GameObject newGameObject = (GameObject)PrefabUtility.InstantiatePrefab(prefab);
-
-            CinemachineVirtualCamera cinemachineVirtualCamera = newGameObject.GetComponent<CinemachineVirtualCamera>();
-            if(cinemachineVirtualCamera != null)
-            {
-                Transform playerTransform = GameObject.Find("R0B-B3RT").transform.GetChild(0);
-                cinemachineVirtualCamera.Follow = playerTransform;
-                cinemachineVirtualCamera.LookAt = playerTransform;
-            }
-
-
-            CinemachineConfiner cinemachineConfiner = newGameObject.GetComponent<CinemachineConfiner>();
-            if(cinemachineConfiner != null )
-            {
-                cinemachineConfiner.m_BoundingShape2D = FindObjectOfType<PolygonCollider2D>();
-            }
+            CreateAndConfigureVirtualCamera(virtualCameraPrefab);
         }
         else
         {
             EditorUtils.DisplayDialogBox("Unable to Find the Virtual Camera Prefab!");
         }
-    }  
-    
-    public static void CreateCameraConfine()
-    {
-        LoadAssetPrefabFromPath("Assets/Prefabs/Camera/CameraConfine.prefab");
     }
 
+    private static void CreateAndConfigureVirtualCamera(GameObject virtualCameraPrefab)
+    {
+        GameObject virtualCamera = (GameObject)PrefabUtility.InstantiatePrefab(virtualCameraPrefab);
 
-    [MenuItem("LevelTools/Core Objects/Debug Menu")]
+        CinemachineVirtualCamera cinemachineVirtualCamera = virtualCamera.GetComponent<CinemachineVirtualCamera>();
+        if (cinemachineVirtualCamera != null)
+        {
+            Transform playerTransform = GameObject.Find("R0B").transform;
+            cinemachineVirtualCamera.Follow = playerTransform;
+            cinemachineVirtualCamera.LookAt = playerTransform;
+        }
+
+        CinemachineConfiner cinemachineConfiner = virtualCamera.GetComponent<CinemachineConfiner>();
+        if (cinemachineConfiner != null)
+        {
+            cinemachineConfiner.m_BoundingShape2D = FindObjectOfType<PolygonCollider2D>();
+        }
+    }
+
+    [MenuItem("Level Tools/Core Objects/Debug Menu")]
     public static void CreateDebugMenu()
     {
         LoadAssetPrefabFromPath("Assets/Prefabs/UI/DebugMenu.prefab");
+
+        CreateEventSystemIfNotAlreadyPresent();
     }
 
-    [MenuItem("LevelTools/Core Objects/Pause Menu")]
+    [MenuItem("Level Tools/Core Objects/Pause Menu")]
     public static void CreatePauseMenu()
     {
         LoadAssetPrefabFromPath("Assets/Prefabs/UI/PauseMenu.prefab");
 
-        CreateEventSystem();
+        CreateEventSystemIfNotAlreadyPresent();
+    }
+
+    private static void CreateEventSystemIfNotAlreadyPresent()
+    {
+        if (GameObject.FindObjectOfType<EventSystem>().gameObject == null)
+        {
+            LoadAssetPrefabFromPath("Assets/Prefabs/UI/EventSystem.prefab");
+        }
     }
 
     public static void CreateHealthBars()
     {
         LoadAssetPrefabFromPath("Assets/Prefabs/UI/HealthBar.prefab");
-
-        CreateEventSystem();
     }
 
-    [MenuItem("LevelTools/Core Objects/Create Level Manager")]
+
+    [MenuItem("Level Tools/Core Objects/Create Level Manager")]
     public static void CreateLevelManager()
     {
         LoadAssetPrefabFromPath("Assets/Prefabs/LevelsManagement/LevelManager.prefab");
     }
 
-    [MenuItem("LevelTools/Core Objects/Create A Test Platform")]
-    public static void CreatePlatform()
+    [MenuItem("Level Tools/Core Objects/Create Platform - Horizontal")]
+    public static void CreateHorizontalPlatform()
     {
         GameObject newPlatform = LoadAssetPrefabFromPath("Assets/Prefabs/Platforms/Horizontal Platform.prefab");
         if(newPlatform != null )
         {
             Transform playerTransform = GameObject.Find("R0B-B3RT").transform;
-
-            Vector3 platformPos = new Vector3(playerTransform.position.x, 0, 0);
-            newPlatform.transform.position = platformPos;
+            float x = playerTransform ? playerTransform.position.x : 0;
+            newPlatform.transform.position = new Vector3(x, 0, 0);
         }
     }
 
-    public static void CreateEventSystem()
+    [MenuItem("Level Tools/Core Objects/Create Platform - Vertical")]
+    public static void CreateVerticalPlatform()
     {
-        GameObject eventSystemGo = new GameObject("EventSystem", typeof(EventSystem));
-        eventSystemGo.AddComponent<StandaloneInputModule>();
-        eventSystemGo.transform.position = Vector3.zero;
-        Selection.activeGameObject = eventSystemGo;
+        GameObject newPlatform = LoadAssetPrefabFromPath("Assets/Prefabs/Platforms/Vertical Platform.prefab");
+        if (newPlatform != null)
+        {
+            newPlatform.transform.position = new Vector3(0, 0, 0);
+        }
     }
+
 
     private static GameObject LoadAssetPrefabFromPath(string path)
     {
@@ -163,7 +176,7 @@ public class EditorMenus : EditorWindow
         }
         else
         {
-            EditorUtils.DisplayDialogBox("Unable to Find A Prefab!");
+            EditorUtils.DisplayDialogBox("Unable to Find Prefab at " + path + "!");
             return null;
         }
     }
