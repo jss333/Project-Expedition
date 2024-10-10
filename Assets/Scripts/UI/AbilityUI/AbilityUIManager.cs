@@ -12,7 +12,7 @@ namespace AbilitySystem
         private List<AbilitySo> abilities = new List<AbilitySo>();
         private List<AbilityUIItem> abilityUIItems = new List<AbilityUIItem>();
 
-        private void Awake()
+        private void Start()
         {
             abilities = AbilityManager.Singletone.AvailableAbilities;
 
