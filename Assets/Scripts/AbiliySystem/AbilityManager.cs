@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,9 +9,10 @@ namespace AbilitySystem
     {
         public static AbilityManager Singletone;
 
-        [SerializeField] List<AbilitySo> availableAbilities = new List<AbilitySo>();
-        [SerializeField] AbilitySo firstAbility;
-        [SerializeField] AbilitySo secondaryAbility;
+        [SerializeField] private List<AbilitySo> availableAbilities = new List<AbilitySo>();
+        [SerializeField] private AbilitySo currentAbility;
+        [SerializeField] private AbilitySo firstAbility;
+        [SerializeField] private AbilitySo secondaryAbility;
         private AbilityToggleUI toggleUI;
 
 
@@ -19,6 +21,12 @@ namespace AbilitySystem
         int currentAbilityIndex = 0;
 
         GameObject playerTransform;
+
+
+        public List<AbilitySo> AvailableAbilities => availableAbilities;
+
+
+        public Action<int> OnCurrentAbilitySelected;
 
         private void Awake()
         {
@@ -31,27 +39,35 @@ namespace AbilitySystem
                 Singletone = this;
             }
 
-            InputHandler.Singletone.OnAbilityActivate += UseFirstAbility;
-            InputHandler.Singletone.OnSecondaryAbilityActivate += UseSecondaryAbility;
+            InputHandler.Singletone.OnAbilityActivate += UseCurrentAbility;
+            InputHandler.Singletone.OnCycleForward += CycleForwardThroughAbilities;
+            InputHandler.Singletone.OnCycleBackward += CycleBackwardThroughAbilities;
         }
 
         private void OnDestroy()
         {
-            InputHandler.Singletone.OnAbilityActivate -= UseFirstAbility;
-            InputHandler.Singletone.OnSecondaryAbilityActivate -= UseSecondaryAbility;
+            InputHandler.Singletone.OnAbilityActivate -= UseCurrentAbility;
+            InputHandler.Singletone.OnCycleForward -= CycleForwardThroughAbilities;
+            InputHandler.Singletone.OnCycleBackward -= CycleBackwardThroughAbilities;
         }
 
         private void Start()
         {
             toggleUI = FindFirstObjectByType<AbilityToggleUI>();
             playerTransform = GameObject.FindGameObjectWithTag("Player");
-            firstAbility.InitializeAbility();
-            secondaryAbility.InitializeAbility();
+            /*firstAbility.InitializeAbility();
+            secondaryAbility.InitializeAbility(); */
+
+            SelectFirstAbilityAsCurrent();
         }
 
         private void Update()
         {
-            if(firstAbility.InUse())
+            UpdateDurations();
+
+            UpdateCoolDowns();
+
+            /*if(firstAbility.InUse())
                 firstAbility.UpdateDuration();
 
             if(secondaryAbility.InUse())
@@ -61,14 +77,9 @@ namespace AbilitySystem
                 firstAbility.UpdateCoolDownTime();
             
             if (secondaryAbility.IsInCoolDown())
-                secondaryAbility.UpdateCoolDownTime();
+                secondaryAbility.UpdateCoolDownTime(); */
 
             toggleSecondAb = toggleUI.ShieldAbilityRed;
-        }
-
-        private bool AnyAbilityInUse()
-        {
-            return firstAbility.InUse() || secondaryAbility.InUse();
         }
 
         public void AddAbilityToInventory(AbilitySo _ability)
@@ -81,49 +92,26 @@ namespace AbilitySystem
             availableAbilities.Remove(_ability);
         }
 
-        [ContextMenu("Use Current Ability")]
-        private void UseFirstAbility()
+        private void SelectFirstAbilityAsCurrent()
         {
+            currentAbility = availableAbilities[0];
 
-            if (AnyAbilityInUse()) return;
+            OnCurrentAbilitySelected?.Invoke(0);
 
-            toggleFirstAb = toggleUI.ShieldAbilityBlue;
-
-            if (firstAbility != null && toggleFirstAb)
-            {
-                if (secondaryAbility.InUse())
-                    return;
-
-                if (firstAbility.IsReadyToUse())
-                    firstAbility.UseAbility(playerTransform.transform);
-            }
-        } 
-        
-        private void UseSecondaryAbility()
-        {
-
-            if (AnyAbilityInUse()) return;
-
-            toggleSecondAb = toggleUI.ShieldAbilityRed;
-
-            if (secondaryAbility != null && toggleSecondAb)
-            {
-                if (firstAbility.InUse())
-                    return;
-
-                if (secondaryAbility.IsReadyToUse())
-                    secondaryAbility.UseAbility(playerTransform.transform);
-            }
+            currentAbility.InitializeAbility();
         }
 
-        [ContextMenu("Cycle")]
-        public void CycleThroughAbilities()
+        private void UseCurrentAbility()
         {
-            if(firstAbility != null)
-            {
-                if (firstAbility.InUse()) return;
-            }
+            if (currentAbility.InUse())
+                return;
 
+            if (currentAbility.IsReadyToUse())
+                currentAbility.UseAbility(playerTransform.transform);
+        }
+
+        public void CycleForwardThroughAbilities()
+        {
             currentAbilityIndex++;
 
             if(currentAbilityIndex >= availableAbilities.Count)
@@ -131,13 +119,25 @@ namespace AbilitySystem
                 currentAbilityIndex = 0;
             }
 
+            OnCurrentAbilitySelected?.Invoke(currentAbilityIndex);
+
+            currentAbility = availableAbilities[currentAbilityIndex];
+            currentAbility.InitializeAbility();
+        }
+
+        public void CycleBackwardThroughAbilities()
+        {
+            currentAbilityIndex--;
+
             if (currentAbilityIndex < 0)
             {
                 currentAbilityIndex = availableAbilities.Count - 1;
             }
 
-            firstAbility = availableAbilities[currentAbilityIndex];
-            firstAbility.InitializeAbility();
+            OnCurrentAbilitySelected?.Invoke(currentAbilityIndex);
+
+            currentAbility = availableAbilities[currentAbilityIndex];
+            currentAbility.InitializeAbility();
         }
 
         private void UpdateDurations()
@@ -157,6 +157,48 @@ namespace AbilitySystem
                     availableAbilities[i].UpdateCoolDownTime();
             }
         }
+
+        #region oldAbilityLogic 
+
+        private bool AnyAbilityInUse()
+        {
+            return firstAbility.InUse() || secondaryAbility.InUse();
+        }
+
+        private void UseFirstAbility()
+        {
+
+            if (AnyAbilityInUse()) return;
+
+            toggleFirstAb = toggleUI.ShieldAbilityBlue;
+
+            if (firstAbility != null && toggleFirstAb)
+            {
+                if (secondaryAbility.InUse())
+                    return;
+
+                if (firstAbility.IsReadyToUse())
+                    firstAbility.UseAbility(playerTransform.transform);
+            }
+        }
+
+        private void UseSecondaryAbility()
+        {
+
+            if (AnyAbilityInUse()) return;
+
+            toggleSecondAb = toggleUI.ShieldAbilityRed;
+
+            if (secondaryAbility != null && toggleSecondAb)
+            {
+                if (firstAbility.InUse())
+                    return;
+
+                if (secondaryAbility.IsReadyToUse())
+                    secondaryAbility.UseAbility(playerTransform.transform);
+            }
+        }
+        #endregion
     }
 
     public enum AbilityType { ReflectingShield, TestAbility}

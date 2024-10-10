@@ -24,7 +24,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "AcitvateAbility",
+                    "name": "CycleForward",
                     "type": "Button",
                     "id": "694c7c4a-e871-41f7-a87d-221d8cf8186a",
                     "expectedControlType": "Button",
@@ -33,9 +33,18 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "ActivateSecondAbility",
+                    "name": "CycleBackward",
                     "type": "Button",
                     "id": "dac6b945-2a24-4885-b2e0-667a80ebbf2a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "UseAbility",
+                    "type": "Button",
+                    "id": "9e6ecec5-9ba9-424b-afad-ad260a401d38",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -94,7 +103,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "AcitvateAbility",
+                    "action": "CycleForward",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -105,7 +114,18 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "ActivateSecondAbility",
+                    "action": "CycleBackward",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7cb84d7c-3119-444b-b4a6-a3bb86d46bfb",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "UseAbility",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

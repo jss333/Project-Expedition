@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ReversingDirectionShieldAbility
   m_EditorClassIdentifier: 
   abilityName: 
-  abilityIcon: {fileID: 0}
+  abilityIcon: {fileID: 21300000, guid: a1bf4e2cf90377341939f7e1d9a27d95, type: 3}
   maxDuration: 3
   maxCoolDownTime: 5
   reflectingShieldProperties:

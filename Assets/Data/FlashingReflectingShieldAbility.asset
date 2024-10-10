@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: FlashingReflectingShieldAbility
   m_EditorClassIdentifier: 
   abilityName: 
-  abilityIcon: {fileID: 0}
+  abilityIcon: {fileID: 21300000, guid: 12516f4fd32142842a00f2eeb91a05f6, type: 3}
   maxDuration: 0.25
   maxCoolDownTime: 1.5
   reflectingShieldProperties:
@@ -23,4 +23,5 @@ MonoBehaviour:
     radius: 1
     reverseSpeed: 10
     chargeClip: {fileID: 8300000, guid: bfbdff909454488498f081bf8ff97dbb, type: 3}
+    shouldDestroyProjectileOnImpact: 0
     newDamageValue: 150
