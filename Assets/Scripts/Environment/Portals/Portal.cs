@@ -5,7 +5,8 @@ using UnityEngine;
 public class Portal : MonoBehaviour
 {
     [SerializeField] private Portal adjacentPortal;
-    [SerializeField] Transform spawnPoint;
+    [SerializeField] private Transform spawnPoint;
+    [SerializeField] private bool spawnOnlyInOneDirection;
     bool canTelePort;
 
     public bool CanTelePort 
@@ -25,7 +26,6 @@ public class Portal : MonoBehaviour
         if(targetObject.GetComponent<PlayerMovement>() != null )
         {
             targetObject.transform.position = spawnPoint.position;
-            targetObject.transform.rotation = spawnPoint.rotation;
 
             SpriteRenderer sprite = targetObject.GetComponent<SpriteRenderer>();
             if (sprite != null)
@@ -37,7 +37,16 @@ public class Portal : MonoBehaviour
         if(targetObject.GetComponent<PlayerProjectile>()  != null )
         {
             targetObject.transform.position = spawnPoint.position;
-            targetObject.GetComponent<Rigidbody2D>().velocity *= -1f; 
+            
+            if(spawnOnlyInOneDirection)
+            {
+                targetObject.transform.rotation = spawnPoint.rotation;
+                targetObject.GetComponent<Rigidbody2D>().velocity = spawnPoint.right * 20; 
+            }
+            else
+            {
+                targetObject.GetComponent<Rigidbody2D>().velocity *= -1f;
+            }
         }
         
     }
