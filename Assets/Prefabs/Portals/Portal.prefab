@@ -117,6 +117,7 @@ GameObject:
   - component: {fileID: 5090601871339404665}
   - component: {fileID: 8164116868552768413}
   - component: {fileID: 3715343435655023190}
+  - component: {fileID: 2644858411045010779}
   m_Layer: 0
   m_Name: Portal
   m_TagString: Untagged
@@ -200,6 +201,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   adjacentPortal: {fileID: 0}
   spawnPoint: {fileID: 5580443384704487650}
+  spawnOnlyInOneDirection: 0
+--- !u!114 &2644858411045010779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3540191227049959282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a0db32c75c582942a7b848e44609fcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnInteracted:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3715343435655023190}
+        m_TargetAssemblyTypeName: Portal, Assembly-CSharp
+        m_MethodName: SpawnPlayerAtAdjacentPortal
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8144792217215780919
 GameObject:
   m_ObjectHideFlags: 0

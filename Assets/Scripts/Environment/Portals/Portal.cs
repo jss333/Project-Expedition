@@ -8,6 +8,7 @@ public class Portal : MonoBehaviour
     [SerializeField] private Transform spawnPoint;
     [SerializeField] private bool spawnOnlyInOneDirection;
     bool canTelePort;
+    Transform targetObject;
 
     public bool CanTelePort 
     {
@@ -15,15 +16,21 @@ public class Portal : MonoBehaviour
         set { canTelePort = value; }
     }
 
+    public Transform TargetObject
+    {
+        get { return targetObject; }
+        set { targetObject = value; }
+    }
+
     private void Start()
     {
         canTelePort = true;
     }
 
-    public void SpawnTarget(Transform targetObject)
+    public void SpawnTarget()
     {
 
-        if(targetObject.GetComponent<PlayerMovement>() != null )
+        /*if(targetObject.GetComponent<PlayerMovement>() != null )
         {
             targetObject.transform.position = spawnPoint.position;
 
@@ -32,7 +39,7 @@ public class Portal : MonoBehaviour
             {
                 sprite.flipX = true;
             }
-        }
+        } */
 
         if(targetObject.GetComponent<PlayerProjectile>()  != null )
         {
@@ -57,7 +64,13 @@ public class Portal : MonoBehaviour
 
         if( collision != null )
         {
-            adjacentPortal.SpawnTarget(collision.transform);
+            if (collision.GetComponent<PlayerMovement>() != null)
+            {
+                targetObject = collision.transform;
+            }
+            
+            adjacentPortal.TargetObject = collision.transform;
+            adjacentPortal.SpawnTarget();
             adjacentPortal.CanTelePort = false;
         }
     }
@@ -67,6 +80,30 @@ public class Portal : MonoBehaviour
         if( collision != null )
         {
             canTelePort = true;
+            targetObject = null;
+        }
+    }
+
+
+    public void TelePortPlayer()   //Interaction Event Call back
+    {
+        targetObject.transform.position = adjacentPortal.spawnPoint.position;
+
+        SpriteRenderer sprite = targetObject.GetComponent<SpriteRenderer>();
+        if (sprite != null)
+        {
+            sprite.flipX = true;
+        }
+    }
+
+    public void SpawnPlayerAtAdjacentPortal()
+    {
+        targetObject.transform.position = adjacentPortal.spawnPoint.position;
+
+        SpriteRenderer sprite = targetObject.GetComponent<SpriteRenderer>();
+        if (sprite != null)
+        {
+            sprite.flipX = true;
         }
     }
 }
