@@ -11,7 +11,7 @@ public class AbilityButton : MonoBehaviour
     {
         button = GetComponent<Button>();
         image = GetComponent<Image>();
-        isActive = false;
+        isActive = true;
     }
     public bool getActive()
     {

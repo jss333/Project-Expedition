@@ -5,16 +5,18 @@ using UnityEngine;
 
 public class CameraShaker : MonoBehaviour
 {
-    [SerializeField] CinemachineVirtualCamera virtualCamera;
     [SerializeField] float shakeIntensity;
     [SerializeField] float shakeTime;
     [SerializeField] AnimationCurve shakeCurve;
 
+    CinemachineVirtualCamera virtualCamera;
     private float timer;
     private CinemachineBasicMultiChannelPerlin basicNoise;
 
     private void Awake()
     {
+        virtualCamera = FindObjectOfType<CinemachineVirtualCamera>();
+
         StopShake();
 
         DamageEventsManager.OnPlayerDamaged += ShakeCameraOnDamaged;
@@ -39,8 +41,11 @@ public class CameraShaker : MonoBehaviour
 
     void StopShake()
     {
-        basicNoise = virtualCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
-        basicNoise.m_AmplitudeGain = 0;
+        if(virtualCamera)
+        {
+            basicNoise = virtualCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
+            basicNoise.m_AmplitudeGain = 0;
+        }
         timer = 0;
     }
 

@@ -16,6 +16,8 @@ namespace AbilitySystem
         private Vector3 initialDirection;
         private AudioClip rechargeClip;
 
+        ReflectingShieldProperties shieldProperties;
+
         private void OnDestroy()
         {
             RemoveAbilityVisualFromScene();
@@ -28,6 +30,8 @@ namespace AbilitySystem
             damageValue = reflectingShieldProperties.newDamageValue;
             reverseSpeed = reflectingShieldProperties.reverseSpeed;
             rechargeClip = reflectingShieldProperties.chargeClip;
+
+            shieldProperties = reflectingShieldProperties;
 
             SetUpRadiusDependencies();
         }
@@ -77,6 +81,12 @@ namespace AbilitySystem
             {
                 if (collision.CompareTag("Projectile"))
                 {
+                    if(shieldProperties.shouldDestroyProjectileOnImpact)
+                    {
+                        Destroy(collision.gameObject);
+                        return;
+                    }
+
                     PlayerProjectile playerProjectile = collision.GetComponent<PlayerProjectile>();
                     if (playerProjectile != null) return;
 

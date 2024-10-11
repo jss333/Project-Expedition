@@ -9,18 +9,16 @@ public class PlayerHealth : MonoBehaviour
     public HealthBar healthBar;
     public GameObject robBertParentObj;
     public ChallengeRoomBGM challengeRoomBGM;
-    private RandomPitchAudioSource audioSource;
     private EntityActionVisualController entityActionVisualController;
 
     [Header("Parameters")]
     public int maxHealth = 150;
     public int currentHealth;
-    public AudioClip damageTakenSFX;
-
 
     void Start()
     {
-        audioSource = GetComponent<RandomPitchAudioSource>();
+        healthBar = GameObject.Find("Health-border").GetComponent<HealthBar>();
+        challengeRoomBGM = FindObjectOfType<ChallengeRoomBGM>();
         entityActionVisualController = GetComponent<EntityActionVisualController>();
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
@@ -30,7 +28,7 @@ public class PlayerHealth : MonoBehaviour
     {
         currentHealth -= healthdamage;
         healthBar.SetHealth(currentHealth);
-        audioSource.PlayAudioWithNormalPitch(damageTakenSFX);
+        AudioManagerNoMixers.Singleton.PlaySFXByName("PlayerTakesDamage");
         entityActionVisualController.ApplyGettingHitVisuals();
         DamageEventsManager.OnPlayerDamaged?.Invoke((float)healthdamage / maxHealth);
 

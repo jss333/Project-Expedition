@@ -23,4 +23,5 @@ MonoBehaviour:
     radius: 1
     reverseSpeed: 3
     chargeClip: {fileID: 8300000, guid: bfbdff909454488498f081bf8ff97dbb, type: 3}
+    shouldDestroyProjectileOnImpact: 1
     newDamageValue: 30

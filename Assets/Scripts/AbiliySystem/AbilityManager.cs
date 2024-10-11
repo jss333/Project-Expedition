@@ -11,11 +11,11 @@ namespace AbilitySystem
         [SerializeField] List<AbilitySo> availableAbilities = new List<AbilitySo>();
         [SerializeField] AbilitySo firstAbility;
         [SerializeField] AbilitySo secondaryAbility;
-        [SerializeField] AbilityToggleUI toggleUI;
+        private AbilityToggleUI toggleUI;
 
 
-        private bool toggleSecondAb = false;
-        private bool toggleFirstAb = false;
+        private bool toggleSecondAb = true;
+        private bool toggleFirstAb = true;
         int currentAbilityIndex = 0;
 
         GameObject playerTransform;
@@ -62,8 +62,13 @@ namespace AbilitySystem
             
             if (secondaryAbility.IsInCoolDown())
                 secondaryAbility.UpdateCoolDownTime();
-            toggleFirstAb = toggleUI.ShieldAbilityBlue;
+
             toggleSecondAb = toggleUI.ShieldAbilityRed;
+        }
+
+        private bool AnyAbilityInUse()
+        {
+            return firstAbility.InUse() || secondaryAbility.InUse();
         }
 
         public void AddAbilityToInventory(AbilitySo _ability)
@@ -79,6 +84,11 @@ namespace AbilitySystem
         [ContextMenu("Use Current Ability")]
         private void UseFirstAbility()
         {
+
+            if (AnyAbilityInUse()) return;
+
+            toggleFirstAb = toggleUI.ShieldAbilityBlue;
+
             if (firstAbility != null && toggleFirstAb)
             {
                 if (secondaryAbility.InUse())
@@ -91,6 +101,11 @@ namespace AbilitySystem
         
         private void UseSecondaryAbility()
         {
+
+            if (AnyAbilityInUse()) return;
+
+            toggleSecondAb = toggleUI.ShieldAbilityRed;
+
             if (secondaryAbility != null && toggleSecondAb)
             {
                 if (firstAbility.InUse())
@@ -154,7 +169,7 @@ namespace AbilitySystem
         public float radius;
         public float reverseSpeed;
         public AudioClip chargeClip;
-
+        public bool shouldDestroyProjectileOnImpact;
 
         [Range(5, 300)]
         public int newDamageValue;
