@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: FlashingReflectingShieldAbility
   m_EditorClassIdentifier: 
   abilityName: 
-  abilityIcon: {fileID: 21300000, guid: 12516f4fd32142842a00f2eeb91a05f6, type: 3}
+  abilityIcon: {fileID: 21300000, guid: 78d69726ef8f2ef428f166bcde459677, type: 3}
+  iconColor: {r: 1, g: 1, b: 1, a: 1}
   maxDuration: 0.25
   maxCoolDownTime: 1.5
   reflectingShieldProperties:

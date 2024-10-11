@@ -15,6 +15,7 @@ namespace AbilitySystem
         {
             highLightImageGameObject.SetActive(false);
             icon.sprite = abilitySo.AbilityIcon; 
+            icon.color = abilitySo.IconColor;
         }
 
         public void ShowHighLight()

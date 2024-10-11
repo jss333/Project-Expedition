@@ -7,7 +7,7 @@ namespace AbilitySystem
 {
     public class AbilityManager : MonoBehaviour
     {
-        public static AbilityManager Singletone;
+        public static AbilityManager Singleton;
 
         [SerializeField] private List<AbilitySo> availableAbilities = new List<AbilitySo>();
         [SerializeField] private AbilitySo currentAbility;
@@ -30,13 +30,13 @@ namespace AbilitySystem
 
         private void Awake()
         {
-            if(Singletone != null)
+            if(Singleton != null)
             {
-                Destroy(Singletone);
+                Destroy(Singleton);
             }
             else
             {
-                Singletone = this;
+                Singleton = this;
             }
 
             InputHandler.Singletone.OnAbilityActivate += UseCurrentAbility;
@@ -85,6 +85,8 @@ namespace AbilitySystem
         public void AddAbilityToInventory(AbilitySo _ability)
         {
             availableAbilities.Add(_ability);
+
+            SelectFirstAbilityAsCurrent();
         }
 
         public void RemoveAbilityFromInventory(AbilitySo _ability)
@@ -103,6 +105,8 @@ namespace AbilitySystem
 
         private void UseCurrentAbility()
         {
+            if(currentAbility == null) return;
+
             if (currentAbility.InUse())
                 return;
 
@@ -119,6 +123,8 @@ namespace AbilitySystem
                 currentAbilityIndex = 0;
             }
 
+            Debug.Log(currentAbilityIndex);
+
             OnCurrentAbilitySelected?.Invoke(currentAbilityIndex);
 
             currentAbility = availableAbilities[currentAbilityIndex];
@@ -133,6 +139,8 @@ namespace AbilitySystem
             {
                 currentAbilityIndex = availableAbilities.Count - 1;
             }
+
+            Debug.Log(currentAbilityIndex);
 
             OnCurrentAbilitySelected?.Invoke(currentAbilityIndex);
 

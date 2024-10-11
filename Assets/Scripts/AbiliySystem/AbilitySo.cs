@@ -9,6 +9,7 @@ namespace AbilitySystem
         [Header("General Settings")]
         [SerializeField] private string abilityName;
         [SerializeField] private Sprite abilityIcon;
+        [SerializeField] private Color iconColor = Color.white;
 
         [SerializeField] private float maxDuration;
         protected float duration;
@@ -25,6 +26,8 @@ namespace AbilitySystem
         public string AbilityName => abilityName;
 
         public Sprite AbilityIcon => abilityIcon;
+
+        public Color IconColor => iconColor;    
 
 
         private void Awake()

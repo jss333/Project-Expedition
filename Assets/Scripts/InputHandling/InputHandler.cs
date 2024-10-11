@@ -57,16 +57,25 @@ public class InputHandler : MonoBehaviour, IStdActions
 
     void IStdActions.OnCycleForward(InputAction.CallbackContext context)
     {
-        OnCycleForward?.Invoke();
+        if (context.phase == InputActionPhase.Canceled)
+        {
+            OnCycleForward?.Invoke();
+        }
     }
 
     void IStdActions.OnCycleBackward(InputAction.CallbackContext context)
     {
-        OnCycleBackward?.Invoke();
+        if (context.phase == InputActionPhase.Canceled)
+        {
+            OnCycleBackward?.Invoke();
+        }
     }
 
     public void OnUseAbility(InputAction.CallbackContext context)
     {
-        OnAbilityActivate?.Invoke();
+        if (context.phase == InputActionPhase.Canceled)
+        {
+            OnAbilityActivate?.Invoke();
+        }
     }
 }

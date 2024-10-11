@@ -14,16 +14,16 @@ namespace AbilitySystem
 
         private void Start()
         {
-            abilities = AbilityManager.Singletone.AvailableAbilities;
+            abilities = AbilityManager.Singleton.AvailableAbilities;
 
-            AbilityManager.Singletone.OnCurrentAbilitySelected += HighLightCurrentlySelectedAbility;
+            AbilityManager.Singleton.OnCurrentAbilitySelected += HighLightCurrentlySelectedAbility;
 
             InitializeAbilitiesUI();
         }
 
         private void OnDestroy()
         {
-            AbilityManager.Singletone.OnCurrentAbilitySelected -= HighLightCurrentlySelectedAbility;
+            AbilityManager.Singleton.OnCurrentAbilitySelected -= HighLightCurrentlySelectedAbility;
         }
 
         void Update()
@@ -33,6 +33,8 @@ namespace AbilitySystem
 
         private void InitializeAbilitiesUI()
         {
+            abilityUIHolder.DetachChildren();
+
             if (abilities.Count > 0)
             {
                 for (int i = 0; i < abilities.Count; i++)
