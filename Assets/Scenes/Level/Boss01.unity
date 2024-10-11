@@ -284,7 +284,7 @@ Transform:
   m_GameObject: {fileID: 6225117}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.100029, y: 4.0301185, z: -10}
+  m_LocalPosition: {x: -16.086628, y: 4.0301185, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -368,6 +368,74 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1001 &10951411
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4344868066763769398, guid: cbeba7eb9bcca034e9408ec3c48d95be,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4344868066763769398, guid: cbeba7eb9bcca034e9408ec3c48d95be,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4344868066763769398, guid: cbeba7eb9bcca034e9408ec3c48d95be,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4344868066763769398, guid: cbeba7eb9bcca034e9408ec3c48d95be,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4344868066763769398, guid: cbeba7eb9bcca034e9408ec3c48d95be,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4344868066763769398, guid: cbeba7eb9bcca034e9408ec3c48d95be,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4344868066763769398, guid: cbeba7eb9bcca034e9408ec3c48d95be,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4344868066763769398, guid: cbeba7eb9bcca034e9408ec3c48d95be,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4344868066763769398, guid: cbeba7eb9bcca034e9408ec3c48d95be,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4344868066763769398, guid: cbeba7eb9bcca034e9408ec3c48d95be,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8440126391885891598, guid: cbeba7eb9bcca034e9408ec3c48d95be,
+        type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cbeba7eb9bcca034e9408ec3c48d95be, type: 3}
 --- !u!1001 &43150483
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1280,7 +1348,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entityToSpawn: {fileID: 449684760226055840, guid: 5026d7c18267c4c4c9785e382b85218c,
     type: 3}
-  entityCount: 1
+  entityCount: 2
   freeAnchors:
   - {fileID: 2041587276}
   - {fileID: 1886410138}
@@ -3272,7 +3340,6 @@ MonoBehaviour:
   availableAbilities: []
   firstAbility: {fileID: 11400000, guid: 016f3c8cf524c9b42becb99d2b9e2077, type: 2}
   secondaryAbility: {fileID: 11400000, guid: fc75d966280991549b09fce89f5af747, type: 2}
-  toggleUI: {fileID: 0}
 --- !u!4 &804246507
 Transform:
   m_ObjectHideFlags: 0
@@ -3753,11 +3820,26 @@ PrefabInstance:
       propertyPath: JumpToggle
       value: 
       objectReference: {fileID: 1109229711}
+    - target: {fileID: 3072250601190182420, guid: bfe30e0a894d02d488d00f5203b8ec9a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3902266722017391789, guid: bfe30e0a894d02d488d00f5203b8ec9a,
         type: 3}
       propertyPath: virtualCamera
       value: 
       objectReference: {fileID: 1204898065}
+    - target: {fileID: 4283147244315553361, guid: bfe30e0a894d02d488d00f5203b8ec9a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4569246080999924309, guid: bfe30e0a894d02d488d00f5203b8ec9a,
+        type: 3}
+      propertyPath: shotDmg
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 4569246080999924309, guid: bfe30e0a894d02d488d00f5203b8ec9a,
         type: 3}
       propertyPath: healthBar
@@ -13668,3 +13750,4 @@ SceneRoots:
   - {fileID: 990522604}
   - {fileID: 1156118999}
   - {fileID: 831226061}
+  - {fileID: 10951411}
