@@ -33,7 +33,7 @@ public class PlayerHealth : MonoBehaviour
         AudioManagerNoMixers.Singleton.PlaySFXByName("PlayerTakesDamage");
         entityActionVisualController.ApplyGettingHitVisuals();
         DamageEventsManager.OnPlayerDamaged?.Invoke((float)healthdamage / maxHealth);
-        playHitAnim();
+        PlayHitAnim();
         if (currentHealth <= 0)
         {
             Destroy(robBertParentObj);
@@ -41,14 +41,8 @@ public class PlayerHealth : MonoBehaviour
             EndGameEventManager.OnDefeatAchieved?.Invoke();
         }
     }
-    private void playHitAnim()
+    private void PlayHitAnim()
     {
-        animator.SetBool("isHit", true);
-        //transform.localScale = new Vector3(.4f, .4f, .4f);
-    }
-    public void stopHitAnim()
-    {
-        animator.SetBool("isHit", false);
-        //transform.localScale = Vector3.one;
+        animator.SetTrigger("gotHit");
     }
 }
