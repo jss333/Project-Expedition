@@ -10,6 +10,7 @@ public class PlayerHealth : MonoBehaviour
     public GameObject robBertParentObj;
     public ChallengeRoomBGM challengeRoomBGM;
     private EntityActionVisualController entityActionVisualController;
+    private Animator animator;
 
     [Header("Parameters")]
     public int maxHealth = 150;
@@ -22,6 +23,7 @@ public class PlayerHealth : MonoBehaviour
         entityActionVisualController = GetComponent<EntityActionVisualController>();
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
+        animator = GetComponent<Animator>();
     }
 
     public void TakeDamage(int healthdamage)
@@ -31,13 +33,16 @@ public class PlayerHealth : MonoBehaviour
         AudioManagerNoMixers.Singleton.PlaySFXByName("PlayerTakesDamage");
         entityActionVisualController.ApplyGettingHitVisuals();
         DamageEventsManager.OnPlayerDamaged?.Invoke((float)healthdamage / maxHealth);
-
+        PlayHitAnim();
         if (currentHealth <= 0)
         {
             Destroy(robBertParentObj);
             challengeRoomBGM.PlayDefeatBGM();
             EndGameEventManager.OnDefeatAchieved?.Invoke();
-
         }
+    }
+    private void PlayHitAnim()
+    {
+        animator.SetTrigger("gotHit");
     }
 }
