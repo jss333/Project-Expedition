@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class MinionController : MonoBehaviour
 {
@@ -33,6 +34,8 @@ public class MinionController : MonoBehaviour
     [SerializeField] private Quaternion launchAngle;
 
     private bool reachedAnchor;
+
+    public GameEvent OnDieEvent;
 
     public void Start()
     {
@@ -134,13 +137,14 @@ public class MinionController : MonoBehaviour
         healthBar.SetHealth((int)(currentHealth/maxhealth*100f));
         if (currentHealth <= 0)
         {
+            OnDieEvent.Raise();
             destroyThisMinion();
         }
     }
     private void destroyThisMinion()
     {
-        bossInfo.minionDestroyed();
-        spawner.decrementActiveCount(anchor);
+        /*bossInfo.minionDestroyed();
+        spawner.decrementActiveCount(anchor);   */
         Destroy(this.gameObject);
     }
 }
