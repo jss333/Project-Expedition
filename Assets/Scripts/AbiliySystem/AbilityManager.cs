@@ -101,6 +101,8 @@ namespace AbilitySystem
             OnCurrentAbilitySelected?.Invoke(0);
 
             currentAbility.InitializeAbility();
+
+            availableAbilities[1].InitializeAbility();
         }
 
         private void UseCurrentAbility()
@@ -128,7 +130,7 @@ namespace AbilitySystem
             OnCurrentAbilitySelected?.Invoke(currentAbilityIndex);
 
             currentAbility = availableAbilities[currentAbilityIndex];
-            currentAbility.InitializeAbility();
+            //currentAbility.InitializeAbility();
         }
 
         public void CycleBackwardThroughAbilities()
@@ -145,7 +147,7 @@ namespace AbilitySystem
             OnCurrentAbilitySelected?.Invoke(currentAbilityIndex);
 
             currentAbility = availableAbilities[currentAbilityIndex];
-            currentAbility.InitializeAbility();
+            //currentAbility.InitializeAbility();
         }
 
         private void UpdateDurations()

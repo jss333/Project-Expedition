@@ -28,7 +28,7 @@ namespace AbilitySystem
 
         void Update()
         {
-
+            UpdateAbilityUIItemVisuals();
         }
 
         private void InitializeAbilitiesUI()
@@ -45,7 +45,7 @@ namespace AbilitySystem
 
                     if (abilityUIItem != null )
                     {
-                        abilityUIItem.InitializeUI(abilities[i]);
+                        abilityUIItem.InitializeUI(abilities[i], i);
                     }
                 }
             }
@@ -64,6 +64,14 @@ namespace AbilitySystem
                         abilityUIItems[i].ShowHighLight();
                     }
                 }
+            }
+        }
+
+        private void UpdateAbilityUIItemVisuals()
+        {
+            for (int i = 0; i < abilityUIItems.Count; i++)
+            {
+                abilityUIItems[i].UpdateVisual(abilities[i]);
             }
         }
     }

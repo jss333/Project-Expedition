@@ -46,6 +46,11 @@ namespace AbilitySystem
             return duration < maxDuration;
         }
 
+        public bool InCoolDown()
+        {
+            return (coolDownTime < maxCoolDownTime && coolDownTime > 0);
+        }
+
         public bool IsReadyToUse()
         {
             return (coolDownTime >= maxCoolDownTime && duration >= MaxDuration);
