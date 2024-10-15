@@ -81,7 +81,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 376, y: -149}
+  m_AnchoredPosition: {x: 329.99997, y: -146.99998}
   m_SizeDelta: {x: 73.176, y: 23.694}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7123681306114680787
@@ -214,7 +214,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 376, y: 10}
+  m_AnchoredPosition: {x: 329.99997, y: 12.000015}
   m_SizeDelta: {x: 73.176, y: 23.694}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3972470365168532747
@@ -339,15 +339,15 @@ RectTransform:
   m_GameObject: {fileID: 4455031503343887703}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5.3486, y: 9.493765, z: 5.3486}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1823243126013069564}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 8.408997}
-  m_SizeDelta: {x: -1679.9838, y: -913.6421}
+  m_AnchoredPosition: {x: -0.000061035156, y: 0}
+  m_SizeDelta: {x: -717.0559, y: -329.766}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8157091711351986909
 CanvasRenderer:
@@ -422,7 +422,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 376, y: -70}
+  m_AnchoredPosition: {x: 329.99997, y: -67.999985}
   m_SizeDelta: {x: 73.176, y: 23.694}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2926967488176354458
@@ -555,7 +555,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 376, y: 90}
+  m_AnchoredPosition: {x: 330, y: 92}
   m_SizeDelta: {x: 73.176, y: 23.694}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1406777198179730251
