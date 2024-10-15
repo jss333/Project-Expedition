@@ -12,7 +12,9 @@ public class Pointer_Sys : MonoBehaviour
 
     void Start()
     {
-        if(cam == null){
+        cam = FindObjectOfType<Camera>();
+
+        if (cam == null){
             Debug.Log("No camera attached -- pointer non-functional.");
             hide_pointer = true;
         }

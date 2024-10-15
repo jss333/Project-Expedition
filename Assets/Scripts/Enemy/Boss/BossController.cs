@@ -7,60 +7,64 @@ using UnityEngine.UI;
 public class BossController : MonoBehaviour
 {
     [Header("References")]
-    public Transform orbSourcePosition;
-    public Transform playerPosition;
-    public HealthBar healthBar;
-    public ChallengeRoomBGM challengeRoomBGM;
+    [SerializeField] private Transform orbSourcePosition;
+    [SerializeField] private GameObject p_BossShield;
+    private Transform playerPosition;
+    private HealthBar healthBar;
+    private ChallengeRoomBGM challengeRoomBGM;
     private Animator bossAnimator;
     private System.Random random;
     private BossInformation info;
-    [SerializeField] private GameObject p_BossShield;
-    [SerializeField] private EntityActionVisualController bossAnimationController;
+    private EntityActionVisualController bossAnimationController;
 
     [Header("References - Popup labels")]
     [SerializeField] private PopupLabel damageNumberPopupPrefab;
     [SerializeField] private PopupLabel immunePopupPrefab;
     [SerializeField] private Transform popupLabelSource;
 
-
     [Header("Parameters")]
-    public int maxHealth = 5000;
-    public int currentHealth;
-    public float hurtStateHealthPercent = 50f;
+    [SerializeField] private int maxHealth = 5000;
+    private int currentHealth;
+    [SerializeField] private float hurtStateHealthPercent = 50f;
     private bool hurtStateTriggered = false;
-    public float bgmChangeHealthPercent = 40f;
+    [SerializeField] private float bgmChangeHealthPercent = 40f;
     private bool bgmChangeTriggered = false;
-    public float damageTakenSFXCooldown = 0.2f;
+    [SerializeField] private float damageTakenSFXCooldown = 0.2f;
     private float lastDamageTakenSFXPlayTime = -Mathf.Infinity;
-    private float stopOverflowDamageNumbers = 1f;
-    public float overflowDamageCooldown = 1f;
+    [SerializeField] private float stopOverflowDamageNumbers = 1f;
+    [SerializeField] private float overflowDamageCooldown = 1f;
 
     [Header("Parameters - Minion/shield respawn")]
     [SerializeField] private List<float> minionRespawnThreasholds;
 
     [Header("Parameters - Orb")]
-    public GameObject singleOrbPrefab;
-    public float minShotIntervalSec = 0.7f;
-    public float maxShotIntervalSec = 1.3f;
+    [SerializeField] private GameObject singleOrbPrefab;
+    [SerializeField] private float minShotIntervalSec = 0.7f;
+    [SerializeField] private float maxShotIntervalSec = 1.3f;
     private float nextShotTime = 0f;
-    public float minSingleOrbSpeed = 4.5f;
-    public float maxSingleOrbSpeed = 5.5f;
+    [SerializeField] private float minSingleOrbSpeed = 4.5f;
+    [SerializeField] private float maxSingleOrbSpeed = 5.5f;
 
     [Header("Parameters - Multiple orbs")]
-    public GameObject multipleOrbPrefab;
-    public float multipleOrbsPercent = 10f;
-    public float numMultipleOrbs = 5;
-    public float multipleOrbsAngleSpreadDeg = 60;
-    public float minMultipleOrbSpeed = 4.5f;
-    public float maxMultipleOrbSpeed = 5.5f;
+    [SerializeField] private GameObject multipleOrbPrefab;
+    [SerializeField] private float multipleOrbsPercent = 10f;
+    [SerializeField] private float numMultipleOrbs = 5;
+    [SerializeField] private float multipleOrbsAngleSpreadDeg = 60;
+    [SerializeField] private float minMultipleOrbSpeed = 4.5f;
+    [SerializeField] private float maxMultipleOrbSpeed = 5.5f;
 
     private bool hasShield = false;
     private bool damageNumActive = false;
+
     void Start()
     {
-        bossAnimator = GetComponent<Animator>();
         random = new System.Random();
+        playerPosition = FindFirstObjectByType<PlayerMovement>().gameObject.transform;
+        challengeRoomBGM = FindFirstObjectByType<ChallengeRoomBGM>();
+        healthBar = GetComponentInChildren<HealthBar>();
+        bossAnimator = GetComponent<Animator>();
         info = GetComponent<BossInformation>();
+        bossAnimationController = GetComponent<EntityActionVisualController>();
 
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
@@ -178,7 +182,7 @@ public class BossController : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        if(info.getImmune())
+        if(info.GetImmune())
         {
             if (damageNumActive == false)
             {
@@ -270,7 +274,7 @@ public class BossController : MonoBehaviour
                     minionRespawnThreasholds.RemoveAt(i);
                     FindAnyObjectByType<MinionSpawnerController>().handleMinionRespawn();
                     AudioManagerNoMixers.Singleton.PlaySFXByName("BossSpawnsMinions");
-                    info.setImmune(true);
+                    info.SetImmune(true);
                 }
             }
         }

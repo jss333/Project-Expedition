@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: BossSpawnsMinions
   m_EditorClassIdentifier: 
   SFXClipName: BossSpawnsMinions
-  audioClip: {fileID: 8300000, guid: 0dc68d9f7117ec5419896482f59e42b7, type: 3}
-  minPitch: 0.95
-  maxPitch: 1.05
+  audioClip: {fileID: 8300000, guid: eee4762f53bd4be41911a4e0e1c07104, type: 3}
+  minPitch: 1
+  maxPitch: 1
