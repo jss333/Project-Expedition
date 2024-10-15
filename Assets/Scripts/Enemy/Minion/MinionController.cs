@@ -139,7 +139,7 @@ public class MinionController : MonoBehaviour
     }
     private void destroyThisMinion()
     {
-        bossInfo.minionDestroyed();
+        bossInfo.MinionDestroyed();
         spawner.decrementActiveCount(anchor);
         Destroy(this.gameObject);
     }

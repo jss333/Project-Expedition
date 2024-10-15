@@ -7,21 +7,20 @@ using UnityEngine.UI;
 public class BossController : MonoBehaviour
 {
     [Header("References")]
-    [SerializeField] Transform orbSourcePosition;
+    [SerializeField] private Transform orbSourcePosition;
+    [SerializeField] private GameObject p_BossShield;
     private Transform playerPosition;
     private HealthBar healthBar;
     private ChallengeRoomBGM challengeRoomBGM;
     private Animator bossAnimator;
     private System.Random random;
     private BossInformation info;
-    [SerializeField] private GameObject p_BossShield;
     private EntityActionVisualController bossAnimationController;
 
     [Header("References - Popup labels")]
     [SerializeField] private PopupLabel damageNumberPopupPrefab;
     [SerializeField] private PopupLabel immunePopupPrefab;
     [SerializeField] private Transform popupLabelSource;
-
 
     [Header("Parameters")]
     [SerializeField] private int maxHealth = 5000;
@@ -56,17 +55,16 @@ public class BossController : MonoBehaviour
 
     private bool hasShield = false;
     private bool damageNumActive = false;
+
     void Start()
     {
-        bossAnimator = GetComponent<Animator>();
         random = new System.Random();
-        info = GetComponent<BossInformation>();
-
-        //New Auto grabbing references
         playerPosition = FindFirstObjectByType<PlayerMovement>().gameObject.transform;
+        challengeRoomBGM = FindFirstObjectByType<ChallengeRoomBGM>();
         healthBar = GetComponentInChildren<HealthBar>();
+        bossAnimator = GetComponent<Animator>();
+        info = GetComponent<BossInformation>();
         bossAnimationController = GetComponent<EntityActionVisualController>();
-
 
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
@@ -184,7 +182,7 @@ public class BossController : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        if(info.getImmune())
+        if(info.GetImmune())
         {
             if (damageNumActive == false)
             {
@@ -276,7 +274,7 @@ public class BossController : MonoBehaviour
                     minionRespawnThreasholds.RemoveAt(i);
                     FindAnyObjectByType<MinionSpawnerController>().handleMinionRespawn();
                     AudioManagerNoMixers.Singleton.PlaySFXByName("BossSpawnsMinions");
-                    info.setImmune(true);
+                    info.SetImmune(true);
                 }
             }
         }

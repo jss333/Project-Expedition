@@ -162,22 +162,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orbSourcePosition: {fileID: 4769236345242613906}
-  playerPosition: {fileID: 0}
-  healthBar: {fileID: 1064760652760908610}
-  challengeRoomBGM: {fileID: 0}
   p_BossShield: {fileID: 3970724019627321346, guid: 2a484caf907ff66468343981d89f3cbe,
     type: 3}
-  bossAnimationController: {fileID: 5027129401144850634}
   damageNumberPopupPrefab: {fileID: 1038287333503213384, guid: 829610abb2180f84a92e352045cc7092,
     type: 3}
   immunePopupPrefab: {fileID: 1038287333503213384, guid: 3110b24e1d0c17643857d32cfc303124,
     type: 3}
   popupLabelSource: {fileID: 569214277671105002}
   maxHealth: 5000
-  currentHealth: 0
   hurtStateHealthPercent: 50
   bgmChangeHealthPercent: 40
   damageTakenSFXCooldown: 0.2
+  stopOverflowDamageNumbers: 1
   overflowDamageCooldown: 1.5
   minionRespawnThreasholds:
   - 80
