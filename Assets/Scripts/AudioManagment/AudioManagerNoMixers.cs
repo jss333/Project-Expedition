@@ -60,7 +60,7 @@ public class AudioManagerNoMixers : MonoBehaviour {
         SFXAudioDataSO clipToPlay = sfxAudioClipMap[sfxAudioClipName];
         sfxSource.pitch = clipToPlay.GetRandomPitch();
         sfxSource.PlayOneShot(clipToPlay.audioClip, 1);
-        sfxSource.pitch = 1;
+        //sfxSource.pitch = 1;
     }
 
 
