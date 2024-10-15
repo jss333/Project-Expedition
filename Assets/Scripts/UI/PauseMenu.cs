@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class PauseMenu : MonoBehaviour
         EndGameEventManager.OnVictoryAchieved += StopTime;
         EndGameEventManager.OnDefeatAchieved += StopTime;
         isPaused = false;
-        Time.timeScale = 1;
+        PauseManager.Singletone.pauseGame(false);
     }
 
     private void OnDestroy()
@@ -35,11 +36,11 @@ public class PauseMenu : MonoBehaviour
             isPaused = !isPaused;
             if (isPaused)
             {
-                Time.timeScale = 0;
+                PauseManager.Singletone.pauseGame(true);
             }
             else
             {
-                Time.timeScale = 1;
+                PauseManager.Singletone.pauseGame(false);
             }
         }
     }
@@ -47,6 +48,7 @@ public class PauseMenu : MonoBehaviour
     public void Resume()
     {
         isPaused = false;
+        PauseManager.Singletone.pauseGame(false);
     }
 
     // Optional: Method to call when a "Quit" button is clicked
@@ -58,6 +60,11 @@ public class PauseMenu : MonoBehaviour
 
     private void StopTime()
     {
-        Time.timeScale = 0;
+        PauseManager.Singletone.pauseGame(true);
+    }
+
+    public void LevelChange(string level)
+    {
+        SceneManager.LoadScene(level);
     }
 }
