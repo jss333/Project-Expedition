@@ -46,12 +46,14 @@ public class PauseMenu : MonoBehaviour
     // Resume the game
     public void Resume()
     {
+        AudioManagerNoMixers.Singleton.PlaySFXByName("MenuClick");
         isPaused = false;
     }
 
     // Optional: Method to call when a "Quit" button is clicked
     public void QuitGame()
     {
+        AudioManagerNoMixers.Singleton.PlaySFXByName("MenuClick");
         Application.Quit();            // Quit the game
         Debug.Log("Game is quitting...");  // For debugging in the editor
     }

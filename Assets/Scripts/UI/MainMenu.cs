@@ -67,16 +67,19 @@ public class MainMenu : MonoBehaviour
     // Button actions
     void StartNewGame()
     {
+        AudioManagerNoMixers.Singleton.PlaySFXByName("MenuClick");
         SceneManager.LoadScene("Boss01");
     }
 
     void LoadGame()
     {
+        AudioManagerNoMixers.Singleton.PlaySFXByName("MenuClick");
         Debug.Log("Load Game");
     }
 
     void QuitGame()
     {
+        AudioManagerNoMixers.Singleton.PlaySFXByName("MenuClick");
         Application.Quit();
         Debug.Log("Quit Game");
     }
