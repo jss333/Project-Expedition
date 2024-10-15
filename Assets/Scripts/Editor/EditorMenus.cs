@@ -10,7 +10,7 @@ public class EditorMenus : EditorWindow
     {
         CreatePlayer();
         CreateCameraSystem();
-        //CreatePauseMenu();
+        CreatePauseManagerAndMenu();
         CreateDebugMenu();
         //CreateBoss();
         CreateAudioManager();
@@ -19,6 +19,13 @@ public class EditorMenus : EditorWindow
         CreateHealthBars();
         CreateLevelManager();
         CreateHorizontalPlatform();
+    }
+
+    [MenuItem("Level Tools/Core Objects/Create Pause Manager and Menu")]
+    public static void CreatePauseManagerAndMenu()
+    {
+        LoadAssetPrefabFromPath("Assets/Prefabs/UI/PauseManager.prefab");
+        LoadAssetPrefabFromPath("Assets/Prefabs/UI/PauseMenu.prefab");
     }
 
     [MenuItem("Level Tools/Core Objects/Create Audio Manager")]
