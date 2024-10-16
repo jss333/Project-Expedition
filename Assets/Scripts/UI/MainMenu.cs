@@ -67,7 +67,7 @@ public class MainMenu : MonoBehaviour
     // Button actions
     void StartNewGame()
     {
-        SceneManager.LoadScene("Boss01");
+        SceneManager.LoadScene("MicroTutorial");
     }
 
     void LoadGame()
