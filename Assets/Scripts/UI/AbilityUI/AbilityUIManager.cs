@@ -9,21 +9,18 @@ namespace AbilitySystem
         [SerializeField] private Transform abilityUIHolder;
         [SerializeField] private AbilityUIItem abilityUIItemPrefab;
 
-        private List<AbilitySo> abilities = new List<AbilitySo>();
         private List<AbilityUIItem> abilityUIItems = new List<AbilityUIItem>();
 
         private void Start()
         {
-            abilities = AbilityManager.Singleton.AvailableAbilities;
-
-            AbilityManager.Singleton.OnCurrentAbilitySelected += HighLightCurrentlySelectedAbility;
+            AbilityManager.singleton.OnCurrentAbilitySelected += HighLightCurrentlySelectedAbility;
 
             InitializeAbilitiesUI();
         }
 
         private void OnDestroy()
         {
-            AbilityManager.Singleton.OnCurrentAbilitySelected -= HighLightCurrentlySelectedAbility;
+            AbilityManager.singleton.OnCurrentAbilitySelected -= HighLightCurrentlySelectedAbility;
         }
 
         void Update()
@@ -33,6 +30,8 @@ namespace AbilitySystem
 
         private void InitializeAbilitiesUI()
         {
+            List<AbilitySo> abilities = AbilityManager.singleton.AvailableAbilities;
+
             abilityUIHolder.DetachChildren();
 
             if (abilities.Count > 0)
@@ -45,7 +44,7 @@ namespace AbilitySystem
 
                     if (abilityUIItem != null )
                     {
-                        abilityUIItem.InitializeUI(abilities[i], i);
+                        abilityUIItem.InitializeUI(AbilityManager.singleton.AvailableAbilities[i], i);
                     }
                 }
             }
@@ -71,7 +70,7 @@ namespace AbilitySystem
         {
             for (int i = 0; i < abilityUIItems.Count; i++)
             {
-                abilityUIItems[i].UpdateVisual(abilities[i]);
+                abilityUIItems[i].UpdateVisual(AbilityManager.singleton.AvailableAbilities[i]);
             }
         }
     }

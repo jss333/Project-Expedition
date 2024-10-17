@@ -48,17 +48,12 @@ namespace AbilitySystem
 
         public bool InCoolDown()
         {
-            return (coolDownTime < maxCoolDownTime && coolDownTime > 0);
+            return (coolDownTime < maxCoolDownTime);
         }
 
-        public bool IsReadyToUse()
+        public bool ReadyToUse()
         {
-            return (coolDownTime >= maxCoolDownTime && duration >= MaxDuration);
-        }
-
-        public bool IsInCoolDown()
-        {
-            return coolDownTime < maxCoolDownTime;
+            return !InUse() && !InCoolDown();
         }
 
         public abstract void UpdateDuration();

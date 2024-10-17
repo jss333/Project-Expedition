@@ -7,31 +7,26 @@ namespace AbilitySystem
 {
     public class AbilityManager : MonoBehaviour
     {
-        public static AbilityManager Singleton;
+        public static AbilityManager singleton;
 
         [SerializeField] private List<AbilitySo> availableAbilities = new List<AbilitySo>();
-        [SerializeField] private AbilitySo currentAbility;
-        private AbilityToggleUI toggleUI;
-
-        int currentAbilityIndex = 0;
-
-        GameObject playerTransform;
-
 
         public List<AbilitySo> AvailableAbilities => availableAbilities;
-
-
         public Action<int> OnCurrentAbilitySelected;
+
+        [SerializeField] private AbilitySo currentAbility;
+        private int currentAbilityIndex = 0;
+        private GameObject playerTransform;
 
         private void Awake()
         {
-            if(Singleton != null)
+            if(singleton != null)
             {
-                Destroy(Singleton);
+                Destroy(this);
             }
             else
             {
-                Singleton = this;
+                singleton = this;
             }
 
             InputHandler.Singletone.OnAbilityActivate += UseCurrentAbility;
@@ -48,105 +43,102 @@ namespace AbilitySystem
 
         private void Start()
         {
-            toggleUI = FindFirstObjectByType<AbilityToggleUI>();
             playerTransform = GameObject.FindGameObjectWithTag("Player");
-            /*firstAbility.InitializeAbility();
-            secondaryAbility.InitializeAbility(); */
+
+            foreach(var ability in availableAbilities)
+            {
+                ability.InitializeAbility();
+            }
 
             SelectFirstAbilityAsCurrent();
+        }
+
+        private void SelectFirstAbilityAsCurrent()
+        {
+            currentAbility = availableAbilities[currentAbilityIndex];
+            OnCurrentAbilitySelected?.Invoke(currentAbilityIndex);
         }
 
         private void Update()
         {
             UpdateDurations();
-
             UpdateCoolDowns();
         }
-
-        public void AddAbilityToInventory(AbilitySo _ability)
-        {
-            availableAbilities.Add(_ability);
-
-            SelectFirstAbilityAsCurrent();
-        }
-
-        public void RemoveAbilityFromInventory(AbilitySo _ability)
-        {
-            availableAbilities.Remove(_ability);
-        }
-
-        private void SelectFirstAbilityAsCurrent()
-        {
-            currentAbility = availableAbilities[0];
-
-            OnCurrentAbilitySelected?.Invoke(0);
-
-            currentAbility.InitializeAbility();
-
-            availableAbilities[1].InitializeAbility();
-        }
-
-        private void UseCurrentAbility()
-        {
-            if(currentAbility == null) return;
-
-            if (currentAbility.InUse())
-                return;
-
-            if (currentAbility.IsReadyToUse())
-                currentAbility.UseAbility(playerTransform.transform);
-        }
-
-        public void CycleForwardThroughAbilities()
-        {
-            currentAbilityIndex++;
-
-            if(currentAbilityIndex >= availableAbilities.Count)
-            {
-                currentAbilityIndex = 0;
-            }
-
-            Debug.Log(currentAbilityIndex);
-
-            OnCurrentAbilitySelected?.Invoke(currentAbilityIndex);
-
-            currentAbility = availableAbilities[currentAbilityIndex];
-            //currentAbility.InitializeAbility();
-        }
-
-        public void CycleBackwardThroughAbilities()
-        {
-            currentAbilityIndex--;
-
-            if (currentAbilityIndex < 0)
-            {
-                currentAbilityIndex = availableAbilities.Count - 1;
-            }
-
-            Debug.Log(currentAbilityIndex);
-
-            OnCurrentAbilitySelected?.Invoke(currentAbilityIndex);
-
-            currentAbility = availableAbilities[currentAbilityIndex];
-            //currentAbility.InitializeAbility();
-        }
-
         private void UpdateDurations()
         {
-            for (int i = 0; i < availableAbilities.Count; i++)
+            foreach (var ability in availableAbilities)
             {
-                if (availableAbilities[i].InUse())
-                    availableAbilities[i].UpdateDuration();
+                if (ability.InUse())
+                {
+                    ability.UpdateDuration();
+                }
             }
         }
 
         private void UpdateCoolDowns()
         {
-            for (int i = 0; i < availableAbilities.Count; i++)
+            foreach (var ability in availableAbilities)
             {
-                if (availableAbilities[i].IsInCoolDown())
-                    availableAbilities[i].UpdateCoolDownTime();
+                if (ability.InCoolDown())
+                {
+                    ability.UpdateCoolDownTime();
+                }
             }
+        }
+
+
+        private void UseCurrentAbility()
+        {
+            if (currentAbility == null || currentAbility.InUse())
+            {
+                return;
+            }
+
+            if (currentAbility.ReadyToUse())
+            {
+                currentAbility.UseAbility(playerTransform.transform);
+            }
+        }
+
+        public void CycleForwardThroughAbilities()
+        {
+            currentAbilityIndex++;
+            if(currentAbilityIndex >= availableAbilities.Count)
+            {
+                currentAbilityIndex = 0;
+            }
+
+            currentAbility = availableAbilities[currentAbilityIndex];
+            OnCurrentAbilitySelected?.Invoke(currentAbilityIndex);
+        }
+
+        public void CycleBackwardThroughAbilities()
+        {
+            currentAbilityIndex--;
+            if (currentAbilityIndex < 0)
+            {
+                currentAbilityIndex = availableAbilities.Count - 1;
+            }
+
+            currentAbility = availableAbilities[currentAbilityIndex];
+            OnCurrentAbilitySelected?.Invoke(currentAbilityIndex);
+        }
+
+
+        public void AddAbilityToInventory(AbilitySo ability)
+        {
+            availableAbilities.Add(ability);
+
+            if (availableAbilities.Count == 1)
+            {
+                SelectFirstAbilityAsCurrent();
+            }
+        }
+
+        public void RemoveAbilityFromInventory(AbilitySo ability)
+        {
+            // TODO consider what happens if ability removed is selected?
+            availableAbilities.Remove(ability);
         }
     }
 
@@ -164,11 +156,5 @@ namespace AbilitySystem
 
         [Range(5, 300)]
         public int newDamageValue;
-    }
-
-    [System.Serializable]
-    public struct TestAbilityProperties
-    {
-        public string message;
     }
 }
