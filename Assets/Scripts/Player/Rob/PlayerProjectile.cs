@@ -5,6 +5,7 @@ public class PlayerProjectile : MonoBehaviour
     public LayerMask layersToCollideWith;
     public int damageAmt = 2;
     public float maxRange;
+    public GameObject onDestroyVFX;
 
     float timeAlive;
     float maxSpeed;
@@ -52,6 +53,11 @@ public class PlayerProjectile : MonoBehaviour
             }  */
             //Destroy(this.gameObject);
        // }
+    }
+
+    private void OnDestroy()
+    {
+        Instantiate(onDestroyVFX,transform.position, transform.rotation);
     }
 
 }

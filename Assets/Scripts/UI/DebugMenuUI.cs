@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -17,7 +19,7 @@ public class DebugMenuUI : MonoBehaviour
     private void Start()
     {
         isDebugOn = false;
-        Time.timeScale = 1;
+        //instance.pauseGame(false);
     }
     void Update()
     {
@@ -35,11 +37,11 @@ public class DebugMenuUI : MonoBehaviour
             isDebugOn = !isDebugOn;
             if(isDebugOn)
             {
-                Time.timeScale = 0;
+                PauseManager.Singletone.pauseGame(true);
             }
             else
             {
-                Time.timeScale = 1;
+                PauseManager.Singletone.pauseGame(false);
             }
         }
     }

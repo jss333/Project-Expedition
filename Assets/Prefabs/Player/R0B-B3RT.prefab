@@ -348,7 +348,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a033816ca8614c34c877a7c19e27ad55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  virtualCamera: {fileID: 0}
   shakeIntensity: 1
   shakeTime: 0.2
   shakeCurve:
@@ -675,7 +674,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   renderers:
   - {fileID: 7404772159482370178}
-  damageColor: {r: 1, g: 0, b: 0, a: 1}
+  damageColor: {r: 1, g: 0.28490567, b: 0.28490567, a: 1}
   normalcolor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &6770448408643650198
 MonoBehaviour:
