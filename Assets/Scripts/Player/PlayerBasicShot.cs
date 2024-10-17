@@ -8,6 +8,7 @@ public class PlayerBasicShot : MonoBehaviour
     [Header("References")]
     public PlayerProjectile projectilePrefab;
     public GameObject pointer;
+    [SerializeField] private Transform shootPoint;
     private RandomPitchAudioSource audioSource;
 
     [Header("Input Controls")]
@@ -60,7 +61,7 @@ public class PlayerBasicShot : MonoBehaviour
 
     private void LaunchProjectile()
     {
-        PlayerProjectile proj = Instantiate(projectilePrefab, transform.position, transform.rotation);
+        PlayerProjectile proj = Instantiate(projectilePrefab, shootPoint.position, shootPoint.rotation);
         proj.SetVelocityAndDamageAmt(shotSpeed, shotDmg);
     }
 }
