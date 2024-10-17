@@ -18,6 +18,22 @@ namespace AbilitySystem
             InitializeAbilitiesUI();
         }
 
+        private void InitializeAbilitiesUI()
+        {
+            abilityUIHolder.DetachChildren();
+
+            foreach (var ability in AbilityManager.singleton.AvailableAbilities)
+            {
+                AbilityUIItem abilityUIItem = Instantiate(abilityUIItemPrefab.gameObject, abilityUIHolder).GetComponent<AbilityUIItem>();
+
+                if (abilityUIItem != null)
+                {
+                    abilityUIItems.Add(abilityUIItem);
+                    abilityUIItem.InitializeUI(ability);
+                }
+            }
+        }
+
         private void OnDestroy()
         {
             AbilityManager.singleton.OnCurrentAbilitySelected -= HighLightCurrentlySelectedAbility;
@@ -28,25 +44,11 @@ namespace AbilitySystem
             UpdateAbilityUIItemVisuals();
         }
 
-        private void InitializeAbilitiesUI()
+        private void UpdateAbilityUIItemVisuals()
         {
-            List<AbilitySo> abilities = AbilityManager.singleton.AvailableAbilities;
-
-            abilityUIHolder.DetachChildren();
-
-            if (abilities.Count > 0)
+            for (int i = 0; i < abilityUIItems.Count; i++)
             {
-                for (int i = 0; i < abilities.Count; i++)
-                {
-                    AbilityUIItem abilityUIItem = Instantiate(abilityUIItemPrefab.gameObject, abilityUIHolder).GetComponent<AbilityUIItem>();
-
-                    abilityUIItems.Add(abilityUIItem);
-
-                    if (abilityUIItem != null )
-                    {
-                        abilityUIItem.InitializeUI(AbilityManager.singleton.AvailableAbilities[i], i);
-                    }
-                }
+                abilityUIItems[i].UpdateCooldownVisual(AbilityManager.singleton.AvailableAbilities[i]);
             }
         }
 
@@ -66,12 +68,6 @@ namespace AbilitySystem
             }
         }
 
-        private void UpdateAbilityUIItemVisuals()
-        {
-            for (int i = 0; i < abilityUIItems.Count; i++)
-            {
-                abilityUIItems[i].UpdateVisual(AbilityManager.singleton.AvailableAbilities[i]);
-            }
-        }
+        
     }
 }

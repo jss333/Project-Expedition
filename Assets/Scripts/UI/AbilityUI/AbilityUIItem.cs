@@ -12,15 +12,11 @@ namespace AbilitySystem
         [SerializeField] private Image dimmedImage;
         [SerializeField] private GameObject highLightImageGameObject;
 
-        private int uiObjectId;
-
-        public void InitializeUI(AbilitySo abilitySo, int id)
+        public void InitializeUI(AbilitySo abilitySo)
         {
             highLightImageGameObject.SetActive(false);
             icon.sprite = abilitySo.AbilityIcon; 
             icon.color = abilitySo.IconColor;
-
-            SetId(id);
         }
 
         public void ShowHighLight()
@@ -33,12 +29,7 @@ namespace AbilitySystem
             highLightImageGameObject.SetActive(false);
         }
 
-        private void SetId(int index)
-        {
-            uiObjectId = index;
-        }
-
-        public void UpdateVisual(AbilitySo abilitySo)
+        public void UpdateCooldownVisual(AbilitySo abilitySo)
         {
             if(abilitySo.InCoolDown())
             {
