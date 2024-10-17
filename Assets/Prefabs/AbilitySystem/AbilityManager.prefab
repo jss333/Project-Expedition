@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b69862c348576bc45b78c01ee6dea174, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  availableAbilities: []
-  firstAbility: {fileID: 11400000, guid: 016f3c8cf524c9b42becb99d2b9e2077, type: 2}
-  secondaryAbility: {fileID: 11400000, guid: fc75d966280991549b09fce89f5af747, type: 2}
+  availableAbilities:
+  - {fileID: 11400000, guid: 016f3c8cf524c9b42becb99d2b9e2077, type: 2}
+  - {fileID: 11400000, guid: fc75d966280991549b09fce89f5af747, type: 2}
+  currentAbility: {fileID: 0}

@@ -46,7 +46,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""AcitvateAbility"",
+                    ""name"": ""CycleForward"",
                     ""type"": ""Button"",
                     ""id"": ""694c7c4a-e871-41f7-a87d-221d8cf8186a"",
                     ""expectedControlType"": ""Button"",
@@ -55,9 +55,18 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""ActivateSecondAbility"",
+                    ""name"": ""CycleBackward"",
                     ""type"": ""Button"",
                     ""id"": ""dac6b945-2a24-4885-b2e0-667a80ebbf2a"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""UseAbility"",
+                    ""type"": ""Button"",
+                    ""id"": ""9e6ecec5-9ba9-424b-afad-ad260a401d38"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -116,7 +125,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""AcitvateAbility"",
+                    ""action"": ""CycleForward"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -127,7 +136,18 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""ActivateSecondAbility"",
+                    ""action"": ""CycleBackward"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7cb84d7c-3119-444b-b4a6-a3bb86d46bfb"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""UseAbility"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -168,8 +188,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         m_Std = asset.FindActionMap("Std", throwIfNotFound: true);
         m_Std_Fire = m_Std.FindAction("Fire", throwIfNotFound: true);
         m_Std_Move = m_Std.FindAction("Move", throwIfNotFound: true);
-        m_Std_AcitvateAbility = m_Std.FindAction("AcitvateAbility", throwIfNotFound: true);
-        m_Std_ActivateSecondAbility = m_Std.FindAction("ActivateSecondAbility", throwIfNotFound: true);
+        m_Std_CycleForward = m_Std.FindAction("CycleForward", throwIfNotFound: true);
+        m_Std_CycleBackward = m_Std.FindAction("CycleBackward", throwIfNotFound: true);
+        m_Std_UseAbility = m_Std.FindAction("UseAbility", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Newaction = m_UI.FindAction("New action", throwIfNotFound: true);
@@ -236,16 +257,18 @@ public partial class @Controls: IInputActionCollection2, IDisposable
     private List<IStdActions> m_StdActionsCallbackInterfaces = new List<IStdActions>();
     private readonly InputAction m_Std_Fire;
     private readonly InputAction m_Std_Move;
-    private readonly InputAction m_Std_AcitvateAbility;
-    private readonly InputAction m_Std_ActivateSecondAbility;
+    private readonly InputAction m_Std_CycleForward;
+    private readonly InputAction m_Std_CycleBackward;
+    private readonly InputAction m_Std_UseAbility;
     public struct StdActions
     {
         private @Controls m_Wrapper;
         public StdActions(@Controls wrapper) { m_Wrapper = wrapper; }
         public InputAction @Fire => m_Wrapper.m_Std_Fire;
         public InputAction @Move => m_Wrapper.m_Std_Move;
-        public InputAction @AcitvateAbility => m_Wrapper.m_Std_AcitvateAbility;
-        public InputAction @ActivateSecondAbility => m_Wrapper.m_Std_ActivateSecondAbility;
+        public InputAction @CycleForward => m_Wrapper.m_Std_CycleForward;
+        public InputAction @CycleBackward => m_Wrapper.m_Std_CycleBackward;
+        public InputAction @UseAbility => m_Wrapper.m_Std_UseAbility;
         public InputActionMap Get() { return m_Wrapper.m_Std; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -261,12 +284,15 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @Move.started += instance.OnMove;
             @Move.performed += instance.OnMove;
             @Move.canceled += instance.OnMove;
-            @AcitvateAbility.started += instance.OnAcitvateAbility;
-            @AcitvateAbility.performed += instance.OnAcitvateAbility;
-            @AcitvateAbility.canceled += instance.OnAcitvateAbility;
-            @ActivateSecondAbility.started += instance.OnActivateSecondAbility;
-            @ActivateSecondAbility.performed += instance.OnActivateSecondAbility;
-            @ActivateSecondAbility.canceled += instance.OnActivateSecondAbility;
+            @CycleForward.started += instance.OnCycleForward;
+            @CycleForward.performed += instance.OnCycleForward;
+            @CycleForward.canceled += instance.OnCycleForward;
+            @CycleBackward.started += instance.OnCycleBackward;
+            @CycleBackward.performed += instance.OnCycleBackward;
+            @CycleBackward.canceled += instance.OnCycleBackward;
+            @UseAbility.started += instance.OnUseAbility;
+            @UseAbility.performed += instance.OnUseAbility;
+            @UseAbility.canceled += instance.OnUseAbility;
         }
 
         private void UnregisterCallbacks(IStdActions instance)
@@ -277,12 +303,15 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @Move.started -= instance.OnMove;
             @Move.performed -= instance.OnMove;
             @Move.canceled -= instance.OnMove;
-            @AcitvateAbility.started -= instance.OnAcitvateAbility;
-            @AcitvateAbility.performed -= instance.OnAcitvateAbility;
-            @AcitvateAbility.canceled -= instance.OnAcitvateAbility;
-            @ActivateSecondAbility.started -= instance.OnActivateSecondAbility;
-            @ActivateSecondAbility.performed -= instance.OnActivateSecondAbility;
-            @ActivateSecondAbility.canceled -= instance.OnActivateSecondAbility;
+            @CycleForward.started -= instance.OnCycleForward;
+            @CycleForward.performed -= instance.OnCycleForward;
+            @CycleForward.canceled -= instance.OnCycleForward;
+            @CycleBackward.started -= instance.OnCycleBackward;
+            @CycleBackward.performed -= instance.OnCycleBackward;
+            @CycleBackward.canceled -= instance.OnCycleBackward;
+            @UseAbility.started -= instance.OnUseAbility;
+            @UseAbility.performed -= instance.OnUseAbility;
+            @UseAbility.canceled -= instance.OnUseAbility;
         }
 
         public void RemoveCallbacks(IStdActions instance)
@@ -350,8 +379,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
     {
         void OnFire(InputAction.CallbackContext context);
         void OnMove(InputAction.CallbackContext context);
-        void OnAcitvateAbility(InputAction.CallbackContext context);
-        void OnActivateSecondAbility(InputAction.CallbackContext context);
+        void OnCycleForward(InputAction.CallbackContext context);
+        void OnCycleBackward(InputAction.CallbackContext context);
+        void OnUseAbility(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {
