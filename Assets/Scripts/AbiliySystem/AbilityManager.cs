@@ -11,13 +11,8 @@ namespace AbilitySystem
 
         [SerializeField] private List<AbilitySo> availableAbilities = new List<AbilitySo>();
         [SerializeField] private AbilitySo currentAbility;
-        [SerializeField] private AbilitySo firstAbility;
-        [SerializeField] private AbilitySo secondaryAbility;
         private AbilityToggleUI toggleUI;
 
-
-        private bool toggleSecondAb = true;
-        private bool toggleFirstAb = true;
         int currentAbilityIndex = 0;
 
         GameObject playerTransform;
@@ -66,20 +61,6 @@ namespace AbilitySystem
             UpdateDurations();
 
             UpdateCoolDowns();
-
-            /*if(firstAbility.InUse())
-                firstAbility.UpdateDuration();
-
-            if(secondaryAbility.InUse())
-                secondaryAbility.UpdateDuration();
-
-            if (firstAbility.IsInCoolDown())
-                firstAbility.UpdateCoolDownTime();
-            
-            if (secondaryAbility.IsInCoolDown())
-                secondaryAbility.UpdateCoolDownTime(); */
-
-            toggleSecondAb = toggleUI.ShieldAbilityRed;
         }
 
         public void AddAbilityToInventory(AbilitySo _ability)
@@ -167,48 +148,6 @@ namespace AbilitySystem
                     availableAbilities[i].UpdateCoolDownTime();
             }
         }
-
-        #region oldAbilityLogic 
-
-        private bool AnyAbilityInUse()
-        {
-            return firstAbility.InUse() || secondaryAbility.InUse();
-        }
-
-        private void UseFirstAbility()
-        {
-
-            if (AnyAbilityInUse()) return;
-
-            toggleFirstAb = toggleUI.ShieldAbilityBlue;
-
-            if (firstAbility != null && toggleFirstAb)
-            {
-                if (secondaryAbility.InUse())
-                    return;
-
-                if (firstAbility.IsReadyToUse())
-                    firstAbility.UseAbility(playerTransform.transform);
-            }
-        }
-
-        private void UseSecondaryAbility()
-        {
-
-            if (AnyAbilityInUse()) return;
-
-            toggleSecondAb = toggleUI.ShieldAbilityRed;
-
-            if (secondaryAbility != null && toggleSecondAb)
-            {
-                if (firstAbility.InUse())
-                    return;
-
-                if (secondaryAbility.IsReadyToUse())
-                    secondaryAbility.UseAbility(playerTransform.transform);
-            }
-        }
-        #endregion
     }
 
     public enum AbilityType { ReflectingShield, TestAbility}
