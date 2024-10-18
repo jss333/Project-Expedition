@@ -11,6 +11,8 @@ public class InputHandler : MonoBehaviour, IStdActions
     public Controls controls;
     public Action OnAbilityActivate;
     public Action OnSecondaryAbilityActivate;
+    public Action OnCycleForward;
+    public Action OnCycleBackward;
 
     private void Awake()
     {
@@ -45,11 +47,35 @@ public class InputHandler : MonoBehaviour, IStdActions
 
     public void OnAcitvateAbility(InputAction.CallbackContext context)
     {
-        OnAbilityActivate?.Invoke();
+        
     }
 
     public void OnActivateSecondAbility(InputAction.CallbackContext context)
     {
-        OnSecondaryAbilityActivate?.Invoke();
+        
+    }
+
+    void IStdActions.OnCycleForward(InputAction.CallbackContext context)
+    {
+        if (context.phase == InputActionPhase.Canceled)
+        {
+            OnCycleForward?.Invoke();
+        }
+    }
+
+    void IStdActions.OnCycleBackward(InputAction.CallbackContext context)
+    {
+        if (context.phase == InputActionPhase.Canceled)
+        {
+            OnCycleBackward?.Invoke();
+        }
+    }
+
+    public void OnUseAbility(InputAction.CallbackContext context)
+    {
+        if (context.phase == InputActionPhase.Canceled)
+        {
+            OnAbilityActivate?.Invoke();
+        }
     }
 }
