@@ -169,7 +169,7 @@ MonoBehaviour:
   immunePopupPrefab: {fileID: 1038287333503213384, guid: 3110b24e1d0c17643857d32cfc303124,
     type: 3}
   popupLabelSource: {fileID: 569214277671105002}
-  maxHealth: 5000
+  maxHealth: 4000
   hurtStateHealthPercent: 50
   bgmChangeHealthPercent: 40
   damageTakenSFXCooldown: 0.2
@@ -179,7 +179,6 @@ MonoBehaviour:
   - 80
   - 50
   - 30
-  - 10
   singleOrbPrefab: {fileID: 2522101524757786263, guid: a0092814f7c0932439272c2ddbb7dcd6,
     type: 3}
   minShotIntervalSec: 0.8
@@ -188,9 +187,9 @@ MonoBehaviour:
   maxSingleOrbSpeed: 2.5
   multipleOrbPrefab: {fileID: 2522101524757786263, guid: d92236d97d3171d4384564f908974f71,
     type: 3}
-  multipleOrbsPercent: 8
+  multipleOrbsPercent: 5
   numMultipleOrbs: 5
-  multipleOrbsAngleSpreadDeg: 60
+  multipleOrbsAngleSpreadDeg: 75
   minMultipleOrbSpeed: 4.5
   maxMultipleOrbSpeed: 5.5
 --- !u!114 &1863408600527210321
@@ -205,7 +204,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 304f249561e138f4c99b408ef40a63dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  msController: {fileID: 0}
 --- !u!114 &5027129401144850634
 MonoBehaviour:
   m_ObjectHideFlags: 0
