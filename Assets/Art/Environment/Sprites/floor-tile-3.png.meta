@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/Art/Environment/Sprites/floor-tile-1.png.meta
-guid: 1456348331f19974ea868037a6bd3fb8
-========
-guid: 2621ba498007f064489d7c1db1cfebf1
->>>>>>>> main:Assets/Art/Enemy/Sprites/FlareNew-smallSize.png.meta
+guid: 33ee7819c59104a4e84c34359ab03450
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
