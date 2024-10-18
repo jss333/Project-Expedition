@@ -1,7 +1,9 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.Pool;
 
 public class AudioManagerNoMixers : MonoBehaviour {
 
@@ -22,7 +24,12 @@ public class AudioManagerNoMixers : MonoBehaviour {
 
     #endregion
 
+    [Header("Pool")]
+    [SerializeField] private SoundEffect soundEffectPrefab;
+    private ObjectPool<SoundEffect> sfxPool;
+
     [Header("SFX")]
+    [SerializeField] private int sfxVolume = 8;
     [SerializeField] private AudioSource sfxSource;
     private Dictionary<string, SFXAudioDataSO> sfxAudioClipMap = new Dictionary<string, SFXAudioDataSO>();
 
@@ -42,8 +49,31 @@ public class AudioManagerNoMixers : MonoBehaviour {
 
     private void Start()
     {
+        sfxPool = new ObjectPool<SoundEffect>(CreateSoundEffect, ActionOnGet, ActionOnRelease, ActionOnDestroy);
+
         LoadSFXScriptableObjects();
     }
+
+    private SoundEffect CreateSoundEffect()
+    {
+        return Instantiate(soundEffectPrefab, sfxSource.transform);
+    }
+
+    private void ActionOnGet(SoundEffect effect)
+    {
+        effect.gameObject.SetActive(true);
+    }
+
+    private void ActionOnRelease(SoundEffect effect)
+    {
+        effect.gameObject.SetActive(false);
+    }
+
+    private void ActionOnDestroy(SoundEffect effect)
+    {
+        Destroy(effect.gameObject);
+    }
+
 
     public void LoadSFXScriptableObjects()
     {
@@ -57,12 +87,33 @@ public class AudioManagerNoMixers : MonoBehaviour {
 
     public void PlaySFXByName(string sfxAudioClipName)
     {
-        SFXAudioDataSO clipToPlay = sfxAudioClipMap[sfxAudioClipName];
-        sfxSource.pitch = clipToPlay.GetRandomPitch();
+        SFXAudioDataSO clipToPlay = GetSFXSOFromName(sfxAudioClipName);
+        PlaySFX(clipToPlay);
+        /*sfxSource.pitch = clipToPlay.GetRandomPitch();
         sfxSource.PlayOneShot(clipToPlay.audioClip, 1);
-        sfxSource.pitch = 1;
+        sfxSource.pitch = 1; */
     }
 
+    private void PlaySFX(SFXAudioDataSO sFXAudioDataSO)
+    {
+        SoundEffect soundEffect = sfxPool.Get();
+        soundEffect.SetSound(sFXAudioDataSO);
+        soundEffect.gameObject.SetActive(true);
+        StartCoroutine(DisableSFX(soundEffect, sFXAudioDataSO.audioClip.length));
+    }
+
+    private IEnumerator DisableSFX(SoundEffect soundEffect, float length)
+    {
+        yield return new WaitForSeconds(length);
+        sfxPool.Release(soundEffect);
+    }
+
+    public float LinearToDecibels(int linear)
+    {
+        float linearScaleRange = 20f;
+
+        return Mathf.Log10((float)linear / linearScaleRange) * 20f;
+    }
 
     public void RunNextMusicClip()
     {
@@ -95,5 +146,10 @@ public class AudioManagerNoMixers : MonoBehaviour {
         //decreaseVolumeBy = maxVolume / ((1 - startFadeOutAt_Percentage) * musicAudioClips[1].length);
         musicSource.volume = PlayerPrefs.GetFloat("MusicVol");
         musicSource.Play();
+    }
+
+    private SFXAudioDataSO GetSFXSOFromName(string sfxName)
+    {
+        return sfxAudioClipMap[sfxName];
     }
 }
