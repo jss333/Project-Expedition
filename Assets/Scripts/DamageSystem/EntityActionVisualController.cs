@@ -7,11 +7,12 @@ public class EntityActionVisualController : MonoBehaviour
 {
     private Animator animator;
     private HighLightShadingEffect highLightShadingEffect;
-
+    private BossController bossController;
     private void Start()
     {
         animator = GetComponent<Animator>();
         highLightShadingEffect = GetComponent<HighLightShadingEffect>();
+        bossController = GetComponent<BossController>();
     }
 
     public void ApplyGettingHitVisuals()
@@ -38,7 +39,17 @@ public class EntityActionVisualController : MonoBehaviour
 
     public void ApplyShootAnimation()
     {
-        animator.CrossFadeInFixedTime("Boss_Shot", 0.2f);
+        if (bossController.hurtStateTriggered)
+        {
+            //Debug.Log("damaged anim");
+            animator.CrossFadeInFixedTime("BossDamaged_Shooting", 0.2f);
+        }
+        else 
+        {
+            //Debug.Log("shooting anim");
+            animator.CrossFadeInFixedTime("Boss_Shooting", 0.2f);
+        }
+        
 
     }
 }

@@ -29,7 +29,7 @@ public class BossController : MonoBehaviour
     [SerializeField] private int maxHealth = 5000;
     private int currentHealth;
     [SerializeField] private float hurtStateHealthPercent = 50f;
-    private bool hurtStateTriggered = false;
+    public bool hurtStateTriggered = false;
     [SerializeField] private float bgmChangeHealthPercent = 40f;
     private bool bgmChangeTriggered = false;
     [SerializeField] private float damageTakenSFXCooldown = 0.2f;
@@ -58,6 +58,7 @@ public class BossController : MonoBehaviour
 
     private bool hasShield = false;
     private bool damageNumActive = false;
+    
 
     void Start()
     {
@@ -77,6 +78,7 @@ public class BossController : MonoBehaviour
         instantiateBossShield();
 
         stopOverflowDamageNumbers = overflowDamageCooldown;
+        bossAnimator.SetBool("IdleState", true);
     }
 
     void Update()
@@ -213,6 +215,8 @@ public class BossController : MonoBehaviour
             {
                 bossAnimator.SetTrigger("bossHurt");
                 hurtStateTriggered = true;
+                bossAnimator.SetBool("IdleStateDamaged", true);
+                bossAnimator.SetBool("IdleState", false);
             }
 
             if (!bgmChangeTriggered && CurrentHealthPercentLessThan(bgmChangeHealthPercent))
