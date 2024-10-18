@@ -36,6 +36,7 @@ public class BossController : MonoBehaviour
     private float lastDamageTakenSFXPlayTime = -Mathf.Infinity;
     [SerializeField] private float stopOverflowDamageNumbers = 1f;
     [SerializeField] private float overflowDamageCooldown = 1f;
+    [SerializeField] private float delayEndScreen = 10f;
 
     [Header("Parameters - Minion/shield respawn")]
     [SerializeField] private List<float> minionRespawnThreasholds;
@@ -58,7 +59,6 @@ public class BossController : MonoBehaviour
 
     private bool hasShield = false;
     private bool damageNumActive = false;
-    
 
     void Start()
     {
@@ -255,6 +255,7 @@ public class BossController : MonoBehaviour
         //play death animation
         bossAnimator.SetTrigger("bossDeath");
         //transform.position += new Vector3(0f, .2f, 0f);
+        Invoke("EndGame", delayEndScreen);
         
     }
     public void EndGame()
