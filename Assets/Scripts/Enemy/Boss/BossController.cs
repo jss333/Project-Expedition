@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class BossController : MonoBehaviour
 {
     [Header("References")]
+    //[SerializeField] private Sprite deathSprite;
     [SerializeField] private Transform orbSourcePosition;
     [SerializeField] private GameObject p_BossShield;
     private Transform playerPosition;
@@ -16,6 +17,8 @@ public class BossController : MonoBehaviour
     private System.Random random;
     private BossInformation info;
     private EntityActionVisualController bossAnimationController;
+    private CircleCollider2D circleCollider;
+    private bool bossDeath = false;
 
     [Header("References - Popup labels")]
     [SerializeField] private PopupLabel damageNumberPopupPrefab;
@@ -65,6 +68,7 @@ public class BossController : MonoBehaviour
         bossAnimator = GetComponent<Animator>();
         info = GetComponent<BossInformation>();
         bossAnimationController = GetComponent<EntityActionVisualController>();
+        circleCollider = GetComponent<CircleCollider2D>();
 
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
@@ -77,7 +81,7 @@ public class BossController : MonoBehaviour
 
     void Update()
     {
-        if (PlayerIsAlive())
+        if (PlayerIsAlive() && !bossDeath)
         {
             ShootOrbIfTimeForNextShot();
         }
@@ -221,7 +225,7 @@ public class BossController : MonoBehaviour
             {
                 challengeRoomBGM.PlayVictoryBGM();
                 Die();
-                EndGameEventManager.OnVictoryAchieved?.Invoke();
+                
             }
         }
     }
@@ -242,7 +246,16 @@ public class BossController : MonoBehaviour
 
     private void Die()
     {
-        Destroy(this.gameObject);
+        bossDeath = true;
+        circleCollider.radius = 0;
+        //play death animation
+        bossAnimator.SetTrigger("bossDeath");
+        //transform.position += new Vector3(0f, .2f, 0f);
+        
+    }
+    public void EndGame()
+    {
+        EndGameEventManager.OnVictoryAchieved?.Invoke();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
