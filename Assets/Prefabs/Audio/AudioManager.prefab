@@ -46,8 +46,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38741b54376200c42ba96b9e2324dd42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundEffectPrefab: {fileID: 6199081309008518591, guid: 82ce30ab0cfbfad428fe181e46659794,
+    type: 3}
+  sfxVolume: 8
   sfxSource: {fileID: 4026613953541235951}
-  sFXAudioDataSOs: []
   muteMusic: 0
   musicSource: {fileID: 0}
   musicAudioClips: []
