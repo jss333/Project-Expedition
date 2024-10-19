@@ -31,6 +31,7 @@ public class AudioManagerNoMixers : MonoBehaviour {
     [Header("SFX")]
     [SerializeField] private int sfxVolume = 8;
     [SerializeField] private AudioSource sfxSource;
+    [SerializeField] private AudioSource shootSfxSource;
     private Dictionary<string, SFXAudioDataSO> sfxAudioClipMap = new Dictionary<string, SFXAudioDataSO>();
 
     [Space(10)]
@@ -96,10 +97,15 @@ public class AudioManagerNoMixers : MonoBehaviour {
 
     private void PlaySFX(SFXAudioDataSO sFXAudioDataSO)
     {
-        SoundEffect soundEffect = sfxPool.Get();
+        shootSfxSource.pitch = sFXAudioDataSO.GetRandomPitch();
+        shootSfxSource.volume = sFXAudioDataSO.soundEffectVolume;
+        //shootSfxSource.clip = sFXAudioDataSO.audioClip;
+        shootSfxSource.PlayOneShot(sFXAudioDataSO.audioClip);
+
+        /*SoundEffect soundEffect = sfxPool.Get();
         soundEffect.SetSound(sFXAudioDataSO);
         soundEffect.gameObject.SetActive(true);
-        StartCoroutine(DisableSFX(soundEffect, sFXAudioDataSO.audioClip.length));
+        StartCoroutine(DisableSFX(soundEffect, sFXAudioDataSO.audioClip.length));  */
     }
 
     private IEnumerator DisableSFX(SoundEffect soundEffect, float length)

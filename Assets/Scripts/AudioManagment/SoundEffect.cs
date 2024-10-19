@@ -26,6 +26,6 @@ public class SoundEffect : MonoBehaviour
     {
         audioSource.pitch = Random.Range(sFXAudioDataSO.minPitch, sFXAudioDataSO.maxPitch);
         audioSource.volume = sFXAudioDataSO.soundEffectVolume;
-        //audioSource.clip = sFXAudioDataSO.audioClip;
+        audioSource.clip = sFXAudioDataSO.audioClip;
     }
 }
