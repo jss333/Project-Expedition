@@ -1,16 +1,27 @@
-----Credits----
-Producer : James
-Game Design : Kisma
-Level Design : Krism
-Level Design : Magda
-Art : Emma
-Art : CJ
-Art : Jasmine
-Art : Bibi
-Programming : Suri
-Programming : Tanha
-Programming : Mostafa
-Audio : Arpi
-Audio : Hugo
-Audio : Amin
-----****----
+Producer
+James Singi Siqueira (@jss333)
+
+Audio
+Arpi Vardanyan : Sound Designer/Composer
+Hugo Silva (@hyugo95)
+Prnc Amin (@prncamin) : Composer
+
+Art
+Bibi Tavares
+CJ Tugade (@cjtugade) : UI
+Emma Randall : Animation
+Jasmine Modeste (@jasminem4980)
+Jessica Rivas : Character Artist (R0-B and B3RT)
+
+Game Design
+Doryan Lewis
+@kizma
+Magdalena Jordanovska
+
+Programming
+Astrounaut
+Jacob Hooten (@surilexa)
+James Singi Siqueira (@jss333)
+@mostafaebeed
+Rakshaan
+Tanha Patel-

@@ -7,6 +7,7 @@ public class MainMenu : MonoBehaviour
 {
     public Button newGameButton;
     public Button loadGameButton;
+    public Button creditsButton;
     public Button quitButton;
     public Image pointerImage;  // Assign the pointer image in the inspector
     private Button currentButton;
@@ -16,6 +17,7 @@ public class MainMenu : MonoBehaviour
         // Add listeners for buttons
         newGameButton.onClick.AddListener(StartNewGame);
         loadGameButton.onClick.AddListener(LoadGame);
+        creditsButton.onClick.AddListener(LoadCredits);
         quitButton.onClick.AddListener(QuitGame);
 
         // Hide the pointer image at the start
@@ -79,5 +81,10 @@ public class MainMenu : MonoBehaviour
     {
         Application.Quit();
         Debug.Log("Quit Game");
+    }
+
+    void LoadCredits()
+    {
+        SceneManager.LoadScene("CreditsScene");
     }
 }
