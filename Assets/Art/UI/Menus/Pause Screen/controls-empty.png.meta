@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/Art/UI/Menus/Pause Screen/controls-empty.png.meta
-guid: 1b2f782d08b700d428798ad60366b2c3
-========
-guid: 7ba5806575ef38b48a1f21deeaf0f6cc
->>>>>>>> main:Assets/Art/Environment/Sprites/floor-tile-1 1.png.meta
+guid: ec8bab6c25c8d9c45a39a4d4eb0d8acb
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -52,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 500
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1

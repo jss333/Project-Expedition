@@ -1284,8 +1284,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1129892557}
   - {fileID: 185748756}
+  - {fileID: 1129892557}
   m_Father: {fileID: 1458001762}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1523,6 +1523,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minion
       objectReference: {fileID: 0}
+    - target: {fileID: 449684760226055840, guid: 5026d7c18267c4c4c9785e382b85218c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5634901958537801590, guid: 5026d7c18267c4c4c9785e382b85218c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1576,12 +1581,12 @@ PrefabInstance:
     - target: {fileID: 7019203772373754754, guid: 5026d7c18267c4c4c9785e382b85218c,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7019203772373754754, guid: 5026d7c18267c4c4c9785e382b85218c,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2056,7 +2061,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1b2f782d08b700d428798ad60366b2c3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ec8bab6c25c8d9c45a39a4d4eb0d8acb, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -5505,12 +5510,12 @@ PrefabInstance:
     - target: {fileID: 3219202625192781668, guid: ce117d019e53fbf438966fe6e117c542,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.97859
+      value: -11.988174
       objectReference: {fileID: 0}
     - target: {fileID: 3219202625192781668, guid: ce117d019e53fbf438966fe6e117c542,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.9961958
+      value: 3.995904
       objectReference: {fileID: 0}
     - target: {fileID: 3219202625192781668, guid: ce117d019e53fbf438966fe6e117c542,
         type: 3}
