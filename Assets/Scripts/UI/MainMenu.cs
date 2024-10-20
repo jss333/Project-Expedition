@@ -8,7 +8,7 @@ public class MainMenu : MonoBehaviour
     public void StartNewGame()
     {
         Destroy(FindObjectOfType<MainMenuBGM>().gameObject);
-        SceneManager.LoadScene("Boss01");
+        SceneManager.LoadScene("MicroTutorial");
     }
 
     public void LoadCredits()

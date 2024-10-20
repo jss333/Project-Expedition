@@ -123,21 +123,16 @@ public class MinionController : MonoBehaviour
         }
     }
 
-    private void handInResignation()
-    {
-        //Self-destruct method that communicates death to the spawner...
-    }
-
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
         healthBar.SetHealth((int)(currentHealth/maxhealth*100f));
         if (currentHealth <= 0)
         {
-            destroyThisMinion();
+            DestroyThisMinion();
         }
     }
-    private void destroyThisMinion()
+    private void DestroyThisMinion()
     {
         bossInfo.MinionDestroyed();
         spawner.decrementActiveCount(anchor);
