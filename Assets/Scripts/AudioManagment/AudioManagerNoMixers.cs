@@ -25,7 +25,7 @@ public class AudioManagerNoMixers : MonoBehaviour {
     #endregion
 
     [Header("Pool")]
-    [SerializeField] private SoundEffect soundEffectPrefab;
+    [SerializeField] private GameObject soundEffectPrefab;
     private ObjectPool<SoundEffect> sfxPool;
 
     [Header("SFX")]
@@ -57,7 +57,7 @@ public class AudioManagerNoMixers : MonoBehaviour {
 
     private SoundEffect CreateSoundEffect()
     {
-        return Instantiate(soundEffectPrefab, sfxSource.transform);
+        return null;
     }
 
     private void ActionOnGet(SoundEffect effect)
@@ -97,10 +97,37 @@ public class AudioManagerNoMixers : MonoBehaviour {
 
     private void PlaySFX(SFXAudioDataSO sFXAudioDataSO)
     {
-        shootSfxSource.pitch = sFXAudioDataSO.GetRandomPitch();
-        shootSfxSource.volume = sFXAudioDataSO.soundEffectVolume;
+        AudioSource sfxAudioSource = null;
+
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            if (transform.GetChild(i).name == sFXAudioDataSO.name)
+            {
+                sfxAudioSource = transform.GetChild(i).GetComponent<AudioSource>();
+                break;
+            }
+            
+            if(i == transform.childCount - 1)
+            {
+                GameObject newAudioSourceInstance = Instantiate(soundEffectPrefab, transform);
+                newAudioSourceInstance.name = sFXAudioDataSO.SFXClipName;
+                sfxAudioSource = newAudioSourceInstance.GetComponent<AudioSource>();
+
+                break;
+            }
+        }
+        
+        if(sfxAudioSource != null )
+        {
+            sfxAudioSource.pitch = sFXAudioDataSO.GetRandomPitch();
+            sfxAudioSource.volume = sFXAudioDataSO.soundEffectVolume;
+            sfxAudioSource.PlayOneShot(sFXAudioDataSO.audioClip);
+        }
+
+        //shootSfxSource.pitch = sFXAudioDataSO.GetRandomPitch();
+        //shootSfxSource.volume = sFXAudioDataSO.soundEffectVolume;
         //shootSfxSource.clip = sFXAudioDataSO.audioClip;
-        shootSfxSource.PlayOneShot(sFXAudioDataSO.audioClip);
+        //shootSfxSource.PlayOneShot(sFXAudioDataSO.audioClip);
 
         /*SoundEffect soundEffect = sfxPool.Get();
         soundEffect.SetSound(sFXAudioDataSO);
