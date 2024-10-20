@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
-using UnityEngine.Pool;
 
 public class AudioManagerNoMixers : MonoBehaviour {
 
@@ -26,12 +25,8 @@ public class AudioManagerNoMixers : MonoBehaviour {
 
     [Header("Pool")]
     [SerializeField] private GameObject soundEffectPrefab;
-    private ObjectPool<SoundEffect> sfxPool;
 
     [Header("SFX")]
-    [SerializeField] private int sfxVolume = 8;
-    [SerializeField] private AudioSource sfxSource;
-    [SerializeField] private AudioSource shootSfxSource;
     private Dictionary<string, SFXAudioDataSO> sfxAudioClipMap = new Dictionary<string, SFXAudioDataSO>();
 
     [Space(10)]
@@ -50,31 +45,8 @@ public class AudioManagerNoMixers : MonoBehaviour {
 
     private void Start()
     {
-        sfxPool = new ObjectPool<SoundEffect>(CreateSoundEffect, ActionOnGet, ActionOnRelease, ActionOnDestroy);
-
         LoadSFXScriptableObjects();
     }
-
-    private SoundEffect CreateSoundEffect()
-    {
-        return null;
-    }
-
-    private void ActionOnGet(SoundEffect effect)
-    {
-        effect.gameObject.SetActive(true);
-    }
-
-    private void ActionOnRelease(SoundEffect effect)
-    {
-        effect.gameObject.SetActive(false);
-    }
-
-    private void ActionOnDestroy(SoundEffect effect)
-    {
-        Destroy(effect.gameObject);
-    }
-
 
     public void LoadSFXScriptableObjects()
     {
@@ -90,9 +62,6 @@ public class AudioManagerNoMixers : MonoBehaviour {
     {
         SFXAudioDataSO clipToPlay = GetSFXSOFromName(sfxAudioClipName);
         PlaySFX(clipToPlay);
-        /*sfxSource.pitch = clipToPlay.GetRandomPitch();
-        sfxSource.PlayOneShot(clipToPlay.audioClip, 1);
-        sfxSource.pitch = 1; */
     }
 
     private void PlaySFX(SFXAudioDataSO sFXAudioDataSO)
@@ -123,29 +92,6 @@ public class AudioManagerNoMixers : MonoBehaviour {
             sfxAudioSource.volume = sFXAudioDataSO.soundEffectVolume;
             sfxAudioSource.PlayOneShot(sFXAudioDataSO.audioClip);
         }
-
-        //shootSfxSource.pitch = sFXAudioDataSO.GetRandomPitch();
-        //shootSfxSource.volume = sFXAudioDataSO.soundEffectVolume;
-        //shootSfxSource.clip = sFXAudioDataSO.audioClip;
-        //shootSfxSource.PlayOneShot(sFXAudioDataSO.audioClip);
-
-        /*SoundEffect soundEffect = sfxPool.Get();
-        soundEffect.SetSound(sFXAudioDataSO);
-        soundEffect.gameObject.SetActive(true);
-        StartCoroutine(DisableSFX(soundEffect, sFXAudioDataSO.audioClip.length));  */
-    }
-
-    private IEnumerator DisableSFX(SoundEffect soundEffect, float length)
-    {
-        yield return new WaitForSeconds(length);
-        sfxPool.Release(soundEffect);
-    }
-
-    public float LinearToDecibels(int linear)
-    {
-        float linearScaleRange = 20f;
-
-        return Mathf.Log10((float)linear / linearScaleRange) * 20f;
     }
 
     public void RunNextMusicClip()
