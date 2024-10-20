@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level/Krism01.unity
     guid: f3eced64370b58f4a87dea871fc20f0f
+  - enabled: 1
+    path: Assets/Scenes/UI/CreditsScene.unity
+    guid: 03e9fa4739b755040b94ee4ce5c5304b
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: e4d75b8b4062e4e4fb77d2a7deb22856,
       type: 2}
