@@ -29,13 +29,14 @@ public class BossController : MonoBehaviour
     [SerializeField] private int maxHealth = 5000;
     private int currentHealth;
     [SerializeField] private float hurtStateHealthPercent = 50f;
-    private bool hurtStateTriggered = false;
+    public bool hurtStateTriggered = false;
     [SerializeField] private float bgmChangeHealthPercent = 40f;
     private bool bgmChangeTriggered = false;
     [SerializeField] private float damageTakenSFXCooldown = 0.2f;
     private float lastDamageTakenSFXPlayTime = -Mathf.Infinity;
     [SerializeField] private float stopOverflowDamageNumbers = 1f;
     [SerializeField] private float overflowDamageCooldown = 1f;
+    [SerializeField] private float delayEndScreen = 10f;
 
     [Header("Parameters - Minion/shield respawn")]
     [SerializeField] private List<float> minionRespawnThreasholds;
@@ -211,8 +212,7 @@ public class BossController : MonoBehaviour
 
             if (!hurtStateTriggered && CurrentHealthPercentLessThan(hurtStateHealthPercent))
             {
-                bossAnimator.SetTrigger("bossHurt");
-                hurtStateTriggered = true;
+                hurtStateTriggered = true; //Used to control which shooting animation to play by EntityActionVisualController
             }
 
             if (!bgmChangeTriggered && CurrentHealthPercentLessThan(bgmChangeHealthPercent))
@@ -251,6 +251,7 @@ public class BossController : MonoBehaviour
         //play death animation
         bossAnimator.SetTrigger("bossDeath");
         //transform.position += new Vector3(0f, .2f, 0f);
+        Invoke("EndGame", delayEndScreen);
         
     }
     public void EndGame()
