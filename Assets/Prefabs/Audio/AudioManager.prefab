@@ -45,12 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38741b54376200c42ba96b9e2324dd42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundEffectPrefab: {fileID: 2854293015688605026, guid: 82ce30ab0cfbfad428fe181e46659794,
+  randomPitchAudioSourcePrefab: {fileID: 2854293015688605026, guid: 82ce30ab0cfbfad428fe181e46659794,
     type: 3}
-  sfxVolume: 8
-  muteMusic: 0
-  musicSource: {fileID: 0}
-  musicAudioClips: []
 --- !u!1 &8996763672806107192
 GameObject:
   m_ObjectHideFlags: 0
