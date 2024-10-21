@@ -1,0 +1,1192 @@
+fileFormatVersion: 2
+guid: 2d9f9c14130a4cf48930cfbd3f861df5
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: boss-damaged-idle-animation-3_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5034
+        width: 984
+        height: 839
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fa72a2004318794ba6dd767a1673a56
+      internalID: 787065496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-idle-animation-3_1
+      rect:
+        serializedVersion: 2
+        x: 984
+        y: 5034
+        width: 984
+        height: 839
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 371354b6ecf29ef439eee216e8183434
+      internalID: 1287582544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-idle-animation-3_2
+      rect:
+        serializedVersion: 2
+        x: 1968
+        y: 5034
+        width: 984
+        height: 839
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84bf49cee3502a54cb57bf4ca18f5c42
+      internalID: -1648896352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-idle-animation-3_3
+      rect:
+        serializedVersion: 2
+        x: 2952
+        y: 5034
+        width: 984
+        height: 839
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bd7431b4e7ab984cad90bfdfdb5c11f
+      internalID: -378458276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-idle-animation-3_4
+      rect:
+        serializedVersion: 2
+        x: 3936
+        y: 5034
+        width: 984
+        height: 839
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a10a3f474f61c745bcd6f8f18896bb3
+      internalID: 1817330352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-idle-animation-3_5
+      rect:
+        serializedVersion: 2
+        x: 4920
+        y: 5034
+        width: 984
+        height: 839
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48822472aa7b15945ba8ab05ed83984c
+      internalID: 240073417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-idle-animation-3_6
+      rect:
+        serializedVersion: 2
+        x: 5904
+        y: 5034
+        width: 984
+        height: 839
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c514e44058f94734287ef779cc57f6be
+      internalID: 1487639143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-idle-animation-3_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4195
+        width: 984
+        height: 839
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc03b553c66fc464eb51d1fe1f549010
+      internalID: -1430690174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-idle-animation-3_8
+      rect:
+        serializedVersion: 2
+        x: 984
+        y: 4195
+        width: 984
+        height: 839
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb192382663b5954f9bfcc508738c9c2
+      internalID: -1062344306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-idle-animation-3_9
+      rect:
+        serializedVersion: 2
+        x: 1968
+        y: 4195
+        width: 984
+        height: 839
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c0a3101bf5cac04a9cd5f9350402f65
+      internalID: 611025484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-idle-animation-3_10
+      rect:
+        serializedVersion: 2
+        x: 2952
+        y: 4195
+        width: 984
+        height: 839
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9291a00316d07e342904ba56b8c8f765
+      internalID: 945810677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-idle-animation-3_11
+      rect:
+        serializedVersion: 2
+        x: 3936
+        y: 4195
+        width: 984
+        height: 839
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59948db5f9ab8a145bd1cceb19d98e78
+      internalID: 1757359030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-idle-animation-3_12
+      rect:
+        serializedVersion: 2
+        x: 4920
+        y: 4195
+        width: 984
+        height: 839
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da41a741dd75cf545826d809c26ade1c
+      internalID: -1588437599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-idle-animation-3_13
+      rect:
+        serializedVersion: 2
+        x: 5904
+        y: 4195
+        width: 984
+        height: 839
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e7106ededb68e24484ca78897b73860
+      internalID: 553530857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-idle-animation-3_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3356
+        width: 984
+        height: 839
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fef25ab50f2a704e8c54f7fdf16b4b1
+      internalID: 1091663531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-idle-animation-3_15
+      rect:
+        serializedVersion: 2
+        x: 984
+        y: 3356
+        width: 984
+        height: 839
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7efd45400865b5e4bb592933d57dcf47
+      internalID: 178737449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-idle-animation-3_16
+      rect:
+        serializedVersion: 2
+        x: 1968
+        y: 3356
+        width: 984
+        height: 839
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 276fbaa7591bc6a4ab0384446304c6e9
+      internalID: 919848803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-idle-animation-3_17
+      rect:
+        serializedVersion: 2
+        x: 2952
+        y: 3356
+        width: 984
+        height: 839
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d18bee5812cc12e4e8c123da00559ebc
+      internalID: 1364905470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-idle-animation-3_18
+      rect:
+        serializedVersion: 2
+        x: 3936
+        y: 3356
+        width: 984
+        height: 839
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 096f5d068c3902a4ebdf0ea87ae38209
+      internalID: -139408407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-idle-animation-3_19
+      rect:
+        serializedVersion: 2
+        x: 4920
+        y: 3356
+        width: 984
+        height: 839
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1b666f78101bb6438181f0995027a92
+      internalID: -1616322412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-idle-animation-3_20
+      rect:
+        serializedVersion: 2
+        x: 5904
+        y: 3356
+        width: 984
+        height: 839
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ebabfb64d0b4d343a5a1797385379af
+      internalID: -763643688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-idle-animation-3_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2517
+        width: 984
+        height: 839
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d23647b6574b7714ba28ab8ccf74ece1
+      internalID: 850683527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-idle-animation-3_22
+      rect:
+        serializedVersion: 2
+        x: 984
+        y: 2517
+        width: 984
+        height: 839
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edc00d49602773d45a6db2398590c222
+      internalID: 1450612601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-idle-animation-3_23
+      rect:
+        serializedVersion: 2
+        x: 1968
+        y: 2517
+        width: 984
+        height: 839
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdc9d4a97a14fec4d9b012d5b315382c
+      internalID: -2096097583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-idle-animation-3_24
+      rect:
+        serializedVersion: 2
+        x: 2952
+        y: 2517
+        width: 984
+        height: 839
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70dbb159e029dba4eb2458c5db5c8961
+      internalID: -1724877282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-idle-animation-3_25
+      rect:
+        serializedVersion: 2
+        x: 3936
+        y: 2517
+        width: 984
+        height: 839
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 101fbb62777c82b4f9dfb317626155a8
+      internalID: 438403311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-idle-animation-3_26
+      rect:
+        serializedVersion: 2
+        x: 4920
+        y: 2517
+        width: 984
+        height: 839
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0e9fd78c2af924428a0917c61398b7d
+      internalID: 1730192348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-idle-animation-3_27
+      rect:
+        serializedVersion: 2
+        x: 5904
+        y: 2517
+        width: 984
+        height: 839
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 695a5bf2c6dea1349b9f5401be4af9e2
+      internalID: -1405016516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-idle-animation-3_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1678
+        width: 984
+        height: 839
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cbe82bf6a61c9944b514ac77f56ef2e
+      internalID: 2143510053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-idle-animation-3_29
+      rect:
+        serializedVersion: 2
+        x: 984
+        y: 1678
+        width: 984
+        height: 839
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6aaa34eb118ae9f429326e77d0e99302
+      internalID: 885348448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-idle-animation-3_30
+      rect:
+        serializedVersion: 2
+        x: 1968
+        y: 1678
+        width: 984
+        height: 839
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bd483bca444f674b9be8fa3871dd838
+      internalID: -319345982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-idle-animation-3_31
+      rect:
+        serializedVersion: 2
+        x: 2952
+        y: 1678
+        width: 984
+        height: 839
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 927a5827f8e12464abe816c9536921c6
+      internalID: -833312771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-idle-animation-3_32
+      rect:
+        serializedVersion: 2
+        x: 3936
+        y: 1678
+        width: 984
+        height: 839
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 599f56d71bfb8604ebc022d86e33d0af
+      internalID: -447664160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-idle-animation-3_33
+      rect:
+        serializedVersion: 2
+        x: 4920
+        y: 1678
+        width: 984
+        height: 839
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ff979d407d57d34886ec8f30269a8bf
+      internalID: 674285163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-idle-animation-3_34
+      rect:
+        serializedVersion: 2
+        x: 5904
+        y: 1678
+        width: 984
+        height: 839
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e584f03f2b0209e469540b1412cef65f
+      internalID: -154491413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-idle-animation-3_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 839
+        width: 984
+        height: 839
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 874fede613ab87f42b9569e74f31a571
+      internalID: -1796182641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-idle-animation-3_36
+      rect:
+        serializedVersion: 2
+        x: 984
+        y: 839
+        width: 984
+        height: 839
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 544976a21567de641aff6cea2c6a6aec
+      internalID: -1223188801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-idle-animation-3_37
+      rect:
+        serializedVersion: 2
+        x: 1968
+        y: 839
+        width: 984
+        height: 839
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22b1134f0b5bddf49bc530ea126d1e1d
+      internalID: -943563170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-idle-animation-3_38
+      rect:
+        serializedVersion: 2
+        x: 2952
+        y: 839
+        width: 984
+        height: 839
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b84a1de879709e7489e00181eab2d699
+      internalID: 325267598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-idle-animation-3_39
+      rect:
+        serializedVersion: 2
+        x: 3936
+        y: 839
+        width: 984
+        height: 839
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71f4c64b5e884d541923cc86dfe21701
+      internalID: -167688890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-idle-animation-3_40
+      rect:
+        serializedVersion: 2
+        x: 4920
+        y: 839
+        width: 984
+        height: 839
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7dd35742676c0249b2e951cbdfe9fa8
+      internalID: 1277684565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-idle-animation-3_41
+      rect:
+        serializedVersion: 2
+        x: 5904
+        y: 839
+        width: 984
+        height: 839
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30b161225fed93f45ac2f0a167f790a2
+      internalID: 1939537589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-idle-animation-3_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 984
+        height: 839
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abd0a2f2361cbf34fb152e54b3d1f9f8
+      internalID: -655095743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-idle-animation-3_43
+      rect:
+        serializedVersion: 2
+        x: 984
+        y: 0
+        width: 984
+        height: 839
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9155da19c6b2cd548b5eecf95ceb2153
+      internalID: -1425749620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-idle-animation-3_44
+      rect:
+        serializedVersion: 2
+        x: 1968
+        y: 0
+        width: 984
+        height: 839
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d51867ff8bcfc794d832943a6dbfe98d
+      internalID: -1426317482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-idle-animation-3_45
+      rect:
+        serializedVersion: 2
+        x: 2952
+        y: 0
+        width: 984
+        height: 839
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3af4209f771623c47849caa1b5305c35
+      internalID: -1424698928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-idle-animation-3_46
+      rect:
+        serializedVersion: 2
+        x: 3936
+        y: 0
+        width: 984
+        height: 839
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 376d7fddb45c4694597cb30b602ee316
+      internalID: 473228067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-idle-animation-3_47
+      rect:
+        serializedVersion: 2
+        x: 4920
+        y: 0
+        width: 984
+        height: 839
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b44d87ed6a831e449a69a877af938ee2
+      internalID: 745783350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-idle-animation-3_48
+      rect:
+        serializedVersion: 2
+        x: 5904
+        y: 0
+        width: 984
+        height: 839
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0985a82da52a5494490b25738480ee10
+      internalID: -757130666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      boss-damaged-idle-animation-3_0: 787065496
+      boss-damaged-idle-animation-3_1: 1287582544
+      boss-damaged-idle-animation-3_10: 945810677
+      boss-damaged-idle-animation-3_11: 1757359030
+      boss-damaged-idle-animation-3_12: -1588437599
+      boss-damaged-idle-animation-3_13: 553530857
+      boss-damaged-idle-animation-3_14: 1091663531
+      boss-damaged-idle-animation-3_15: 178737449
+      boss-damaged-idle-animation-3_16: 919848803
+      boss-damaged-idle-animation-3_17: 1364905470
+      boss-damaged-idle-animation-3_18: -139408407
+      boss-damaged-idle-animation-3_19: -1616322412
+      boss-damaged-idle-animation-3_2: -1648896352
+      boss-damaged-idle-animation-3_20: -763643688
+      boss-damaged-idle-animation-3_21: 850683527
+      boss-damaged-idle-animation-3_22: 1450612601
+      boss-damaged-idle-animation-3_23: -2096097583
+      boss-damaged-idle-animation-3_24: -1724877282
+      boss-damaged-idle-animation-3_25: 438403311
+      boss-damaged-idle-animation-3_26: 1730192348
+      boss-damaged-idle-animation-3_27: -1405016516
+      boss-damaged-idle-animation-3_28: 2143510053
+      boss-damaged-idle-animation-3_29: 885348448
+      boss-damaged-idle-animation-3_3: -378458276
+      boss-damaged-idle-animation-3_30: -319345982
+      boss-damaged-idle-animation-3_31: -833312771
+      boss-damaged-idle-animation-3_32: -447664160
+      boss-damaged-idle-animation-3_33: 674285163
+      boss-damaged-idle-animation-3_34: -154491413
+      boss-damaged-idle-animation-3_35: -1796182641
+      boss-damaged-idle-animation-3_36: -1223188801
+      boss-damaged-idle-animation-3_37: -943563170
+      boss-damaged-idle-animation-3_38: 325267598
+      boss-damaged-idle-animation-3_39: -167688890
+      boss-damaged-idle-animation-3_4: 1817330352
+      boss-damaged-idle-animation-3_40: 1277684565
+      boss-damaged-idle-animation-3_41: 1939537589
+      boss-damaged-idle-animation-3_42: -655095743
+      boss-damaged-idle-animation-3_43: -1425749620
+      boss-damaged-idle-animation-3_44: -1426317482
+      boss-damaged-idle-animation-3_45: -1424698928
+      boss-damaged-idle-animation-3_46: 473228067
+      boss-damaged-idle-animation-3_47: 745783350
+      boss-damaged-idle-animation-3_48: -757130666
+      boss-damaged-idle-animation-3_5: 240073417
+      boss-damaged-idle-animation-3_6: 1487639143
+      boss-damaged-idle-animation-3_7: -1430690174
+      boss-damaged-idle-animation-3_8: -1062344306
+      boss-damaged-idle-animation-3_9: 611025484
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

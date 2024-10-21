@@ -106,8 +106,8 @@ MonoBehaviour:
   anchor: {fileID: 0}
   spawner: {fileID: 0}
   healthBar: {fileID: 2918724717463857661}
-  maxhealth: 500
-  moveSpeed: 3
+  maxhealth: 300
+  moveSpeed: 6
   collisionDmg: 5
   currentHealth: 20
   projectile: {fileID: 4767921678106280535, guid: 5cda2d0d30d07624b85208d0c5ba089e,
