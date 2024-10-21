@@ -2196,14 +2196,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Welcome, R0-B. You\u2019ve been selected for the Robotic Expedition Agency\u2019s
-    training program. Our mission is clear: Earth faces a growing threat from Mars,
-    and only robots like you can take on the challenge. The enemies you\u2019ll face
-    here are based on real dangers discovered on Mars by previous missions, missions
-    that have gone dark. Your friends were part of those missions. This facility
-    is designed to push you to the limit and prepare you for the fight ahead. Prove
-    yourself in this training, and you might be the one to save them, and protect
-    Earth from what\u2019s coming."
+  m_text: "Welcome, R0-B! You\u2019re here to train with the Robot Expedition Agency.
+    We\u2019ve found something strange on Mars, and we need you to help investigate.
+    Get through these training rooms, and you\u2019ll be ready to explore Mars and
+    uncover its secrets. Good luck!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 91dcf9cc575b5a54db4d881037955c82, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 91dcf9cc575b5a54db4d881037955c82, type: 2}
@@ -2230,10 +2226,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 14
+  m_fontSize: 21.25
   m_fontSizeBase: 14
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -5510,12 +5506,12 @@ PrefabInstance:
     - target: {fileID: 3219202625192781668, guid: ce117d019e53fbf438966fe6e117c542,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.988174
+      value: -11.976738
       objectReference: {fileID: 0}
     - target: {fileID: 3219202625192781668, guid: ce117d019e53fbf438966fe6e117c542,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.995904
+      value: 3.996252
       objectReference: {fileID: 0}
     - target: {fileID: 3219202625192781668, guid: ce117d019e53fbf438966fe6e117c542,
         type: 3}
