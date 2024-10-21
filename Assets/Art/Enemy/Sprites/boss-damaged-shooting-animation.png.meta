@@ -1,0 +1,2292 @@
+fileFormatVersion: 2
+guid: fc9b882d1d1292e44a1b1b286a9f14d0
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8980
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 406ef9c1a836fe24280b36070802a13f
+      internalID: 1498301524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_1
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 8980
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87d79314f558b774d95203a443b96609
+      internalID: -1752530950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_2
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 8980
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e78703a725285c34cb9a059580791ac3
+      internalID: -1073846736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_3
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 8980
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a1c62769b88d354ab59c7fd85f7ce56
+      internalID: 1834485281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_4
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 8980
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c948b91e55aca584ea9f8b91cab23f91
+      internalID: -479729693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_5
+      rect:
+        serializedVersion: 2
+        x: 5000
+        y: 8980
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24f7299b12cbc01419ee1562c74d0bd0
+      internalID: -1975807958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_6
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 8980
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a8a8eb2bd60d624b8db238aab938603
+      internalID: -1388435018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_7
+      rect:
+        serializedVersion: 2
+        x: 7000
+        y: 8980
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0afbb7b20e8f71a49ac0536dfb193662
+      internalID: 1019055978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_8
+      rect:
+        serializedVersion: 2
+        x: 8000
+        y: 8980
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7169a933892e9644b864b4c13d6d98f3
+      internalID: 1790465855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8082
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46ddf4d09c18f0748a75bbd8627e0ccf
+      internalID: -332419717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_10
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 8082
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14aeb6dca58667343b2c7778ddca6d8c
+      internalID: -1921570459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_11
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 8082
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3c94c0f7c59e9c4c9f1776b4a66c82f
+      internalID: -9879216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_12
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 8082
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8fa87691a2cee54c9f43816d0c11890
+      internalID: 1804113231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_13
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 8082
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c69a5e8f8d40144b88d6aab99a10dc1
+      internalID: -1175522560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_14
+      rect:
+        serializedVersion: 2
+        x: 5000
+        y: 8082
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0708bcfd4c2ecf94d940f06ff5175678
+      internalID: 1320531194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_15
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 8082
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d435942e5697094d81111087d10c8c6
+      internalID: 491442613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_16
+      rect:
+        serializedVersion: 2
+        x: 7000
+        y: 8082
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 610d6a6683cdb614680b056ad44d02f7
+      internalID: 226120965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_17
+      rect:
+        serializedVersion: 2
+        x: 8000
+        y: 8082
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e662ac65bfb18ef449b5b85343fba7ab
+      internalID: -742834867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7184
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d90300fd477dfed468d4d2674a603502
+      internalID: -468220217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_19
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 7184
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4994dc2989722c9419cea487c62aa636
+      internalID: -1057082827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_20
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 7184
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffef4b5adcacf6d408397b630c571fdb
+      internalID: 649006382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_21
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 7184
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f3acc92b7ab3884e914c86c06455df8
+      internalID: -977050423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_22
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 7184
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a2f117020d68e84594bae11dafcc8ac
+      internalID: 561262726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_23
+      rect:
+        serializedVersion: 2
+        x: 5000
+        y: 7184
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b63d25bfda984a4699903a6c527900c
+      internalID: 229871945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_24
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 7184
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 093e54b50e4b09c4e972b21f545f09a7
+      internalID: -119843117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_25
+      rect:
+        serializedVersion: 2
+        x: 7000
+        y: 7184
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5081c2f93db20ae4c9b5f59cc70fbbf1
+      internalID: 725277314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_26
+      rect:
+        serializedVersion: 2
+        x: 8000
+        y: 7184
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 776e391bcdfdfe6428865f62ba484463
+      internalID: -173486722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6286
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a391b4a6b8167942af37f9f90b1aad0
+      internalID: 754933693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_28
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 6286
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b710ea583dcf4484bb393354ef82bae8
+      internalID: 511052133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_29
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 6286
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1908e1d63dd357441a9acbe9efedff5c
+      internalID: 651526229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_30
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 6286
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e91d67b1249b5441b7e1608c38eae9a
+      internalID: -1870128715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_31
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 6286
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 864cc83c8158a384c80a6f89b26d1bbc
+      internalID: -907396153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_32
+      rect:
+        serializedVersion: 2
+        x: 5000
+        y: 6286
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acf570e54d3aa054b9307a6035688178
+      internalID: -511202926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_33
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 6286
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71ed415155e94a348b5159eda29b56d6
+      internalID: -1475074068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_34
+      rect:
+        serializedVersion: 2
+        x: 7000
+        y: 6286
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 516d3c2337b730d4a84b5a51dfb77411
+      internalID: 1927174349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_35
+      rect:
+        serializedVersion: 2
+        x: 8000
+        y: 6286
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70d51ac3ec7a9fb429b9a1a4e4bb1ca5
+      internalID: 1342856425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5388
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecb9a628874d5f8428a07b5bbfeae7b1
+      internalID: -163797153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_37
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 5388
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ed39301e72e8ca4ba98fec4d7f07e12
+      internalID: -1459001647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_38
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 5388
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e12ed45c8713b8547a26060c4c619067
+      internalID: -1801177591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_39
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 5388
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22343cb9d0df804409f67f99d1d5cf7b
+      internalID: -34560510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_40
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 5388
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0fc269c1f14ccf419aa05b398f41d73
+      internalID: 1241715851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_41
+      rect:
+        serializedVersion: 2
+        x: 5000
+        y: 5388
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 666e33616b9784c42bdd44f8edbc203d
+      internalID: -2067753124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_42
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 5388
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 452af15b05098a14fb3493d519327f48
+      internalID: 1816296046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_43
+      rect:
+        serializedVersion: 2
+        x: 7000
+        y: 5388
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3cdde372928d2f4e92c5a7611fd8824
+      internalID: 277292713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_44
+      rect:
+        serializedVersion: 2
+        x: 8000
+        y: 5388
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46bba6280985a2c428008aeb94e5d0f2
+      internalID: 759013367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4490
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7eef5ee626248648a26c4bc4f6bd107
+      internalID: 1903050044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_46
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 4490
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1d3fde5c932b2c4693e8b6b23cb2856
+      internalID: -316588346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_47
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 4490
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a0e8593e0a69cc459ccc33571d18c07
+      internalID: -2092900600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_48
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 4490
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9796e1779910e1a4db1d04e132564bb4
+      internalID: 727573598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_49
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 4490
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6fbeece26fc0894db8eda14c4afbbc5
+      internalID: 1492392294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_50
+      rect:
+        serializedVersion: 2
+        x: 5000
+        y: 4490
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d033ea1c005b7254a92bb847c87537e0
+      internalID: -1170180657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_51
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 4490
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da0082288677a9f46a9253b00b91825f
+      internalID: 251424575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_52
+      rect:
+        serializedVersion: 2
+        x: 7000
+        y: 4490
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 051c3aa8fd630fe4080a64f57bdff5d6
+      internalID: -870305136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_53
+      rect:
+        serializedVersion: 2
+        x: 8000
+        y: 4490
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0dfea323fb65d8418f1bbf3c1bb7884
+      internalID: 198370192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_54
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3592
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa39974d1e5842648beb161bec17cf23
+      internalID: 2000501405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_55
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 3592
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f3171e7fc38db142b08bce0cc07fad1
+      internalID: 789229128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_56
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 3592
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71c9dacb53fefac499d3e8b26238a565
+      internalID: 1096990133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_57
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 3592
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f5f0d8b29175cc478a219eab39ef6a4
+      internalID: -549019870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_58
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 3592
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa52bf5ad0c7b5446bf32cac5318a12a
+      internalID: 1239701397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_59
+      rect:
+        serializedVersion: 2
+        x: 5000
+        y: 3592
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 010b13faecf731b43a258c927ed674d5
+      internalID: -480852602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_60
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 3592
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34450d67cc6cc7f4d9719f095d2192e3
+      internalID: -826938529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_61
+      rect:
+        serializedVersion: 2
+        x: 7000
+        y: 3592
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ab5bfb9e0a468b4e921e09afd98df6f
+      internalID: 1131327299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_62
+      rect:
+        serializedVersion: 2
+        x: 8000
+        y: 3592
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a357d850a176b9e448e0faea3e622d33
+      internalID: -846840513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_63
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2694
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b67f49d24e59034481d826246ee9fa4
+      internalID: 1711830489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_64
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 2694
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d843809c8027954a83459cf0736e571
+      internalID: -623860790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_65
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 2694
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9714b0d2a2483b844860a449c3bf8f72
+      internalID: -1012819417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_66
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 2694
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f4437d28a14f974385267299afaa92d
+      internalID: 1822561238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_67
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 2694
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c6bdcbfa83a2df4b986f36617bd7cd8
+      internalID: -790629767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_68
+      rect:
+        serializedVersion: 2
+        x: 5000
+        y: 2694
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0346626a37e36b40a415538fcfbaa6c
+      internalID: 1319283031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_69
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 2694
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 451ab67fac93efb4b8f9b8d5838964e4
+      internalID: 460152353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_70
+      rect:
+        serializedVersion: 2
+        x: 7000
+        y: 2694
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 198fe66e194f88346810a408afdae519
+      internalID: -694978968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_71
+      rect:
+        serializedVersion: 2
+        x: 8000
+        y: 2694
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b93a5c34348028409687f8ad4336303
+      internalID: -926191449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1796
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10024581797f80246882d0959709b434
+      internalID: 1804439229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_73
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 1796
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5089d31eeefa4d4fb7cefde44eebf97
+      internalID: -1474807766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_74
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 1796
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e72f54438a938274593c83cbc2cd4e29
+      internalID: -2097816533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_75
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 1796
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 126b4880e760903459bce6611e2901c3
+      internalID: -2146736549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_76
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 1796
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d630fd97d19fc2f4bbb5c1a2775231ce
+      internalID: -1917292988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_77
+      rect:
+        serializedVersion: 2
+        x: 5000
+        y: 1796
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e77d10981f06c5a42a2aea7fd2a825d3
+      internalID: 197895256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_78
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 1796
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1980d62797ad7484091e45415897083c
+      internalID: 1561976177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_79
+      rect:
+        serializedVersion: 2
+        x: 7000
+        y: 1796
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de0150808ec9eee49938e72ff75bb198
+      internalID: -831359717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_80
+      rect:
+        serializedVersion: 2
+        x: 8000
+        y: 1796
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27f31d1021cb1ec48b0b190e01a9a692
+      internalID: 293329488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_81
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 898
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b98b96dab1249e49a5f3226d4bd606a
+      internalID: -2108917075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_82
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 898
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59ab07354ba886e468628de76fd8326d
+      internalID: 791274061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_83
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 898
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e71d2f9ae92b61439149e7934960199
+      internalID: 817305873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_84
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 898
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e722c786f1428b4796b511cc56afdaf
+      internalID: -774179629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_85
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 898
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99ba8ae25c84ebe4d8b4f340003fa4ec
+      internalID: 766382633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_86
+      rect:
+        serializedVersion: 2
+        x: 5000
+        y: 898
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c6f5906659d8cf4d886aa7d0b643f38
+      internalID: -1660962150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_87
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 898
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c875e2165972f14e9a489c0c7ab0b60
+      internalID: -364247045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_88
+      rect:
+        serializedVersion: 2
+        x: 7000
+        y: 898
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7dd1e6a0f87bae49b26517f80619e5d
+      internalID: -1306545037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_89
+      rect:
+        serializedVersion: 2
+        x: 8000
+        y: 898
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 945b981980251b54db04694ab9a97198
+      internalID: -1114392753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_90
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 042313eaad88139428b98c537fd202ba
+      internalID: -276582937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_91
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 0
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ecb68ecfaf1a3a478a019e05166c32b
+      internalID: 1974238898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_92
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 0
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dfbfcd4f48383a46ab6f3ac34efa35f
+      internalID: 1680926693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_93
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 0
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 609d7dc36c24a464eb45d73c9473bfef
+      internalID: 31686679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_94
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 0
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eab5d8a60e3de1645844196015d2f1b2
+      internalID: 1247402030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_95
+      rect:
+        serializedVersion: 2
+        x: 5000
+        y: 0
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0b9fcb394e41e84f9fcfd306eddb303
+      internalID: 968085750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_96
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 0
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbdb5617b1096db44af885673f02531c
+      internalID: 1160094805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_97
+      rect:
+        serializedVersion: 2
+        x: 7000
+        y: 0
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb631abc6e279124daf02d5e87fa6251
+      internalID: 1487830196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-damaged-shooting-animation_98
+      rect:
+        serializedVersion: 2
+        x: 8000
+        y: 0
+        width: 1000
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25e07fd4907f7eb4686870748d33c7e0
+      internalID: -410387819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      boss-damaged-shooting-animation_0: 1498301524
+      boss-damaged-shooting-animation_1: -1752530950
+      boss-damaged-shooting-animation_10: -1921570459
+      boss-damaged-shooting-animation_11: -9879216
+      boss-damaged-shooting-animation_12: 1804113231
+      boss-damaged-shooting-animation_13: -1175522560
+      boss-damaged-shooting-animation_14: 1320531194
+      boss-damaged-shooting-animation_15: 491442613
+      boss-damaged-shooting-animation_16: 226120965
+      boss-damaged-shooting-animation_17: -742834867
+      boss-damaged-shooting-animation_18: -468220217
+      boss-damaged-shooting-animation_19: -1057082827
+      boss-damaged-shooting-animation_2: -1073846736
+      boss-damaged-shooting-animation_20: 649006382
+      boss-damaged-shooting-animation_21: -977050423
+      boss-damaged-shooting-animation_22: 561262726
+      boss-damaged-shooting-animation_23: 229871945
+      boss-damaged-shooting-animation_24: -119843117
+      boss-damaged-shooting-animation_25: 725277314
+      boss-damaged-shooting-animation_26: -173486722
+      boss-damaged-shooting-animation_27: 754933693
+      boss-damaged-shooting-animation_28: 511052133
+      boss-damaged-shooting-animation_29: 651526229
+      boss-damaged-shooting-animation_3: 1834485281
+      boss-damaged-shooting-animation_30: -1870128715
+      boss-damaged-shooting-animation_31: -907396153
+      boss-damaged-shooting-animation_32: -511202926
+      boss-damaged-shooting-animation_33: -1475074068
+      boss-damaged-shooting-animation_34: 1927174349
+      boss-damaged-shooting-animation_35: 1342856425
+      boss-damaged-shooting-animation_36: -163797153
+      boss-damaged-shooting-animation_37: -1459001647
+      boss-damaged-shooting-animation_38: -1801177591
+      boss-damaged-shooting-animation_39: -34560510
+      boss-damaged-shooting-animation_4: -479729693
+      boss-damaged-shooting-animation_40: 1241715851
+      boss-damaged-shooting-animation_41: -2067753124
+      boss-damaged-shooting-animation_42: 1816296046
+      boss-damaged-shooting-animation_43: 277292713
+      boss-damaged-shooting-animation_44: 759013367
+      boss-damaged-shooting-animation_45: 1903050044
+      boss-damaged-shooting-animation_46: -316588346
+      boss-damaged-shooting-animation_47: -2092900600
+      boss-damaged-shooting-animation_48: 727573598
+      boss-damaged-shooting-animation_49: 1492392294
+      boss-damaged-shooting-animation_5: -1975807958
+      boss-damaged-shooting-animation_50: -1170180657
+      boss-damaged-shooting-animation_51: 251424575
+      boss-damaged-shooting-animation_52: -870305136
+      boss-damaged-shooting-animation_53: 198370192
+      boss-damaged-shooting-animation_54: 2000501405
+      boss-damaged-shooting-animation_55: 789229128
+      boss-damaged-shooting-animation_56: 1096990133
+      boss-damaged-shooting-animation_57: -549019870
+      boss-damaged-shooting-animation_58: 1239701397
+      boss-damaged-shooting-animation_59: -480852602
+      boss-damaged-shooting-animation_6: -1388435018
+      boss-damaged-shooting-animation_60: -826938529
+      boss-damaged-shooting-animation_61: 1131327299
+      boss-damaged-shooting-animation_62: -846840513
+      boss-damaged-shooting-animation_63: 1711830489
+      boss-damaged-shooting-animation_64: -623860790
+      boss-damaged-shooting-animation_65: -1012819417
+      boss-damaged-shooting-animation_66: 1822561238
+      boss-damaged-shooting-animation_67: -790629767
+      boss-damaged-shooting-animation_68: 1319283031
+      boss-damaged-shooting-animation_69: 460152353
+      boss-damaged-shooting-animation_7: 1019055978
+      boss-damaged-shooting-animation_70: -694978968
+      boss-damaged-shooting-animation_71: -926191449
+      boss-damaged-shooting-animation_72: 1804439229
+      boss-damaged-shooting-animation_73: -1474807766
+      boss-damaged-shooting-animation_74: -2097816533
+      boss-damaged-shooting-animation_75: -2146736549
+      boss-damaged-shooting-animation_76: -1917292988
+      boss-damaged-shooting-animation_77: 197895256
+      boss-damaged-shooting-animation_78: 1561976177
+      boss-damaged-shooting-animation_79: -831359717
+      boss-damaged-shooting-animation_8: 1790465855
+      boss-damaged-shooting-animation_80: 293329488
+      boss-damaged-shooting-animation_81: -2108917075
+      boss-damaged-shooting-animation_82: 791274061
+      boss-damaged-shooting-animation_83: 817305873
+      boss-damaged-shooting-animation_84: -774179629
+      boss-damaged-shooting-animation_85: 766382633
+      boss-damaged-shooting-animation_86: -1660962150
+      boss-damaged-shooting-animation_87: -364247045
+      boss-damaged-shooting-animation_88: -1306545037
+      boss-damaged-shooting-animation_89: -1114392753
+      boss-damaged-shooting-animation_9: -332419717
+      boss-damaged-shooting-animation_90: -276582937
+      boss-damaged-shooting-animation_91: 1974238898
+      boss-damaged-shooting-animation_92: 1680926693
+      boss-damaged-shooting-animation_93: 31686679
+      boss-damaged-shooting-animation_94: 1247402030
+      boss-damaged-shooting-animation_95: 968085750
+      boss-damaged-shooting-animation_96: 1160094805
+      boss-damaged-shooting-animation_97: 1487830196
+      boss-damaged-shooting-animation_98: -410387819
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
