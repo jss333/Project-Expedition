@@ -11,15 +11,15 @@ public class ReadTextFile : MonoBehaviour
 
     void Start()
     {
-        string creditsFilePath = Path.Combine(Application.dataPath, "credits.txt");
-        if (File.Exists(creditsFilePath))
-        {
-            string creditsText = File.ReadAllText(creditsFilePath);
-            creditsTextComponent.text = creditsText;
-        }
-        else
-        {
-            Debug.LogError("Credits file not found: " + creditsFilePath);
-        }
+        //string creditsFilePath = Path.Combine(Application.dataPath, "credits.txt");
+        //if (File.Exists(creditsFilePath))
+        //{
+        //    string creditsText = File.ReadAllText(creditsFilePath);
+        //    creditsTextComponent.text = creditsText;
+        //}
+        //else
+        //{
+        //    Debug.LogError("Credits file not found: " + creditsFilePath);
+        //}
     }
 }
