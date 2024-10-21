@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(HighLightShadingEffect))]
-public class EntityActionVisualController : MonoBehaviour
+public class EntityActionVisualController : MonoBehaviour //This class is specific to Boss, should be renamed
 {
     private Animator animator;
     private HighLightShadingEffect highLightShadingEffect;
@@ -39,14 +39,13 @@ public class EntityActionVisualController : MonoBehaviour
 
     public void ApplyShootAnimation()
     {
+        // Why can't this be handled by the Controller state machine??
         if (bossController.hurtStateTriggered)
         {
-            //Debug.Log("damaged anim");
             animator.CrossFadeInFixedTime("BossDamaged_Shooting", 0.2f);
         }
         else 
         {
-            //Debug.Log("shooting anim");
             animator.CrossFadeInFixedTime("Boss_Shooting", 0.2f);
         }
         

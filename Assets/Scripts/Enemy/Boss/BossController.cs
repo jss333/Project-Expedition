@@ -78,7 +78,6 @@ public class BossController : MonoBehaviour
         instantiateBossShield();
 
         stopOverflowDamageNumbers = overflowDamageCooldown;
-        bossAnimator.SetBool("IdleState", true);
     }
 
     void Update()
@@ -213,10 +212,7 @@ public class BossController : MonoBehaviour
 
             if (!hurtStateTriggered && CurrentHealthPercentLessThan(hurtStateHealthPercent))
             {
-                bossAnimator.SetTrigger("bossHurt");
-                hurtStateTriggered = true;
-                bossAnimator.SetBool("IdleStateDamaged", true);
-                bossAnimator.SetBool("IdleState", false);
+                hurtStateTriggered = true; //Used to control which shooting animation to play by EntityActionVisualController
             }
 
             if (!bgmChangeTriggered && CurrentHealthPercentLessThan(bgmChangeHealthPercent))
