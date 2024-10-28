@@ -54,6 +54,7 @@ public class PauseMenu : MonoBehaviour
     public void Resume()
     {
         isPaused = false;
+        InputHandler.Singleton.OnUIMenuDeActivated?.Invoke();
         PauseManager.Singletone.pauseGame(false);
     }
 

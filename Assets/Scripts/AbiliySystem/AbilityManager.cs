@@ -29,16 +29,7 @@ namespace AbilitySystem
                 singleton = this;
             }
 
-            InputHandler.Singleton.OnAbilityActivate += UseCurrentAbility;
-            InputHandler.Singleton.OnCycleForward += CycleForwardThroughAbilities;
-            InputHandler.Singleton.OnCycleBackward += CycleBackwardThroughAbilities;
-        }
-
-        private void OnDestroy()
-        {
-            InputHandler.Singleton.OnAbilityActivate -= UseCurrentAbility;
-            InputHandler.Singleton.OnCycleForward -= CycleForwardThroughAbilities;
-            InputHandler.Singleton.OnCycleBackward -= CycleBackwardThroughAbilities;
+            
         }
 
         private void Start()
@@ -51,7 +42,19 @@ namespace AbilitySystem
             }
 
             SelectFirstAbilityAsCurrent();
+
+            InputHandler.Singleton.OnAbilityActivate += UseCurrentAbility;
+            InputHandler.Singleton.OnCycleForward += CycleForwardThroughAbilities;
+            InputHandler.Singleton.OnCycleBackward += CycleBackwardThroughAbilities;
         }
+
+        private void OnDestroy()
+        {
+            InputHandler.Singleton.OnAbilityActivate -= UseCurrentAbility;
+            InputHandler.Singleton.OnCycleForward -= CycleForwardThroughAbilities;
+            InputHandler.Singleton.OnCycleBackward -= CycleBackwardThroughAbilities;
+        }
+
 
         private void SelectFirstAbilityAsCurrent()
         {
