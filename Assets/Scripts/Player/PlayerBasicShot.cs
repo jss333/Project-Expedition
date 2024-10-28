@@ -22,13 +22,15 @@ public class PlayerBasicShot : MonoBehaviour
 
     private void Awake()
     {
-        InputHandler.Singleton.OnWeaponFire += SetIsFired;
     }
 
     void Start()
     {
         audioSource = GetComponent<RandomPitchAudioSource>();
         timeOfLastShot = Time.time - shotIntervalSec;
+
+        InputHandler.Singleton.OnWeaponFire += SetIsFired;
+
     }
 
     private void OnDestroy()
