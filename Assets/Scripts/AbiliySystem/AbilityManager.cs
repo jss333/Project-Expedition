@@ -29,16 +29,16 @@ namespace AbilitySystem
                 singleton = this;
             }
 
-            InputHandler.Singletone.OnAbilityActivate += UseCurrentAbility;
-            InputHandler.Singletone.OnCycleForward += CycleForwardThroughAbilities;
-            InputHandler.Singletone.OnCycleBackward += CycleBackwardThroughAbilities;
+            InputHandler.Singleton.OnAbilityActivate += UseCurrentAbility;
+            InputHandler.Singleton.OnCycleForward += CycleForwardThroughAbilities;
+            InputHandler.Singleton.OnCycleBackward += CycleBackwardThroughAbilities;
         }
 
         private void OnDestroy()
         {
-            InputHandler.Singletone.OnAbilityActivate -= UseCurrentAbility;
-            InputHandler.Singletone.OnCycleForward -= CycleForwardThroughAbilities;
-            InputHandler.Singletone.OnCycleBackward -= CycleBackwardThroughAbilities;
+            InputHandler.Singleton.OnAbilityActivate -= UseCurrentAbility;
+            InputHandler.Singleton.OnCycleForward -= CycleForwardThroughAbilities;
+            InputHandler.Singleton.OnCycleBackward -= CycleBackwardThroughAbilities;
         }
 
         private void Start()

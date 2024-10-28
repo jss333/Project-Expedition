@@ -10,6 +10,7 @@ public class PauseMenu : MonoBehaviour
     {
         EndGameEventManager.OnVictoryAchieved += StopTime;
         EndGameEventManager.OnDefeatAchieved += StopTime;
+        InputHandler.Singleton.OnHandlePausingAndResuming += HandlePausingAndResuming;
         isPaused = false;
         PauseManager.Singletone.pauseGame(false);
     }
@@ -18,6 +19,7 @@ public class PauseMenu : MonoBehaviour
     {
         EndGameEventManager.OnVictoryAchieved -= StopTime;
         EndGameEventManager.OnDefeatAchieved -= StopTime;
+        InputHandler.Singleton.OnHandlePausingAndResuming -= HandlePausingAndResuming;
     }
     void Update()
     {
@@ -31,19 +33,23 @@ public class PauseMenu : MonoBehaviour
         {
             pauseMenuUI.SetActive(false);
         }
-        if (Input.GetKeyDown(KeyCode.Escape))
+    }
+
+    private void HandlePausingAndResuming()
+    {
+        isPaused = !isPaused;
+        if (isPaused)
         {
-            isPaused = !isPaused;
-            if (isPaused)
-            {
-                PauseManager.Singletone.pauseGame(true);
-            }
-            else
-            {
-                PauseManager.Singletone.pauseGame(false);
-            }
+            InputHandler.Singleton.OnUIMenuActivated?.Invoke();
+            PauseManager.Singletone.pauseGame(true);
+        }
+        else
+        {
+            InputHandler.Singleton.OnUIMenuDeActivated?.Invoke();
+            PauseManager.Singletone.pauseGame(false);
         }
     }
+
     // Resume the game
     public void Resume()
     {

@@ -20,7 +20,15 @@ public class DebugMenuUI : MonoBehaviour
     {
         isDebugOn = false;
         //instance.pauseGame(false);
+
+        InputHandler.Singleton.OnHandleDebugMenuOpenning += HandleDebugMenuOpenning;
     }
+
+    private void OnDestroy()
+    {
+        InputHandler.Singleton.OnHandleDebugMenuOpenning -= HandleDebugMenuOpenning;
+    }
+
     void Update()
     {
         // Toggle pause when the "P" key is pressed
@@ -32,19 +40,23 @@ public class DebugMenuUI : MonoBehaviour
         {
             debugMenuUI.SetActive(false);
         }
-        if (Input.GetKeyDown(KeyCode.P))
+    }
+
+    private void HandleDebugMenuOpenning()
+    {
+        isDebugOn = !isDebugOn;
+        if (isDebugOn)
         {
-            isDebugOn = !isDebugOn;
-            if(isDebugOn)
-            {
-                PauseManager.Singletone.pauseGame(true);
-            }
-            else
-            {
-                PauseManager.Singletone.pauseGame(false);
-            }
+            InputHandler.Singleton.OnUIMenuActivated?.Invoke();
+            PauseManager.Singletone.pauseGame(true);
+        }
+        else
+        {
+            InputHandler.Singleton.OnUIMenuDeActivated?.Invoke();
+            PauseManager.Singletone.pauseGame(false);
         }
     }
+
     public void LevelChange(string level)
     {
         SceneManager.LoadScene(level);
