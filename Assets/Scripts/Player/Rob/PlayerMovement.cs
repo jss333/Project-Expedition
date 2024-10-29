@@ -39,6 +39,7 @@ public class PlayerMovement : MonoBehaviour
     [Tooltip("How many times the player has jumped since leaving the ground (inclusive)")]
     public int jumpCount = 0;
 
+    private float movementValue;
 
     public void Start()
     {
@@ -48,6 +49,17 @@ public class PlayerMovement : MonoBehaviour
         playerRb = GetComponent<Rigidbody2D>();
         jumpCount = 1; //To force grounded check at the start
         originalGravityScale = playerRb.gravityScale;
+
+        InputHandler.Singleton.OnPlayerMovementHandle += HandelMovement;
+        InputHandler.Singleton.OnJumpDown += JumpDown;
+        InputHandler.Singleton.OnJumpUp += JumpUp;
+    }
+
+    private void OnDestroy()
+    {
+        InputHandler.Singleton.OnPlayerMovementHandle -= HandelMovement;
+        InputHandler.Singleton.OnJumpDown -= JumpDown;
+        InputHandler.Singleton.OnJumpUp -= JumpUp;
     }
 
 
@@ -57,7 +69,7 @@ public class PlayerMovement : MonoBehaviour
         ResetJumpCountIfGrounded();
         UpdateGravityScaleFactor();
         HandleHorizontalInput();
-        HandleJumpInput();
+        //HandleJumpInput();
         ClampVerticalVelocity();
         isAirJumpSkillAcquired = toggleUI.DoubleJump;
     }
@@ -104,7 +116,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void HandleHorizontalInput()
     {
-        float horizontalInput = Input.GetAxisRaw("Horizontal");
+        float horizontalInput = GetMovement();
         playerRb.velocity = new Vector2(horizontalInput * maxHorizontalVelocity, playerRb.velocity.y);
         playerAnimator.SetBool("isWalking", horizontalInput != 0);
         FlipSpriteBasedOnHorizontalInput(horizontalInput);
@@ -115,25 +127,38 @@ public class PlayerMovement : MonoBehaviour
         playerSpriteRenderer.flipX = horizontalInput < 0;
     }
 
+    private void HandelMovement(float movement)
+    {
+        movementValue = movement;
+    }
+
+    private float GetMovement()
+    {
+        return movementValue;
+    }
 
     private void HandleJumpInput()
     {
-        if (Input.GetButtonDown("Jump"))
-        {
-            if (isGrounded)
-            {
-                EffectJump(groundJumpForce, "PlayerGroundJumps");
-            }
-            else if (isAirJumpSkillAcquired && (jumpCount < maxTotalNumberOfJumps))
-            {
-                EffectJump(airJumpForce, "PlayerAirJumps");
-            }
-        }
+        JumpDown();
 
         // Jump cutting - vertical velocity ends as soon as the player releases the jump button
-        if(Input.GetButtonUp("Jump"))
+        JumpUp();
+    }
+
+    private void JumpUp()
+    {
+        playerRb.velocity = new Vector2(playerRb.velocity.x, Mathf.Min(0, playerRb.velocity.y));
+    }
+
+    private void JumpDown()
+    {
+        if (isGrounded)
         {
-            playerRb.velocity = new Vector2(playerRb.velocity.x, Mathf.Min(0, playerRb.velocity.y));
+            EffectJump(groundJumpForce, "PlayerGroundJumps");
+        }
+        else if (isAirJumpSkillAcquired && (jumpCount < maxTotalNumberOfJumps))
+        {
+            EffectJump(airJumpForce, "PlayerAirJumps");
         }
     }
 

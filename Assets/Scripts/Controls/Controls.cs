@@ -71,13 +71,31 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""PlayerMovement"",
+                    ""type"": ""Button"",
+                    ""id"": ""82743f9d-170d-48f9-a6fe-2693408a456e"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Jump"",
+                    ""type"": ""Button"",
+                    ""id"": ""221a87b6-cfa1-4c9b-8f46-a71be4f077af"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
                 {
                     ""name"": """",
                     ""id"": ""27379058-b8e9-4fa6-98d1-c75ab21560c3"",
-                    ""path"": ""<Keyboard>/space"",
+                    ""path"": ""<Mouse>/leftButton"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -150,6 +168,50 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""action"": ""UseAbility"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""Horizontal"",
+                    ""id"": ""de5da59d-67a7-47f2-a6a6-0d88d3e917e3"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PlayerMovement"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""2d58ed86-2302-4ea1-ae81-04aad3c54435"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PlayerMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""f19a2585-48ed-4608-bebd-930bcd9e8ec1"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PlayerMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6167b7bf-b60a-45bf-94d3-2213b13bd926"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -161,6 +223,24 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""name"": ""New action"",
                     ""type"": ""Button"",
                     ""id"": ""48999b81-673e-4728-b513-a999a877c9f3"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""PauseMenu"",
+                    ""type"": ""Button"",
+                    ""id"": ""bbad80d2-cab2-426d-9b1b-04f5cad9a1d7"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""DebugMenu"",
+                    ""type"": ""Button"",
+                    ""id"": ""0174bf39-9984-4727-b6d9-099e17e53822"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -178,6 +258,28 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""action"": ""New action"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e1b46c47-2bab-45b3-becc-c71ca76e8dd8"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PauseMenu"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9ef92a55-e699-4467-90aa-dffe71373184"",
+                    ""path"": ""<Keyboard>/p"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""DebugMenu"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -191,9 +293,13 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         m_Std_CycleForward = m_Std.FindAction("CycleForward", throwIfNotFound: true);
         m_Std_CycleBackward = m_Std.FindAction("CycleBackward", throwIfNotFound: true);
         m_Std_UseAbility = m_Std.FindAction("UseAbility", throwIfNotFound: true);
+        m_Std_PlayerMovement = m_Std.FindAction("PlayerMovement", throwIfNotFound: true);
+        m_Std_Jump = m_Std.FindAction("Jump", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Newaction = m_UI.FindAction("New action", throwIfNotFound: true);
+        m_UI_PauseMenu = m_UI.FindAction("PauseMenu", throwIfNotFound: true);
+        m_UI_DebugMenu = m_UI.FindAction("DebugMenu", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -260,6 +366,8 @@ public partial class @Controls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Std_CycleForward;
     private readonly InputAction m_Std_CycleBackward;
     private readonly InputAction m_Std_UseAbility;
+    private readonly InputAction m_Std_PlayerMovement;
+    private readonly InputAction m_Std_Jump;
     public struct StdActions
     {
         private @Controls m_Wrapper;
@@ -269,6 +377,8 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         public InputAction @CycleForward => m_Wrapper.m_Std_CycleForward;
         public InputAction @CycleBackward => m_Wrapper.m_Std_CycleBackward;
         public InputAction @UseAbility => m_Wrapper.m_Std_UseAbility;
+        public InputAction @PlayerMovement => m_Wrapper.m_Std_PlayerMovement;
+        public InputAction @Jump => m_Wrapper.m_Std_Jump;
         public InputActionMap Get() { return m_Wrapper.m_Std; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -293,6 +403,12 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @UseAbility.started += instance.OnUseAbility;
             @UseAbility.performed += instance.OnUseAbility;
             @UseAbility.canceled += instance.OnUseAbility;
+            @PlayerMovement.started += instance.OnPlayerMovement;
+            @PlayerMovement.performed += instance.OnPlayerMovement;
+            @PlayerMovement.canceled += instance.OnPlayerMovement;
+            @Jump.started += instance.OnJump;
+            @Jump.performed += instance.OnJump;
+            @Jump.canceled += instance.OnJump;
         }
 
         private void UnregisterCallbacks(IStdActions instance)
@@ -312,6 +428,12 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @UseAbility.started -= instance.OnUseAbility;
             @UseAbility.performed -= instance.OnUseAbility;
             @UseAbility.canceled -= instance.OnUseAbility;
+            @PlayerMovement.started -= instance.OnPlayerMovement;
+            @PlayerMovement.performed -= instance.OnPlayerMovement;
+            @PlayerMovement.canceled -= instance.OnPlayerMovement;
+            @Jump.started -= instance.OnJump;
+            @Jump.performed -= instance.OnJump;
+            @Jump.canceled -= instance.OnJump;
         }
 
         public void RemoveCallbacks(IStdActions instance)
@@ -334,11 +456,15 @@ public partial class @Controls: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_UI;
     private List<IUIActions> m_UIActionsCallbackInterfaces = new List<IUIActions>();
     private readonly InputAction m_UI_Newaction;
+    private readonly InputAction m_UI_PauseMenu;
+    private readonly InputAction m_UI_DebugMenu;
     public struct UIActions
     {
         private @Controls m_Wrapper;
         public UIActions(@Controls wrapper) { m_Wrapper = wrapper; }
         public InputAction @Newaction => m_Wrapper.m_UI_Newaction;
+        public InputAction @PauseMenu => m_Wrapper.m_UI_PauseMenu;
+        public InputAction @DebugMenu => m_Wrapper.m_UI_DebugMenu;
         public InputActionMap Get() { return m_Wrapper.m_UI; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -351,6 +477,12 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @Newaction.started += instance.OnNewaction;
             @Newaction.performed += instance.OnNewaction;
             @Newaction.canceled += instance.OnNewaction;
+            @PauseMenu.started += instance.OnPauseMenu;
+            @PauseMenu.performed += instance.OnPauseMenu;
+            @PauseMenu.canceled += instance.OnPauseMenu;
+            @DebugMenu.started += instance.OnDebugMenu;
+            @DebugMenu.performed += instance.OnDebugMenu;
+            @DebugMenu.canceled += instance.OnDebugMenu;
         }
 
         private void UnregisterCallbacks(IUIActions instance)
@@ -358,6 +490,12 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @Newaction.started -= instance.OnNewaction;
             @Newaction.performed -= instance.OnNewaction;
             @Newaction.canceled -= instance.OnNewaction;
+            @PauseMenu.started -= instance.OnPauseMenu;
+            @PauseMenu.performed -= instance.OnPauseMenu;
+            @PauseMenu.canceled -= instance.OnPauseMenu;
+            @DebugMenu.started -= instance.OnDebugMenu;
+            @DebugMenu.performed -= instance.OnDebugMenu;
+            @DebugMenu.canceled -= instance.OnDebugMenu;
         }
 
         public void RemoveCallbacks(IUIActions instance)
@@ -382,9 +520,13 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         void OnCycleForward(InputAction.CallbackContext context);
         void OnCycleBackward(InputAction.CallbackContext context);
         void OnUseAbility(InputAction.CallbackContext context);
+        void OnPlayerMovement(InputAction.CallbackContext context);
+        void OnJump(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {
         void OnNewaction(InputAction.CallbackContext context);
+        void OnPauseMenu(InputAction.CallbackContext context);
+        void OnDebugMenu(InputAction.CallbackContext context);
     }
 }
