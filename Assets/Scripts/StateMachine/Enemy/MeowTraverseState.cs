@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class MeowTraverseState : EnemyState
 {
-    private MeowEnemy enemy;
+    private MeowEnemy meowEnemy;
     private Color color;
 
     public MeowTraverseState(Enemy enemyBase, EnemyStateMachine stateMachine, string animBoolName, MeowEnemy enemy, Color color) : base(enemyBase, stateMachine, animBoolName)
     {
-        this.enemy = enemy;
+        this.meowEnemy = enemy;
         this.color = color;
     }
 
@@ -17,7 +17,9 @@ public class MeowTraverseState : EnemyState
     {
         base.OnEnter();
 
-        enemy.spriteRenderer.color = color;
+        meowEnemy.spriteRenderer.color = color;
+
+        meowEnemy.ShootBall();
     }
 
     public override void OnExit()
@@ -29,11 +31,11 @@ public class MeowTraverseState : EnemyState
     {
         base.OnUpdate();
 
-        Debug.Log("Agro");
+        //Debug.Log("Agro");
 
-        if (enemy.IsAlerted())
+        if (meowEnemy.IsAlerted())
         {
-           stateMachine.ChangeState(enemy.meowAlertedState);
+           stateMachine.ChangeState(meowEnemy.meowAlertedState);
         }
     }
 }

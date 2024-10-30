@@ -10,6 +10,22 @@ public class MeowEnemy : Enemy
 
     public MeowAlertedState meowAlertedState { get; private set; }
 
+    [SerializeField] private GameObject ball;
+
+    [SerializeField] private Transform ballSpawn;
+
+    [SerializeField] private float shootForce;
+
+    [SerializeField] private float newPointRadius;
+
+    [SerializeField] private LayerMask groundLayerMask;
+
+    public GameObject BallProjectile => ball;
+
+    public float ShootForce => shootForce;
+    public float NewPointRadius => newPointRadius;
+    public LayerMask GroundLayerMask => groundLayerMask;
+
 
     protected override void Awake()
     {
@@ -25,10 +41,44 @@ public class MeowEnemy : Enemy
         base.Start();
 
         stateMachine.Initialize(meowIdleState);
+
+        Ball.OnBallDisappear += Traverse;
     }
 
     protected override void Update()
     {
         base.Update();
+    }
+
+    private void OnDestroy()
+    {
+        Ball.OnBallDisappear -= Traverse;
+    }
+
+    public void ShootBall()
+    {
+        Ball existingBall = FindAnyObjectByType<Ball>();
+        if (existingBall != null) return;
+
+        GameObject ballInstance = Instantiate(BallProjectile, ballSpawn.position, ballSpawn.rotation);
+
+        Rigidbody2D rb = ballInstance.GetComponent<Rigidbody2D>();
+        if(rb != null )
+        {
+            rb.AddForce(ballSpawn.right * shootForce, ForceMode2D.Impulse);
+        }
+    }
+
+    public void Traverse(Vector2 newPosition)
+    {
+        RaycastHit2D hit = Physics2D.Raycast(newPosition, Vector2.down, Mathf.Infinity, GroundLayerMask);
+        if (hit.collider != null)
+        {
+            transform.position = hit.point;
+        }
+        else
+        {
+            Debug.Log("Hit nothing.");
+        }
     }
 }

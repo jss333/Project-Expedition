@@ -29,7 +29,7 @@ public class MeowAlertedState : EnemyState
     {
         base.OnUpdate();
 
-        Debug.Log("Alerted");
+        //Debug.Log("Alerted");
 
         if(enemy.IsAgro())
         {

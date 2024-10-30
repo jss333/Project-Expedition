@@ -2187,7 +2187,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &548420234
 Transform:
   m_ObjectHideFlags: 0
@@ -2372,12 +2372,13 @@ Transform:
   m_GameObject: {fileID: 585027628}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.56, y: 0.85, z: 0}
+  m_LocalPosition: {x: -3.56, y: 0.14, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 828523610}
   - {fileID: 1543037293}
+  - {fileID: 1902307588}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &585027631
@@ -2431,6 +2432,13 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 128
+  ball: {fileID: 197443141783050435, guid: 48ba9f88ea1640b4a833e631bc223d38, type: 3}
+  ballSpawn: {fileID: 1902307588}
+  shootForce: 20
+  newPointRadius: 10
+  groundLayerMask:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!58 &585027633
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -3200,7 +3208,7 @@ Transform:
   m_GameObject: {fileID: 828523609}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.63, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5042,6 +5050,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Vertical Platform
       objectReference: {fileID: 0}
+    - target: {fileID: 3762172242505445756, guid: 51c99eb98a059ed469cc77c35f639e48,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5816,7 +5829,7 @@ Transform:
   m_GameObject: {fileID: 1543037292}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1, y: -0.61, z: 0}
+  m_LocalPosition: {x: -1, y: 0.01999998, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11112,6 +11125,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Vertical Platform (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 3762172242505445756, guid: 51c99eb98a059ed469cc77c35f639e48,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11402,6 +11420,37 @@ Transform:
   - {fileID: 374767743}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1902307587
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1902307588}
+  m_Layer: 0
+  m_Name: BallSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1902307588
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1902307587}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.10883522, y: 0.9940598, z: 0.000000063249054, w: 0.0000005776932}
+  m_LocalPosition: {x: -1.25, y: 0.63, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 585027629}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 12.496}
 --- !u!1001 &1929125122
 PrefabInstance:
   m_ObjectHideFlags: 0

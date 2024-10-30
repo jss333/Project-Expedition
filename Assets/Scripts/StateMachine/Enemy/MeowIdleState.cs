@@ -35,7 +35,7 @@ public class MeowIdleState : EnemyState
     {
         base.OnUpdate();
 
-        Debug.Log("Idle");
+        //Debug.Log("Idle");
 
         if (enemy.IsAgro())
         {
