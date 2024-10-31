@@ -56,9 +56,16 @@ namespace AbilitySystem
             return !InUse() && !InCoolDown();
         }
 
+        public void InterruptAbility()
+        {
+            coolDownTime = 0;
+            duration = maxDuration;
+        }
+
         public abstract void UpdateDuration();
         public abstract void UpdateCoolDownTime();
         public abstract void UseAbility(Transform spawnPoint);
         public abstract void ForceCancelAbility();
+        
     }
 }

@@ -143,6 +143,17 @@ namespace AbilitySystem
             // TODO consider what happens if ability removed is selected?
             availableAbilities.Remove(ability);
         }
+        public AbilitySo CheckForRunningAbility()
+        {
+            foreach(var ability in availableAbilities) 
+            {
+                if (ability.InUse() && ability != currentAbility)
+                {
+                    return ability;
+                }
+            }
+            return null;
+        }
     }
 
     public enum AbilityType { ReflectingShield, TestAbility}
