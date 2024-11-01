@@ -65,7 +65,11 @@ public class MeowEnemy : Enemy
         Rigidbody2D rb = ballInstance.GetComponent<Rigidbody2D>();
         if(rb != null )
         {
-            rb.AddForce(ballSpawn.right * shootForce, ForceMode2D.Impulse);
+            PlayerMovement playerMovement = FindAnyObjectByType<PlayerMovement>();
+            if (playerMovement != null)
+            {
+                rb.AddForce((ballSpawn.right - playerMovement.transform.position).normalized * shootForce, ForceMode2D.Impulse);
+            }
         }
     }
 
@@ -80,5 +84,10 @@ public class MeowEnemy : Enemy
         {
             Debug.Log("Hit nothing.");
         }
+    }
+
+    public void MoveTo(Vector2 newPosition)
+    {
+        transform.Translate(newPosition);
     }
 }

@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class MeowAlertedState : EnemyState
 {
-    private MeowEnemy enemy;
+    private MeowEnemy meowEnemy;
     private Color color;
 
     public MeowAlertedState(Enemy enemyBase, EnemyStateMachine stateMachine, string animBoolName, MeowEnemy enemy, Color color) : base(enemyBase, stateMachine, animBoolName)
     {
-        this.enemy = enemy;
+        this.meowEnemy = enemy;
         this.color = color;
     }
 
@@ -17,7 +17,9 @@ public class MeowAlertedState : EnemyState
     {
         base.OnEnter();
 
-        enemy.spriteRenderer.color = color;
+        meowEnemy.spriteRenderer.color = color;
+
+        meowEnemy.ShootBall();
     }
 
     public override void OnExit()
@@ -31,14 +33,14 @@ public class MeowAlertedState : EnemyState
 
         //Debug.Log("Alerted");
 
-        if(enemy.IsAgro())
+        if(meowEnemy.IsAgro())
         {
-            stateMachine.ChangeState(enemy.meowTraverseState);
+            stateMachine.ChangeState(meowEnemy.meowTraverseState);
         }
 
-        if (!enemy.IsAgro() && !enemy.IsAlerted())
+        if (!meowEnemy.IsAgro() && !meowEnemy.IsAlerted())
         {
-            stateMachine.ChangeState(enemy.meowIdleState);
+            stateMachine.ChangeState(meowEnemy.meowIdleState);
         }
     }
 }

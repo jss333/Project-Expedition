@@ -2425,7 +2425,7 @@ MonoBehaviour:
   groundCheck: {fileID: 1543037293}
   groundCheckDistance: 0.4
   alertedDistance: 8
-  agroDistance: 4
+  agroDistance: 2
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
@@ -5695,6 +5695,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: AbilityHUD
+      objectReference: {fileID: 0}
+    - target: {fileID: 6693260767540153081, guid: c5b02de270319834681ca2b1ba1e5ce7,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 115.36011
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11445,7 +11450,7 @@ Transform:
   m_GameObject: {fileID: 1902307587}
   serializedVersion: 2
   m_LocalRotation: {x: 0.10883522, y: 0.9940598, z: 0.000000063249054, w: 0.0000005776932}
-  m_LocalPosition: {x: -1.25, y: 0.63, z: 0}
+  m_LocalPosition: {x: 0, y: 0.63, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

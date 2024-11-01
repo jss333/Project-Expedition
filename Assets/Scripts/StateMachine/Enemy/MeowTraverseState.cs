@@ -18,8 +18,6 @@ public class MeowTraverseState : EnemyState
         base.OnEnter();
 
         meowEnemy.spriteRenderer.color = color;
-
-        meowEnemy.ShootBall();
     }
 
     public override void OnExit()
