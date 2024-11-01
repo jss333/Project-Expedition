@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class MeowIdleState : EnemyState
 {
-    private MeowEnemy enemy;
+    private MeowEnemy meowEnemy;
     private Color color;
-
+    private Vector2 destination;
+    private float remainingDistance;
+    private bool hasReached = false;
     public MeowIdleState(Enemy enemyBase, EnemyStateMachine stateMachine, string animBoolName, MeowEnemy enemy, Color color) : base(enemy, stateMachine, animBoolName)
     {
-        this.enemy = enemy;
+        this.meowEnemy = enemy;
         this.color = color;
     }
 
@@ -17,16 +19,14 @@ public class MeowIdleState : EnemyState
     {
         base.OnEnter();
 
-        enemy.spriteRenderer.color = color;
-        stateTimer = 1f;
+        meowEnemy.spriteRenderer.color = color;
+
+        PickRandomPoint();
     }
 
     public override void OnExit()
     {
-        if (stateTimer < 0)
-        {
-            //Debug.Log("Stopped Idle");
-        }
+        LeanTween.cancel(meowEnemy.gameObject);
 
         base.OnExit();
     }
@@ -37,14 +37,55 @@ public class MeowIdleState : EnemyState
 
         //Debug.Log("Idle");
 
-        if (enemy.IsAgro())
+        Debug.Log(hasReached);
+
+        if (hasReached)
         {
-            stateMachine.ChangeState(enemy.meowTraverseState);
+            PickRandomPoint();
+        }                                                                                   
+
+        if (meowEnemy.IsAgro())
+        {
+            stateMachine.ChangeState(meowEnemy.meowTraverseState);
         }
 
-        if (enemy.IsAlerted())
+        if (meowEnemy.IsAlerted())
         {
-            stateMachine.ChangeState(enemy.meowAlertedState);
+            stateMachine.ChangeState(meowEnemy.meowAlertedState);
         }
+    }
+
+    private void PickRandomPoint()
+    {
+        Vector2 randomPoint = (Vector2)meowEnemy.transform.position + Random.insideUnitCircle * 3f;
+
+        RaycastHit2D hit = Physics2D.Raycast(randomPoint, Vector2.down, Mathf.Infinity, meowEnemy.GroundLayerMask);
+
+        destination = hit.point;
+
+        HasReachedDestination();
+        //Debug.Log(destination);
+    }
+
+    private void HasReachedDestination()
+    {
+        LeanTween.cancel(meowEnemy.gameObject);
+        hasReached = false;
+
+        LeanTween.moveLocalX(meowEnemy.gameObject, destination.x, 2f).setOnUpdate((float value) =>
+        {
+
+            float dist = Vector2.Distance(meowEnemy.transform.position, destination);
+
+            //Debug.Log(dist);
+            if(dist < 0.2f)
+            {
+                hasReached = true;
+            }
+            else
+            {
+                hasReached = false;
+            }
+        });
     }
 }
