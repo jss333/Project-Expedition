@@ -145,12 +145,11 @@ public class InputHandler : MonoBehaviour, IStdActions , IUIActions
     public void OnNewaction(InputAction.CallbackContext context)
     {
     }
-
-    /*public void OnThrowBomb(InputAction.CallbackContext context)
+    void IStdActions.OnThrowBomb(InputAction.CallbackContext context)
     {
-        if(context.phase == InputActionPhase.Performed)
+        if (context.phase == InputActionPhase.Started)
         {
-            ThrowBomb?.Invoke();
+            OnThrowBomb?.Invoke();
         }
-    }*/
+    }
 }

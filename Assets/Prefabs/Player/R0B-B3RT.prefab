@@ -152,23 +152,6 @@ MonoBehaviour:
     type: 3}
   pointer: {fileID: 7671618368361461386}
   shootPoint: {fileID: 4123449854685159046}
-  fireInput:
-    m_Name: Fire Input
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: f10fbd21-44c5-467a-86df-352697234c8f
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: e187a6cd-b499-4db1-9e16-d76eaa51cc7a
-      m_Path: <Mouse>/leftButton
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Fire Input
-      m_Flags: 0
-    m_Flags: 0
   shotDmg: 15
   shotSpeed: 20
   shotIntervalSec: 0.1
@@ -302,8 +285,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13590b08c384fdb458d29e42fe290529, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clip: {fileID: 0}
+  volume: 1
   minPitch: 1.05
   maxPitch: 1.25
+  audioSource: {fileID: 0}
 --- !u!1 &3288356424656655796
 GameObject:
   m_ObjectHideFlags: 0
@@ -628,6 +614,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groundCheckObj: {fileID: 7634073678044376022}
+  bomb: {fileID: 7007879412541221966, guid: 8843d1c86bf86d44585bf089305f4869, type: 3}
   groundLayer:
     serializedVersion: 2
     m_Bits: 64

@@ -1,26 +1,44 @@
 using Platformer.Mechanics;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class BombThrowController : MonoBehaviour
 {
-    private Vector3 spawnLocation;
-    private Vector2 mouseLocation;
-
     [Header("Parameters")]
-    [SerializeField] private float bombSpeed;
+    private float bombSpeed;
     [SerializeField] private float duration;
-    [SerializeField] private int bombImpactDamage = 40;
+    //[SerializeField] private int bombImpactDamage = 40;
     [SerializeField] private int bombExplosionDamage = 300;
-    [SerializeField] private float bombExplosionRadius = 1.2f;
+    [SerializeField] private float bombExplosionRadius = 2f;
 
     [Header("Variables")]
+    private Vector2 spawnLocation;
+    private Vector2 mouseLocation;
+
     private float timeSinceSpawn = 0;
+    private float mouseDistance;
+
+    private GameObject player;
     void Start()
     {
         spawnLocation = transform.position;
         mouseLocation = Input.mousePosition;
+        player = FindAnyObjectByType<PlayerMovement>().gameObject;
+
+        mouseDistance = Vector2.Distance(spawnLocation, mouseLocation);
+        Debug.Log(mouseDistance);
+
+        if(mouseDistance / 1500 < .5)
+        {
+            bombSpeed = 10;
+        }
+        else
+        {
+            bombSpeed = (mouseDistance / 1500) * 20;
+        }
+        Debug.Log(bombSpeed);
 
         ThrowBomb();
     }
@@ -48,7 +66,7 @@ public class BombThrowController : MonoBehaviour
             //for each in radius of explosion deal damage
             foreach(var hit in hitEnemies)
             {
-                if(hit.tag == "Enemy")
+                if(hit.tag == "Boss")
                 {
                     var closestPoint = hit.ClosestPoint(transform.position);
                     var distance = Vector3.Distance(closestPoint, transform.position);
@@ -56,32 +74,24 @@ public class BombThrowController : MonoBehaviour
                     var damagePercentCalc = Mathf.InverseLerp(bombExplosionRadius, 0, distance);
 
                     hit.GetComponent<BossController>().TakeDamage((int)(damagePercentCalc * bombExplosionDamage));
-                    Debug.Log("Explosion Deals " + (int)(damagePercentCalc * bombExplosionDamage));
+                }
+                else if(hit.tag == "Minion")
+                {
+                    var closestPoint = hit.ClosestPoint(transform.position);
+                    var distance = Vector3.Distance(closestPoint, transform.position);
+
+                    var damagePercentCalc = Mathf.InverseLerp(bombExplosionRadius, 0, distance);
+
+                    hit.GetComponent<MinionController>().TakeDamage((int)(damagePercentCalc * bombExplosionDamage));
                 }
             }
-            Gizmos.DrawSphere(transform.position, bombExplosionRadius);
+            //Gizmos.DrawSphere(transform.position, bombExplosionRadius);
         }
-        //Destroy(gameObject);
+        Destroy(gameObject);
     }
 
     private void ThrowBomb()
     {
-        GetComponent<Rigidbody2D>().AddForce(mouseLocation * bombSpeed, ForceMode2D.Impulse);
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(collision.gameObject.tag == "Enemy")
-        {
-            if(collision.gameObject.GetComponent<BossController>() != null)
-            {
-                collision.gameObject.GetComponent<BossController>().TakeDamage(bombImpactDamage);
-            }
-            else if(collision.gameObject.GetComponent<MinionController>() != null)
-            {
-                collision.gameObject.GetComponent<MinionController>().TakeDamage(bombImpactDamage);
-            }
-            
-        }
+        GetComponent<Rigidbody2D>().AddForce((Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position).normalized * bombSpeed, ForceMode2D.Impulse);
     }
 }

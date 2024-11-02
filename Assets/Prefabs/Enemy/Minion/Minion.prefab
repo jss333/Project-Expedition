@@ -245,7 +245,7 @@ GameObject:
   - component: {fileID: 7019203772373754754}
   - component: {fileID: 7689781637602700296}
   - component: {fileID: 1523869240234072405}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Health Bar Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -320,7 +320,7 @@ GameObject:
   - component: {fileID: 9026980846854313241}
   - component: {fileID: 7074118938146588872}
   - component: {fileID: 7540265122180275837}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Health Bar Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -398,7 +398,7 @@ GameObject:
   - component: {fileID: 4806116223019529106}
   - component: {fileID: 2918724717463857661}
   - component: {fileID: 5330687850978151509}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Minion Health Bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
