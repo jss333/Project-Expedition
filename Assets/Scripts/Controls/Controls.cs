@@ -89,6 +89,15 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ThrowBomb"",
+                    ""type"": ""Button"",
+                    ""id"": ""9b3baa74-4695-4ad5-a0d6-8889dee27e25"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -212,6 +221,17 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""action"": ""Jump"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e4993a4b-4870-4e92-8aeb-a40e6a21a450"",
+                    ""path"": ""<Keyboard>/b"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ThrowBomb"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -295,6 +315,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         m_Std_UseAbility = m_Std.FindAction("UseAbility", throwIfNotFound: true);
         m_Std_PlayerMovement = m_Std.FindAction("PlayerMovement", throwIfNotFound: true);
         m_Std_Jump = m_Std.FindAction("Jump", throwIfNotFound: true);
+        m_Std_ThrowBomb = m_Std.FindAction("ThrowBomb", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Newaction = m_UI.FindAction("New action", throwIfNotFound: true);
@@ -368,6 +389,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Std_UseAbility;
     private readonly InputAction m_Std_PlayerMovement;
     private readonly InputAction m_Std_Jump;
+    private readonly InputAction m_Std_ThrowBomb;
     public struct StdActions
     {
         private @Controls m_Wrapper;
@@ -379,6 +401,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         public InputAction @UseAbility => m_Wrapper.m_Std_UseAbility;
         public InputAction @PlayerMovement => m_Wrapper.m_Std_PlayerMovement;
         public InputAction @Jump => m_Wrapper.m_Std_Jump;
+        public InputAction @ThrowBomb => m_Wrapper.m_Std_ThrowBomb;
         public InputActionMap Get() { return m_Wrapper.m_Std; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -409,6 +432,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @Jump.started += instance.OnJump;
             @Jump.performed += instance.OnJump;
             @Jump.canceled += instance.OnJump;
+            @ThrowBomb.started += instance.OnThrowBomb;
+            @ThrowBomb.performed += instance.OnThrowBomb;
+            @ThrowBomb.canceled += instance.OnThrowBomb;
         }
 
         private void UnregisterCallbacks(IStdActions instance)
@@ -434,6 +460,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @Jump.started -= instance.OnJump;
             @Jump.performed -= instance.OnJump;
             @Jump.canceled -= instance.OnJump;
+            @ThrowBomb.started -= instance.OnThrowBomb;
+            @ThrowBomb.performed -= instance.OnThrowBomb;
+            @ThrowBomb.canceled -= instance.OnThrowBomb;
         }
 
         public void RemoveCallbacks(IStdActions instance)
@@ -522,6 +551,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         void OnUseAbility(InputAction.CallbackContext context);
         void OnPlayerMovement(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
+        void OnThrowBomb(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {
