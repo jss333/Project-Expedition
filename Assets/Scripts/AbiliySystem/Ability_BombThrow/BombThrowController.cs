@@ -12,6 +12,7 @@ public class BombThrowController : MonoBehaviour
     //[SerializeField] private int bombImpactDamage = 40;
     [SerializeField] private int bombExplosionDamage = 300;
     [SerializeField] private float bombExplosionRadius = 2f;
+    [SerializeField] private AnimationCurve bombSpeedCurve;
 
     [Header("Variables")]
     private Vector2 spawnLocation;
@@ -19,6 +20,7 @@ public class BombThrowController : MonoBehaviour
 
     private float timeSinceSpawn = 0;
     private float mouseDistance;
+    private float sampleSpeed;
 
     private GameObject player;
     void Start()
@@ -30,14 +32,9 @@ public class BombThrowController : MonoBehaviour
         mouseDistance = Vector2.Distance(spawnLocation, mouseLocation);
         Debug.Log(mouseDistance);
 
-        if(mouseDistance / 1500 < .5)
-        {
-            bombSpeed = 10;
-        }
-        else
-        {
-            bombSpeed = (mouseDistance / 1500) * 20;
-        }
+        sampleSpeed = bombSpeedCurve.Evaluate(mouseDistance/2203);
+
+        bombSpeed = sampleSpeed * 20;
         Debug.Log(bombSpeed);
 
         ThrowBomb();
