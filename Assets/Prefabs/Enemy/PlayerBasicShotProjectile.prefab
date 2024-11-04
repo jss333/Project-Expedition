@@ -145,7 +145,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.0001
   m_LinearDrag: 0
   m_AngularDrag: 5
   m_GravityScale: 0
@@ -174,7 +174,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layersToCollideWith:
     serializedVersion: 2
-    m_Bits: 2624
+    m_Bits: 3648
   damageAmt: 2
   maxRange: 7
   onDestroyVFX: {fileID: 7076045874447551573, guid: 307e38cb804df2d4099aa7b1d0543abf,
