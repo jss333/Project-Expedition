@@ -7,6 +7,7 @@ using static UnityEngine.Rendering.DebugUI;
 public class FallingPlatform : HazardPlatform
 {
     [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] private bool isVanishing;
     float maxTime;
     float timer;
     Color color;
@@ -20,7 +21,7 @@ public class FallingPlatform : HazardPlatform
             {
                 timer += Time.deltaTime;
                 color.a = 1 - timer;
-                Debug.Log(1 - timer);
+                //Debug.Log(1 - timer);
                 spriteRenderer.color = color;
             }
             else
@@ -39,34 +40,26 @@ public class FallingPlatform : HazardPlatform
         maxTime = 1f;
         timer = 0f;
         isFading = true;
-        /*LeanTween.value(gameObject, 1, 0, disappearTime).setOnUpdate((value) =>
-        {
-            color.a = value;
-
-            spriteRenderer.color = color;
-        });  */
+  
 
         mainCollider.enabled = false;
-        gameObject.AddComponent<Rigidbody2D>();
+        if(!isVanishing)
+        {
+            gameObject.AddComponent<Rigidbody2D>();
+        }
     }
 
     protected override void ResetToSpwanPoint()
     {
         base.ResetToSpwanPoint();
 
-        Destroy(gameObject.GetComponent<Rigidbody2D>());
+        if(!isVanishing)
+        {
+            Destroy(gameObject.GetComponent<Rigidbody2D>());
+        }
+
         mainCollider.enabled = true;
         spriteRenderer.enabled = true;
         spriteRenderer.color = Vector4.one;
-    }
-
-    IEnumerator FadeOut()
-    {
-        while (timer < maxTime)
-        {
-            
-        }
-
-        yield return null;
     }
 }

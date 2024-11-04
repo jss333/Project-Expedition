@@ -8,6 +8,7 @@ public abstract class HazardPlatform : MonoBehaviour
     [SerializeField] protected float stayHazardousTime;
     [SerializeField] protected int shakeTime = 1;
     [SerializeField] protected Collider2D mainCollider;
+    [SerializeField] protected Collider2D triggerCollider;
 
     private Transform startPoint;
     protected bool isAlreadyActive;
@@ -36,8 +37,10 @@ public abstract class HazardPlatform : MonoBehaviour
     {
         LeanTween.cancel(gameObject);
 
-        LeanTween.rotateAround(gameObject, Vector3.forward, 3f, 0.02f).setEaseInOutSine().setLoopPingPong((shakeTime+1) * 10).setOnComplete(() =>
+        LeanTween.rotateAround(gameObject, Vector3.forward, 3f, 0.02f).setEaseInOutSine().setLoopCount(shakeTime * 10).setOnComplete(() =>
         {
+            LeanTween.cancel(gameObject);
+            transform.rotation = Quaternion.identity;
             ActivateAction();
         });
 
@@ -48,14 +51,15 @@ public abstract class HazardPlatform : MonoBehaviour
     {
         LeanTween.cancel(gameObject);
 
+        Debug.Log("Started Action");
         LeanTween.delayedCall(gameObject, stayHazardousTime, () => ReActivateAgain());
 
-        Debug.Log("Started Action");
     }
 
     protected virtual void ReActivateAgain()
     {
         ResetToSpwanPoint();
+        triggerCollider.enabled = true;
 
         Debug.Log("Reactivated");
     }
@@ -66,5 +70,10 @@ public abstract class HazardPlatform : MonoBehaviour
         transform.localScale = startPoint.localScale;
         transform.rotation = startPoint.rotation;
 
+    }
+
+    private void OnDisable()
+    {
+        LeanTween.cancel(gameObject);
     }
 }
