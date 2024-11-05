@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class VanishingPlatform : MonoBehaviour
@@ -7,6 +8,8 @@ public class VanishingPlatform : MonoBehaviour
     [Header("Refs")]
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private Collider2D mainCollider;
+    [SerializeField] private TextMeshProUGUI timerText;
+    [SerializeField] private GameObject timerHolder;
 
     [Header("Vanishing Settings")]
     [SerializeField] private float timeToVanish;
@@ -20,12 +23,23 @@ public class VanishingPlatform : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        if(timer > timeToVanish)
+        if(timer < timeToVanish)
+        {
+            timerHolder.SetActive(true);
+
+            float t = timeToVanish - timer;
+            Debug.Log(t);
+            timerText.text = ((int)t).ToString();
+        }
+
+        if (timer > timeToVanish)
         {
             //Vanish
 
+            timerHolder.SetActive(false);
+
             float t = (float)(timeToVanish + vanishingTime - timer) / (float)(vanishingTime);
-            
+
             color = Vector4.one;
             color.a = t;
             spriteRenderer.color = color;
