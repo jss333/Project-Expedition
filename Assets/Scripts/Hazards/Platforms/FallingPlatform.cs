@@ -16,7 +16,7 @@ public class FallingPlatform : HazardPlatform
 
     private void Update()
     {
-        /*if (isFading)
+        if (isFading)
         {
             if(timer <  maxTime)
             {
@@ -30,7 +30,7 @@ public class FallingPlatform : HazardPlatform
                 visual.SetActive(false);
                 isFading = false;
             } 
-        } */
+        } 
     }
 
     protected override void ActivateAction()
@@ -40,7 +40,7 @@ public class FallingPlatform : HazardPlatform
 
         spriteRenderer.enabled = false;
         color = Vector4.one;
-        maxTime = 0.15f;
+        maxTime = 0.2f;
         timer = 0f; 
         visual.SetActive(true);
         isFading = true;

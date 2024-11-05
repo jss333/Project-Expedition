@@ -15,7 +15,7 @@ public abstract class HazardPlatform : MonoBehaviour
     [SerializeField] protected GameObject timerHolder;
 
     private Transform startPoint;
-    protected bool isAlreadyActive;
+    protected bool isAlreadyTriggered;
 
 
     protected virtual void Start()
@@ -33,6 +33,7 @@ public abstract class HazardPlatform : MonoBehaviour
         if(collision.CompareTag("Player"))
         {
             Debug.Log("test");
+            if (isAlreadyTriggered) return;
             TiggerAction();
         }
     }
@@ -40,6 +41,8 @@ public abstract class HazardPlatform : MonoBehaviour
     protected virtual void TiggerAction()
     {
         LeanTween.cancel(gameObject);
+        isAlreadyTriggered = true;
+
         /*
         LeanTween.rotateAround(gameObject, Vector3.forward, 3f, 0.02f).setEaseInOutSine().setTime(shakeTime).setOnComplete(() =>
         {
@@ -87,6 +90,7 @@ public abstract class HazardPlatform : MonoBehaviour
         transform.localScale = startPoint.localScale;
         transform.rotation = startPoint.rotation;
 
+        isAlreadyTriggered = false;
     }
 
     private void OnDisable()
