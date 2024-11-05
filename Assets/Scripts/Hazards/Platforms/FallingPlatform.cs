@@ -8,6 +8,7 @@ public class FallingPlatform : HazardPlatform
 {
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private bool isVanishing;
+    [SerializeField] private GameObject visual;
     float maxTime;
     float timer;
     Color color;
@@ -15,20 +16,21 @@ public class FallingPlatform : HazardPlatform
 
     private void Update()
     {
-        if (isFading)
+        /*if (isFading)
         {
             if(timer <  maxTime)
             {
                 timer += Time.deltaTime;
                 color.a = 1 - timer;
-                //Debug.Log(1 - timer);
                 spriteRenderer.color = color;
             }
             else
             {
+                spriteRenderer.enabled = false;
+                visual.SetActive(false);
                 isFading = false;
-            }
-        }
+            } 
+        } */
     }
 
     protected override void ActivateAction()
@@ -36,12 +38,14 @@ public class FallingPlatform : HazardPlatform
         base.ActivateAction();
         Debug.Log("falling Action");
 
+        spriteRenderer.enabled = false;
         color = Vector4.one;
-        maxTime = 1f;
-        timer = 0f;
+        maxTime = 0.15f;
+        timer = 0f; 
+        visual.SetActive(true);
         isFading = true;
-  
 
+        triggerCollider.enabled = false;
         mainCollider.enabled = false;
         if(!isVanishing)
         {
@@ -58,6 +62,8 @@ public class FallingPlatform : HazardPlatform
             Destroy(gameObject.GetComponent<Rigidbody2D>());
         }
 
+        spriteRenderer.enabled = true;
+        visual.SetActive(false);
         mainCollider.enabled = true;
         spriteRenderer.enabled = true;
         spriteRenderer.color = Vector4.one;

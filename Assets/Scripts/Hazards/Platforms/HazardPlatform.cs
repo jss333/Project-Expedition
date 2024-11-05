@@ -1,14 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public abstract class HazardPlatform : MonoBehaviour
 {
     [SerializeField] protected float disappearTime;
     [SerializeField] protected float stayHazardousTime;
-    [SerializeField] protected int shakeTime = 1;
+    [SerializeField] protected float shakeTime = 1;
     [SerializeField] protected Collider2D mainCollider;
     [SerializeField] protected Collider2D triggerCollider;
+    [SerializeField] protected Animator animator;
+    [SerializeField] protected TextMeshProUGUI timerText;
+    [SerializeField] protected GameObject timerHolder;
 
     private Transform startPoint;
     protected bool isAlreadyActive;
@@ -36,15 +40,28 @@ public abstract class HazardPlatform : MonoBehaviour
     protected virtual void TiggerAction()
     {
         LeanTween.cancel(gameObject);
-
-        LeanTween.rotateAround(gameObject, Vector3.forward, 3f, 0.02f).setEaseInOutSine().setLoopCount(shakeTime * 10).setOnComplete(() =>
+        /*
+        LeanTween.rotateAround(gameObject, Vector3.forward, 3f, 0.02f).setEaseInOutSine().setTime(shakeTime).setOnComplete(() =>
         {
             LeanTween.cancel(gameObject);
             transform.rotation = Quaternion.identity;
             ActivateAction();
-        });
+        }); */
 
-        
+        animator.SetBool("Shake", true);
+
+        float timer = shakeTime;
+        timerHolder.SetActive(true);
+
+        LeanTween.value(gameObject, timer, 0, shakeTime).setOnUpdate((value) =>
+        {
+            timerText.text = ((int)value).ToString();
+        }).setOnComplete(() =>
+        {
+            ActivateAction();
+            timerHolder.SetActive(false);
+            animator.SetBool("Shake", false);
+        });
     }
 
     protected virtual void ActivateAction()
