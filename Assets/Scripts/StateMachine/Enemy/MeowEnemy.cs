@@ -20,11 +20,33 @@ public class MeowEnemy : Enemy
 
     [SerializeField] private LayerMask groundLayerMask;
 
+    [SerializeField] private Transform raycastPoint;
+
+    [SerializeField] private float horizontalCheckDistance = 1f;
+
+    [SerializeField] private float downCheckDistance = 1f;
+
+    [SerializeField] private float idleMoveSpeed = 1f;
+
+    private Vector2 horizontalRaycastVector;
+
+    private Vector2 downRaycastVector;
+
     public GameObject BallProjectile => ball;
 
     public float ShootForce => shootForce;
     public float NewPointRadius => newPointRadius;
     public LayerMask GroundLayerMask => groundLayerMask;
+
+    public Transform RaycastPoint => raycastPoint;
+
+    public float HorizontalCheckDistance => horizontalCheckDistance;
+    public float DownCheckDistance => downCheckDistance;
+
+    public float IdleMoveSpeed => idleMoveSpeed;
+
+    public Vector2 DownRaycastVector => downRaycastVector;
+    public Vector2 HorizontalRaycastVector => horizontalRaycastVector;
 
 
     protected override void Awake()
@@ -89,5 +111,23 @@ public class MeowEnemy : Enemy
     public void MoveTo(Vector2 newPosition)
     {
         transform.Translate(newPosition);
+    }
+
+    private void OnDrawGizmos()
+    {
+        Debug.DrawLine(raycastPoint.position, (Vector2)raycastPoint.position + (Vector2.right * horizontalCheckDistance), Color.magenta);
+
+        horizontalRaycastVector = (Vector2)raycastPoint.position + ((Vector2)raycastPoint.transform.right * horizontalCheckDistance);
+        downRaycastVector = new Vector2(horizontalRaycastVector.x, horizontalRaycastVector.y + downCheckDistance);
+
+        Debug.DrawLine(horizontalRaycastVector, new Vector2(horizontalRaycastVector.x, horizontalRaycastVector.y - downCheckDistance), Color.blue);
+    }
+
+    public void FlipRaycastVectors()
+    {
+        LeanTween.rotateAroundLocal(raycastPoint.gameObject, raycastPoint.transform.up, 180, 0);
+        //downRaycastVector = new Vector2(downRaycastVector.x * -1, downRaycastVector.y);
+        //horizontalCheckDistance *= -1;
+        //horizontalRaycastVector = new Vector2(horizontalRaycastVector.x * -1, horizontalRaycastVector.y);
     }
 }

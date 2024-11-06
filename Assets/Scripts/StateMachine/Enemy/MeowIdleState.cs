@@ -9,6 +9,9 @@ public class MeowIdleState : EnemyState
     private Vector2 destination;
     private float remainingDistance;
     private bool hasReached = false;
+    Vector2 dir;
+
+
     public MeowIdleState(Enemy enemyBase, EnemyStateMachine stateMachine, string animBoolName, MeowEnemy enemy, Color color) : base(enemy, stateMachine, animBoolName)
     {
         this.meowEnemy = enemy;
@@ -21,7 +24,8 @@ public class MeowIdleState : EnemyState
 
         meowEnemy.spriteRenderer.color = color;
 
-        PickRandomPoint();
+        dir = (Vector2)meowEnemy.transform.right;
+        //PickRandomPoint();
     }
 
     public override void OnExit()
@@ -35,14 +39,35 @@ public class MeowIdleState : EnemyState
     {
         base.OnUpdate();
 
+
+        RaycastHit2D horizontalhit = Physics2D.Raycast(meowEnemy.RaycastPoint.position, dir, meowEnemy.HorizontalCheckDistance, meowEnemy.GroundLayerMask);
+        RaycastHit2D downhit       = Physics2D.Raycast(meowEnemy.HorizontalRaycastVector, meowEnemy.DownRaycastVector, meowEnemy.DownCheckDistance * -1, meowEnemy.GroundLayerMask);
+
+        if (horizontalhit.collider == null && downhit.collider != null)
+        {
+            meowEnemy.transform.Translate(dir * meowEnemy.IdleMoveSpeed * Time.deltaTime);
+        }
+        else
+        {
+        }
+
+        if (downhit.collider == null || horizontalhit.collider != null)
+        {
+            meowEnemy.FlipRaycastVectors();
+            dir *= -1;
+        }
+
+
+        //meowEnemy.transform.Translate(meowEnemy.transform.right);
+
         //Debug.Log("Idle");
 
-        Debug.Log(hasReached);
+        //Debug.Log(hasReached);
 
-        if (hasReached)
+        /*if (hasReached)
         {
             PickRandomPoint();
-        }                                                                                   
+        }*/
 
         if (meowEnemy.IsAgro())
         {
