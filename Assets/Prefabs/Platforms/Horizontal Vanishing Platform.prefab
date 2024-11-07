@@ -156,6 +156,7 @@ MonoBehaviour:
   mainCollider: {fileID: 3430273102149796804}
   timerText: {fileID: 1507649315902138131}
   timerHolder: {fileID: 8805176474461606075}
+  timeToStartCycling: 0
   timeToVanish: 3
   timeToStayVanished: 3
   vanishingTime: 1
@@ -235,8 +236,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4284850909
-  m_fontColor: {r: 0.8679245, g: 0.63530415, b: 0.39711642, a: 1}
+    rgba: 4278255594
+  m_fontColor: {r: 0.9160466, g: 1, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -253,8 +254,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 127.37
-  m_fontSizeBase: 127.37
+  m_fontSize: 190
+  m_fontSizeBase: 190
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

@@ -12,6 +12,7 @@ public class VanishingPlatform : MonoBehaviour
     [SerializeField] private GameObject timerHolder;
 
     [Header("Vanishing Settings")]
+    [SerializeField] private float timeToStartCycling;
     [SerializeField] private float timeToVanish;
     [SerializeField] private float timeToStayVanished;
     [SerializeField] private float vanishingTime;
@@ -19,11 +20,25 @@ public class VanishingPlatform : MonoBehaviour
     float timer;
     Color color;
 
+    bool started;
+
     private void FixedUpdate()
     {
         timer += Time.deltaTime;
 
-        if(timer < timeToVanish)
+        
+        if(timer > timeToStartCycling && !started)
+        {
+            started = true;
+            timer = 0;
+        }
+
+        if (!started)
+        {
+            return;
+        }
+
+        if (timer < timeToVanish)
         {
             timerHolder.SetActive(true);
 

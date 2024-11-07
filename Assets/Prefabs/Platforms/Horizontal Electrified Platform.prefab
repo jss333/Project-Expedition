@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 35c28ad97f52c5e479032a2502d1b9e0, type: 3}
-  m_Color: {r: 0, g: 0.70466566, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.6273585, b: 0.6273585, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -209,8 +209,8 @@ MonoBehaviour:
   timerHolder: {fileID: 4889085762425394846}
   electricCaster: {fileID: 1210012526053372111, guid: 2230af13ba58f56428061b95d0ea1e02,
     type: 3}
-  damage: 10
-  timeToCastDamage: 1
+  damage: 3
+  timeToCastDamage: 0.25
   maxTimeToStayElectrified: 3
 --- !u!95 &4752970472840809302
 Animator:
@@ -309,8 +309,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4284850909
-  m_fontColor: {r: 0.8679245, g: 0.63530415, b: 0.39711642, a: 1}
+    rgba: 4294956288
+  m_fontColor: {r: 0, g: 0.83644104, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -327,8 +327,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 207.23
-  m_fontSizeBase: 207.23
+  m_fontSize: 200
+  m_fontSizeBase: 200
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
