@@ -157,8 +157,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   disappearTime: 1
-  stayHazardousTime: 3
-  shakeTime: 3
+  stayHiddenTime: 3
+  shakeTime: 1.5
   mainCollider: {fileID: 2678528886299784407}
   triggerCollider: {fileID: 2530492322352916004}
   animator: {fileID: 9073713607978684701}
@@ -255,7 +255,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.468811, y: 1.6800001}
+    oldSize: {x: 4.4920864, y: 1.6800001}
     newSize: {x: 22.249876, y: 4.4}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -308,7 +308,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.468811, y: 1.6800001}
+    oldSize: {x: 4.4920864, y: 1.6800001}
     newSize: {x: 22.249876, y: 4.4}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

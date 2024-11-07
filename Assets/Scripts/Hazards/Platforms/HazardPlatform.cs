@@ -6,7 +6,7 @@ using UnityEngine;
 public abstract class HazardPlatform : MonoBehaviour
 {
     [SerializeField] protected float disappearTime;
-    [SerializeField] protected float stayHazardousTime;
+    [SerializeField] protected float stayHiddenTime;
     [SerializeField] protected float shakeTime = 1;
     [SerializeField] protected Collider2D mainCollider;
     [SerializeField] protected Collider2D triggerCollider;
@@ -72,7 +72,7 @@ public abstract class HazardPlatform : MonoBehaviour
         LeanTween.cancel(gameObject);
 
         Debug.Log("Started Action");
-        LeanTween.delayedCall(gameObject, stayHazardousTime, () => ReActivateAgain());
+        LeanTween.delayedCall(gameObject, stayHiddenTime, () => ReActivateAgain());
 
     }
 

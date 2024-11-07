@@ -200,7 +200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   disappearTime: 0
-  stayHazardousTime: 3
+  stayHiddenTime: 3
   shakeTime: 3
   mainCollider: {fileID: 8356504948089676278}
   triggerCollider: {fileID: 8913394884777872442}
@@ -222,7 +222,7 @@ Animator:
   m_GameObject: {fileID: 1214042653374250081}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 08f1e04404006d74d8f7435e13119e8c, type: 2}
+  m_Controller: {fileID: 9100000, guid: 3fa80c49faaf8e443a723eda59f92f54, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
