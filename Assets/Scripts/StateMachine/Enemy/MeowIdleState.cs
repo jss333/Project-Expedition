@@ -49,11 +49,7 @@ public class MeowIdleState : EnemyState
 
         if(horizontalhit.collider != null)
         {
-            /*if(timeSinceFlip >= maxTimeSinceFlip)
-            {
-                meowEnemy.FlipRaycastVectors();
-                timeSinceFlip = 0;
-            } */
+            
         }
 
         if(timeSinceFlip < maxTimeSinceFlip)
@@ -66,7 +62,7 @@ public class MeowIdleState : EnemyState
             Debug.Log(downhit.collider.name);
         }
 
-        if (horizontalhit.collider == null /*&& downhit.collider != null*/)
+        if (horizontalhit.collider == null && downhit.collider != null)
         {
             meowEnemy.transform.Translate(meowEnemy.RaycastPoint.right * meowEnemy.IdleMoveSpeed * Time.deltaTime);
         }
@@ -76,6 +72,11 @@ public class MeowIdleState : EnemyState
 
         if (downhit.collider == null || horizontalhit.collider != null)
         {
+            if (timeSinceFlip >= maxTimeSinceFlip)
+            {
+                meowEnemy.FlipRaycastVectors();
+                timeSinceFlip = 0;
+            }
             //dir *= -1;
         }
 
