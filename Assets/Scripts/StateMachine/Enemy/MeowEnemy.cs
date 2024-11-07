@@ -70,6 +70,9 @@ public class MeowEnemy : Enemy
     protected override void Update()
     {
         base.Update();
+
+        horizontalRaycastVector = (Vector2)raycastPoint.position + ((Vector2)raycastPoint.transform.right.normalized * horizontalCheckDistance);
+        downRaycastVector = new Vector2(horizontalRaycastVector.x, Vector2.up.y);
     }
 
     private void OnDestroy()
@@ -113,16 +116,20 @@ public class MeowEnemy : Enemy
         transform.Translate(newPosition);
     }
 
-    private void OnDrawGizmos()
+    /*private void OnDrawGizmos()
     {
-        Debug.DrawLine(raycastPoint.position, (Vector2)raycastPoint.position + (Vector2.right * horizontalCheckDistance), Color.magenta);
+        Debug.DrawRay(raycastPoint.position, (Vector2)raycastPoint.transform.right.normalized * horizontalCheckDistance, Color.magenta);
 
-        horizontalRaycastVector = (Vector2)raycastPoint.position + ((Vector2)raycastPoint.transform.right * horizontalCheckDistance);
-        downRaycastVector = new Vector2(horizontalRaycastVector.x, horizontalRaycastVector.y + downCheckDistance);
+        // Debug.DrawLine(raycastPoint.position, (Vector2)raycastPoint.position + ((Vector2)raycastPoint.transform.right.normalized * horizontalCheckDistance), Color.magenta);
 
-        Debug.DrawLine(horizontalRaycastVector, new Vector2(horizontalRaycastVector.x, horizontalRaycastVector.y - downCheckDistance), Color.blue);
-    }
+        horizontalRaycastVector = (Vector2)raycastPoint.position + ((Vector2)raycastPoint.transform.right.normalized * horizontalCheckDistance);
+        downRaycastVector = new Vector2(-horizontalRaycastVector.y, horizontalRaycastVector.x);
 
+        Debug.DrawRay(HorizontalRaycastVector, DownRaycastVector.normalized, Color.blue);
+        //Debug.DrawLine(horizontalRaycastVector, new Vector2(horizontalRaycastVector.x, horizontalRaycastVector.y + downCheckDistance), Color.blue);
+    } */
+
+    [ContextMenu("Flip")]
     public void FlipRaycastVectors()
     {
         LeanTween.rotateAroundLocal(raycastPoint.gameObject, raycastPoint.transform.up, 180, 0);
