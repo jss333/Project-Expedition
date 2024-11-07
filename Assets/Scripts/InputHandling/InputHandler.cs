@@ -15,6 +15,8 @@ public class InputHandler : MonoBehaviour, IStdActions , IUIActions
     public Action OnCycleBackward;
     public Action OnJumpDown;
     public Action OnJumpUp;
+    public Action OnThrowBomb;
+    public Action OnThrowStickyBomb;
 
     public Action OnHandlePausingAndResuming;
     public Action OnHandleDebugMenuOpenning;
@@ -143,5 +145,19 @@ public class InputHandler : MonoBehaviour, IStdActions , IUIActions
 
     public void OnNewaction(InputAction.CallbackContext context)
     {
+    }
+    void IStdActions.OnThrowBomb(InputAction.CallbackContext context)
+    {
+        if (context.phase == InputActionPhase.Started)
+        {
+            OnThrowBomb?.Invoke();
+        }
+    }
+    void IStdActions.OnThrowStickyBomb(InputAction.CallbackContext context)
+    {
+        if (context.phase == InputActionPhase.Started)
+        {
+            OnThrowStickyBomb?.Invoke();
+        }
     }
 }

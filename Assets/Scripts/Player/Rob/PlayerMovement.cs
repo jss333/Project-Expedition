@@ -9,6 +9,8 @@ public class PlayerMovement : MonoBehaviour
     [Header("References")]
     public Transform groundCheckObj;
     private AbilityToggleUI toggleUI;
+    [SerializeField] private GameObject bomb;
+    [SerializeField] private GameObject bombSticky;
     [Tooltip("Layer to define what is considered 'ground'")]
     public LayerMask groundLayer;
     public LayerMask bossLayer;
@@ -53,6 +55,8 @@ public class PlayerMovement : MonoBehaviour
         InputHandler.Singleton.OnPlayerMovementHandle += HandelMovement;
         InputHandler.Singleton.OnJumpDown += JumpDown;
         InputHandler.Singleton.OnJumpUp += JumpUp;
+        InputHandler.Singleton.OnThrowBomb += ThrowBomb;
+        InputHandler.Singleton.OnThrowStickyBomb += ThrowStickyBomb;
     }
 
     private void OnDestroy()
@@ -60,6 +64,8 @@ public class PlayerMovement : MonoBehaviour
         InputHandler.Singleton.OnPlayerMovementHandle -= HandelMovement;
         InputHandler.Singleton.OnJumpDown -= JumpDown;
         InputHandler.Singleton.OnJumpUp -= JumpUp;
+        InputHandler.Singleton.OnThrowBomb -= ThrowBomb;
+        InputHandler.Singleton.OnThrowStickyBomb -= ThrowStickyBomb;
     }
 
 
@@ -72,6 +78,8 @@ public class PlayerMovement : MonoBehaviour
         //HandleJumpInput();
         ClampVerticalVelocity();
         isAirJumpSkillAcquired = toggleUI.DoubleJump;
+
+        
     }
 
 
@@ -174,5 +182,15 @@ public class PlayerMovement : MonoBehaviour
     private void ClampVerticalVelocity()
     {
         playerRb.velocity = new Vector2(playerRb.velocity.x, Mathf.Clamp(playerRb.velocity.y, -maxVerticalVelocity, maxVerticalVelocity));
+    }
+
+    //this is a temp bomb spawning function
+    private void ThrowBomb()
+    {
+        Instantiate(bomb, transform.position, Quaternion.identity);
+    }
+    private void ThrowStickyBomb()
+    {
+        Instantiate(bombSticky, FindFirstObjectByType<FollowerController>().transform.position, Quaternion.identity);
     }
 }

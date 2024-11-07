@@ -10,13 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 5634901958537801590}
   - component: {fileID: 348001607907476706}
-  - component: {fileID: 862526121453958950}
-  - component: {fileID: 2358549528649128718}
   - component: {fileID: -3214555015778094342}
   - component: {fileID: -2893040643860357271}
   - component: {fileID: 4909417910734677740}
+  - component: {fileID: 1368074845727070049}
   m_Layer: 0
-  m_Name: Minion
+  m_Name: MinionTesting
   m_TagString: Minion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37,6 +36,7 @@ Transform:
   m_Children:
   - {fileID: 5026959863030684914}
   - {fileID: 1003880002372108823}
+  - {fileID: 4916891223843050128}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &348001607907476706
@@ -91,71 +91,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &862526121453958950
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 449684760226055840}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d27042e14824dc4c897463ef51ddfde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bossInfo: {fileID: 0}
-  anchor: {fileID: 0}
-  spawner: {fileID: 0}
-  healthBar: {fileID: 2918724717463857661}
-  maxhealth: 300
-  moveSpeed: 6
-  collisionDmg: 5
-  currentHealth: 20
-  projectile: {fileID: 4767921678106280535, guid: 5cda2d0d30d07624b85208d0c5ba089e,
-    type: 3}
-  attackPeriod: 2
-  attackTimer: 0
-  burstSize: 3
-  burstDensity: 0.2
-  burstTimer: 0
-  shotNum: 0
-  launchPoint: {fileID: 1003880002372108823}
-  launchAngle: {x: 0, y: 0, z: 0, w: 0}
---- !u!70 &2358549528649128718
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 449684760226055840}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.024086952, y: -0.01605773}
-  m_Size: {x: 1.0885153, y: 1.2972693}
-  m_Direction: 0
 --- !u!50 &-3214555015778094342
 Rigidbody2D:
   serializedVersion: 4
@@ -239,6 +174,54 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &1368074845727070049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 449684760226055840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 015140d9aca17044ab2896ce64284ea8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageNumberPopupPrefab: {fileID: 1038287333503213384, guid: 829610abb2180f84a92e352045cc7092,
+    type: 3}
+  popupLabelSource: {fileID: 4916891223843050128}
+  maxhealth: 1000
+  currentHealth: 1000
+--- !u!1 &1333129298858907327
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4916891223843050128}
+  m_Layer: 0
+  m_Name: NumberPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4916891223843050128
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1333129298858907327}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.487, y: 0.555, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5634901958537801590}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2340894105315849776
 GameObject:
   m_ObjectHideFlags: 0
