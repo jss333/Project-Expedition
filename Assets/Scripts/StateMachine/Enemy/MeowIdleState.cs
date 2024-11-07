@@ -10,7 +10,9 @@ public class MeowIdleState : EnemyState
     private float remainingDistance;
     private bool hasReached = false;
     Vector2 dir;
+    private float maxTimeSinceFlip = 0.1f;
 
+    private float timeSinceFlip;
 
     public MeowIdleState(Enemy enemyBase, EnemyStateMachine stateMachine, string animBoolName, MeowEnemy enemy, Color color) : base(enemy, stateMachine, animBoolName)
     {
@@ -24,7 +26,7 @@ public class MeowIdleState : EnemyState
 
         meowEnemy.spriteRenderer.color = color;
 
-        dir = (Vector2)meowEnemy.transform.right;
+        dir = (Vector2)meowEnemy.RaycastPoint.right.normalized;
         //PickRandomPoint();
     }
 
@@ -39,13 +41,34 @@ public class MeowIdleState : EnemyState
     {
         base.OnUpdate();
 
+        Debug.DrawRay(meowEnemy.RaycastPoint.position, meowEnemy.RaycastPoint.right * meowEnemy.HorizontalCheckDistance, Color.blue);
+        Debug.DrawRay(meowEnemy.HorizontalRaycastVector, meowEnemy.DownRaycastVector * meowEnemy.DownCheckDistance, Color.green);
 
-        RaycastHit2D horizontalhit = Physics2D.Raycast(meowEnemy.RaycastPoint.position, dir, meowEnemy.HorizontalCheckDistance, meowEnemy.GroundLayerMask);
-        RaycastHit2D downhit       = Physics2D.Raycast(meowEnemy.HorizontalRaycastVector, meowEnemy.DownRaycastVector, meowEnemy.DownCheckDistance * -1, meowEnemy.GroundLayerMask);
+        RaycastHit2D horizontalhit = Physics2D.Raycast(meowEnemy.RaycastPoint.position, meowEnemy.RaycastPoint.right, meowEnemy.HorizontalCheckDistance, meowEnemy.GroundLayerMask);
+        RaycastHit2D downhit       = Physics2D.Raycast(meowEnemy.HorizontalRaycastVector, meowEnemy.DownRaycastVector, meowEnemy.DownCheckDistance, meowEnemy.GroundLayerMask);
 
-        if (horizontalhit.collider == null && downhit.collider != null)
+        if(horizontalhit.collider != null)
         {
-            meowEnemy.transform.Translate(dir * meowEnemy.IdleMoveSpeed * Time.deltaTime);
+            /*if(timeSinceFlip >= maxTimeSinceFlip)
+            {
+                meowEnemy.FlipRaycastVectors();
+                timeSinceFlip = 0;
+            } */
+        }
+
+        if(timeSinceFlip < maxTimeSinceFlip)
+        {
+            timeSinceFlip += Time.deltaTime;
+        }    
+
+        if(downhit.collider != null)
+        {
+            Debug.Log(downhit.collider.name);
+        }
+
+        if (horizontalhit.collider == null /*&& downhit.collider != null*/)
+        {
+            meowEnemy.transform.Translate(meowEnemy.RaycastPoint.right * meowEnemy.IdleMoveSpeed * Time.deltaTime);
         }
         else
         {
@@ -53,8 +76,7 @@ public class MeowIdleState : EnemyState
 
         if (downhit.collider == null || horizontalhit.collider != null)
         {
-            meowEnemy.FlipRaycastVectors();
-            dir *= -1;
+            //dir *= -1;
         }
 
 
