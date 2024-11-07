@@ -33,19 +33,19 @@ public class BossInformation : MonoBehaviour
         {
             bossShield = FindFirstObjectByType<BossShield>();
             minionCount--;
-            if (minionCount >= 2)
-            {
-                bossShield.shieldDamaged(1);
-            }
-            else if (minionCount == 1)
-            {
-                bossShield.shieldDamaged(2);
-            }
             if (minionCount <= 0)
             {
                 SetImmune(false);
                 bossShield.playShieldBreakAnimation();
             }
+        }
+        if (minionCount >= 2)
+        {
+            bossShield.shieldDamaged(1);
+        }
+        else if (minionCount == 1)
+        {
+            bossShield.shieldDamaged(2);
         }
     }
     public void SetMinionCount(int count)
