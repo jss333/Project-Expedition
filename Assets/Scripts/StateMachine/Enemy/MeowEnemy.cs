@@ -72,7 +72,7 @@ public class MeowEnemy : Enemy
         base.Update();
 
         horizontalRaycastVector = (Vector2)raycastPoint.position + ((Vector2)raycastPoint.transform.right.normalized * horizontalCheckDistance);
-        downRaycastVector = new Vector2(horizontalRaycastVector.x, Vector2.up.y);
+        downRaycastVector = -Vector2.up * downCheckDistance;
     }
 
     private void OnDestroy()

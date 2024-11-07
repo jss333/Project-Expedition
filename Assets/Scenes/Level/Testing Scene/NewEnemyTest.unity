@@ -2472,9 +2472,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 2112
   raycastPoint: {fileID: 220735785}
-  horizontalCheckDistance: 2.02
+  horizontalCheckDistance: 0.8
   downCheckDistance: 1.93
-  idleMoveSpeed: 0
+  idleMoveSpeed: 0.8
 --- !u!58 &585027633
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -3601,7 +3601,7 @@ PrefabInstance:
     - target: {fileID: 6965143306446923476, guid: bfe30e0a894d02d488d00f5203b8ec9a,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8142056004692796415, guid: bfe30e0a894d02d488d00f5203b8ec9a,
         type: 3}
@@ -4760,7 +4760,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1204898063}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
   m_Name: 
