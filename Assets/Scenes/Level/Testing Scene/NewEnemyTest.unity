@@ -2467,7 +2467,6 @@ MonoBehaviour:
   ball: {fileID: 197443141783050435, guid: 48ba9f88ea1640b4a833e631bc223d38, type: 3}
   ballSpawn: {fileID: 1902307588}
   shootForce: 20
-  newPointRadius: 10
   groundLayerMask:
     serializedVersion: 2
     m_Bits: 2112
@@ -2475,6 +2474,9 @@ MonoBehaviour:
   horizontalCheckDistance: 0.8
   downCheckDistance: 1.93
   idleMoveSpeed: 0.8
+  damageCaster: {fileID: 8115666507150881593, guid: a68f9cd16941283408cd8eaf0996bb9d,
+    type: 3}
+  meleeAttackRange: 1
 --- !u!58 &585027633
 CircleCollider2D:
   m_ObjectHideFlags: 0

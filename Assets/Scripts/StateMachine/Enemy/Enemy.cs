@@ -67,7 +67,7 @@ public class Enemy : Entity
         return isAgro;
     }
 
-    public virtual bool IsAlerted()
+    public virtual bool DetectedPlayerInRange()
     {
         return isAlerted && !isAgro;
     }

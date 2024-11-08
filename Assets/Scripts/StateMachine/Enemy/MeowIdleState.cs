@@ -97,9 +97,9 @@ public class MeowIdleState : EnemyState
             stateMachine.ChangeState(meowEnemy.meowTraverseState);
         }
 
-        if (meowEnemy.IsAlerted())
+        if (meowEnemy.DetectedPlayerInRange())
         {
-            stateMachine.ChangeState(meowEnemy.meowAlertedState);
+            stateMachine.ChangeState(meowEnemy.meowRangeAttackState);
         }
     }
 
