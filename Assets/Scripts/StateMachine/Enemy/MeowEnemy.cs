@@ -6,18 +6,19 @@ public class MeowEnemy : Enemy
 {
     public MeowIdleState meowIdleState { get; private set; }
 
-    public MeowTraverseState meowTraverseState { get; private set; }
+    public MeowMeleeAttackState meowTraverseState { get; private set; }
 
-    public MeowAlertedState meowAlertedState { get; private set; }
+    public MeowRangeAttackState meowRangeAttackState { get; private set; }
 
+
+    [Header("Range Attack Stat Parameters")]
     [SerializeField] private GameObject ball;
 
     [SerializeField] private Transform ballSpawn;
 
     [SerializeField] private float shootForce;
 
-    [SerializeField] private float newPointRadius;
-
+    [Header("Idle Stat Parameters")]
     [SerializeField] private LayerMask groundLayerMask;
 
     [SerializeField] private Transform raycastPoint;
@@ -28,6 +29,10 @@ public class MeowEnemy : Enemy
 
     [SerializeField] private float idleMoveSpeed = 1f;
 
+    [Header("Melee Attack Stat Parameters")]
+    [SerializeField] private GameObject damageCaster;
+    [SerializeField] private float meleeAttackRange = 1f;
+
     private Vector2 horizontalRaycastVector;
 
     private Vector2 downRaycastVector;
@@ -35,7 +40,6 @@ public class MeowEnemy : Enemy
     public GameObject BallProjectile => ball;
 
     public float ShootForce => shootForce;
-    public float NewPointRadius => newPointRadius;
     public LayerMask GroundLayerMask => groundLayerMask;
 
     public Transform RaycastPoint => raycastPoint;
@@ -48,14 +52,16 @@ public class MeowEnemy : Enemy
     public Vector2 DownRaycastVector => downRaycastVector;
     public Vector2 HorizontalRaycastVector => horizontalRaycastVector;
 
+    public float MeleeAttackRange => meleeAttackRange;
+
 
     protected override void Awake()
     {
         base.Awake();
 
         meowIdleState = new MeowIdleState(this, stateMachine, "Idle", this, Color.white);
-        meowAlertedState = new MeowAlertedState(this, stateMachine, "Traverse", this, Color.yellow);
-        meowTraverseState = new MeowTraverseState(this, stateMachine, "Traverse", this, Color.red);
+        meowRangeAttackState = new MeowRangeAttackState(this, stateMachine, "Traverse", this, Color.yellow);
+        meowTraverseState = new MeowMeleeAttackState(this, stateMachine, "Traverse", this, Color.red);
     }
 
     protected override void Start()
@@ -96,6 +102,11 @@ public class MeowEnemy : Enemy
                 rb.AddForce((ballSpawn.right - playerMovement.transform.position).normalized * shootForce, ForceMode2D.Impulse);
             }
         }
+    }
+     
+    public void SpawnDamageCaster(Vector2 position)
+    {
+        Instantiate(damageCaster, position, Quaternion.identity);
     }
 
     public void Traverse(Vector2 newPosition)
