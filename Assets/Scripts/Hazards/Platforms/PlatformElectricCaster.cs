@@ -56,6 +56,7 @@ public class PlatformElectricCaster : MonoBehaviour
 
     private void RemoveFromScene()
     {
+        CyclingElectricPlatform.ResetTimer();
         Destroy(gameObject);
     }
 }

@@ -43,7 +43,7 @@ public class VanishingPlatform : MonoBehaviour
             timerHolder.SetActive(true);
 
             float t = timeToVanish - timer;
-            Debug.Log(t);
+            //Debug.Log(t);
             timerText.text = ((int)t).ToString();
         }
 
