@@ -10,6 +10,7 @@ public class MeowMeleeAttackState : EnemyState
     private float maxCoolDown;
 
     private float coolDownTimer;
+    Transform playerPoint;
 
     public MeowMeleeAttackState(Enemy enemyBase, EnemyStateMachine stateMachine, string animBoolName, MeowEnemy enemy, Color color) : base(enemyBase, stateMachine, animBoolName)
     {
@@ -21,6 +22,8 @@ public class MeowMeleeAttackState : EnemyState
     {
         base.OnEnter();
 
+        playerPoint = GameObject.FindGameObjectWithTag("Player").transform;
+
         meowEnemy.spriteRenderer.color = color;
 
         maxCoolDown = 1f;
@@ -28,6 +31,8 @@ public class MeowMeleeAttackState : EnemyState
 
     public override void OnExit()
     {
+
+
         base.OnExit();
     }
 
@@ -36,16 +41,14 @@ public class MeowMeleeAttackState : EnemyState
         base.OnUpdate();
 
         //Debug.Log("Agro");
-        Transform playerPoint = GameObject.FindGameObjectWithTag("Player").transform;
-        Vector2 dir = meowEnemy.transform.position - playerPoint.position;
+        //Vector2 dir = meowEnemy.transform.position - playerPoint.position;
 
-        Debug.DrawRay(meowEnemy.transform.position, -dir.normalized * meowEnemy.MeleeAttackRange, Color.white);
+        //Debug.DrawRay(meowEnemy.transform.position, -dir.normalized * meowEnemy.MeleeAttackRange, Color.white);
 
         coolDownTimer += Time.deltaTime;
         if(coolDownTimer > maxCoolDown )
         {
             //Attack
-           
 
             Vector2 targetPosition = new Vector2(meowEnemy.transform.position.x + meowEnemy.MeleeAttackRange, meowEnemy.transform.localScale.y / 2);
 
@@ -56,6 +59,11 @@ public class MeowMeleeAttackState : EnemyState
         if (meowEnemy.DetectedPlayerInRange())
         {
            stateMachine.ChangeState(meowEnemy.meowRangeAttackState);
+        }
+
+        if (!meowEnemy.IsAgro() && !meowEnemy.DetectedPlayerInRange())
+        {
+            stateMachine.ChangeState(meowEnemy.meowIdleState);
         }
     }
 }
