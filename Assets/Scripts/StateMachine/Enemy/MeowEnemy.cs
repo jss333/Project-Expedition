@@ -99,7 +99,7 @@ public class MeowEnemy : Enemy
             PlayerMovement playerMovement = FindAnyObjectByType<PlayerMovement>();
             if (playerMovement != null)
             {
-                rb.AddForce((ballSpawn.right - playerMovement.transform.position).normalized * shootForce, ForceMode2D.Impulse);
+                rb.AddForce((playerMovement.transform.position - ballSpawn.position).normalized * shootForce, ForceMode2D.Impulse);
             }
         }
     }
@@ -115,6 +115,7 @@ public class MeowEnemy : Enemy
         if (hit.collider != null)
         {
             transform.position = hit.point;
+            stateMachine.ChangeState(meowIdleState);
         }
         else
         {
