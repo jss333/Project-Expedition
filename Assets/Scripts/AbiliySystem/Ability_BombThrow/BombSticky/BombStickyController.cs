@@ -9,7 +9,7 @@ public class BombStickyController : MonoBehaviour
     [SerializeField] private float durationInAir;
     [SerializeField] private float durationAfterStick;
     [SerializeField] private int bombExplosionDamage = 300;
-    [SerializeField] private float bombExplosionRadius = 1f;
+    [SerializeField] private float bombExplosionRadius = 1.5f;
     [SerializeField] private AnimationCurve bombSpeedCurve;
     [SerializeField] private float speedMultiplier = 20;
 
@@ -96,6 +96,15 @@ public class BombStickyController : MonoBehaviour
                     {
                         hit.GetComponent<MinionTesting>().TakeDamage((int)(damagePercentCalc * bombExplosionDamage));
                     }
+                }
+                else if (hit.tag == "Player")
+                {
+                    var closestPoint = hit.ClosestPoint(transform.position);
+                    var distance = Vector3.Distance(closestPoint, transform.position);
+
+                    var damagePercentCalc = Mathf.InverseLerp(bombExplosionRadius, 0, distance);
+
+                    hit.GetComponent<PlayerHealth>().TakeDamage((int)(damagePercentCalc * bombExplosionDamage) / 5);
                 }
             }
         }

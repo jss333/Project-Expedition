@@ -129,4 +129,20 @@ public class BombThrowController : MonoBehaviour
             transform.position = explodeLocation;
         }
     }
+    private IEnumerator Grow()
+    {
+        float scale = 1;
+        while (scale < 2)
+        {
+            scale += 0.05f;
+            transform.localScale = new Vector3(scale, scale, scale);
+            yield return new WaitForSeconds(0.05f);
+        }
+    }
+
+    public void growInSize()
+    {
+        StartCoroutine(Grow());
+    }
+
 }

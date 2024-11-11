@@ -9,8 +9,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("References")]
     public Transform groundCheckObj;
     private AbilityToggleUI toggleUI;
-    [SerializeField] private GameObject bomb;
-    [SerializeField] private GameObject bombSticky;
+
     [Tooltip("Layer to define what is considered 'ground'")]
     public LayerMask groundLayer;
     public LayerMask bossLayer;
@@ -42,6 +41,14 @@ public class PlayerMovement : MonoBehaviour
     public int jumpCount = 0;
 
     private float movementValue;
+
+    [Header("Bomb")]
+    [SerializeField] private GameObject bomb;
+    [SerializeField] private GameObject bombSticky;
+    [SerializeField] private float bombCooldown = 1;
+    [SerializeField] private float stickyBombCooldown = 1;
+    private float canFireBomb = 0;
+    private float canFireBombSticky = 0;
 
     public void Start()
     {
@@ -187,10 +194,19 @@ public class PlayerMovement : MonoBehaviour
     //this is a temp bomb spawning function
     private void ThrowBomb()
     {
-        Instantiate(bomb, transform.position, Quaternion.identity);
+        if(canFireBomb <= Time.time)
+        {
+            Instantiate(bomb, transform.position, Quaternion.identity);
+            canFireBomb = Time.time + bombCooldown;
+        }
     }
     private void ThrowStickyBomb()
     {
-        Instantiate(bombSticky, FindFirstObjectByType<FollowerController>().transform.position, Quaternion.identity);
+        if (canFireBombSticky <= Time.time)
+        {
+            Instantiate(bombSticky, FindFirstObjectByType<FollowerController>().transform.position, Quaternion.identity);
+            canFireBombSticky = Time.time + stickyBombCooldown;
+        }
     }
+
 }

@@ -165,7 +165,7 @@ MonoBehaviour:
   durationInAir: 2
   durationAfterStick: 2
   bombExplosionDamage: 200
-  bombExplosionRadius: 0.5
+  bombExplosionRadius: 0.9
   bombSpeedCurve:
     serializedVersion: 2
     m_Curve:
@@ -190,7 +190,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  speedMultiplier: 12
+  speedMultiplier: 20
 --- !u!95 &2782691068923512639
 Animator:
   serializedVersion: 5
