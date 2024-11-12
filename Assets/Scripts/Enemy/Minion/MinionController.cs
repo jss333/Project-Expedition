@@ -1,3 +1,4 @@
+using Platformer.Mechanics;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -33,6 +34,7 @@ public class MinionController : MonoBehaviour
     [SerializeField] private Quaternion launchAngle;
 
     private bool reachedAnchor;
+    private bool death = false;
     [Header("Audio")]
     private bool minionHitCooldown = false;
     private float finishHitCooldown = 0;
@@ -127,21 +129,24 @@ public class MinionController : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-       
-        currentHealth -= damage;
-        healthBar.SetHealth((int)(currentHealth/maxhealth*100f));
-        if (currentHealth <= 0)
+       if(currentHealth > 0)
         {
+            currentHealth -= damage;
+            healthBar.SetHealth((int)(currentHealth / maxhealth * 100f));
+        }
+        else if (currentHealth <= 0 && !death)
+        {
+            death = true;
             DestroyThisMinion();
         }
         else if(!minionHitCooldown)
         {
             MinionHitCooldownSFX();
-            
         }
     }
     private void DestroyThisMinion()
     {
+
         bossInfo.MinionDestroyed();
         spawner.decrementActiveCount(anchor);
         //play death sound
