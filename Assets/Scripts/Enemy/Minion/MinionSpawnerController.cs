@@ -14,11 +14,13 @@ public class MinionSpawnerController : MonoBehaviour
 
     void Awake(){
         activeAnchors = new List<GameObject>(freeAnchors.Count);
-        
     }
     private void Start()
     {
-        spawnWave();
+        if(FindAnyObjectByType<BossInformation>().GetImmune() == true) 
+        {
+            spawnWave();
+        }
     }
     public void decrementActiveCount(GameObject anchorToRemove){
         for(int counter = 0; counter < activeAnchors.Count; counter++){

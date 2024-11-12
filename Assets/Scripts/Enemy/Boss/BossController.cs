@@ -75,7 +75,11 @@ public class BossController : MonoBehaviour
         healthBar.SetMaxHealth(maxHealth);
 
         nextShotTime = Time.time + 3f;
-        instantiateBossShield();
+        if(minionRespawnThreasholds.Count == 0 && currentHealth == maxHealth)
+        {
+            instantiateBossShield();
+        }
+        
 
         stopOverflowDamageNumbers = overflowDamageCooldown;
     }
@@ -310,4 +314,6 @@ public class BossController : MonoBehaviour
         PopupLabel dmgNumPopup = Instantiate(damageNumberPopupPrefab, popupLabelSource.position, Quaternion.identity);
         dmgNumPopup.UpdateLabel(damage.ToString());
     }
+
+
 }
