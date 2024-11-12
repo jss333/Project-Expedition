@@ -33,7 +33,9 @@ public class MinionController : MonoBehaviour
     [SerializeField] private Quaternion launchAngle;
 
     private bool reachedAnchor;
-
+    [Header("Audio")]
+    private bool minionHitCooldown = false;
+    private float finishHitCooldown = 0;
     public void Start()
     {
         reachedAnchor = false;
@@ -125,17 +127,39 @@ public class MinionController : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+       
         currentHealth -= damage;
         healthBar.SetHealth((int)(currentHealth/maxhealth*100f));
         if (currentHealth <= 0)
         {
             DestroyThisMinion();
         }
+        else if(!minionHitCooldown)
+        {
+            MinionHitCooldownSFX();
+            
+        }
     }
     private void DestroyThisMinion()
     {
         bossInfo.MinionDestroyed();
         spawner.decrementActiveCount(anchor);
+        //play death sound
+        AudioManagerNoMixers.Singleton.PlaySFXByName("MinionDeath");
         Destroy(this.gameObject);
+    }
+    private void MinionHitCooldownSFX()
+    {
+        if(!minionHitCooldown)
+        {
+            finishHitCooldown = Time.time + 1f;
+            minionHitCooldown = true;
+            AudioManagerNoMixers.Singleton.PlaySFXByName("MinionHit");
+            
+        }
+        if(finishHitCooldown < Time.time)
+        {
+            minionHitCooldown = false;
+        }
     }
 }
