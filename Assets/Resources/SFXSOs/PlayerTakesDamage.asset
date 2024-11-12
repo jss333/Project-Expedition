@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: PlayerTakesDamage
   m_EditorClassIdentifier: 
   SFXClipName: PlayerTakesDamage
-  audioClip: {fileID: 8300000, guid: 3a81da651cd427649b01552ba2f905db, type: 3}
-  minPitch: 0.95
-  maxPitch: 1.05
+  audioClip: {fileID: 8300000, guid: 06d6e64be29969343bc079d8bd52fbb1, type: 3}
+  minPitch: 0.5
+  maxPitch: 0.65

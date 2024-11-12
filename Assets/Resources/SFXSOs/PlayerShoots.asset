@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: PlayerShoots
   m_EditorClassIdentifier: 
   SFXClipName: PlayerShoots
-  audioClip: {fileID: 8300000, guid: e345b7232526f2c499d89e786a1fbbac, type: 3}
+  audioClip: {fileID: 8300000, guid: aaec6dd1470b9be4e88aa90643d497f4, type: 3}
   minPitch: 0.95
   maxPitch: 1.05

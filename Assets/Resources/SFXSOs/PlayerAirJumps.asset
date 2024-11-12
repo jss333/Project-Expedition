@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: PlayerAirJumps
   m_EditorClassIdentifier: 
   SFXClipName: PlayerAirJumps
-  audioClip: {fileID: 8300000, guid: 008ad314c531bb049b66663edd12cade, type: 3}
+  audioClip: {fileID: 8300000, guid: 003f61fc4ba0d564bb6d4855eb048f15, type: 3}
   minPitch: 0.95
   maxPitch: 1.05

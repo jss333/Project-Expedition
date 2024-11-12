@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: BossShootsSingleProjectile
   m_EditorClassIdentifier: 
   SFXClipName: BossShootsSingleProjectile
-  audioClip: {fileID: 8300000, guid: 547f930f4c7ccb44e88e8fd9403d79ef, type: 3}
+  audioClip: {fileID: 8300000, guid: b9d90e2557cf0714d8c0f2b33a8b034c, type: 3}
   minPitch: 0.95
-  maxPitch: 1.05
+  maxPitch: 1.25
