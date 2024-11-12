@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2358549528649128718}
   - component: {fileID: -3214555015778094342}
   - component: {fileID: -2893040643860357271}
+  - component: {fileID: 4909417910734677740}
   m_Layer: 0
   m_Name: Minion
   m_TagString: Minion
@@ -106,8 +107,8 @@ MonoBehaviour:
   anchor: {fileID: 0}
   spawner: {fileID: 0}
   healthBar: {fileID: 2918724717463857661}
-  maxhealth: 500
-  moveSpeed: 3
+  maxhealth: 300
+  moveSpeed: 6
   collisionDmg: 5
   currentHealth: 20
   projectile: {fileID: 4767921678106280535, guid: 5cda2d0d30d07624b85208d0c5ba089e,
@@ -203,6 +204,41 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!58 &4909417910734677740
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 449684760226055840}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &2340894105315849776
 GameObject:
   m_ObjectHideFlags: 0
@@ -245,7 +281,7 @@ GameObject:
   - component: {fileID: 7019203772373754754}
   - component: {fileID: 7689781637602700296}
   - component: {fileID: 1523869240234072405}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Health Bar Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -320,7 +356,7 @@ GameObject:
   - component: {fileID: 9026980846854313241}
   - component: {fileID: 7074118938146588872}
   - component: {fileID: 7540265122180275837}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Health Bar Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -398,7 +434,7 @@ GameObject:
   - component: {fileID: 4806116223019529106}
   - component: {fileID: 2918724717463857661}
   - component: {fileID: 5330687850978151509}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Minion Health Bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -8,29 +8,38 @@ public class BossInformation : MonoBehaviour
     
     private bool immune;
     private int minionCount;
-    [Header("References")]
-    [SerializeField] private MinionSpawnerController msController;
+    private MinionSpawnerController msController;
     private BossShield bossShield;
+
     void Start()
     {
+        msController = FindFirstObjectByType<MinionSpawnerController>();
         minionCount = msController.entityCount;
         immune = true;
     }
 
     // Update is called once per frame
-    public bool getImmune()
+    public bool GetImmune()
     {
         return immune;
     }
-    public void setImmune(bool i)
+    public void SetImmune(bool i)
     {
         immune = i;
     }
-    public void minionDestroyed()
+    public void MinionDestroyed()
     {
-        bossShield = FindFirstObjectByType<BossShield>();
-        minionCount--;
-        if(minionCount >= 2)
+        if(FindFirstObjectByType<BossShield>()!= null)
+        {
+            bossShield = FindFirstObjectByType<BossShield>();
+            minionCount--;
+            if (minionCount <= 0)
+            {
+                SetImmune(false);
+                bossShield.playShieldBreakAnimation();
+            }
+        }
+        if (minionCount >= 2)
         {
             bossShield.shieldDamaged(1);
         }
@@ -38,13 +47,8 @@ public class BossInformation : MonoBehaviour
         {
             bossShield.shieldDamaged(2);
         }
-        if(minionCount <= 0)
-        {
-            setImmune(false);
-            bossShield.playShieldBreakAnimation();
-        }
     }
-    public void setMinionCount(int count)
+    public void SetMinionCount(int count)
     {
         minionCount = count;
     }

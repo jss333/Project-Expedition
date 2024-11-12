@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -5543015421844513631}
   m_Layer: 8
   m_Name: PlayerBasicShotProjectile
-  m_TagString: Projectile
+  m_TagString: PlayerProjectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -176,7 +176,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 2624
   damageAmt: 2
-  maxRange: 0
+  maxRange: 7
+  onDestroyVFX: {fileID: 7076045874447551573, guid: 307e38cb804df2d4099aa7b1d0543abf,
+    type: 3}
 --- !u!114 &-5543015421844513631
 MonoBehaviour:
   m_ObjectHideFlags: 0

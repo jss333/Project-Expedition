@@ -8,10 +8,8 @@ public class PlayerBasicShot : MonoBehaviour
     [Header("References")]
     public PlayerProjectile projectilePrefab;
     public GameObject pointer;
+    [SerializeField] private Transform shootPoint;
     private RandomPitchAudioSource audioSource;
-
-    [Header("Input Controls")]
-    public InputAction fireInput;
 
     [Header("Basic Shot Parameters")]
     public int shotDmg = 10;
@@ -19,15 +17,26 @@ public class PlayerBasicShot : MonoBehaviour
     public float shotIntervalSec = 0.05f;
     private float timeOfLastShot;
     public AudioClip shotSFX;
-   
+
+    private bool isFired;
+
+    private void Awake()
+    {
+    }
 
     void Start()
     {
         audioSource = GetComponent<RandomPitchAudioSource>();
-        fireInput.Enable();
         timeOfLastShot = Time.time - shotIntervalSec;
+
+        InputHandler.Singleton.OnWeaponFire += SetIsFired;
+
     }
 
+    private void OnDestroy()
+    {
+        InputHandler.Singleton.OnWeaponFire -= SetIsFired;
+    }
 
     void Update()
     {
@@ -45,7 +54,7 @@ public class PlayerBasicShot : MonoBehaviour
 
     private void HandleFireInput()
     {
-        if (fireInput.IsPressed() && CanFireAgain())
+        if (IsFired() && CanFireAgain())
         {
             timeOfLastShot = Time.time;
             LaunchProjectile();
@@ -58,9 +67,20 @@ public class PlayerBasicShot : MonoBehaviour
         }
     }
 
+    private void SetIsFired(bool isFired)
+    {
+        this.isFired = isFired; 
+    }
+
+    private bool IsFired()
+    {
+        return this.isFired;
+    }
+
+
     private void LaunchProjectile()
     {
-        PlayerProjectile proj = Instantiate(projectilePrefab, transform.position, transform.rotation);
+        PlayerProjectile proj = Instantiate(projectilePrefab, shootPoint.position, shootPoint.rotation);
         proj.SetVelocityAndDamageAmt(shotSpeed, shotDmg);
     }
 }

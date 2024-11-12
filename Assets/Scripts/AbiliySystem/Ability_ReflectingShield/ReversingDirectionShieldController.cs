@@ -108,7 +108,7 @@ namespace AbilitySystem
 
         IEnumerator PlaySoundAndDestroyObject()
         {
-            audioSource.PlayOneShot(rechargeClip);
+            AudioManagerNoMixers.Singleton.PlaySFXByName("ShieldCharged");
 
 
             yield return new WaitForSeconds(1.2f);

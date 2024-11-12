@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -9,14 +10,16 @@ public class PauseMenu : MonoBehaviour
     {
         EndGameEventManager.OnVictoryAchieved += StopTime;
         EndGameEventManager.OnDefeatAchieved += StopTime;
+        InputHandler.Singleton.OnHandlePausingAndResuming += HandlePausingAndResuming;
         isPaused = false;
-        Time.timeScale = 1;
+        PauseManager.Singletone.pauseGame(false);
     }
 
     private void OnDestroy()
     {
         EndGameEventManager.OnVictoryAchieved -= StopTime;
         EndGameEventManager.OnDefeatAchieved -= StopTime;
+        InputHandler.Singleton.OnHandlePausingAndResuming -= HandlePausingAndResuming;
     }
     void Update()
     {
@@ -30,23 +33,29 @@ public class PauseMenu : MonoBehaviour
         {
             pauseMenuUI.SetActive(false);
         }
-        if (Input.GetKeyDown(KeyCode.Escape))
+    }
+
+    private void HandlePausingAndResuming()
+    {
+        isPaused = !isPaused;
+        if (isPaused)
         {
-            isPaused = !isPaused;
-            if (isPaused)
-            {
-                Time.timeScale = 0;
-            }
-            else
-            {
-                Time.timeScale = 1;
-            }
+            InputHandler.Singleton.OnUIMenuActivated?.Invoke();
+            PauseManager.Singletone.pauseGame(true);
+        }
+        else
+        {
+            InputHandler.Singleton.OnUIMenuDeActivated?.Invoke();
+            PauseManager.Singletone.pauseGame(false);
         }
     }
+
     // Resume the game
     public void Resume()
     {
         isPaused = false;
+        InputHandler.Singleton.OnUIMenuDeActivated?.Invoke();
+        PauseManager.Singletone.pauseGame(false);
     }
 
     // Optional: Method to call when a "Quit" button is clicked
@@ -58,6 +67,11 @@ public class PauseMenu : MonoBehaviour
 
     private void StopTime()
     {
-        Time.timeScale = 0;
+        PauseManager.Singletone.pauseGame(true);
+    }
+
+    public void LevelChange(string level)
+    {
+        SceneManager.LoadScene(level);
     }
 }

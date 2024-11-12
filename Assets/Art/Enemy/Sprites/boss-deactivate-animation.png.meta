@@ -1,0 +1,1698 @@
+fileFormatVersion: 2
+guid: dbe0ad88546a850429d427c8074b5fac
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: boss-deactivate-animation_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6370
+        width: 1000
+        height: 910
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46badf5dd70ea9b4d9baf66a26dda5ff
+      internalID: -1498394678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-deactivate-animation_1
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 6370
+        width: 1000
+        height: 910
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e3e0e2c2e31d7b4da8664b226f41250
+      internalID: -143182123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-deactivate-animation_2
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 6370
+        width: 1000
+        height: 910
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc8df912270e5f64a835dd67bcbe097a
+      internalID: -1580081254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-deactivate-animation_3
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 6370
+        width: 1000
+        height: 910
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f842b291f3ec329498aa0fe056ec9404
+      internalID: 1010855012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-deactivate-animation_4
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 6370
+        width: 1000
+        height: 910
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b3f9881040b04449bee29b8d0b73148
+      internalID: -1324275712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-deactivate-animation_5
+      rect:
+        serializedVersion: 2
+        x: 5000
+        y: 6370
+        width: 1000
+        height: 910
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 775e36f56bc096944a94527ca748b16c
+      internalID: 2024966371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-deactivate-animation_6
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 6370
+        width: 1000
+        height: 910
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11668c157a4ac5044b7b199609066eeb
+      internalID: -954183202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-deactivate-animation_7
+      rect:
+        serializedVersion: 2
+        x: 7000
+        y: 6370
+        width: 1000
+        height: 910
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 395a2bd83e69c4e42a661fc1aa94159b
+      internalID: 759475652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-deactivate-animation_8
+      rect:
+        serializedVersion: 2
+        x: 8000
+        y: 6370
+        width: 1000
+        height: 910
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bc20949102ff4b41ac5e41221fdaafb
+      internalID: 2055581688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-deactivate-animation_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5460
+        width: 1000
+        height: 910
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4257bbcce73e3524b9e356414c5f4995
+      internalID: 560354721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-deactivate-animation_10
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 5460
+        width: 1000
+        height: 910
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b96f7f753d8c4ac4b8b1905d50e20904
+      internalID: 1912191022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-deactivate-animation_11
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 5460
+        width: 1000
+        height: 910
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fb1fd82125e41e479f185cc849d8168
+      internalID: 551559927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-deactivate-animation_12
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 5460
+        width: 1000
+        height: 910
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec67e4570b5203940a3a80c33fc85899
+      internalID: 546224421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-deactivate-animation_13
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 5460
+        width: 1000
+        height: 910
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9def52d72c0c664b93a9f07e90e1e06
+      internalID: -1261284423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-deactivate-animation_14
+      rect:
+        serializedVersion: 2
+        x: 5000
+        y: 5460
+        width: 1000
+        height: 910
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ec5c0ffd60652947a8e5cd1df56ea9d
+      internalID: -294909118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-deactivate-animation_15
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 5460
+        width: 1000
+        height: 910
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7e85a7def32137448ab9226ca692066
+      internalID: 881585824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-deactivate-animation_16
+      rect:
+        serializedVersion: 2
+        x: 7000
+        y: 5460
+        width: 1000
+        height: 910
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0637df1378e61b4e99402c96b2a8424
+      internalID: 77311260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-deactivate-animation_17
+      rect:
+        serializedVersion: 2
+        x: 8000
+        y: 5460
+        width: 1000
+        height: 910
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c22c3a603f58c8a4ab5e99b8f5a8ae50
+      internalID: 1129747898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-deactivate-animation_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4550
+        width: 1000
+        height: 910
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc0d01f92acc31f4d9220864ae2733f1
+      internalID: -891093440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-deactivate-animation_19
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 4550
+        width: 1000
+        height: 910
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c13d2353b14aa0d4e9b7b1d32348d030
+      internalID: 1020771747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-deactivate-animation_20
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 4550
+        width: 1000
+        height: 910
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21d79efc687ce7b418a3b7eff44d143e
+      internalID: 1217128470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-deactivate-animation_21
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 4550
+        width: 1000
+        height: 910
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f399e7d3c75f21b4baba9b1b4123b73a
+      internalID: -1426617956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-deactivate-animation_22
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 4550
+        width: 1000
+        height: 910
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0eaf6320c32245642bd67447ca9ae902
+      internalID: 1364996906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-deactivate-animation_23
+      rect:
+        serializedVersion: 2
+        x: 5000
+        y: 4550
+        width: 1000
+        height: 910
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90e5a3db1ba7ab44499f6fb41d202e35
+      internalID: -995511119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-deactivate-animation_24
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 4550
+        width: 1000
+        height: 910
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78ab34e185612824e88f901679cac0b8
+      internalID: -1267817470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-deactivate-animation_25
+      rect:
+        serializedVersion: 2
+        x: 7000
+        y: 4550
+        width: 1000
+        height: 910
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38babd7d493552e47bdf75b7ba772158
+      internalID: -342168821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-deactivate-animation_26
+      rect:
+        serializedVersion: 2
+        x: 8000
+        y: 4550
+        width: 1000
+        height: 910
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41ef4ad880c58b547878f11485ca2c44
+      internalID: 1964561799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-deactivate-animation_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3640
+        width: 1000
+        height: 910
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 423edabad0659b44fbe34606552fe66a
+      internalID: 1718695335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-deactivate-animation_28
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 3640
+        width: 1000
+        height: 910
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56b6ccbd537f6374288ab9fe4a6c91e0
+      internalID: -741701398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-deactivate-animation_29
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 3640
+        width: 1000
+        height: 910
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e61060e1b825f945b659b55b107f76a
+      internalID: -689326807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-deactivate-animation_30
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 3640
+        width: 1000
+        height: 910
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: feadab22c7ed30b4e8e6490002ec8e89
+      internalID: -1519640807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-deactivate-animation_31
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 3640
+        width: 1000
+        height: 910
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17faf2f19eaa168449d8d949dc72059a
+      internalID: -561552675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-deactivate-animation_32
+      rect:
+        serializedVersion: 2
+        x: 5000
+        y: 3640
+        width: 1000
+        height: 910
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e6eae60918c37e44b23349f2ebcde79
+      internalID: 1137265141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-deactivate-animation_33
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 3640
+        width: 1000
+        height: 910
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d55c99131d3cff945b4c0c4c4ba69e0c
+      internalID: 1963423853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-deactivate-animation_34
+      rect:
+        serializedVersion: 2
+        x: 7000
+        y: 3640
+        width: 1000
+        height: 910
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5b9546630b9caa4c980761164133402
+      internalID: -410702986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-deactivate-animation_35
+      rect:
+        serializedVersion: 2
+        x: 8000
+        y: 3640
+        width: 1000
+        height: 910
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f685dc8f27e4d884099c62ac8c817020
+      internalID: -971494687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-deactivate-animation_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2730
+        width: 1000
+        height: 910
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a81b025462184124eba511d35bb0b255
+      internalID: -1617647401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-deactivate-animation_37
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 2730
+        width: 1000
+        height: 910
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7775f7044ab33c34791a3917d091d623
+      internalID: -1590068759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-deactivate-animation_38
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 2730
+        width: 1000
+        height: 910
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2847b8e0ba601c3429ddd130e61bd8eb
+      internalID: -1457252787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-deactivate-animation_39
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 2730
+        width: 1000
+        height: 910
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed31b0d1478f9d6448b034a86b6403f1
+      internalID: -1348056576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-deactivate-animation_40
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 2730
+        width: 1000
+        height: 910
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9853ef164adf3644e8464da62588d4a6
+      internalID: 1106555813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-deactivate-animation_41
+      rect:
+        serializedVersion: 2
+        x: 5000
+        y: 2730
+        width: 1000
+        height: 910
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa202908babbc294ea1f880fc4ab565e
+      internalID: 575329922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-deactivate-animation_42
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 2730
+        width: 1000
+        height: 910
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b587efa32777a04896ec88b608d115c
+      internalID: 1906869642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-deactivate-animation_43
+      rect:
+        serializedVersion: 2
+        x: 7000
+        y: 2730
+        width: 1000
+        height: 910
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32712bba1200bef44a5649617f158f05
+      internalID: -904086027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-deactivate-animation_44
+      rect:
+        serializedVersion: 2
+        x: 8000
+        y: 2730
+        width: 1000
+        height: 910
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56fcc01cfff23d040b4a598e25954e6f
+      internalID: -1283436884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-deactivate-animation_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1820
+        width: 1000
+        height: 910
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b11f445dcf302240ab25c0af0f8455d
+      internalID: -771313787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-deactivate-animation_46
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 1820
+        width: 1000
+        height: 910
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37a48cc0441ee3a4ca8451218d32982f
+      internalID: 198287943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-deactivate-animation_47
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 1820
+        width: 1000
+        height: 910
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a478087e4eacc754a9feac7b6d3f834e
+      internalID: 2134021682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-deactivate-animation_48
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 1820
+        width: 1000
+        height: 910
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 556889dd2151b504fb19a2e5ae1bbf72
+      internalID: -1306209262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-deactivate-animation_49
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 1820
+        width: 1000
+        height: 910
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a5355ca21471c848a1f01fab3deac94
+      internalID: 1923711445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-deactivate-animation_50
+      rect:
+        serializedVersion: 2
+        x: 5000
+        y: 1820
+        width: 1000
+        height: 910
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abd18830e018b16498837581deb23c80
+      internalID: -1015195028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-deactivate-animation_51
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 1820
+        width: 1000
+        height: 910
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 400206abfc3d30643a21a808962d8298
+      internalID: -1632872571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-deactivate-animation_52
+      rect:
+        serializedVersion: 2
+        x: 7000
+        y: 1820
+        width: 1000
+        height: 910
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faa738274ab5a364e83c2ab971572f37
+      internalID: -758950778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-deactivate-animation_53
+      rect:
+        serializedVersion: 2
+        x: 8000
+        y: 1820
+        width: 1000
+        height: 910
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b5ac40ee1da6e442b7327b2c792f0d4
+      internalID: -43117758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-deactivate-animation_54
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 910
+        width: 1000
+        height: 910
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b71d10dab145e845b6cb042ead7143b
+      internalID: -1204331975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-deactivate-animation_55
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 910
+        width: 1000
+        height: 910
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d37ec5c49023cf4e86e7ee909d51016
+      internalID: 478066853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-deactivate-animation_56
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 910
+        width: 1000
+        height: 910
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a258ae4f070499647b0272e5990a411f
+      internalID: 600389856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-deactivate-animation_57
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 910
+        width: 1000
+        height: 910
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 036f4d29896a29547a5239b52c2cae47
+      internalID: 2003199713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-deactivate-animation_58
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 910
+        width: 1000
+        height: 910
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 777813c522378ff46912e604768bef03
+      internalID: -1919558080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-deactivate-animation_59
+      rect:
+        serializedVersion: 2
+        x: 5000
+        y: 910
+        width: 1000
+        height: 910
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8a1b2753e61fde42ab22061b980436a
+      internalID: -1438019706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-deactivate-animation_60
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 910
+        width: 1000
+        height: 910
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bdb10580a530e743a0554954270cc7d
+      internalID: 1346141420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-deactivate-animation_61
+      rect:
+        serializedVersion: 2
+        x: 7000
+        y: 910
+        width: 1000
+        height: 910
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1b0f64b6a3b7d44b8f06457b6704366
+      internalID: -1426529314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-deactivate-animation_62
+      rect:
+        serializedVersion: 2
+        x: 8000
+        y: 910
+        width: 1000
+        height: 910
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cb48589757a33a468e8001e36e84949
+      internalID: 2128915754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-deactivate-animation_63
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1000
+        height: 910
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f9b70fb250cbd64d9b16ffffafddc42
+      internalID: 286815665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-deactivate-animation_64
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 0
+        width: 1000
+        height: 910
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5330d43045dfd6344a6bcbe868088452
+      internalID: -916933305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-deactivate-animation_65
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 0
+        width: 1000
+        height: 910
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc605cf6cd5edaa4ea81f275a1e476b8
+      internalID: 859851340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-deactivate-animation_66
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 0
+        width: 1000
+        height: 910
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb12ec207954d9540b6d75c1362785ec
+      internalID: -633153526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-deactivate-animation_67
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 0
+        width: 1000
+        height: 910
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 808134dfb20db394093c1a13c6ab95d8
+      internalID: -1455260953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-deactivate-animation_68
+      rect:
+        serializedVersion: 2
+        x: 5000
+        y: 0
+        width: 1000
+        height: 910
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5926e1e08e931834188745b763a35ee4
+      internalID: -1599728097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-deactivate-animation_69
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 0
+        width: 1000
+        height: 910
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62e79992edcba1c4b896fd3344b8c35a
+      internalID: 2126397471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-deactivate-animation_70
+      rect:
+        serializedVersion: 2
+        x: 7000
+        y: 0
+        width: 1000
+        height: 910
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edcbc233b8adcdc4e9ce2799da95e1d5
+      internalID: 514905989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-deactivate-animation_71
+      rect:
+        serializedVersion: 2
+        x: 8000
+        y: 0
+        width: 1000
+        height: 910
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02ca478e4de32434680323c3582867aa
+      internalID: 1359599064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      boss-deactivate-animation_0: -1498394678
+      boss-deactivate-animation_1: -143182123
+      boss-deactivate-animation_10: 1912191022
+      boss-deactivate-animation_11: 551559927
+      boss-deactivate-animation_12: 546224421
+      boss-deactivate-animation_13: -1261284423
+      boss-deactivate-animation_14: -294909118
+      boss-deactivate-animation_15: 881585824
+      boss-deactivate-animation_16: 77311260
+      boss-deactivate-animation_17: 1129747898
+      boss-deactivate-animation_18: -891093440
+      boss-deactivate-animation_19: 1020771747
+      boss-deactivate-animation_2: -1580081254
+      boss-deactivate-animation_20: 1217128470
+      boss-deactivate-animation_21: -1426617956
+      boss-deactivate-animation_22: 1364996906
+      boss-deactivate-animation_23: -995511119
+      boss-deactivate-animation_24: -1267817470
+      boss-deactivate-animation_25: -342168821
+      boss-deactivate-animation_26: 1964561799
+      boss-deactivate-animation_27: 1718695335
+      boss-deactivate-animation_28: -741701398
+      boss-deactivate-animation_29: -689326807
+      boss-deactivate-animation_3: 1010855012
+      boss-deactivate-animation_30: -1519640807
+      boss-deactivate-animation_31: -561552675
+      boss-deactivate-animation_32: 1137265141
+      boss-deactivate-animation_33: 1963423853
+      boss-deactivate-animation_34: -410702986
+      boss-deactivate-animation_35: -971494687
+      boss-deactivate-animation_36: -1617647401
+      boss-deactivate-animation_37: -1590068759
+      boss-deactivate-animation_38: -1457252787
+      boss-deactivate-animation_39: -1348056576
+      boss-deactivate-animation_4: -1324275712
+      boss-deactivate-animation_40: 1106555813
+      boss-deactivate-animation_41: 575329922
+      boss-deactivate-animation_42: 1906869642
+      boss-deactivate-animation_43: -904086027
+      boss-deactivate-animation_44: -1283436884
+      boss-deactivate-animation_45: -771313787
+      boss-deactivate-animation_46: 198287943
+      boss-deactivate-animation_47: 2134021682
+      boss-deactivate-animation_48: -1306209262
+      boss-deactivate-animation_49: 1923711445
+      boss-deactivate-animation_5: 2024966371
+      boss-deactivate-animation_50: -1015195028
+      boss-deactivate-animation_51: -1632872571
+      boss-deactivate-animation_52: -758950778
+      boss-deactivate-animation_53: -43117758
+      boss-deactivate-animation_54: -1204331975
+      boss-deactivate-animation_55: 478066853
+      boss-deactivate-animation_56: 600389856
+      boss-deactivate-animation_57: 2003199713
+      boss-deactivate-animation_58: -1919558080
+      boss-deactivate-animation_59: -1438019706
+      boss-deactivate-animation_6: -954183202
+      boss-deactivate-animation_60: 1346141420
+      boss-deactivate-animation_61: -1426529314
+      boss-deactivate-animation_62: 2128915754
+      boss-deactivate-animation_63: 286815665
+      boss-deactivate-animation_64: -916933305
+      boss-deactivate-animation_65: 859851340
+      boss-deactivate-animation_66: -633153526
+      boss-deactivate-animation_67: -1455260953
+      boss-deactivate-animation_68: -1599728097
+      boss-deactivate-animation_69: 2126397471
+      boss-deactivate-animation_7: 759475652
+      boss-deactivate-animation_70: 514905989
+      boss-deactivate-animation_71: 1359599064
+      boss-deactivate-animation_8: 2055581688
+      boss-deactivate-animation_9: 560354721
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -17,8 +19,16 @@ public class DebugMenuUI : MonoBehaviour
     private void Start()
     {
         isDebugOn = false;
-        Time.timeScale = 1;
+        //instance.pauseGame(false);
+
+        InputHandler.Singleton.OnHandleDebugMenuOpenning += HandleDebugMenuOpenning;
     }
+
+    private void OnDestroy()
+    {
+        InputHandler.Singleton.OnHandleDebugMenuOpenning -= HandleDebugMenuOpenning;
+    }
+
     void Update()
     {
         // Toggle pause when the "P" key is pressed
@@ -30,19 +40,23 @@ public class DebugMenuUI : MonoBehaviour
         {
             debugMenuUI.SetActive(false);
         }
-        if (Input.GetKeyDown(KeyCode.P))
+    }
+
+    private void HandleDebugMenuOpenning()
+    {
+        isDebugOn = !isDebugOn;
+        if (isDebugOn)
         {
-            isDebugOn = !isDebugOn;
-            if(isDebugOn)
-            {
-                Time.timeScale = 0;
-            }
-            else
-            {
-                Time.timeScale = 1;
-            }
+            InputHandler.Singleton.OnUIMenuActivated?.Invoke();
+            PauseManager.Singletone.pauseGame(true);
+        }
+        else
+        {
+            InputHandler.Singleton.OnUIMenuDeActivated?.Invoke();
+            PauseManager.Singletone.pauseGame(false);
         }
     }
+
     public void LevelChange(string level)
     {
         SceneManager.LoadScene(level);

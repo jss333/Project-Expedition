@@ -47,7 +47,7 @@ public class MinionSpawnerController : MonoBehaviour
         {
             spawnWave();
             BossInformation info = FindFirstObjectByType<BossInformation>();
-            info.setMinionCount(entityCount);
+            info.SetMinionCount(entityCount);
         }
     }
 }

@@ -21,15 +21,19 @@ public class BossOrb : MonoBehaviour
     {
         if(canDamageBossAndMinions)
         {
-            if (other.gameObject.tag == "Boss")
+            if (other.gameObject.CompareTag("Boss"))
             {
                 other.gameObject.GetComponent<BossController>().TakeDamage(orbDmg);
                 Destroy(this.gameObject);
             }  
-            
-            if (other.gameObject.tag == "Minion")
+            else if (other.gameObject.CompareTag("Minion"))
             {
                 other.gameObject.GetComponent<MinionController>().TakeDamage(orbDmg);
+                Destroy(this.gameObject);
+            }
+            else if (other.gameObject.CompareTag("Tutorial Minion"))
+            {
+                other.gameObject.GetComponent<TutorialMinionController>().TakeDamage(orbDmg);
                 Destroy(this.gameObject);
             }
 
