@@ -541,7 +541,67 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 'CREDITS
+
+    
+
+    Producer
+
+    James Singi Siqueira (@jss333)
+
+    
+
+    Audio
+
+    Arpi
+    Vardanyan : Sound Designer/Composer
+
+    Prnc Amin (@prncamin) : Composer
+
+    
+
+    Art
+
+    Bibi
+    Tavares
+
+    CJ Tugade (@cjtugade) : UI
+
+    Emma Randall : Animation
+
+    Jasmine
+    Modeste (@jasminem4980)
+
+    Jessica Rivas : Character Artist (R0-B and B3RT)
+
+    
+
+    Game
+    Design
+
+    Doryan Lewis
+
+    @kizma
+
+    Magdalena Jordanovska
+
+    
+
+    Programming
+
+    Astrounaut
+
+    Jacob
+    Hooten (@surilexa)
+
+    James Singi Siqueira (@jss333)
+
+    @mostafaebeed
+
+    Rakshaan
+
+    Tanha
+    Patel'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -568,7 +628,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 18
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1

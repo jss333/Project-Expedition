@@ -16,6 +16,7 @@ TagManager:
   - Platform
   - Minion
   - PlayerProjectile
+  - Tutorial Minion
   layers:
   - Default
   - TransparentFX
