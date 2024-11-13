@@ -43,9 +43,9 @@ public class BossController : MonoBehaviour
 
     [Header("Parameters - Orb")]
     [SerializeField] private GameObject singleOrbPrefab;
-    [SerializeField] private float minShotIntervalSec = 0.7f;
-    [SerializeField] private float maxShotIntervalSec = 1.3f;
-    private float nextShotTime = 0f;
+    [SerializeField] private float minShotIntervalSec = 1f;
+    [SerializeField] private float maxShotIntervalSec = 2f;
+    [SerializeField] private float nextShotTime = 0f;
     [SerializeField] private float minSingleOrbSpeed = 4.5f;
     [SerializeField] private float maxSingleOrbSpeed = 5.5f;
 
@@ -120,7 +120,7 @@ public class BossController : MonoBehaviour
                 AudioManagerNoMixers.Singleton.PlaySFXByName("BossShootsSingleProjectile");
             }
 
-            nextShotTime += GetRandomFloat(minShotIntervalSec, maxShotIntervalSec);
+            nextShotTime = Time.time + GetRandomFloat(minShotIntervalSec, maxShotIntervalSec);
         }
     }
 
