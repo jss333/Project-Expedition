@@ -16,7 +16,7 @@ public class ChallengeRoomBGM : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
 
-        StopAndPlayNewClip(firstHalfBGM);
+        //StopAndPlayNewClip(firstHalfBGM);
     }
 
     public void PlaySecondHalfBGM()

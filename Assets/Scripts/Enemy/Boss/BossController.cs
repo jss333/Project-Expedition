@@ -217,13 +217,15 @@ public class BossController : MonoBehaviour
 
             if (!bgmChangeTriggered && CurrentHealthPercentLessThan(bgmChangeHealthPercent))
             {
-                challengeRoomBGM.PlaySecondHalfBGM();
+                //challengeRoomBGM.PlaySecondHalfBGM();
+                AudioManagerNoMixers.Singleton.PlaySecondPartMusic();
                 bgmChangeTriggered = true;
             }
 
             if (currentHealth <= 0)
             {
-                challengeRoomBGM.PlayVictoryBGM();
+                //challengeRoomBGM.PlayVictoryBGM();
+                AudioManagerNoMixers.Singleton.PlayVictroyMusic();
                 Die();
                 
             }

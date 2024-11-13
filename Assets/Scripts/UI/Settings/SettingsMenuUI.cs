@@ -7,6 +7,7 @@ public class SettingsMenuUI : MonoBehaviour
 {
     [SerializeField] private RectTransform settingsPanel;
     [SerializeField] private RectTransform settingsPanelBG;
+    [SerializeField] private Slider musicSlider;
 
     private Vector3 startScale;
 
@@ -30,5 +31,10 @@ public class SettingsMenuUI : MonoBehaviour
 
         LeanTween.cancel(settingsPanel);
         LeanTween.scale(settingsPanel, startScale, 0.5f).setEase(LeanTweenType.easeInCubic); */
+    }
+
+    public void ControlMusicVolume()
+    {
+        AudioManagerNoMixers.Singleton.ControlMusicVolume(musicSlider.value);
     }
 }
