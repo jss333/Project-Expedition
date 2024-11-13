@@ -8,6 +8,7 @@ public class SettingsMenuUI : MonoBehaviour
     [SerializeField] private RectTransform settingsPanel;
     [SerializeField] private RectTransform settingsPanelBG;
     [SerializeField] private Slider musicSlider;
+    [SerializeField] private Slider sFXSlider;
 
     private Vector3 startScale;
 
@@ -36,5 +37,10 @@ public class SettingsMenuUI : MonoBehaviour
     public void ControlMusicVolume()
     {
         AudioManagerNoMixers.Singleton.ControlMusicVolume(musicSlider.value);
+    }
+
+    public void ControlSFXVolume()
+    {
+        AudioManagerNoMixers.Singleton.ControlSFXVolume(sFXSlider.value);
     }
 }
