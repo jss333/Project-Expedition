@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 497986f42411ebd4c8e757f3b1cba09d, type: 3}
   m_Name: PlayerShoots
   m_EditorClassIdentifier: 
-  SFXClipName: PlayerShoots
   audioClip: {fileID: 8300000, guid: aaec6dd1470b9be4e88aa90643d497f4, type: 3}
   minPitch: 0.95
   maxPitch: 1.05
+  soundEffectVolume: 1
