@@ -16,6 +16,7 @@ public class BossInformation : MonoBehaviour
         msController = FindFirstObjectByType<MinionSpawnerController>();
         minionCount = msController.entityCount;
         immune = true;
+        Debug.Log("Initial minions: " + minionCount);
     }
 
     // Update is called once per frame
@@ -33,6 +34,7 @@ public class BossInformation : MonoBehaviour
         {
             bossShield = FindFirstObjectByType<BossShield>();
             minionCount--;
+            Debug.Log(minionCount);
             if (minionCount <= 0)
             {
                 SetImmune(false);
