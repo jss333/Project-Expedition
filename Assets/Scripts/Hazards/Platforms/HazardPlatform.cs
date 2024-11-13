@@ -51,6 +51,7 @@ public abstract class HazardPlatform : MonoBehaviour
             ActivateAction();
         }); */
 
+
         animator.SetBool("Shake", true);
 
         float timer = shakeTime;

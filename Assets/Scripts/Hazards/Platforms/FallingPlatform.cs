@@ -37,6 +37,7 @@ public class FallingPlatform : HazardPlatform
     {
         base.ActivateAction();
         Debug.Log("falling Action");
+        AudioManagerNoMixers.Singleton.PlaySFXByName("FallingPlatform");
 
         spriteRenderer.enabled = false;
         color = Vector4.one;

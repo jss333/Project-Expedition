@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 497986f42411ebd4c8e757f3b1cba09d, type: 3}
-  m_Name: MinionHit
+  m_Name: Electricity
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: b370d3a3298890641aab6144e244ac1b, type: 3}
-  minPitch: 1
+  audioClip: {fileID: 0}
+  minPitch: 0.95
   maxPitch: 1.05
   soundEffectVolume: 1

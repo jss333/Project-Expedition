@@ -29,11 +29,13 @@ public class MinionTesting : MonoBehaviour
     }
     public void TakeDamage(int damage)
     {
+        AudioManagerNoMixers.Singleton.PlaySFXByName("MinionHit");
         currentHealth -= damage;
         SpawnDamageNumberPopupLabel(damage);
         healthBar.SetHealth((int)currentHealth);
         if (currentHealth <= 0)
         {
+            AudioManagerNoMixers.Singleton.PlaySFXByName("MinionDeath");
             DestroyThisMinion();
         }
     }

@@ -129,8 +129,9 @@ public class MinionController : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-       if(currentHealth > 0)
+        if (currentHealth > 0)
         {
+            AudioManagerNoMixers.Singleton.PlaySFXByName("MinionHit");
             currentHealth -= damage;
             healthBar.SetHealth((int)(currentHealth / maxhealth * 100f));
         }
@@ -159,7 +160,7 @@ public class MinionController : MonoBehaviour
         {
             finishHitCooldown = Time.time + 1f;
             minionHitCooldown = true;
-            AudioManagerNoMixers.Singleton.PlaySFXByName("MinionHit");
+            
             
         }
         if(finishHitCooldown < Time.time)
