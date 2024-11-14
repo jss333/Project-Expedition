@@ -45,8 +45,9 @@ public class BombThrowController : MonoBehaviour
     }
     private void Explode()
     {
+        GetComponent<Rigidbody2D>().freezeRotation = true;
         //code a radius for the explosion damage
-        if(bombExplosionRadius > 0)
+        if (bombExplosionRadius > 0)
         {
             //check radius
             var hitEnemies = Physics2D.OverlapCircleAll(transform.position, bombExplosionRadius);
@@ -132,7 +133,7 @@ public class BombThrowController : MonoBehaviour
     private IEnumerator Grow()
     {
         float scale = 1;
-        while (scale < 2)
+        while (scale < bombExplosionRadius)
         {
             scale += 0.05f;
             transform.localScale = new Vector3(scale, scale, scale);
@@ -142,7 +143,7 @@ public class BombThrowController : MonoBehaviour
 
     public void growInSize()
     {
-        StartCoroutine(Grow());
+        StartCoroutine(Grow()); 
     }
 
 }

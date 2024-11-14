@@ -6,7 +6,7 @@ public class BossInformation : MonoBehaviour
 {
     // Start is called before the first frame update
     
-    private bool immune;
+    private bool immune = false;
     private int minionCount;
     private MinionSpawnerController msController;
     private BossShield bossShield;
@@ -15,7 +15,6 @@ public class BossInformation : MonoBehaviour
     {
         msController = FindFirstObjectByType<MinionSpawnerController>();
         minionCount = msController.entityCount;
-        immune = true;
         Debug.Log("Initial minions: " + minionCount);
     }
 
