@@ -63,6 +63,7 @@ public class BombStickyController : MonoBehaviour
     }
     private void Explode()
     {
+
         //code a radius for the explosion damage
         if (bombExplosionRadius > 0)
         {
@@ -119,11 +120,13 @@ public class BombStickyController : MonoBehaviour
         //while in air
         if (timeSinceSpawn < durationInAir && !sticking)
         {
+            GetComponent<Rigidbody2D>().freezeRotation = false;
             timeSinceSpawn += Time.deltaTime;
         }
         //after sticking to something
         else if (timeSinceSticking < durationAfterStick && sticking)
         {
+            GetComponent<Rigidbody2D>().freezeRotation = true;
             timeSinceSticking += Time.deltaTime;
             if (stuckToObject != null)
             {
@@ -178,10 +181,17 @@ public class BombStickyController : MonoBehaviour
     }
     private IEnumerator Grow()
     {
-        float scale = 1;
-        while (scale < 2)
+        float scale = 1f;
+        while (scale < bombExplosionRadius || scale > bombExplosionRadius)
         {
-            scale += 0.05f;
+            if(bombExplosionRadius > 1)
+            {
+                scale += 0.05f;
+            }
+            else if(bombExplosionRadius < 1)
+            {
+                scale -= 0.05f;
+            }
             transform.localScale = new Vector3(scale, scale, scale);
             yield return new WaitForSeconds(0.05f);
         }
