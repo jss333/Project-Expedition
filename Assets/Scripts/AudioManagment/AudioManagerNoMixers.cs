@@ -29,10 +29,23 @@ public class AudioManagerNoMixers : MonoBehaviour {
     [Header("SFX")]
     private Dictionary<string, SFXAudioDataSO> sfxSOByName = new Dictionary<string, SFXAudioDataSO>();
     private Dictionary<string, RandomPitchAudioSource> audioSrcByName = new Dictionary<string, RandomPitchAudioSource>();
+    [SerializeField] private float sfxVolume = 1.0f;
+
+    public float SFXVolume => sfxVolume;
+
+    [Header("Music")]
+    [SerializeField] private AudioSource musicAudioSource;
+    [SerializeField] AudioClip firstHalfBGM;
+    [SerializeField] AudioClip secondHalfBGM;
+    [SerializeField] AudioClip victoryBGM;
+    [SerializeField] AudioClip defeatBGM;
+
 
     private void Start()
     {
         LoadSFXScriptableObjects();
+
+        PlayFirstPartMusic();
     }
 
     public void LoadSFXScriptableObjects()
@@ -74,5 +87,43 @@ public class AudioManagerNoMixers : MonoBehaviour {
             audioSrcByName.Add(sfxSO.name, rndPitchAudioSrc);
             return rndPitchAudioSrc;
         }
+    }
+
+    public void PlayFirstPartMusic()
+    {
+        musicAudioSource.Stop();
+        musicAudioSource.clip = firstHalfBGM;
+        musicAudioSource.Play();
+    }
+
+    public void PlaySecondPartMusic()
+    {
+        musicAudioSource.Stop();
+        musicAudioSource.clip = secondHalfBGM;
+        musicAudioSource.Play();
+    }
+
+    public void PlayVictroyMusic()
+    {
+        musicAudioSource.Stop();
+        musicAudioSource.clip = victoryBGM;
+        musicAudioSource.Play();
+    }
+
+    public void PlayDefeatMusic()
+    {
+        musicAudioSource.Stop();
+        musicAudioSource.clip = defeatBGM;
+        musicAudioSource.Play();
+    }
+
+    public void ControlMusicVolume(float volume)
+    {
+        musicAudioSource.volume = volume;
+    }
+
+    public void ControlSFXVolume(float volume)
+    {
+        sfxVolume = volume;
     }
 }

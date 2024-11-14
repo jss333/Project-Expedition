@@ -21,7 +21,7 @@ public class RandomPitchAudioSource : MonoBehaviour
         volume = sfxDataSO.soundEffectVolume;
         clip = sfxDataSO.audioClip;
 
-        audioSource.volume = volume;
+        audioSource.volume =  AudioManagerNoMixers.Singleton.SFXVolume;
     }
 
     public void PlayAssociatedAudio()

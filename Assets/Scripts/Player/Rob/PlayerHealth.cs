@@ -37,7 +37,8 @@ public class PlayerHealth : MonoBehaviour
         if (currentHealth <= 0)
         {
             Destroy(robBertParentObj);
-            challengeRoomBGM.PlayDefeatBGM();
+            //challengeRoomBGM.PlayDefeatBGM();
+            AudioManagerNoMixers.Singleton.PlayDefeatMusic();
             EndGameEventManager.OnDefeatAchieved?.Invoke();
         }
     }
