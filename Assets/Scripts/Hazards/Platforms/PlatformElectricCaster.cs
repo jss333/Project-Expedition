@@ -13,6 +13,19 @@ public class PlatformElectricCaster : MonoBehaviour
 
     [SerializeField] PlayerHealth playerHealth;
 
+    CyclingElectricPlatform electricPlatform;
+
+    public void Configure(CyclingElectricPlatform cyclingElectricPlatform, int damagetAmount, float timeToCastDamage, float maxTimeToStayElectrified)
+    {
+        electricPlatform = cyclingElectricPlatform;
+        this.damage = damagetAmount;
+        this.timeToCastDamage = timeToCastDamage;
+        canCastDamage = false;
+        damageTimer = 0;
+
+        Invoke("RemoveFromScene", maxTimeToStayElectrified);
+    } 
+    
     public void Configure(int damagetAmount, float timeToCastDamage, float maxTimeToStayElectrified)
     {
         this.damage = damagetAmount;
@@ -40,7 +53,7 @@ public class PlatformElectricCaster : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         PlayerHealth pH = collision.GetComponent<PlayerHealth>();
         if(pH != null)
@@ -56,7 +69,7 @@ public class PlatformElectricCaster : MonoBehaviour
 
     private void RemoveFromScene()
     {
-        CyclingElectricPlatform.ResetTimer();
+        electricPlatform.ResetTimer();
         Destroy(gameObject);
     }
 }

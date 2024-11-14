@@ -16,8 +16,8 @@ public class CyclingElectricPlatform : MonoBehaviour
     [SerializeField] private float timeToStayElectrified;
     [SerializeField] private int damage;
 
-    static float timer;
-    static bool spawned;
+    float timer;
+    bool spawned;
 
     bool started;
 
@@ -52,7 +52,7 @@ public class CyclingElectricPlatform : MonoBehaviour
             {
                 Debug.Log("Spawned");
                 PlatformElectricCaster platformElectricCaster = Instantiate(electricityCaster, transform);
-                platformElectricCaster.Configure(damage, 0.25f, timeToStayElectrified);
+                platformElectricCaster.Configure(this, damage, 0.25f, timeToStayElectrified);
                 spawned = true;
             }
         }
@@ -71,7 +71,7 @@ public class CyclingElectricPlatform : MonoBehaviour
         }  */
     }
 
-    public static void ResetTimer()
+    public void ResetTimer()
     {
         spawned = false;
         timer = 0; 
