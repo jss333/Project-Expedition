@@ -14,10 +14,17 @@ public class SettingsMenuUI : MonoBehaviour
 
     IEnumerator Start()
     {
+        InputHandler.Singleton.OnUIMenuDeActivated += HideSettingsPanel;
+
         yield return null;
 
         startScale = settingsPanel.lossyScale;
         settingsPanel.gameObject.SetActive(false);
+    }
+
+    private void OnDestroy()
+    {
+        InputHandler.Singleton.OnUIMenuDeActivated -= HideSettingsPanel;
     }
 
     public void ShowSettingsPanel()
@@ -32,6 +39,11 @@ public class SettingsMenuUI : MonoBehaviour
 
         LeanTween.cancel(settingsPanel);
         LeanTween.scale(settingsPanel, startScale, 0.5f).setEase(LeanTweenType.easeInCubic); */
+    }
+
+    public void HideSettingsPanel()
+    {
+        settingsPanel.gameObject.SetActive(false);
     }
 
     public void ControlMusicVolume()

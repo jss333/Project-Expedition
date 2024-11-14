@@ -45,6 +45,8 @@ public class AudioManagerNoMixers : MonoBehaviour {
     {
         LoadSFXScriptableObjects();
 
+        sfxVolume = 1.0f;
+
         PlayFirstPartMusic();
     }
 
@@ -74,6 +76,8 @@ public class AudioManagerNoMixers : MonoBehaviour {
     {
         if (audioSrcByName.ContainsKey(sfxSO.name))
         {
+            RandomPitchAudioSource rndPitchAudioSrc = audioSrcByName[sfxSO.name];
+            rndPitchAudioSrc.SetAssociatedAudio(sfxSO);
             return audioSrcByName[sfxSO.name];
         }
         else
