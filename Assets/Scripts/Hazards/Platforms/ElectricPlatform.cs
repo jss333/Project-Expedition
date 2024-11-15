@@ -31,6 +31,7 @@ public class ElectricPlatform : HazardPlatform
     {
         base.ActivateAction();
         Debug.Log("Electrified Action");
+        AudioManagerNoMixers.Singleton.PlaySFXByName("Electricity");
 
         isElectrified = true;
         timer = 0;

@@ -3230,6 +3230,16 @@ PrefabInstance:
       propertyPath: JumpToggle
       value: 
       objectReference: {fileID: 1109229711}
+    - target: {fileID: 2583448413161769738, guid: bfe30e0a894d02d488d00f5203b8ec9a,
+        type: 3}
+      propertyPath: airJumpSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 003f61fc4ba0d564bb6d4855eb048f15, type: 3}
+    - target: {fileID: 2583448413161769738, guid: bfe30e0a894d02d488d00f5203b8ec9a,
+        type: 3}
+      propertyPath: groundJumpSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: e575edee73728ed4d9971ca6354c9dc2, type: 3}
     - target: {fileID: 3902266722017391789, guid: bfe30e0a894d02d488d00f5203b8ec9a,
         type: 3}
       propertyPath: virtualCamera
