@@ -43,9 +43,9 @@ public class BossController : MonoBehaviour
 
     [Header("Parameters - Orb")]
     [SerializeField] private GameObject singleOrbPrefab;
-    [SerializeField] private float minShotIntervalSec = 0.7f;
-    [SerializeField] private float maxShotIntervalSec = 1.3f;
-    private float nextShotTime = 0f;
+    [SerializeField] private float minShotIntervalSec = 1f;
+    [SerializeField] private float maxShotIntervalSec = 2f;
+    [SerializeField] private float nextShotTime = 0f;
     [SerializeField] private float minSingleOrbSpeed = 4.5f;
     [SerializeField] private float maxSingleOrbSpeed = 5.5f;
 
@@ -75,7 +75,11 @@ public class BossController : MonoBehaviour
         healthBar.SetMaxHealth(maxHealth);
 
         nextShotTime = Time.time + 3f;
-        instantiateBossShield();
+        if(minionRespawnThreasholds.Count == 0 && currentHealth == maxHealth)
+        {
+            instantiateBossShield();
+        }
+        
 
         stopOverflowDamageNumbers = overflowDamageCooldown;
     }
@@ -116,7 +120,7 @@ public class BossController : MonoBehaviour
                 AudioManagerNoMixers.Singleton.PlaySFXByName("BossShootsSingleProjectile");
             }
 
-            nextShotTime += GetRandomFloat(minShotIntervalSec, maxShotIntervalSec);
+            nextShotTime = Time.time + GetRandomFloat(minShotIntervalSec, maxShotIntervalSec);
         }
     }
 
@@ -217,13 +221,15 @@ public class BossController : MonoBehaviour
 
             if (!bgmChangeTriggered && CurrentHealthPercentLessThan(bgmChangeHealthPercent))
             {
-                challengeRoomBGM.PlaySecondHalfBGM();
+                //challengeRoomBGM.PlaySecondHalfBGM();
+                AudioManagerNoMixers.Singleton.PlaySecondPartMusic();
                 bgmChangeTriggered = true;
             }
 
             if (currentHealth <= 0)
             {
-                challengeRoomBGM.PlayVictoryBGM();
+                //challengeRoomBGM.PlayVictoryBGM();
+                AudioManagerNoMixers.Singleton.PlayVictroyMusic();
                 Die();
                 
             }
@@ -310,4 +316,6 @@ public class BossController : MonoBehaviour
         PopupLabel dmgNumPopup = Instantiate(damageNumberPopupPrefab, popupLabelSource.position, Quaternion.identity);
         dmgNumPopup.UpdateLabel(damage.ToString());
     }
+
+
 }
