@@ -22,14 +22,14 @@ public class PlayerHealth : MonoBehaviour
         challengeRoomBGM = FindObjectOfType<ChallengeRoomBGM>();
         entityActionVisualController = GetComponent<EntityActionVisualController>();
         currentHealth = maxHealth;
-        healthBar.SetMaxHealth(maxHealth);
+        //healthBar.SetMaxHealth(maxHealth);
         animator = GetComponent<Animator>();
     }
 
     public void TakeDamage(int healthdamage)
     {
         currentHealth -= healthdamage;
-        healthBar.SetHealth(currentHealth);
+        //healthBar.SetHealth(currentHealth);
         AudioManagerNoMixers.Singleton.PlaySFXByName("PlayerTakesDamage");
         entityActionVisualController.ApplyGettingHitVisuals();
         DamageEventsManager.OnPlayerDamaged?.Invoke((float)healthdamage / maxHealth);

@@ -32,18 +32,13 @@ public class PlayerProjectile : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
-    
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Enemy"))
-        {
-            if(collision.GetComponent<HealthComponent>() != null)
-            {
-                collision.GetComponent<HealthComponent>().TakeDamage(10);
-            }
-        }
+        if (collision.GetComponent<HealthComponent>() != null && !collision.CompareTag("Player"))
+         {
+            collision.GetComponent<HealthComponent>().TakeDamage(10);
+            Destroy(this.gameObject);
+         }
     }
 
     private void OnDestroy()

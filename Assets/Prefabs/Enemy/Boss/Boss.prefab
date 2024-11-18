@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7144092496311828960}
   - component: {fileID: 1863408600527210321}
   - component: {fileID: 5027129401144850634}
+  - component: {fileID: 7351034233433138393}
   - component: {fileID: 4498592303357510841}
   m_Layer: 9
   m_Name: Boss
@@ -164,17 +165,11 @@ MonoBehaviour:
   orbSourcePosition: {fileID: 4769236345242613906}
   p_BossShield: {fileID: 3970724019627321346, guid: 2a484caf907ff66468343981d89f3cbe,
     type: 3}
-  damageNumberPopupPrefab: {fileID: 1038287333503213384, guid: 829610abb2180f84a92e352045cc7092,
-    type: 3}
-  immunePopupPrefab: {fileID: 1038287333503213384, guid: 3110b24e1d0c17643857d32cfc303124,
-    type: 3}
-  popupLabelSource: {fileID: 569214277671105002}
-  maxHealth: 4000
   hurtStateHealthPercent: 50
+  hurtStateTriggered: 0
   bgmChangeHealthPercent: 40
   damageTakenSFXCooldown: 0.2
-  stopOverflowDamageNumbers: 1
-  overflowDamageCooldown: 1.5
+  delayEndScreen: 10
   minionRespawnThreasholds:
   - 80
   - 50
@@ -183,6 +178,7 @@ MonoBehaviour:
     type: 3}
   minShotIntervalSec: 0.8
   maxShotIntervalSec: 1.3
+  nextShotTime: 0
   minSingleOrbSpeed: 1.5
   maxSingleOrbSpeed: 2.5
   multipleOrbPrefab: {fileID: 2522101524757786263, guid: d92236d97d3171d4384564f908974f71,
@@ -216,6 +212,72 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11566a80379449d40b3ad276b5ef4311, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7351034233433138393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1135948589728832962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a36b7a4a58aba984c9b2a143d2cdced4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 5000
+  healthChannel: {fileID: 11400000, guid: 3faa71df3fe45234398f96670e0d989d, type: 2}
+  healthChange:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7144092496311828960}
+        m_TargetAssemblyTypeName: BossController, Assembly-CSharp
+        m_MethodName: BossHit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  death:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7144092496311828960}
+        m_TargetAssemblyTypeName: BossController, Assembly-CSharp
+        m_MethodName: Die
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  Immune:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7351034233433138393}
+        m_TargetAssemblyTypeName: BossHealthComponent, Assembly-CSharp
+        m_MethodName: TryImmunePopup
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  damageNumberPopupPrefab: {fileID: 1038287333503213384, guid: 829610abb2180f84a92e352045cc7092,
+    type: 3}
+  immunePopupPrefab: {fileID: 1038287333503213384, guid: 3110b24e1d0c17643857d32cfc303124,
+    type: 3}
+  popupLabelSource: {fileID: 569214277671105002}
+  stopOverflowDamageNumbers: 1
+  overflowDamageCooldown: 1
 --- !u!114 &4498592303357510841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -409,8 +471,8 @@ GameObject:
   - component: {fileID: 8841328366245207326}
   - component: {fileID: 4971161105985601160}
   - component: {fileID: 7815332445413333582}
-  - component: {fileID: 1064760652760908610}
   - component: {fileID: 6885957506596557899}
+  - component: {fileID: 1253607053290292666}
   m_Layer: 5
   m_Name: Boss Health Bar Canvas
   m_TagString: Untagged
@@ -503,19 +565,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &1064760652760908610
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4963213019358931660}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69d70f28a89c34f7d9e555483217afb7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  slider: {fileID: 6885957506596557899}
 --- !u!114 &6885957506596557899
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -567,6 +616,34 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1253607053290292666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4963213019358931660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0f07600ed5827046a0448afa5058415, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventChannel: {fileID: 11400000, guid: 3faa71df3fe45234398f96670e0d989d, type: 2}
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2342176316402791918}
+        m_TargetAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+        m_MethodName: set_fillAmount
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6318660427224991497
 GameObject:
   m_ObjectHideFlags: 0

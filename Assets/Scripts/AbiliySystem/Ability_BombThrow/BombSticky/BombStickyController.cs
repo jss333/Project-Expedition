@@ -72,15 +72,23 @@ public class BombStickyController : MonoBehaviour
             //for each in radius of explosion deal damage
             foreach (var hit in hitEnemies)
             {
-                if (hit.GetComponent<HealthComponent>()!= null)
+                if (hit.GetComponent<PlayerHealthComponent>() != null)
                 {
                     var closestPoint = hit.ClosestPoint(transform.position);
                     var distance = Vector3.Distance(closestPoint, transform.position);
 
                     var damagePercentCalc = Mathf.InverseLerp(bombExplosionRadius, 0, distance);
+                    hit.GetComponent<HealthComponent>().TakeDamage((int)(damagePercentCalc * bombExplosionDamage) / 7);
+                }
+                else if (hit.GetComponent<HealthComponent>() != null)
+                {
+                    var closestPoint = hit.ClosestPoint(transform.position);
+                    var distance = Vector3.Distance(closestPoint, transform.position);
 
+                    var damagePercentCalc = Mathf.InverseLerp(bombExplosionRadius, 0, distance);
                     hit.GetComponent<HealthComponent>().TakeDamage((int)(damagePercentCalc * bombExplosionDamage));
                 }
+
             }
         }
     }

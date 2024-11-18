@@ -204,7 +204,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 1000
-  healthChannel: {fileID: 11400000, guid: 3faa71df3fe45234398f96670e0d989d, type: 2}
+  healthChannel: {fileID: 0}
   healthChange:
     m_PersistentCalls:
       m_Calls:
@@ -235,6 +235,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  Immune:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1333129298858907327
 GameObject:
   m_ObjectHideFlags: 0

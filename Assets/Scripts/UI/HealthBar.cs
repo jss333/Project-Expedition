@@ -6,16 +6,30 @@ using UnityEngine.UI;
 public class HealthBar : MonoBehaviour
 {
     [SerializeField] Slider slider;
+    private HealthComponent healthComponent;
 
-    public void SetMaxHealth(int health)
+    private void Awake()
     {
-        slider.maxValue = health;
-        slider.value = health;
+        healthComponent = GetComponent<HealthComponent>();
     }
-
-    public void SetHealth(int health)
+    private void Start()
     {
-        slider.value = health;
+        SetMaxHealth();
+    }
+    public void SetMaxHealth()
+    {
+        if (healthComponent != null)
+        {
+            slider.maxValue = healthComponent.getMaxHealth();
+            slider.value = healthComponent.getCurrentHealth();
+        }
+    }
+    public void SetHealth()
+    {
+        if (healthComponent != null)
+        {
+            slider.value = healthComponent.getCurrentHealth();
+        }
     }
 
 }
