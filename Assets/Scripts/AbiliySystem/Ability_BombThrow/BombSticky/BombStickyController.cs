@@ -61,6 +61,16 @@ public class BombStickyController : MonoBehaviour
             DurationLogic();
         }
     }
+
+    public void InitializeBombSettings(float durationInAir, float durationAfterStick, int explosionDamage, float explosionRadius, float speedMuliplier = 20)
+    {
+        this.durationInAir = durationInAir;
+        this.durationAfterStick = durationAfterStick;
+        this.bombExplosionDamage = explosionDamage;
+        this.bombExplosionRadius = explosionRadius;
+        this.speedMultiplier = speedMuliplier;
+    }
+
     private void Explode()
     {
 

@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1bf8a1907265fb4694107ee858782a0, type: 3}
+  m_Name: ThrowBombAbility
+  m_EditorClassIdentifier: 
+  abilityName: 
+  abilityIcon: {fileID: 1183742671, guid: 5409ce70b3e87d343a361b2c624ef38c, type: 3}
+  iconColor: {r: 1, g: 1, b: 1, a: 1}
+  maxDuration: 2
+  maxCoolDownTime: 0.7
+  bombPrefab: {fileID: 7007879412541221966, guid: 8843d1c86bf86d44585bf089305f4869,
+    type: 3}
+  durationInAir: 2
+  explosionDamage: 300
+  explosionRadius: 1.5
+  speedMultiplier: 20
