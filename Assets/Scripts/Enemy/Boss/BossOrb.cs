@@ -20,7 +20,7 @@ public class BossOrb : MonoBehaviour
     {
         if(canDamageBossAndMinions)
         {
-            if (!other.CompareTag("Player"))
+            if (!other.CompareTag("Player") && other.GetComponent<HealthComponent>() != null)
             {
                 other.GetComponent<HealthComponent>().TakeDamage(orbDmg);
                 Destroy(this.gameObject);
@@ -28,7 +28,7 @@ public class BossOrb : MonoBehaviour
             return;
         }
 
-        if (other.gameObject.tag == "Player" && !canDamageBossAndMinions)
+        else if (other.gameObject.tag == "Player" && !canDamageBossAndMinions)
         {
             other.GetComponent<HealthComponent>().TakeDamage(orbDmg);
             Destroy(this.gameObject);
