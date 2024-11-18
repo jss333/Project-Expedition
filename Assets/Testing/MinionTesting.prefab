@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: -2893040643860357271}
   - component: {fileID: 4909417910734677740}
   - component: {fileID: 1368074845727070049}
+  - component: {fileID: 690782536529857663}
   m_Layer: 0
   m_Name: MinionTesting
-  m_TagString: Minion
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -189,8 +190,51 @@ MonoBehaviour:
   damageNumberPopupPrefab: {fileID: 1038287333503213384, guid: 829610abb2180f84a92e352045cc7092,
     type: 3}
   popupLabelSource: {fileID: 4916891223843050128}
-  maxhealth: 1000
-  currentHealth: 1000
+  healthSlider: {fileID: 1523869240234072405}
+--- !u!114 &690782536529857663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 449684760226055840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d814cef7182fd0948b6181addc367f72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 1000
+  healthChannel: {fileID: 11400000, guid: 3faa71df3fe45234398f96670e0d989d, type: 2}
+  healthChange:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1368074845727070049}
+        m_TargetAssemblyTypeName: MinionTesting, Assembly-CSharp
+        m_MethodName: changeHealthBar
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  death:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1368074845727070049}
+        m_TargetAssemblyTypeName: MinionTesting, Assembly-CSharp
+        m_MethodName: DestroyThisMinion
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1333129298858907327
 GameObject:
   m_ObjectHideFlags: 0
@@ -415,7 +459,6 @@ GameObject:
   - component: {fileID: 1979263072081841679}
   - component: {fileID: 6316931684003109230}
   - component: {fileID: 4806116223019529106}
-  - component: {fileID: 2918724717463857661}
   - component: {fileID: 5330687850978151509}
   m_Layer: 0
   m_Name: Minion Health Bar
@@ -508,19 +551,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &2918724717463857661
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7498352130130691186}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69d70f28a89c34f7d9e555483217afb7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  slider: {fileID: 5330687850978151509}
 --- !u!114 &5330687850978151509
 MonoBehaviour:
   m_ObjectHideFlags: 0

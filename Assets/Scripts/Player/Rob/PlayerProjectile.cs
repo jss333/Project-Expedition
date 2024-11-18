@@ -37,22 +37,13 @@ public class PlayerProjectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        /*if (collision.collider.gameObject.tag == "Boss")
+        if (collision.CompareTag("Enemy"))
         {
-            BossController boss = collision.collider.gameObject.GetComponent<BossController>();
-            boss.TakeDamage(damageAmt);
-            Destroy(this.gameObject);
-        }  */
-
-       // if (layersToCollideWith == (layersToCollideWith | (1 << collision.gameObject.layer)))
-       // {
-            /*if (collision.gameObject.tag == "Boss")
+            if(collision.GetComponent<HealthComponent>() != null)
             {
-                BossController boss = collision.gameObject.GetComponent<BossController>();
-                boss.TakeDamage(damageAmt);
-            }  */
-            //Destroy(this.gameObject);
-       // }
+                collision.GetComponent<HealthComponent>().TakeDamage(10);
+            }
+        }
     }
 
     private void OnDestroy()
