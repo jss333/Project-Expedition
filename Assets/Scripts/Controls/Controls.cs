@@ -107,6 +107,42 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Ability_1"",
+                    ""type"": ""Button"",
+                    ""id"": ""68ef1dc6-80cb-4c4f-b91c-c4012572ee18"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Ability_2"",
+                    ""type"": ""Button"",
+                    ""id"": ""7070ea32-8712-4d0c-aeae-5e7814fd3d15"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Ability_3"",
+                    ""type"": ""Button"",
+                    ""id"": ""83c4b56b-5f4f-40be-958a-9d5e037a884c"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Ability_4"",
+                    ""type"": ""Button"",
+                    ""id"": ""60f8147c-2100-4e0d-ba63-3732930ef2d3"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -252,6 +288,50 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""action"": ""ThrowStickyBomb"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e936a6cc-6f82-4aa0-87f3-060871a33d7f"",
+                    ""path"": ""<Keyboard>/1"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Ability_1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c60290c0-b5e2-45de-bade-a8a34ce60a29"",
+                    ""path"": ""<Keyboard>/2"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Ability_2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""59a43279-2484-4d9a-9f29-43a18b908867"",
+                    ""path"": ""<Keyboard>/3"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Ability_3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""12c612aa-3ca7-4302-8dc9-9201cd7fb8d3"",
+                    ""path"": ""<Keyboard>/4"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Ability_4"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -337,6 +417,10 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         m_Std_Jump = m_Std.FindAction("Jump", throwIfNotFound: true);
         m_Std_ThrowBomb = m_Std.FindAction("ThrowBomb", throwIfNotFound: true);
         m_Std_ThrowStickyBomb = m_Std.FindAction("ThrowStickyBomb", throwIfNotFound: true);
+        m_Std_Ability_1 = m_Std.FindAction("Ability_1", throwIfNotFound: true);
+        m_Std_Ability_2 = m_Std.FindAction("Ability_2", throwIfNotFound: true);
+        m_Std_Ability_3 = m_Std.FindAction("Ability_3", throwIfNotFound: true);
+        m_Std_Ability_4 = m_Std.FindAction("Ability_4", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Newaction = m_UI.FindAction("New action", throwIfNotFound: true);
@@ -412,6 +496,10 @@ public partial class @Controls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Std_Jump;
     private readonly InputAction m_Std_ThrowBomb;
     private readonly InputAction m_Std_ThrowStickyBomb;
+    private readonly InputAction m_Std_Ability_1;
+    private readonly InputAction m_Std_Ability_2;
+    private readonly InputAction m_Std_Ability_3;
+    private readonly InputAction m_Std_Ability_4;
     public struct StdActions
     {
         private @Controls m_Wrapper;
@@ -425,6 +513,10 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         public InputAction @Jump => m_Wrapper.m_Std_Jump;
         public InputAction @ThrowBomb => m_Wrapper.m_Std_ThrowBomb;
         public InputAction @ThrowStickyBomb => m_Wrapper.m_Std_ThrowStickyBomb;
+        public InputAction @Ability_1 => m_Wrapper.m_Std_Ability_1;
+        public InputAction @Ability_2 => m_Wrapper.m_Std_Ability_2;
+        public InputAction @Ability_3 => m_Wrapper.m_Std_Ability_3;
+        public InputAction @Ability_4 => m_Wrapper.m_Std_Ability_4;
         public InputActionMap Get() { return m_Wrapper.m_Std; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -461,6 +553,18 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @ThrowStickyBomb.started += instance.OnThrowStickyBomb;
             @ThrowStickyBomb.performed += instance.OnThrowStickyBomb;
             @ThrowStickyBomb.canceled += instance.OnThrowStickyBomb;
+            @Ability_1.started += instance.OnAbility_1;
+            @Ability_1.performed += instance.OnAbility_1;
+            @Ability_1.canceled += instance.OnAbility_1;
+            @Ability_2.started += instance.OnAbility_2;
+            @Ability_2.performed += instance.OnAbility_2;
+            @Ability_2.canceled += instance.OnAbility_2;
+            @Ability_3.started += instance.OnAbility_3;
+            @Ability_3.performed += instance.OnAbility_3;
+            @Ability_3.canceled += instance.OnAbility_3;
+            @Ability_4.started += instance.OnAbility_4;
+            @Ability_4.performed += instance.OnAbility_4;
+            @Ability_4.canceled += instance.OnAbility_4;
         }
 
         private void UnregisterCallbacks(IStdActions instance)
@@ -492,6 +596,18 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @ThrowStickyBomb.started -= instance.OnThrowStickyBomb;
             @ThrowStickyBomb.performed -= instance.OnThrowStickyBomb;
             @ThrowStickyBomb.canceled -= instance.OnThrowStickyBomb;
+            @Ability_1.started -= instance.OnAbility_1;
+            @Ability_1.performed -= instance.OnAbility_1;
+            @Ability_1.canceled -= instance.OnAbility_1;
+            @Ability_2.started -= instance.OnAbility_2;
+            @Ability_2.performed -= instance.OnAbility_2;
+            @Ability_2.canceled -= instance.OnAbility_2;
+            @Ability_3.started -= instance.OnAbility_3;
+            @Ability_3.performed -= instance.OnAbility_3;
+            @Ability_3.canceled -= instance.OnAbility_3;
+            @Ability_4.started -= instance.OnAbility_4;
+            @Ability_4.performed -= instance.OnAbility_4;
+            @Ability_4.canceled -= instance.OnAbility_4;
         }
 
         public void RemoveCallbacks(IStdActions instance)
@@ -582,6 +698,10 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         void OnJump(InputAction.CallbackContext context);
         void OnThrowBomb(InputAction.CallbackContext context);
         void OnThrowStickyBomb(InputAction.CallbackContext context);
+        void OnAbility_1(InputAction.CallbackContext context);
+        void OnAbility_2(InputAction.CallbackContext context);
+        void OnAbility_3(InputAction.CallbackContext context);
+        void OnAbility_4(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

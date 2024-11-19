@@ -28,6 +28,11 @@ public class InputHandler : MonoBehaviour, IStdActions , IUIActions
 
     public Action<float> OnPlayerMovementHandle;
 
+    public Action<int> OnAbilityTriggered_1;
+    public Action<int> OnAbilityTriggered_2;
+    public Action<int> OnAbilityTriggered_3;
+    public Action<int> OnAbilityTriggered_4;
+
     private void Awake()
     {
         if (Singleton != null)
@@ -158,6 +163,38 @@ public class InputHandler : MonoBehaviour, IStdActions , IUIActions
         if (context.phase == InputActionPhase.Started)
         {
             OnThrowStickyBomb?.Invoke();
+        }
+    }
+
+    public void OnAbility_1(InputAction.CallbackContext context)
+    {
+        if (context.phase == InputActionPhase.Started)
+        {
+            OnAbilityTriggered_1?.Invoke(1);
+        }
+    }
+
+    public void OnAbility_2(InputAction.CallbackContext context)
+    {
+        if (context.phase == InputActionPhase.Started)
+        {
+            OnAbilityTriggered_2?.Invoke(2);
+        }
+    }
+
+    public void OnAbility_3(InputAction.CallbackContext context)
+    {
+        if (context.phase == InputActionPhase.Started)
+        {
+            OnAbilityTriggered_3?.Invoke(3);
+        }
+    }
+
+    public void OnAbility_4(InputAction.CallbackContext context)
+    {
+        if (context.phase == InputActionPhase.Started)
+        {
+            OnAbilityTriggered_4?.Invoke(4);
         }
     }
 }

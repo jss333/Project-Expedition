@@ -46,15 +46,32 @@ namespace AbilitySystem
             InputHandler.Singleton.OnAbilityActivate += UseCurrentAbility;
             InputHandler.Singleton.OnCycleForward += CycleForwardThroughAbilities;
             InputHandler.Singleton.OnCycleBackward += CycleBackwardThroughAbilities;
+
+            InputHandler.Singleton.OnAbilityTriggered_1 += ActivateAbility;
+            InputHandler.Singleton.OnAbilityTriggered_2 += ActivateAbility;
+            InputHandler.Singleton.OnAbilityTriggered_3 += ActivateAbility;
+            InputHandler.Singleton.OnAbilityTriggered_4 += ActivateAbility;
         }
+        
 
         private void OnDestroy()
         {
             InputHandler.Singleton.OnAbilityActivate -= UseCurrentAbility;
             InputHandler.Singleton.OnCycleForward -= CycleForwardThroughAbilities;
             InputHandler.Singleton.OnCycleBackward -= CycleBackwardThroughAbilities;
+
+            InputHandler.Singleton.OnAbilityTriggered_1 += ActivateAbility;
+            InputHandler.Singleton.OnAbilityTriggered_2 += ActivateAbility;
+            InputHandler.Singleton.OnAbilityTriggered_3 += ActivateAbility;
+            InputHandler.Singleton.OnAbilityTriggered_4 += ActivateAbility;
         }
 
+        private void ActivateAbility(int index)
+        {
+            currentAbility = availableAbilities[index - 1];
+
+            UseCurrentAbility();
+        }
 
         private void SelectFirstAbilityAsCurrent()
         {
