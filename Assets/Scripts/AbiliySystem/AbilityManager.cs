@@ -18,6 +18,8 @@ namespace AbilitySystem
         private int currentAbilityIndex = 0;
         private GameObject playerTransform;
 
+        public Action<int, bool> OnAbilityEnabledAndDisabled;
+
         private void Awake()
         {
             if(singleton != null)
@@ -51,8 +53,10 @@ namespace AbilitySystem
             InputHandler.Singleton.OnAbilityTriggered_2 += ActivateAbility;
             InputHandler.Singleton.OnAbilityTriggered_3 += ActivateAbility;
             InputHandler.Singleton.OnAbilityTriggered_4 += ActivateAbility;
+
+            OnAbilityEnabledAndDisabled += ControlAbilityAvailability;
         }
-        
+
 
         private void OnDestroy()
         {
@@ -64,13 +68,32 @@ namespace AbilitySystem
             InputHandler.Singleton.OnAbilityTriggered_2 += ActivateAbility;
             InputHandler.Singleton.OnAbilityTriggered_3 += ActivateAbility;
             InputHandler.Singleton.OnAbilityTriggered_4 += ActivateAbility;
+
+            OnAbilityEnabledAndDisabled -= ControlAbilityAvailability;
         }
 
         private void ActivateAbility(int index)
         {
+            if (!CanAbilityBeActivated(index - 1))
+            {
+                return;
+            }
+
             currentAbility = availableAbilities[index - 1];
 
             UseCurrentAbility();
+        }
+
+        private bool CanAbilityBeActivated(int v)
+        {
+            Debug.Log(availableAbilities[v].name);
+            Debug.Log(availableAbilities[v].CanBeActivated);
+            return availableAbilities[v].CanBeActivated;
+        }
+
+        private void ControlAbilityAvailability(int index, bool b)
+        {
+            availableAbilities[index].CanBeActivated = b;
         }
 
         private void SelectFirstAbilityAsCurrent()

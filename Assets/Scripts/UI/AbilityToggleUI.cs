@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AbilityToggleUI : MonoBehaviour
 {
-    private List<AbilityButton> buttonList = new List<AbilityButton>();
+    private List<AbilityDebugButton> buttonList = new List<AbilityDebugButton>();
     private DebugMenuUI menuUI;
     private bool shieldAbilityRed = true;
     private bool shieldAbilityBlue = true;
@@ -18,10 +18,10 @@ public class AbilityToggleUI : MonoBehaviour
     {
         menuUI = this.GetComponent<DebugMenuUI>();
         buttonList.Clear();
-        buttonList = menuUI.abilityButtons;
+        //buttonList = menuUI.abilityButtons;
     }
 
-    public void manageVariableChanges()
+    /*public void manageVariableChanges()
     {
         for (int i = 0; i < buttonList.Count; i++)
         {
@@ -42,5 +42,5 @@ public class AbilityToggleUI : MonoBehaviour
                     break;
             }
         }
-    }
+    } */
 }
