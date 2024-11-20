@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 1704915921860726945}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -12.290978, y: -0.5984415, z: -10}
+  m_LocalPosition: {x: 7.078683, y: 3.2290378, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -846,6 +846,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54475e5326271f14a99b866410d69cdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 145
+  currentHealth: 0
+  healthChannel: {fileID: 11400000, guid: 7979e1e1bcf93e84c9f450f957f5d37d, type: 2}
+  healthEventChannel: {fileID: 0}
+  healthChange:
+    m_PersistentCalls:
+      m_Calls: []
+  death:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3512466302623144588}
+        m_TargetAssemblyTypeName: PlayerHealthComponent, Assembly-CSharp
+        m_MethodName: PlayerDeath
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3858255749189079412}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  Immune:
+    m_PersistentCalls:
+      m_Calls: []
+  robObj: {fileID: 5274791500926242520}
 --- !u!1 &5676261326298286954
 GameObject:
   m_ObjectHideFlags: 0
@@ -1178,7 +1216,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_NoiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
   m_PivotOffset: {x: 0, y: 0, z: 0}
-  m_AmplitudeGain: 1
+  m_AmplitudeGain: 0
   m_FrequencyGain: 1
   mNoiseOffsets: {x: 0, y: 0, z: 0}
 --- !u!1 &8403068427738537419
