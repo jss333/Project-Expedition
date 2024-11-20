@@ -37,6 +37,8 @@ namespace AbilitySystem
         private void Awake()
         {
             InitializeAbility();
+
+            CanBeActivated = true;
         }
 
         public void InitializeAbility()
