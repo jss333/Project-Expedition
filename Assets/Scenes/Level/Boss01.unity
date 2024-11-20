@@ -284,7 +284,7 @@ Transform:
   m_GameObject: {fileID: 6225117}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.092297, y: 4.0301185, z: -10}
+  m_LocalPosition: {x: -16.09399, y: 4.0301185, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3787,7 +3787,7 @@ PrefabInstance:
         type: 3}
       propertyPath: healthBar
       value: 
-      objectReference: {fileID: 1540650913}
+      objectReference: {fileID: 0}
     - target: {fileID: 4569246080999924309, guid: bfe30e0a894d02d488d00f5203b8ec9a,
         type: 3}
       propertyPath: challengeRoomBGM
@@ -4542,7 +4542,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69d70f28a89c34f7d9e555483217afb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slider: {fileID: 1062283727}
+  slider: {fileID: 0}
 --- !u!114 &1062283727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6105,10 +6105,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1540650910}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69d70f28a89c34f7d9e555483217afb7, type: 3}
+  m_Script: {fileID: 11500000, guid: c0f07600ed5827046a0448afa5058415, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slider: {fileID: 1540650912}
+  eventChannel: {fileID: 11400000, guid: 7979e1e1bcf93e84c9f450f957f5d37d, type: 2}
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1398735899}
+        m_TargetAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+        m_MethodName: set_fillAmount
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1546351940
 GameObject:
   m_ObjectHideFlags: 0
@@ -11769,7 +11784,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69d70f28a89c34f7d9e555483217afb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slider: {fileID: 1987242765}
+  slider: {fileID: 0}
 --- !u!114 &1987242765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12493,6 +12508,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boss
       objectReference: {fileID: 0}
+    - target: {fileID: 1135948589728832962, guid: 88669eb52a11c4f45b479ec3df6d074b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Boss
+      objectReference: {fileID: 0}
+    - target: {fileID: 1253607053290292666, guid: 88669eb52a11c4f45b479ec3df6d074b,
+        type: 3}
+      propertyPath: eventChannel
+      value: 
+      objectReference: {fileID: 11400000, guid: 3faa71df3fe45234398f96670e0d989d,
+        type: 2}
     - target: {fileID: 1863408600527210321, guid: 88669eb52a11c4f45b479ec3df6d074b,
         type: 3}
       propertyPath: msController

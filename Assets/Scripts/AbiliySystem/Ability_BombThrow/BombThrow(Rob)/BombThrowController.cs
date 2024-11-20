@@ -55,44 +55,23 @@ public class BombThrowController : MonoBehaviour
             //for each in radius of explosion deal damage
             foreach(var hit in hitEnemies)
             {
-                if(hit.tag == "Boss")
+                if(hit.GetComponent<PlayerHealthComponent>() != null)
                 {
                     var closestPoint = hit.ClosestPoint(transform.position);
                     var distance = Vector3.Distance(closestPoint, transform.position);
 
                     var damagePercentCalc = Mathf.InverseLerp(bombExplosionRadius, 0, distance);
-
-                    if(hit.GetComponent<BossController>() != null)
-                    {
-                        hit.GetComponent<BossController>().TakeDamage((int)(damagePercentCalc * bombExplosionDamage));
-                    }
-                    
+                    hit.GetComponent<HealthComponent>().TakeDamage((int)(damagePercentCalc * bombExplosionDamage)/7);
                 }
-                else if(hit.tag == "Minion")
+                else if (hit.GetComponent<HealthComponent>() != null)
                 {
                     var closestPoint = hit.ClosestPoint(transform.position);
                     var distance = Vector3.Distance(closestPoint, transform.position);
 
                     var damagePercentCalc = Mathf.InverseLerp(bombExplosionRadius, 0, distance);
-                    if(hit.GetComponent<MinionController>() != null)
-                    {
-                        hit.GetComponent<MinionController>().TakeDamage((int)(damagePercentCalc * bombExplosionDamage));
-                    }
-                    else if (hit.GetComponent<MinionTesting>() != null)
-                    {
-                        hit.GetComponent<MinionTesting>().TakeDamage((int)(damagePercentCalc * bombExplosionDamage));
-                    }
-                    
+                    hit.GetComponent<HealthComponent>().TakeDamage((int)(damagePercentCalc * bombExplosionDamage));
                 }
-                else if (hit.tag == "Player")
-                {
-                    var closestPoint = hit.ClosestPoint(transform.position);
-                    var distance = Vector3.Distance(closestPoint, transform.position);
-
-                    var damagePercentCalc = Mathf.InverseLerp(bombExplosionRadius, 0, distance);
-
-                    hit.GetComponent<PlayerHealth>().TakeDamage((int)(damagePercentCalc * bombExplosionDamage)/5);
-                }
+                
             }
             //Gizmos.DrawSphere(transform.position, bombExplosionRadius);
         }

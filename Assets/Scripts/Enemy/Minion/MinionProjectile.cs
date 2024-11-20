@@ -29,7 +29,7 @@ public class MinionFireSys : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision){
         if(collision.gameObject.tag == "Player"){
-            collision.gameObject.GetComponent<PlayerHealth>().TakeDamage(dmg);
+            collision.gameObject.GetComponent<HealthComponent>().TakeDamage(dmg);
             Destroy(this.gameObject);
         }
     }

@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: -3214555015778094342}
   - component: {fileID: -2893040643860357271}
   - component: {fileID: 4909417910734677740}
+  - component: {fileID: 1930364456516552654}
+  - component: {fileID: 7182629859586642812}
   m_Layer: 0
   m_Name: Minion
   m_TagString: Minion
@@ -103,14 +105,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d27042e14824dc4c897463ef51ddfde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bossInfo: {fileID: 0}
   anchor: {fileID: 0}
-  spawner: {fileID: 0}
-  healthBar: {fileID: 2918724717463857661}
-  maxhealth: 300
+  healthBar: {fileID: 0}
   moveSpeed: 6
   collisionDmg: 5
-  currentHealth: 20
   projectile: {fileID: 4767921678106280535, guid: 5cda2d0d30d07624b85208d0c5ba089e,
     type: 3}
   attackPeriod: 2
@@ -239,6 +237,78 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &1930364456516552654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 449684760226055840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d814cef7182fd0948b6181addc367f72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 500
+  healthChannel: {fileID: 0}
+  healthChange:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 862526121453958950}
+        m_TargetAssemblyTypeName: MinionController, Assembly-CSharp
+        m_MethodName: MinionHit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7182629859586642812}
+        m_TargetAssemblyTypeName: HealthBar, Assembly-CSharp
+        m_MethodName: SetHealth
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  death:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 862526121453958950}
+        m_TargetAssemblyTypeName: MinionController, Assembly-CSharp
+        m_MethodName: DestroyThisMinion
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  Immune:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &7182629859586642812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 449684760226055840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69d70f28a89c34f7d9e555483217afb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 5330687850978151509}
 --- !u!1 &2340894105315849776
 GameObject:
   m_ObjectHideFlags: 0
@@ -432,7 +502,6 @@ GameObject:
   - component: {fileID: 1979263072081841679}
   - component: {fileID: 6316931684003109230}
   - component: {fileID: 4806116223019529106}
-  - component: {fileID: 2918724717463857661}
   - component: {fileID: 5330687850978151509}
   m_Layer: 0
   m_Name: Minion Health Bar
@@ -525,19 +594,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &2918724717463857661
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7498352130130691186}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69d70f28a89c34f7d9e555483217afb7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  slider: {fileID: 5330687850978151509}
 --- !u!114 &5330687850978151509
 MonoBehaviour:
   m_ObjectHideFlags: 0

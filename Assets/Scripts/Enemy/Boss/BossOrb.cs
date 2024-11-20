@@ -16,33 +16,21 @@ public class BossOrb : MonoBehaviour
     {
         orbDmg = _damageValue;
     }
-
     public void OnTriggerEnter2D(Collider2D other)
     {
         if(canDamageBossAndMinions)
         {
-            if (other.gameObject.CompareTag("Boss"))
+            if (!other.CompareTag("Player") && other.GetComponent<HealthComponent>() != null)
             {
-                other.gameObject.GetComponent<BossController>().TakeDamage(orbDmg);
-                Destroy(this.gameObject);
-            }  
-            else if (other.gameObject.CompareTag("Minion"))
-            {
-                other.gameObject.GetComponent<MinionController>().TakeDamage(orbDmg);
+                other.GetComponent<HealthComponent>().TakeDamage(orbDmg);
                 Destroy(this.gameObject);
             }
-            else if (other.gameObject.CompareTag("Tutorial Minion"))
-            {
-                other.gameObject.GetComponent<TutorialMinionController>().TakeDamage(orbDmg);
-                Destroy(this.gameObject);
-            }
-
             return;
         }
 
-        if (other.gameObject.tag == "Player" && !canDamageBossAndMinions)
+        else if (other.gameObject.tag == "Player" && !canDamageBossAndMinions)
         {
-            other.gameObject.GetComponent<PlayerHealth>().TakeDamage(orbDmg);
+            other.GetComponent<HealthComponent>().TakeDamage(orbDmg);
             Destroy(this.gameObject);
         }
     }

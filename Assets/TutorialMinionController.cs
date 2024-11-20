@@ -8,10 +8,7 @@ public class TutorialMinionController : MonoBehaviour
     private Transform playerTransform;
 
     [Header("Health")]
-    [SerializeField] private HealthBar healthBar;
-    [SerializeField] private float maxhealth = 500;
     [SerializeField] private float collisionDmg = 5F;
-    [SerializeField] private float currentHealth;
 
     [Header("Attack")]
     [SerializeField] private GameObject orbPrefab;
@@ -22,10 +19,7 @@ public class TutorialMinionController : MonoBehaviour
 
     public void Start()
     {
-        playerTransform = FindAnyObjectByType<PlayerHealth>().transform;
-
-        currentHealth = maxhealth;
-        healthBar.SetHealth((int)(currentHealth / maxhealth * 100f));
+        playerTransform = FindAnyObjectByType<PlayerMovement>().gameObject.transform;
     }
 
     public void Update()
@@ -66,21 +60,12 @@ public class TutorialMinionController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            collision.gameObject.GetComponent<PlayerHealth>().TakeDamage((int)collisionDmg);
-        }
-        if (collision.gameObject.layer == 8)
-        {
-            TakeDamage(collision.gameObject.GetComponent<PlayerProjectile>().damageAmt);
-            Destroy(collision.gameObject);
+            collision.gameObject.GetComponent<PlayerHealthComponent>().TakeDamage((int)collisionDmg);
         }
     }
-    public void TakeDamage(int damage)
+
+    public void DestroyMinion()
     {
-        currentHealth -= damage;
-        healthBar.SetHealth((int)(currentHealth / maxhealth * 100f));
-        if (currentHealth <= 0)
-        {
-            Destroy(this.gameObject);
-        }
+        Destroy(this.gameObject);
     }
 }

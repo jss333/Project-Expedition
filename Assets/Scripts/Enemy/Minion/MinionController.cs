@@ -7,19 +7,16 @@ using UnityEngine;
 public class MinionController : MonoBehaviour
 {
     [Header("References")]
-    public BossInformation bossInfo;
+    private BossInformation bossInfo;
 
     [Header("Properties")]
     //Basic properties and component refs...
     public GameObject anchor;
-    public MinionSpawnerController spawner;
-    public HealthBar healthBar;
-    public float maxhealth = 500;
+    private MinionSpawnerController spawner;
     public float moveSpeed = 3F;
     public float collisionDmg = 5F;
     //private bool awayFromAnchor = true;
     private Rigidbody2D rb;
-    public float currentHealth;
 
     [Header("Parameters")]
     //Parameters describing the minion's attack properties...
@@ -34,7 +31,6 @@ public class MinionController : MonoBehaviour
     [SerializeField] private Quaternion launchAngle;
 
     private bool reachedAnchor;
-    private bool death = false;
     [Header("Audio")]
     private bool minionHitCooldown = false;
     private float finishHitCooldown = 0;
@@ -54,8 +50,6 @@ public class MinionController : MonoBehaviour
         {
             StartCoroutine(moveToAnchor());
         }
-        currentHealth = maxhealth;
-        healthBar.SetHealth((int)(currentHealth / maxhealth * 100f));
         burstTimer = burstDensity;
         return;
     }
@@ -94,17 +88,10 @@ public class MinionController : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
+        //dealing damage to the player on impact.
         if (collision.gameObject.tag == "Player")
         {
             collision.gameObject.GetComponent<PlayerHealth>().TakeDamage((int)collisionDmg);
-        }
-        if (collision.gameObject.layer == 8)
-        {
-            if(reachedAnchor)
-            {
-                TakeDamage(collision.gameObject.GetComponent<PlayerProjectile>().damageAmt);
-                Destroy(collision.gameObject);
-            }
         }
         return;
     }
@@ -114,7 +101,7 @@ public class MinionController : MonoBehaviour
         //from its spawn point to its anchor point...
         Vector3 direction = Vector3.Normalize(anchor.transform.position - this.transform.position);
         rb.velocity = (Vector2)(direction * moveSpeed);
-        while (true)
+        while (!reachedAnchor)
         {
             if ((this.transform.position - anchor.transform.position).magnitude <= .2F)
             {
@@ -126,46 +113,33 @@ public class MinionController : MonoBehaviour
             yield return null;
         }
     }
-
-    public void TakeDamage(int damage)
+    //add this the the death unity event on the health comp
+    public void DestroyThisMinion()
     {
-        if (currentHealth > 0)
-        {
-            AudioManagerNoMixers.Singleton.PlaySFXByName("MinionHit");
-            currentHealth -= damage;
-            healthBar.SetHealth((int)(currentHealth / maxhealth * 100f));
-        }
-        else if (currentHealth <= 0 && !death)
-        {
-            death = true;
-            DestroyThisMinion();
-        }
-        else if(!minionHitCooldown)
-        {
-            MinionHitCooldownSFX();
-        }
-    }
-    private void DestroyThisMinion()
-    {
-
         bossInfo.MinionDestroyed();
+        //allow the taken anchor to be available again
         spawner.decrementActiveCount(anchor);
         //play death sound
         AudioManagerNoMixers.Singleton.PlaySFXByName("MinionDeath");
         Destroy(this.gameObject);
     }
-    private void MinionHitCooldownSFX()
+    public void MinionHit()
     {
-        if(!minionHitCooldown)
+        //the minion is immune while moving to the anchor
+        if (reachedAnchor)
         {
-            finishHitCooldown = Time.time + 1f;
-            minionHitCooldown = true;
-            
-            
-        }
-        if(finishHitCooldown < Time.time)
-        {
-            minionHitCooldown = false;
+            //if the sfx is not on cooldown
+            if (!minionHitCooldown)
+            {
+                finishHitCooldown = Time.time + 1f;
+                minionHitCooldown = true;
+                AudioManagerNoMixers.Singleton.PlaySFXByName("MinionHit");
+            }
+            //the sfx cooldown is finished
+            if (finishHitCooldown < Time.time)
+            {
+                minionHitCooldown = false;
+            }
         }
     }
 }
