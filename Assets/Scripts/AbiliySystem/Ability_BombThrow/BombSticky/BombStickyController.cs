@@ -249,7 +249,7 @@ public class BombStickyController : MonoBehaviour
         if (isBeeping)
         {
             animator.speed = beepingSpeedCurve.Evaluate((timeSinceSpawn + timeSinceSticking) / (4));
-            Debug.Log(animator.speed);
+            //Debug.Log(animator.speed);
         }
         else if (!isBeeping)
         {
