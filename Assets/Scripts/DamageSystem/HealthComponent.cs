@@ -9,6 +9,7 @@ public class HealthComponent : MonoBehaviour
     [SerializeField] private int maxHealth = 1000;
     [SerializeField] private int currentHealth = 0;
     [SerializeField] FloatEventChannel healthChannel;
+    [SerializeField] MonoFloatEventChannel healthEventChannel;
 
 
     public UnityEvent healthChange;
@@ -55,7 +56,12 @@ public class HealthComponent : MonoBehaviour
     }
     void PublishHealthPercentage()
     {
-        if(healthChannel != null)
+        if(healthEventChannel != null)
+        {
+            healthEventChannel.Invoke(currentHealth / (float)(maxHealth));
+        }
+
+        if (healthChannel != null)
         {
             healthChannel.Invoke(currentHealth / (float)(maxHealth));
         }

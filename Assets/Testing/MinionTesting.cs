@@ -32,7 +32,7 @@ public class MinionTesting : MonoBehaviour
             MinionTakesDamage(saveOldHealth - healthComponent.getCurrentHealth());
             saveOldHealth = healthComponent.getCurrentHealth();
         }
-        healthSlider.fillAmount = healthComponent.getCurrentHealth()/ (float)(healthComponent.getMaxHealth());
+        //healthSlider.fillAmount = healthComponent.getCurrentHealth()/ (float)(healthComponent.getMaxHealth());
     }
     public void MinionTakesDamage(int damage)
     {
