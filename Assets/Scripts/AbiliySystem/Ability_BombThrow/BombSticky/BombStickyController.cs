@@ -11,6 +11,7 @@ public class BombStickyController : MonoBehaviour
     [SerializeField] private int bombExplosionDamage = 300;
     [SerializeField] private float bombExplosionRadius = 1.5f;
     [SerializeField] private AnimationCurve bombSpeedCurve;
+    [SerializeField] private AnimationCurve beepingSpeedCurve;
     [SerializeField] private float speedMultiplier = 20;
 
     [Header("References")]
@@ -23,6 +24,10 @@ public class BombStickyController : MonoBehaviour
     private bool sticking = false;
     private bool hasExploded = false;
     private Vector2 explodeLocation;
+    private float stickAudioCooldown = 2;
+    private bool stickAudioCooldownActive = false;
+    private float stickAudioTimeStamp;
+    private bool isBeeping = false;
 
     private float timeSinceSpawn = 0;
     private float timeSinceSticking = 0;
@@ -47,6 +52,7 @@ public class BombStickyController : MonoBehaviour
 
 
         ThrowBomb();
+        isBeeping = true;
     }
 
     private void Update()
@@ -60,6 +66,7 @@ public class BombStickyController : MonoBehaviour
         {
             DurationLogic();
         }
+        BeepingLogic();
     }
 
     public void InitializeBombSettings(float durationInAir, float durationAfterStick, int explosionDamage, float explosionRadius, float speedMuliplier = 20)
@@ -78,6 +85,8 @@ public class BombStickyController : MonoBehaviour
         {
             //check radius
             var hitEnemies = Physics2D.OverlapCircleAll(transform.position, bombExplosionRadius);
+            PlayExplodeAudio();
+            
 
             //for each in radius of explosion deal damage
             foreach (var hit in hitEnemies)
@@ -106,6 +115,7 @@ public class BombStickyController : MonoBehaviour
     private void ThrowBomb()
     {
         GetComponent<Rigidbody2D>().AddForce((Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position).normalized * bombSpeed, ForceMode2D.Impulse);
+        PlayLaunchAudio();
     }
     private void DurationLogic()
     {
@@ -136,6 +146,7 @@ public class BombStickyController : MonoBehaviour
             explodeLocation = transform.position;
             hasExploded = true;
             TriggerDeathAnim();
+            isBeeping = false;
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
@@ -151,6 +162,18 @@ public class BombStickyController : MonoBehaviour
     {
         //add in effects later
         sticking = true;
+        //add a cooldown to the sticking sound effect
+        if (!stickAudioCooldownActive)
+        {
+            stickAudioCooldownActive = true;
+            stickAudioTimeStamp = stickAudioCooldown + Time.deltaTime;
+            PlayBombStickAudio();
+        }
+        else if(stickAudioTimeStamp < Time.deltaTime)
+        {
+            stickAudioCooldownActive = false;
+        }
+        
     }
     private void ExplodeLogic()
     {
@@ -204,5 +227,33 @@ public class BombStickyController : MonoBehaviour
     private void TriggerDeathAnim()
     {
         animator.SetTrigger("Death");
+    }
+    public void PlayExplodeAudio()
+    {
+        AudioManagerNoMixers.Singleton.PlaySFXByName("StickyBombExplosion");
+    }
+    public void PlayLaunchAudio()
+    {
+        AudioManagerNoMixers.Singleton.PlaySFXByName("StickyBombLaunch");
+    }
+    public void PlayBeepAudio()
+    {
+        AudioManagerNoMixers.Singleton.PlaySFXByName("StickyBombBeep");
+    }
+    public void PlayBombStickAudio()
+    {
+        AudioManagerNoMixers.Singleton.PlaySFXByName("StickyBombAttach");
+    }
+    public void BeepingLogic()
+    {
+        if (isBeeping)
+        {
+            animator.speed = beepingSpeedCurve.Evaluate((timeSinceSpawn + timeSinceSticking) / (4));
+            Debug.Log(animator.speed);
+        }
+        else if (!isBeeping)
+        {
+            animator.speed = 1;
+        }
     }
 }
