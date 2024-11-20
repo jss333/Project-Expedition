@@ -91,7 +91,7 @@ public class MinionController : MonoBehaviour
         //dealing damage to the player on impact.
         if (collision.gameObject.tag == "Player")
         {
-            collision.gameObject.GetComponent<PlayerHealth>().TakeDamage((int)collisionDmg);
+            collision.gameObject.GetComponent<PlayerHealthComponent>().TakeDamage((int)collisionDmg);
         }
         return;
     }
