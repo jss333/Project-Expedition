@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 497986f42411ebd4c8e757f3b1cba09d, type: 3}
   m_Name: BombLaunch
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 0}
+  audioClip: {fileID: 8300000, guid: 93fbb109633e844259ea828442bda0cb, type: 3}
   minPitch: 0.95
   maxPitch: 1.05
   soundEffectVolume: 1

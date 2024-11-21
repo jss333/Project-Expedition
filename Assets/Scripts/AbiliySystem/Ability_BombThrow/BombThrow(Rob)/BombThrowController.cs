@@ -28,12 +28,10 @@ public class BombThrowController : MonoBehaviour
 
     private bool hasExploded = false;
 
-    private GameObject player;
-    void Start()
+    void Start()    
     {
         spawnLocation = transform.position;
         mouseLocation = Input.mousePosition;
-        player = FindAnyObjectByType<PlayerMovement>().gameObject;
         animator = GetComponent<Animator>();
 
         mouseDistance = Vector2.Distance(spawnLocation, mouseLocation);
@@ -110,10 +108,7 @@ public class BombThrowController : MonoBehaviour
         }
         else if (!hasExploded)
         {
-            hasExploded = true;
-            explodeLocation = transform.position;
-            GetComponent<Animator>().SetTrigger("Explode");
-            isBeeping = false;
+            ExplodeChanges();
             PlayExplodeAudio();
         }
         if (hasExploded)
@@ -155,9 +150,13 @@ public class BombThrowController : MonoBehaviour
             animator.speed = beepingSpeedCurve.Evaluate(timeSinceSpawn / duration);
             //Debug.Log(animator.speed);
         }
-        else if (!isBeeping)
-        {
-            animator.speed = 1;
-        }
+    }
+    private void ExplodeChanges()
+    {
+        hasExploded = true;
+        explodeLocation = transform.position;
+        GetComponent<Animator>().SetTrigger("Explode");
+        isBeeping = false;
+        animator.speed = 1;
     }
 }
