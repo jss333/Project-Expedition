@@ -27,17 +27,17 @@ public class BossInformation : MonoBehaviour
     {
         immune = i;
     }
-    public void MinionDestroyed()
+    public bool MinionDestroyed()
     {
         if(FindFirstObjectByType<BossShield>()!= null)
         {
             bossShield = FindFirstObjectByType<BossShield>();
             minionCount--;
-            Debug.Log(minionCount);
             if (minionCount <= 0)
             {
-                SetImmune(false);
                 bossShield.playShieldBreakAnimation();
+                FindFirstObjectByType<BossHealthComponent>().SetIsImmune(false);
+                return true;
             }
         }
         if (minionCount >= 2)
@@ -48,6 +48,7 @@ public class BossInformation : MonoBehaviour
         {
             bossShield.shieldDamaged(2);
         }
+        return false;
     }
     public void SetMinionCount(int count)
     {

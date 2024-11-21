@@ -11,31 +11,22 @@ public class BossController : MonoBehaviour
     [SerializeField] private Transform orbSourcePosition;
     [SerializeField] private GameObject p_BossShield;
     private Transform playerPosition;
-    private HealthBar healthBar;
     private ChallengeRoomBGM challengeRoomBGM;
     private Animator bossAnimator;
     private System.Random random;
-    private BossInformation info;
+    private BossInformation bossInfo;
     private EntityActionVisualController bossAnimationController;
     private CircleCollider2D circleCollider;
     private bool bossDeath = false;
 
-    [Header("References - Popup labels")]
-    [SerializeField] private PopupLabel damageNumberPopupPrefab;
-    [SerializeField] private PopupLabel immunePopupPrefab;
-    [SerializeField] private Transform popupLabelSource;
-
     [Header("Parameters")]
-    [SerializeField] private int maxHealth = 5000;
-    private int currentHealth;
     [SerializeField] private float hurtStateHealthPercent = 50f;
     public bool hurtStateTriggered = false;
     [SerializeField] private float bgmChangeHealthPercent = 40f;
     private bool bgmChangeTriggered = false;
     [SerializeField] private float damageTakenSFXCooldown = 0.2f;
     private float lastDamageTakenSFXPlayTime = -Mathf.Infinity;
-    [SerializeField] private float stopOverflowDamageNumbers = 1f;
-    [SerializeField] private float overflowDamageCooldown = 1f;
+
     [SerializeField] private float delayEndScreen = 10f;
 
     [Header("Parameters - Minion/shield respawn")]
@@ -58,30 +49,27 @@ public class BossController : MonoBehaviour
     [SerializeField] private float maxMultipleOrbSpeed = 5.5f;
 
     private bool hasShield = false;
-    private bool damageNumActive = false;
-
+    private BossHealthComponent bossHealthComponent;
+    private int trackOldHealth;
     void Start()
     {
         random = new System.Random();
         playerPosition = FindFirstObjectByType<PlayerMovement>().gameObject.transform;
         challengeRoomBGM = FindFirstObjectByType<ChallengeRoomBGM>();
-        healthBar = GetComponentInChildren<HealthBar>();
         bossAnimator = GetComponent<Animator>();
-        info = GetComponent<BossInformation>();
+        bossInfo = GetComponent<BossInformation>();
         bossAnimationController = GetComponent<EntityActionVisualController>();
         circleCollider = GetComponent<CircleCollider2D>();
+        bossHealthComponent = GetComponent<BossHealthComponent>();
 
-        currentHealth = maxHealth;
-        healthBar.SetMaxHealth(maxHealth);
+        trackOldHealth = bossHealthComponent.getCurrentHealth();
 
         nextShotTime = Time.time + 3f;
-        if(minionRespawnThreasholds.Count == 0 && currentHealth == maxHealth)
+
+        if(minionRespawnThreasholds.Count == 0 && trackOldHealth == bossHealthComponent.getMaxHealth())
         {
             instantiateBossShield();
         }
-        
-
-        stopOverflowDamageNumbers = overflowDamageCooldown;
     }
 
     void Update()
@@ -89,14 +77,6 @@ public class BossController : MonoBehaviour
         if (PlayerIsAlive() && !bossDeath)
         {
             ShootOrbIfTimeForNextShot();
-        }
-        if (damageNumActive)
-        {
-            stopOverflowDamageNumbers -= Time.deltaTime;
-            if(stopOverflowDamageNumbers <= -3)
-            {
-                damageNumActive = false;
-            }
         }
     }
 
@@ -189,51 +169,19 @@ public class BossController : MonoBehaviour
         return (float)(min + (random.NextDouble() * (max - min)));
     }
 
-    public void TakeDamage(int damage)
+    public void BossHit()
     {
-        if(info.GetImmune())
+        //spawn popup label
+        if(trackOldHealth != bossHealthComponent.getCurrentHealth())
         {
-            if (damageNumActive == false)
-            {
-                damageNumActive = true;
-                SpawnImmunePopupLabel();
-            }
-            else if(damageNumActive && stopOverflowDamageNumbers < 0)
-            {
-                SpawnImmunePopupLabel();
-            }
-            return;
+            bossHealthComponent.SpawnDamageNumberPopupLabel(trackOldHealth - bossHealthComponent.getCurrentHealth());
+            trackOldHealth = bossHealthComponent.getCurrentHealth();
         }
-        else
-        {
-            SpawnDamageNumberPopupLabel(damage);
-
-            currentHealth -= damage;
-            minionRespawn();
-            healthBar.SetHealth(currentHealth);
-            PlayDamageTakenSFXIfEnoughCooldownTimeHasPassed();
-            bossAnimationController.ApplyGettingHitVisuals();
-
-            if (!hurtStateTriggered && CurrentHealthPercentLessThan(hurtStateHealthPercent))
-            {
-                hurtStateTriggered = true; //Used to control which shooting animation to play by EntityActionVisualController
-            }
-
-            if (!bgmChangeTriggered && CurrentHealthPercentLessThan(bgmChangeHealthPercent))
-            {
-                //challengeRoomBGM.PlaySecondHalfBGM();
-                AudioManagerNoMixers.Singleton.PlaySecondPartMusic();
-                bgmChangeTriggered = true;
-            }
-
-            if (currentHealth <= 0)
-            {
-                //challengeRoomBGM.PlayVictoryBGM();
-                AudioManagerNoMixers.Singleton.PlayVictroyMusic();
-                Die();
-                
-            }
-        }
+        minionRespawn();
+        //healthBar.SetHealth(currentHealth);
+        PlayDamageTakenSFXIfEnoughCooldownTimeHasPassed();
+        bossAnimationController.ApplyGettingHitVisuals();
+        CheckHurtState();
     }
 
     private void PlayDamageTakenSFXIfEnoughCooldownTimeHasPassed()
@@ -245,34 +193,19 @@ public class BossController : MonoBehaviour
         }
     }
 
-    private bool CurrentHealthPercentLessThan(float thresholdPercent)
+    public void Die()
     {
-        return (float)currentHealth / maxHealth <= thresholdPercent / 100;
-    }
-
-    private void Die()
-    {
+        AudioManagerNoMixers.Singleton.PlayVictroyMusic();
         bossDeath = true;
         circleCollider.radius = 0;
         //play death animation
         bossAnimator.SetTrigger("bossDeath");
         //transform.position += new Vector3(0f, .2f, 0f);
         Invoke("EndGame", delayEndScreen);
-        
     }
     public void EndGame()
     {
         EndGameEventManager.OnVictoryAchieved?.Invoke();
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.layer == 8)
-        {
-            TakeDamage(collision.gameObject.GetComponent<PlayerProjectile>().damageAmt);
-            Destroy(collision.gameObject);
-            
-        }
     }
 
     private void instantiateBossShield()
@@ -288,13 +221,14 @@ public class BossController : MonoBehaviour
         {
             for (int i = 0; i < minionRespawnThreasholds.Count(); i++)
             {
-                if (CurrentHealthPercentLessThan(minionRespawnThreasholds[i]))
+                if (bossHealthComponent.CurrentHealthPercentLessThan(minionRespawnThreasholds[i]))
                 {
+
                     instantiateBossShield();
                     minionRespawnThreasholds.RemoveAt(i);
                     FindAnyObjectByType<MinionSpawnerController>().handleMinionRespawn();
                     AudioManagerNoMixers.Singleton.PlaySFXByName("BossSpawnsMinions");
-                    info.SetImmune(true);
+                    bossHealthComponent.SetIsImmune(true);
                 }
             }
         }
@@ -304,18 +238,18 @@ public class BossController : MonoBehaviour
     {
         hasShield = value;
     }
-
-    private void SpawnImmunePopupLabel()
+    private void CheckHurtState()
     {
-        Instantiate(immunePopupPrefab, popupLabelSource.position, Quaternion.identity);
-        stopOverflowDamageNumbers = overflowDamageCooldown;
-    }
-    private void SpawnDamageNumberPopupLabel(int damage)
-    {
-        //quick hits will stack numbers (future)
-        PopupLabel dmgNumPopup = Instantiate(damageNumberPopupPrefab, popupLabelSource.position, Quaternion.identity);
-        dmgNumPopup.UpdateLabel(damage.ToString());
-    }
+        if (!hurtStateTriggered && bossHealthComponent.CurrentHealthPercentLessThan(hurtStateHealthPercent))
+        {
+            hurtStateTriggered = true; //Used to control which shooting animation to play by EntityActionVisualController
+        }
 
-
+        if (!bgmChangeTriggered && bossHealthComponent.CurrentHealthPercentLessThan(bgmChangeHealthPercent))
+        {
+            //challengeRoomBGM.PlaySecondHalfBGM();
+            AudioManagerNoMixers.Singleton.PlaySecondPartMusic();
+            bgmChangeTriggered = true;
+        }
+    }
 }

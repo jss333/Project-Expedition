@@ -11,7 +11,7 @@ public class PlatformElectricCaster : MonoBehaviour
     [SerializeField] private float damageTimer;
     [SerializeField] private bool canCastDamage;
 
-    [SerializeField] PlayerHealth playerHealth;
+    [SerializeField] PlayerHealthComponent playerHealth;
 
     CyclingElectricPlatform electricPlatform;
 
@@ -55,7 +55,7 @@ public class PlatformElectricCaster : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        PlayerHealth pH = collision.GetComponent<PlayerHealth>();
+        PlayerHealthComponent pH = collision.GetComponent<PlayerHealthComponent>();
         if(pH != null)
         {
             playerHealth = pH; 
@@ -69,7 +69,8 @@ public class PlatformElectricCaster : MonoBehaviour
 
     private void RemoveFromScene()
     {
-        electricPlatform.ResetTimer();
+        if(electricPlatform)
+            electricPlatform.ResetTimer();
         Destroy(gameObject);
     }
 }

@@ -84,7 +84,7 @@ public class PlayerMovement : MonoBehaviour
         HandleHorizontalInput();
         //HandleJumpInput();
         ClampVerticalVelocity();
-        isAirJumpSkillAcquired = toggleUI.DoubleJump;
+        //isAirJumpSkillAcquired = toggleUI.DoubleJump;
 
         
     }

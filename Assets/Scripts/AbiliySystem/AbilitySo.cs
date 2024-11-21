@@ -17,6 +17,10 @@ namespace AbilitySystem
         [SerializeField] private float maxCoolDownTime;
         protected float coolDownTime;
 
+        private bool canBeActivated;
+
+        public bool CanBeActivated { get { return canBeActivated; } set { canBeActivated = value; } }
+
         public float MaxDuration => maxDuration;
         public float Duration => duration;
 
@@ -33,6 +37,8 @@ namespace AbilitySystem
         private void Awake()
         {
             InitializeAbility();
+
+            CanBeActivated = true;
         }
 
         public void InitializeAbility()
