@@ -32,9 +32,9 @@ public abstract class HazardPlatform : MonoBehaviour
     {
         if(collision.CompareTag("Player"))
         {
-            Debug.Log("test");
             if (isAlreadyTriggered) return;
             TiggerAction();
+            AudioManagerNoMixers.Singleton.PlaySFXByName("ShakingPlatform");
         }
     }
 
