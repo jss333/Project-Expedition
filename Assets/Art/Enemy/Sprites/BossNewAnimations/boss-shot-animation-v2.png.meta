@@ -1,0 +1,2305 @@
+fileFormatVersion: 2
+guid: 869d3ed846712b447a90d086020a6c29
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 9000
+        width: 1000
+        height: 900
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c55705a48cee164799c9ed6b0381132
+      internalID: 1969832297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_1
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 9000
+        width: 1000
+        height: 900
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 825a723c943bd554baed4e42a394ac39
+      internalID: 1498008852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_2
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 9000
+        width: 1000
+        height: 900
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22d216d7af6aff84cabdc5dea49f1839
+      internalID: -2001957962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_3
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 9000
+        width: 1000
+        height: 900
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d06082976f7c4974f9ed3da815ffbc1f
+      internalID: 116717197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_4
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 9000
+        width: 1000
+        height: 900
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62b78988530d54e439e0f56a0a1d9423
+      internalID: 1518670140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_5
+      rect:
+        serializedVersion: 2
+        x: 5000
+        y: 9000
+        width: 1000
+        height: 900
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5178ae8a2fdaa743b2388dc130cc664
+      internalID: 813814450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_6
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 9000
+        width: 1000
+        height: 900
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a19dbe46c943f44b8bcd675102af416
+      internalID: -1130596017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_7
+      rect:
+        serializedVersion: 2
+        x: 7000
+        y: 9000
+        width: 1000
+        height: 900
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5207f03882218cb4d8e81d971a6f1d3e
+      internalID: 715961849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_8
+      rect:
+        serializedVersion: 2
+        x: 8000
+        y: 9000
+        width: 1000
+        height: 900
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a20ee869b2859442986a62b978fdf19
+      internalID: -412293432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8100
+        width: 1000
+        height: 882
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d1421d988446a248bee09e823e12852
+      internalID: -1103385173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_10
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 8100
+        width: 1000
+        height: 883
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cedf361a0773641439c0f60349282ad8
+      internalID: -62116521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_11
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 8100
+        width: 1000
+        height: 884
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2432b31d5b088d4383ffb2423a534de
+      internalID: 1425799507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_12
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 8100
+        width: 1000
+        height: 884
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7dfa1db4e48adf4fb4869755fb06258
+      internalID: 1045172465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_13
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 8100
+        width: 1000
+        height: 884
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 051f7681366516f4ca4641fbeef47bc7
+      internalID: -1708438063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_14
+      rect:
+        serializedVersion: 2
+        x: 5000
+        y: 8100
+        width: 1000
+        height: 886
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7865080ff0f970649ab233d91436cff5
+      internalID: -651683896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_15
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 8100
+        width: 1000
+        height: 886
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7907c15f28fb36f499462b1d58b64395
+      internalID: 339405721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_16
+      rect:
+        serializedVersion: 2
+        x: 7000
+        y: 8100
+        width: 1000
+        height: 886
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37f8a4bdfb8c2b5409b460056e2895a2
+      internalID: -1325345378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_17
+      rect:
+        serializedVersion: 2
+        x: 8000
+        y: 8100
+        width: 1000
+        height: 887
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33461a9aa3b04b94c8e5f96ad8f2608f
+      internalID: -141062772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7200
+        width: 1000
+        height: 878
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c387d1da339f424f8b79e635519355f
+      internalID: -540169621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_19
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 7200
+        width: 1000
+        height: 878
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 631a1d14803784941ab14f890f047806
+      internalID: 1181227107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_20
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 7200
+        width: 1000
+        height: 879
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a877ff465c2fcfb4eb3adf548b884faf
+      internalID: 609200601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_21
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 7200
+        width: 1000
+        height: 879
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2eca36ad51bac1d4184d36c22b640978
+      internalID: -760606072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_22
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 7200
+        width: 1000
+        height: 879
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1038ce8237abbc4f9a07e1cb8377e76
+      internalID: 1549059733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_23
+      rect:
+        serializedVersion: 2
+        x: 5000
+        y: 7200
+        width: 1000
+        height: 881
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8fe8426aa82bc6418d4bcd249b692dc
+      internalID: -1321208665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_24
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 7200
+        width: 1000
+        height: 879
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 357163081457e624e94be349b071440b
+      internalID: 739864939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_25
+      rect:
+        serializedVersion: 2
+        x: 7000
+        y: 7200
+        width: 1000
+        height: 879
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4150fe6019779b5478d6c64fff4b45ef
+      internalID: -1154519199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_26
+      rect:
+        serializedVersion: 2
+        x: 8000
+        y: 7200
+        width: 1000
+        height: 879
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4771730d28b9ffe4e8b4e1e876c4d1b9
+      internalID: 1685221447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6300
+        width: 1000
+        height: 869
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a0c9b54f48a4874d88c5a5a8c2c66f4
+      internalID: 1887731938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_28
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 6300
+        width: 1000
+        height: 869
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82de442933269c7438958ead6135f00b
+      internalID: -252742438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_29
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 6300
+        width: 1000
+        height: 871
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 752f121db28d766449c726b5f488df7c
+      internalID: 2054390539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_30
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 6300
+        width: 1000
+        height: 869
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fb5f21cfd593574f95d005e01edf56e
+      internalID: -1303695332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_31
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 6300
+        width: 1000
+        height: 869
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc048c96cebaef541810d3930f4d001a
+      internalID: -1919448578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_32
+      rect:
+        serializedVersion: 2
+        x: 5000
+        y: 6300
+        width: 1000
+        height: 875
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17c2d6b1f5a484d42856f1e0e7507eae
+      internalID: -1285496218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_33
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 6300
+        width: 1000
+        height: 877
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b64e2aa0c31fcb34ca10d17fc42163ef
+      internalID: -1143237613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_34
+      rect:
+        serializedVersion: 2
+        x: 7000
+        y: 6300
+        width: 1000
+        height: 879
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b2fec50343c79944a9c442edba2aa8a
+      internalID: -1260032854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_35
+      rect:
+        serializedVersion: 2
+        x: 8000
+        y: 6300
+        width: 1000
+        height: 879
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a8360dc18815824485bb0e3899378e5
+      internalID: -1987023732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5400
+        width: 1000
+        height: 874
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d9a2a48988d42244a41178390b3a141
+      internalID: 273170963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_37
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 5400
+        width: 1000
+        height: 874
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96e6ebb8685d6474ca371efcaabb26ef
+      internalID: -1290936203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_38
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 5400
+        width: 1000
+        height: 874
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9d224dd7523c7e40a15f252a93f1cd5
+      internalID: 1191267044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_39
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 5400
+        width: 1000
+        height: 874
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 019ebd4d65764fb4990d3845c3f0c7f3
+      internalID: 392666327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_40
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 5400
+        width: 1000
+        height: 872
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f152c1673eb5eea4594895ced8b2b38f
+      internalID: -354049428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_41
+      rect:
+        serializedVersion: 2
+        x: 5002
+        y: 5400
+        width: 1000
+        height: 870
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77f04bb4107a49043beb0a9b36741c3f
+      internalID: 4806942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_42
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 5400
+        width: 1000
+        height: 872
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f365d466007b096458039ce9a537e806
+      internalID: 73922480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_43
+      rect:
+        serializedVersion: 2
+        x: 7000
+        y: 5400
+        width: 1000
+        height: 872
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccfa387923fda8947b7a38350ca7b973
+      internalID: 1953621741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_44
+      rect:
+        serializedVersion: 2
+        x: 8000
+        y: 5400
+        width: 1000
+        height: 874
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5970ecf6f4fa3d4d9a5914b95afe6a6
+      internalID: 1521157489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4500
+        width: 1000
+        height: 872
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99cbfa20c33f3de4ea8d4df793817035
+      internalID: 1528146486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_46
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 4500
+        width: 1000
+        height: 872
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7694222ed927194e80b540c2a9672f0
+      internalID: -969850203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_47
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 4500
+        width: 1000
+        height: 874
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 249c4c435b6e3ac48a9c93148607d9e0
+      internalID: 1491688295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_48
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 4500
+        width: 1000
+        height: 872
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8130397b38429094f8704fa9013c884c
+      internalID: -965279584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_49
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 4500
+        width: 1000
+        height: 872
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34b476e40e818fa4384109a293f99e41
+      internalID: 1839952705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_50
+      rect:
+        serializedVersion: 2
+        x: 5000
+        y: 4500
+        width: 1000
+        height: 872
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 180a0f2c8cefbbe4fa7b44960d2f6a1b
+      internalID: 2061512070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_51
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 4500
+        width: 1000
+        height: 874
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edc5f900019e2344e8cbe94b146f88bf
+      internalID: 876919505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_52
+      rect:
+        serializedVersion: 2
+        x: 7000
+        y: 4500
+        width: 1000
+        height: 874
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64ae5bf4a4c1efe4696a92afe6a3f572
+      internalID: 1285304468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_53
+      rect:
+        serializedVersion: 2
+        x: 8000
+        y: 4500
+        width: 1000
+        height: 873
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 594565a4e762e68428f5f094f49b4d34
+      internalID: 1729774306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_54
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3600
+        width: 1000
+        height: 875
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 184499258fbfb1a448ed2a108457c6d4
+      internalID: -593319879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_55
+      rect:
+        serializedVersion: 2
+        x: 1002
+        y: 3600
+        width: 1000
+        height: 873
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bb9ed33133e41a489d43a2af183d540
+      internalID: 1948897889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_56
+      rect:
+        serializedVersion: 2
+        x: 2002
+        y: 3600
+        width: 1000
+        height: 875
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd0e8f6d314200945b81c1122e0be19d
+      internalID: 1021265993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_57
+      rect:
+        serializedVersion: 2
+        x: 3002
+        y: 3600
+        width: 1000
+        height: 877
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63f991cb9eaaa8e40b6c770ee9cd821d
+      internalID: -652591743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_58
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 3600
+        width: 1000
+        height: 877
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83146f96da9ba744f9ea9f1c0d39d398
+      internalID: -1374186042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_59
+      rect:
+        serializedVersion: 2
+        x: 5000
+        y: 3600
+        width: 1000
+        height: 877
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8edd81c11a20cf04184b092fcaad7587
+      internalID: -2084400920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_60
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 3600
+        width: 1000
+        height: 875
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cd4589228eef454d83e33c849033459
+      internalID: 415200119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_61
+      rect:
+        serializedVersion: 2
+        x: 7000
+        y: 3600
+        width: 1000
+        height: 875
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 247ba9fad31bec6468872260228edeed
+      internalID: 88928699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_62
+      rect:
+        serializedVersion: 2
+        x: 8000
+        y: 3600
+        width: 1000
+        height: 875
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84468e1827786654aab35136007dd2c9
+      internalID: -940383912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_63
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2700
+        width: 1000
+        height: 871
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8059d7e424556e3468e7c94226df0977
+      internalID: -2052533194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_64
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 2700
+        width: 1000
+        height: 871
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1ee55640bed22949bccd883c7179f66
+      internalID: -2020749650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_65
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 2700
+        width: 1000
+        height: 871
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f983fff0d78620b4898293ef5ff7be65
+      internalID: -1172465469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_66
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 2700
+        width: 1000
+        height: 871
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3683886419b630941881a296629358e3
+      internalID: -173323339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_67
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 2700
+        width: 1000
+        height: 871
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d7ff787ecda35f4182b36792eb93e18
+      internalID: 1225917823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_68
+      rect:
+        serializedVersion: 2
+        x: 5000
+        y: 2700
+        width: 1000
+        height: 875
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41cccaef286e71144ba2c8faa415c5c7
+      internalID: -97786248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_69
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 2700
+        width: 1000
+        height: 875
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e91e78a6fba5e04eba76dfe2e9e539c
+      internalID: 2064847832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_70
+      rect:
+        serializedVersion: 2
+        x: 7000
+        y: 2700
+        width: 1000
+        height: 875
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e61b9e0d1068774c8f029fd357ac93a
+      internalID: -1244869142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_71
+      rect:
+        serializedVersion: 2
+        x: 8000
+        y: 2700
+        width: 1000
+        height: 875
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 215c95ae5cf0ebc4da6e00c3ac01c472
+      internalID: 1860234556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1800
+        width: 1000
+        height: 868
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abd401fc02cdc814e88ba05cfe4b3848
+      internalID: -357469509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_73
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 1800
+        width: 1000
+        height: 868
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cc4fba561f232c4983d2d0330cefa2b
+      internalID: 1037283922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_74
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 1800
+        width: 1000
+        height: 870
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b4afde862bb59f43b9dd57652f5011e
+      internalID: 1399740573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_75
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 1800
+        width: 1000
+        height: 874
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81284f40cd26f654c942c5e3a1be565d
+      internalID: 689166706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_76
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 1800
+        width: 1000
+        height: 874
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f71d4301f9694c04798fb6b40912edfa
+      internalID: 127832063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_77
+      rect:
+        serializedVersion: 2
+        x: 5002
+        y: 1800
+        width: 1000
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0713b369cdc00a84f9a4ad1454b17d91
+      internalID: 613722178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_78
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 1800
+        width: 1000
+        height: 872
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cafa04f416c420b4cbf007ed6c9d1457
+      internalID: 477035015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_79
+      rect:
+        serializedVersion: 2
+        x: 7002
+        y: 1800
+        width: 1000
+        height: 868
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8be1a14bb7118a74e92d138fa9c1fe0d
+      internalID: 1735697951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_80
+      rect:
+        serializedVersion: 2
+        x: 8000
+        y: 1800
+        width: 1000
+        height: 864
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd6a7f4bf2540ca43a9a86dcda7710d8
+      internalID: 454393140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_81
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 900
+        width: 1000
+        height: 872
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0443352faef15034fbefd8a3283470e5
+      internalID: 1644313211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_82
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 900
+        width: 1000
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b28a2674ed664b4429532b39cbfd7b12
+      internalID: 1865550559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_83
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 900
+        width: 1000
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 612e5900705e09e4495ed685fbf707d6
+      internalID: -815879134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_84
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 900
+        width: 1000
+        height: 861
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f82bcab70d36630449610814849ea627
+      internalID: 9245263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_85
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 900
+        width: 1000
+        height: 861
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c72324fae26ee2348b8fd28a345193a4
+      internalID: -413892583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_86
+      rect:
+        serializedVersion: 2
+        x: 5003
+        y: 900
+        width: 1000
+        height: 861
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f6543e1b041e034a9bff174c98596fd
+      internalID: 236239950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_87
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 903
+        width: 1000
+        height: 865
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf723ecf37b692e4eb10f2b4905924ce
+      internalID: -2054902285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_88
+      rect:
+        serializedVersion: 2
+        x: 7000
+        y: 900
+        width: 1000
+        height: 864
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df783dabc50531242a0a3338a3a1c807
+      internalID: -1406622275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_89
+      rect:
+        serializedVersion: 2
+        x: 8000
+        y: 900
+        width: 1000
+        height: 868
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c2a14773fddc984db2b51d42acbbd8c
+      internalID: -1366280564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_90
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1000
+        height: 865
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d9ad68ea7017d54e9783f6da54a210a
+      internalID: 604939630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_91
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 0
+        width: 1000
+        height: 865
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09a6780615518c047a060b5913525c2f
+      internalID: 1263437587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_92
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 0
+        width: 1000
+        height: 861
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cbfb24cdc6c1da4e8a46136c5b70992
+      internalID: -1335675966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_93
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 0
+        width: 1000
+        height: 868
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91a0db6ff4348da41b7aed57fe65944c
+      internalID: 1477433720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_94
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 0
+        width: 1000
+        height: 900
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b064ee97379cc0646a83b16082498f81
+      internalID: -36713270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_95
+      rect:
+        serializedVersion: 2
+        x: 5000
+        y: 0
+        width: 1000
+        height: 900
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 503ea6767bb32014fa8071b4f8df3290
+      internalID: 2081938706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_96
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 0
+        width: 1000
+        height: 900
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a407989ef2b635c40a48a5dd1f861763
+      internalID: 1899542372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_97
+      rect:
+        serializedVersion: 2
+        x: 7000
+        y: 0
+        width: 1000
+        height: 900
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f8a98f1dce60e34595a85e014bd4efa
+      internalID: -219892171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-shot-animation-v2_98
+      rect:
+        serializedVersion: 2
+        x: 8000
+        y: 0
+        width: 1000
+        height: 900
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26afae3e104210e4fa3a47d139155a0a
+      internalID: 1309080003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      boss-shot-animation-v2_0: 1969832297
+      boss-shot-animation-v2_1: 1498008852
+      boss-shot-animation-v2_10: -62116521
+      boss-shot-animation-v2_11: 1425799507
+      boss-shot-animation-v2_12: 1045172465
+      boss-shot-animation-v2_13: -1708438063
+      boss-shot-animation-v2_14: -651683896
+      boss-shot-animation-v2_15: 339405721
+      boss-shot-animation-v2_16: -1325345378
+      boss-shot-animation-v2_17: -141062772
+      boss-shot-animation-v2_18: -540169621
+      boss-shot-animation-v2_19: 1181227107
+      boss-shot-animation-v2_2: -2001957962
+      boss-shot-animation-v2_20: 609200601
+      boss-shot-animation-v2_21: -760606072
+      boss-shot-animation-v2_22: 1549059733
+      boss-shot-animation-v2_23: -1321208665
+      boss-shot-animation-v2_24: 739864939
+      boss-shot-animation-v2_25: -1154519199
+      boss-shot-animation-v2_26: 1685221447
+      boss-shot-animation-v2_27: 1887731938
+      boss-shot-animation-v2_28: -252742438
+      boss-shot-animation-v2_29: 2054390539
+      boss-shot-animation-v2_3: 116717197
+      boss-shot-animation-v2_30: -1303695332
+      boss-shot-animation-v2_31: -1919448578
+      boss-shot-animation-v2_32: -1285496218
+      boss-shot-animation-v2_33: -1143237613
+      boss-shot-animation-v2_34: -1260032854
+      boss-shot-animation-v2_35: -1987023732
+      boss-shot-animation-v2_36: 273170963
+      boss-shot-animation-v2_37: -1290936203
+      boss-shot-animation-v2_38: 1191267044
+      boss-shot-animation-v2_39: 392666327
+      boss-shot-animation-v2_4: 1518670140
+      boss-shot-animation-v2_40: -354049428
+      boss-shot-animation-v2_41: 4806942
+      boss-shot-animation-v2_42: 73922480
+      boss-shot-animation-v2_43: 1953621741
+      boss-shot-animation-v2_44: 1521157489
+      boss-shot-animation-v2_45: 1528146486
+      boss-shot-animation-v2_46: -969850203
+      boss-shot-animation-v2_47: 1491688295
+      boss-shot-animation-v2_48: -965279584
+      boss-shot-animation-v2_49: 1839952705
+      boss-shot-animation-v2_5: 813814450
+      boss-shot-animation-v2_50: 2061512070
+      boss-shot-animation-v2_51: 876919505
+      boss-shot-animation-v2_52: 1285304468
+      boss-shot-animation-v2_53: 1729774306
+      boss-shot-animation-v2_54: -593319879
+      boss-shot-animation-v2_55: 1948897889
+      boss-shot-animation-v2_56: 1021265993
+      boss-shot-animation-v2_57: -652591743
+      boss-shot-animation-v2_58: -1374186042
+      boss-shot-animation-v2_59: -2084400920
+      boss-shot-animation-v2_6: -1130596017
+      boss-shot-animation-v2_60: 415200119
+      boss-shot-animation-v2_61: 88928699
+      boss-shot-animation-v2_62: -940383912
+      boss-shot-animation-v2_63: -2052533194
+      boss-shot-animation-v2_64: -2020749650
+      boss-shot-animation-v2_65: -1172465469
+      boss-shot-animation-v2_66: -173323339
+      boss-shot-animation-v2_67: 1225917823
+      boss-shot-animation-v2_68: -97786248
+      boss-shot-animation-v2_69: 2064847832
+      boss-shot-animation-v2_7: 715961849
+      boss-shot-animation-v2_70: -1244869142
+      boss-shot-animation-v2_71: 1860234556
+      boss-shot-animation-v2_72: -357469509
+      boss-shot-animation-v2_73: 1037283922
+      boss-shot-animation-v2_74: 1399740573
+      boss-shot-animation-v2_75: 689166706
+      boss-shot-animation-v2_76: 127832063
+      boss-shot-animation-v2_77: 613722178
+      boss-shot-animation-v2_78: 477035015
+      boss-shot-animation-v2_79: 1735697951
+      boss-shot-animation-v2_8: -412293432
+      boss-shot-animation-v2_80: 454393140
+      boss-shot-animation-v2_81: 1644313211
+      boss-shot-animation-v2_82: 1865550559
+      boss-shot-animation-v2_83: -815879134
+      boss-shot-animation-v2_84: 9245263
+      boss-shot-animation-v2_85: -413892583
+      boss-shot-animation-v2_86: 236239950
+      boss-shot-animation-v2_87: -2054902285
+      boss-shot-animation-v2_88: -1406622275
+      boss-shot-animation-v2_89: -1366280564
+      boss-shot-animation-v2_9: -1103385173
+      boss-shot-animation-v2_90: 604939630
+      boss-shot-animation-v2_91: 1263437587
+      boss-shot-animation-v2_92: -1335675966
+      boss-shot-animation-v2_93: 1477433720
+      boss-shot-animation-v2_94: -36713270
+      boss-shot-animation-v2_95: 2081938706
+      boss-shot-animation-v2_96: 1899542372
+      boss-shot-animation-v2_97: -219892171
+      boss-shot-animation-v2_98: 1309080003
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
