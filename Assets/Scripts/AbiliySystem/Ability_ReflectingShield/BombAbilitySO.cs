@@ -13,7 +13,6 @@ namespace AbilitySystem
         [SerializeField] private float durationInAir;
         [SerializeField] private int explosionDamage = 300;
         [SerializeField] private float explosionRadius = 1.5f;
-        [SerializeField] private float speedMultiplier = 20;
         public static Action OnAbilityUsedUp;
 
         public override void UseAbility(Transform spawnPoint)
@@ -23,7 +22,7 @@ namespace AbilitySystem
 
             if(bombStickyController != null)
             {
-                bombStickyController.InitializeBombSettings(durationInAir, MaxDuration, explosionDamage, explosionRadius);
+                bombStickyController.InitializeBombSettings(durationInAir, explosionDamage, explosionRadius);
             }
         }
 

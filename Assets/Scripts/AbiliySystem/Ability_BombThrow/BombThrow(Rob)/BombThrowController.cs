@@ -12,6 +12,9 @@ public class BombThrowController : MonoBehaviour
     [SerializeField] private int bombExplosionDamage = 300;
     [SerializeField] private float bombExplosionRadius = 2f;
     [SerializeField] private AnimationCurve bombSpeedCurve;
+    [SerializeField] private AnimationCurve beepingSpeedCurve;
+
+    private Animator animator;
 
     [Header("Variables")]
     private Vector2 spawnLocation;
@@ -21,15 +24,15 @@ public class BombThrowController : MonoBehaviour
     private float timeSinceSpawn = 0;
     private float mouseDistance;
     private float sampleSpeed;
+    private bool isBeeping = false;
 
     private bool hasExploded = false;
 
-    private GameObject player;
-    void Start()
+    void Start()    
     {
         spawnLocation = transform.position;
         mouseLocation = Input.mousePosition;
-        player = FindAnyObjectByType<PlayerMovement>().gameObject;
+        animator = GetComponent<Animator>();
 
         mouseDistance = Vector2.Distance(spawnLocation, mouseLocation);
         sampleSpeed = bombSpeedCurve.Evaluate(mouseDistance/2203);
@@ -37,11 +40,13 @@ public class BombThrowController : MonoBehaviour
         bombSpeed = sampleSpeed * 20;
 
         ThrowBomb();
+        
     }
 
     private void Update()
     {
         ExplodeLogic();
+        BeepingLogic();
     }
     private void Explode()
     {
@@ -51,6 +56,7 @@ public class BombThrowController : MonoBehaviour
         {
             //check radius
             var hitEnemies = Physics2D.OverlapCircleAll(transform.position, bombExplosionRadius);
+            PlayExplodeAudio();
 
             //for each in radius of explosion deal damage
             foreach(var hit in hitEnemies)
@@ -80,6 +86,8 @@ public class BombThrowController : MonoBehaviour
     private void ThrowBomb()
     {
         GetComponent<Rigidbody2D>().AddForce((Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position).normalized * bombSpeed, ForceMode2D.Impulse);
+        PlayLaunchAudio();
+        isBeeping = true;
     }
     public void Destroy()
     {
@@ -100,9 +108,8 @@ public class BombThrowController : MonoBehaviour
         }
         else if (!hasExploded)
         {
-            hasExploded = true;
-            explodeLocation = transform.position;
-            GetComponent<Animator>().SetTrigger("Explode");
+            ExplodeChanges();
+            PlayExplodeAudio();
         }
         if (hasExploded)
         {
@@ -124,5 +131,32 @@ public class BombThrowController : MonoBehaviour
     {
         StartCoroutine(Grow()); 
     }
-
+    public void PlayExplodeAudio()
+    {
+        AudioManagerNoMixers.Singleton.PlaySFXByName("BombExplosion");
+    }
+    public void PlayLaunchAudio()
+    {
+        AudioManagerNoMixers.Singleton.PlaySFXByName("BombLaunch");
+    }
+    public void PlayBeepAudio()
+    {
+        AudioManagerNoMixers.Singleton.PlaySFXByName("BombBeep");
+    }
+    public void BeepingLogic()
+    {
+        if (isBeeping)
+        {
+            animator.speed = beepingSpeedCurve.Evaluate(timeSinceSpawn / duration);
+            //Debug.Log(animator.speed);
+        }
+    }
+    private void ExplodeChanges()
+    {
+        hasExploded = true;
+        explodeLocation = transform.position;
+        GetComponent<Animator>().SetTrigger("Explode");
+        isBeeping = false;
+        animator.speed = 1;
+    }
 }
