@@ -43,6 +43,8 @@ public class PlayerProjectile : MonoBehaviour
 
     private void OnDestroy()
     {
+        if (!this.gameObject.scene.isLoaded) return;
+
         Instantiate(onDestroyVFX,transform.position, transform.rotation);
     }
 

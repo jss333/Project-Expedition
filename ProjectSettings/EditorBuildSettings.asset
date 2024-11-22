@@ -29,6 +29,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level/Testing Scene/UIAndIndependables.unity
     guid: 0dda8421e982c6349a697490b220b433
+  - enabled: 1
+    path: Assets/Scenes/Level/Boss01-2.unity
+    guid: a7df91d13ecfc154d9e8cca4ffe89885
+  - enabled: 1
+    path: Assets/Scenes/Level/Boss01-3.unity
+    guid: f2d8dabbf30891344b7554b0e43a83c9
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: e4d75b8b4062e4e4fb77d2a7deb22856,
       type: 2}

@@ -96,6 +96,8 @@ public abstract class HazardPlatform : MonoBehaviour
 
     private void OnDisable()
     {
+        if (!this.gameObject.scene.isLoaded) return;
+
         LeanTween.cancel(gameObject);
     }
 }

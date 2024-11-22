@@ -259,6 +259,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioManager
       objectReference: {fileID: 0}
+    - target: {fileID: 8440126391885891598, guid: cbeba7eb9bcca034e9408ec3c48d95be,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2980,6 +2985,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: R0B-B3RT
+      objectReference: {fileID: 0}
+    - target: {fileID: 6965143306446923476, guid: bfe30e0a894d02d488d00f5203b8ec9a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9199,6 +9209,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PauseManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 8637862084751021390, guid: a148dc26649e0cb4fa84719dd82942fd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
