@@ -17,6 +17,8 @@ TagManager:
   - Minion
   - PlayerProjectile
   - Tutorial Minion
+  - Enemy
+  - CameraConfine
   layers:
   - Default
   - TransparentFX

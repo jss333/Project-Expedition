@@ -20,10 +20,6 @@ public class PlayerBasicShot : MonoBehaviour
 
     private bool isFired;
 
-    private void Awake()
-    {
-    }
-
     void Start()
     {
         audioSource = GetComponent<RandomPitchAudioSource>();
