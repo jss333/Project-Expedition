@@ -34,6 +34,7 @@ public class BossController : MonoBehaviour
 
     [Header("Parameters - Orb")]
     [SerializeField] private GameObject singleOrbPrefab;
+    [SerializeField] private GameObject singleStunOrbPrefab;
     [SerializeField] private float minShotIntervalSec = 1f;
     [SerializeField] private float maxShotIntervalSec = 2f;
     [SerializeField] private float nextShotTime = 0f;
@@ -51,6 +52,8 @@ public class BossController : MonoBehaviour
     private bool hasShield = false;
     private BossHealthComponent bossHealthComponent;
     private int trackOldHealth;
+    private EnemyShootingController enemyShootingController;
+    
     void Start()
     {
         random = new System.Random();
@@ -61,6 +64,8 @@ public class BossController : MonoBehaviour
         bossAnimationController = GetComponent<EntityActionVisualController>();
         circleCollider = GetComponent<CircleCollider2D>();
         bossHealthComponent = GetComponent<BossHealthComponent>();
+        enemyShootingController = GetComponent<EnemyShootingController>();
+
 
         trackOldHealth = bossHealthComponent.getCurrentHealth();
 
@@ -96,7 +101,16 @@ public class BossController : MonoBehaviour
             }
             else
             {
-                ShootSingleOrb(GetDirectionToPlayer(), GetRandomizedSpeed(minSingleOrbSpeed, maxSingleOrbSpeed), singleOrbPrefab);
+                GameObject targetSingleOrb;
+                if (enemyShootingController.CanShootStunBullet())
+                {
+                    targetSingleOrb = singleStunOrbPrefab;
+                }
+                else
+                {
+                    targetSingleOrb = singleOrbPrefab;
+                }
+                ShootSingleOrb(GetDirectionToPlayer(), GetRandomizedSpeed(minSingleOrbSpeed, maxSingleOrbSpeed), targetSingleOrb);
                 AudioManagerNoMixers.Singleton.PlaySFXByName("BossShootsSingleProjectile");
             }
 

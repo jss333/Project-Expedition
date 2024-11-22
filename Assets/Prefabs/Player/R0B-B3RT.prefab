@@ -611,6 +611,7 @@ GameObject:
   - component: {fileID: 596652963021192158}
   - component: {fileID: 6770448408643650198}
   - component: {fileID: 3512466302623144588}
+  - component: {fileID: 1595794807191230174}
   m_Layer: 7
   m_Name: R0B
   m_TagString: Player
@@ -884,6 +885,19 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   robObj: {fileID: 5274791500926242520}
+--- !u!114 &1595794807191230174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5274791500926242520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ca1d8e185406f2409dff05bc504d3a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 8216227659021969325}
 --- !u!1 &5676261326298286954
 GameObject:
   m_ObjectHideFlags: 0

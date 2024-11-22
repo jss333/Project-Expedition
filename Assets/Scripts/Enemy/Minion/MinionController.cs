@@ -21,6 +21,7 @@ public class MinionController : MonoBehaviour
     [Header("Parameters")]
     //Parameters describing the minion's attack properties...
     [SerializeField] private GameObject projectile;
+    [SerializeField] private GameObject stunProjectile;
     public float attackPeriod = 2F;
     [SerializeField] private float attackTimer = 0;
     public int burstSize = 3;
@@ -34,12 +35,17 @@ public class MinionController : MonoBehaviour
     [Header("Audio")]
     private bool minionHitCooldown = false;
     private float finishHitCooldown = 0;
+
+    private EnemyShootingController shootingController;
+
     public void Start()
     {
         reachedAnchor = false;
         spawner = FindAnyObjectByType<MinionSpawnerController>();
         bossInfo = FindAnyObjectByType<BossInformation>();
         rb = GetComponent<Rigidbody2D>();
+        shootingController = GetComponent<EnemyShootingController>();
+
         if (projectile == null || launchPoint == null)
         {
             Debug.Log("Minion Controller: projectile spawn parameters null -- component disabled...");
@@ -73,7 +79,17 @@ public class MinionController : MonoBehaviour
         {
             if (burstTimer >= burstDensity)
             {
-                Instantiate(projectile, this.transform.position, this.transform.rotation);
+                GameObject targetBullet;
+                if(shootingController.CanShootStunBullet())
+                {
+                    targetBullet = stunProjectile;
+                }
+                else
+                {
+                    targetBullet = projectile;
+                }
+
+                Instantiate(targetBullet, this.transform.position, this.transform.rotation);
                 burstTimer = 0;
                 shotNum++;
             }

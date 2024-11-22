@@ -69,12 +69,12 @@ public class InputHandler : MonoBehaviour, IStdActions , IUIActions
 
     private void DisablePlayerGameplayInput()
     {
-        controls.Std.Disable();
+        //controls.Std.Disable();
     }
 
     private void EnablePlayerGameplayInput()
     {
-        controls.Std.Enable();
+        //controls.Std.Enable();
     }
 
     public void OnFire(InputAction.CallbackContext context)

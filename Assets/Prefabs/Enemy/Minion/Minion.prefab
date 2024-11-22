@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 4909417910734677740}
   - component: {fileID: 1930364456516552654}
   - component: {fileID: 7182629859586642812}
+  - component: {fileID: 8642094556415548398}
   m_Layer: 0
   m_Name: Minion
   m_TagString: Minion
@@ -106,10 +107,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anchor: {fileID: 0}
-  healthBar: {fileID: 0}
   moveSpeed: 6
   collisionDmg: 5
-  projectile: {fileID: 4767921678106280535, guid: 5cda2d0d30d07624b85208d0c5ba089e,
+  projectile: {fileID: 2522101524757786263, guid: 7bf09eee9d8076d4483bbba7d9fd564b,
+    type: 3}
+  stunProjectile: {fileID: 2522101524757786263, guid: 0527df31c6317ea47beffde434f173ed,
     type: 3}
   attackPeriod: 2
   attackTimer: 0
@@ -250,7 +252,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 500
+  currentHealth: 0
   healthChannel: {fileID: 0}
+  healthEventChannel: {fileID: 0}
   healthChange:
     m_PersistentCalls:
       m_Calls:
@@ -309,6 +313,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 5330687850978151509}
+--- !u!114 &8642094556415548398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 449684760226055840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 391573202dc1dde438d3bb82e0cab3da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stunShotChance: 51
 --- !u!1 &2340894105315849776
 GameObject:
   m_ObjectHideFlags: 0
