@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 497986f42411ebd4c8e757f3b1cba09d, type: 3}
   m_Name: PlayerGroundJumps
   m_EditorClassIdentifier: 
-  SFXClipName: PlayerGroundJumps
-  audioClip: {fileID: 8300000, guid: e575edee73728ed4d9971ca6354c9dc2, type: 3}
+  audioClip: {fileID: 8300000, guid: e976acd200d90a14bb9c26b7923480dc, type: 3}
   minPitch: 0.95
   maxPitch: 1.05
+  soundEffectVolume: 1
