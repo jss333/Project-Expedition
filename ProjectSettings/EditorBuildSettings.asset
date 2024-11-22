@@ -26,6 +26,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level/Testing Scene/BombLevelTest/BombTesting.unity
     guid: 4aa1f3f0ad8f14340bc5fc50e0c108c3
+  - enabled: 1
+    path: Assets/Scenes/Level/Testing Scene/UIAndIndependables.unity
+    guid: 0dda8421e982c6349a697490b220b433
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: e4d75b8b4062e4e4fb77d2a7deb22856,
       type: 2}

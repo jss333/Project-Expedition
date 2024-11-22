@@ -310,7 +310,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 391573202dc1dde438d3bb82e0cab3da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stunShotChance: 73
+  stunShotChance: 17
 --- !u!1 &4642582085259598728
 GameObject:
   m_ObjectHideFlags: 0

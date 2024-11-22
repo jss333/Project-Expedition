@@ -21,6 +21,12 @@ public class LevelManager : MonoBehaviour {
         }
     }
     #endregion
+
+    private void Start()
+    {
+        LoadUIScene();
+    }
+
     public void LoadLevel(int sceneIndex)
     {
         SceneManager.LoadScene(sceneIndex);
@@ -31,4 +37,8 @@ public class LevelManager : MonoBehaviour {
         Application.Quit();
     }
     
+    private void LoadUIScene()
+    {
+        SceneManager.LoadScene("UIAndIndependables", LoadSceneMode.Additive);
+    }
 }
