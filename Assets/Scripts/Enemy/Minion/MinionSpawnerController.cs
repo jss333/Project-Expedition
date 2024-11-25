@@ -41,6 +41,7 @@ public class MinionSpawnerController : MonoBehaviour
             activeAnchors.Add(freeAnchors[randomIndex]);
             GameObject newMinion = Instantiate(entityToSpawn, bossTransform.position, this.transform.rotation);
             newMinion.GetComponent<MinionController>().anchor = freeAnchors[randomIndex];
+            newMinion.GetComponent<EnemyShootingController>().SetStunBulletChance(RoundManager.Singleton.RoundSettings.MinionStunBulletChance);
             freeAnchors.RemoveAt(randomIndex);
             activeEntityInstances++;
             //timer = 0;

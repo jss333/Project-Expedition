@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bossHealth: 1000
   stunBulletChance: 20
+  minionStunBulletChance: 81
   playerHealth: 200
   currentLevel: Boss01-1
   nextLevel: Boss01-2
