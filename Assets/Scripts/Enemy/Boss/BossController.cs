@@ -10,6 +10,7 @@ public class BossController : MonoBehaviour
     //[SerializeField] private Sprite deathSprite;
     [SerializeField] private Transform orbSourcePosition;
     [SerializeField] private GameObject p_BossShield;
+    [SerializeField] private Transform p_BossShieldSpawnPoint;
     private Transform playerPosition;
     private ChallengeRoomBGM challengeRoomBGM;
     private Animator bossAnimator;
@@ -224,7 +225,8 @@ public class BossController : MonoBehaviour
 
     private void instantiateBossShield()
     {
-        Instantiate(p_BossShield, this.transform.position, Quaternion.identity);
+        GameObject shieldInstacne = Instantiate(p_BossShield, p_BossShieldSpawnPoint.position, p_BossShieldSpawnPoint.rotation, p_BossShieldSpawnPoint);
+        shieldInstacne.transform.localPosition = Vector3.zero;
         hasShield = true;
         Debug.Log("BossShield Up");
     }

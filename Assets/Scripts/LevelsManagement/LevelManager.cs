@@ -32,6 +32,11 @@ public class LevelManager : MonoBehaviour {
         SceneManager.LoadScene(sceneIndex);
     }
 
+    public void LoadLevel(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
+    }
+
     public void QuitGame()
     {
         Application.Quit();

@@ -1684,7 +1684,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 6
   m_TargetDisplay: 0
 --- !u!1 &929375625
 GameObject:
@@ -2225,6 +2225,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   victoryScreenObject: {fileID: 990522603}
   defeatScreenObject: {fileID: 468560835}
+  nextLevelButton: {fileID: 874712445}
+  retryLevelButton: {fileID: 929375627}
 --- !u!4 &1156118999
 Transform:
   m_ObjectHideFlags: 0

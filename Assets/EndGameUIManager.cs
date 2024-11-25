@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EndGameUIManager : MonoBehaviour
 {
     [SerializeField] private GameObject victoryScreenObject;
     [SerializeField] private GameObject defeatScreenObject;
+    [SerializeField] private Button nextLevelButton;
+    [SerializeField] private Button retryLevelButton;
 
     private void Start()
     {
@@ -22,6 +25,9 @@ public class EndGameUIManager : MonoBehaviour
 
     private void ShowVictory()
     {
+        nextLevelButton.onClick.RemoveAllListeners();
+        nextLevelButton.onClick.AddListener(() => LevelManager.Singleton.LoadLevel(RoundManager.Singleton.RoundSettings.NextLevel));
+
         victoryScreenObject.SetActive(true);
     }
 
@@ -32,6 +38,9 @@ public class EndGameUIManager : MonoBehaviour
 
     private void ShowDefeat()
     {
+        retryLevelButton.onClick.RemoveAllListeners();
+        retryLevelButton.onClick.AddListener(() => LevelManager.Singleton.LoadLevel(RoundManager.Singleton.RoundSettings.CurrentLevel));
+
         defeatScreenObject.SetActive(true);
     }
 

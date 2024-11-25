@@ -11,13 +11,16 @@ public class MinionSpawnerController : MonoBehaviour
     [SerializeField] private List<GameObject> freeAnchors; //without minion
     [SerializeField] private List<GameObject> activeAnchors; //with minion
 
+    private Transform bossTransform;
 
     void Awake(){
         activeAnchors = new List<GameObject>(freeAnchors.Count);
     }
     private void Start()
     {
-        if(FindAnyObjectByType<BossInformation>().GetImmune() == true) 
+        bossTransform = FindFirstObjectByType<BossController>().transform;
+
+        if (FindAnyObjectByType<BossInformation>().GetImmune() == true) 
         {
             spawnWave();
         }
@@ -36,7 +39,7 @@ public class MinionSpawnerController : MonoBehaviour
         while(activeEntityInstances < entityCount){
             int randomIndex = Random.Range(0, freeAnchors.Count);
             activeAnchors.Add(freeAnchors[randomIndex]);
-            GameObject newMinion = Instantiate(entityToSpawn, this.transform.position, this.transform.rotation);
+            GameObject newMinion = Instantiate(entityToSpawn, bossTransform.position, this.transform.rotation);
             newMinion.GetComponent<MinionController>().anchor = freeAnchors[randomIndex];
             freeAnchors.RemoveAt(randomIndex);
             activeEntityInstances++;

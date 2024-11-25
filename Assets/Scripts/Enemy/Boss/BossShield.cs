@@ -14,7 +14,7 @@ public class BossShield : MonoBehaviour
     {
         boss = FindFirstObjectByType<BossController>();
         animator = GetComponent<Animator>();
-        this.transform.localScale = new Vector3(.55f, .55f, 0);
+        this.transform.localScale = Vector3.one;
         //shield = GetComponent<SpriteRenderer>();
     }
     //change the damaged stage of the sprite renderer for the shield.

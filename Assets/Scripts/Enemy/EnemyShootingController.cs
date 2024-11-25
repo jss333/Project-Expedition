@@ -19,4 +19,9 @@ public class EnemyShootingController : MonoBehaviour
 
         return false;
     }
+
+    public void SetStunBulletChance(int chance)
+    {
+        stunShotChance = chance;
+    }
 }

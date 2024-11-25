@@ -84,4 +84,10 @@ public class HealthComponent : MonoBehaviour
     {
         isImmune = value;
     }
+
+    public void InitializeHealth(int maxHealth)
+    {
+        this.maxHealth = maxHealth;
+        this.currentHealth = maxHealth;
+    }
 }
