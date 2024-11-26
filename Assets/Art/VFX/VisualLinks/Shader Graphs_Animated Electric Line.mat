@@ -64,7 +64,7 @@ Material:
     - _CastShadows: 0
     - _Cull: 2
     - _DstBlend: 10
-    - _Frequency: 30
+    - _Frequency: 10
     - _QueueControl: 0
     - _QueueOffset: 0
     - _SrcBlend: 5
@@ -72,7 +72,8 @@ Material:
     - _ZTest: 4
     - _ZWrite: 0
     - _ZWriteControl: 0
-    m_Colors: []
+    m_Colors:
+    - _Direction: {r: -2, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &3319661058843913176
 MonoBehaviour:

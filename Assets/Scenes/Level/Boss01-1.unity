@@ -749,6 +749,8 @@ MonoBehaviour:
   entityToSpawn: {fileID: 449684760226055840, guid: 5026d7c18267c4c4c9785e382b85218c,
     type: 3}
   entityCount: 2
+  visualLink: {fileID: 4395755630001487061, guid: 6cc05fc3bb87d77408871861c71aa322,
+    type: 3}
   freeAnchors:
   - {fileID: 2041587276}
   - {fileID: 1886410138}
