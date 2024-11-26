@@ -7,7 +7,7 @@ public class TutorialExitTrigger : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Player"))
         {
-            SceneManager.LoadScene("Boss01");
+            SceneManager.LoadScene("Boss01-1");
         }
     }
 }

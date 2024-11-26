@@ -30,6 +30,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Level/Testing Scene/UIAndIndependables.unity
     guid: 0dda8421e982c6349a697490b220b433
   - enabled: 1
+    path: Assets/Scenes/Level/Boss01-1.unity
+    guid: a859aba1f73d49b49819837d0a57e0fb
+  - enabled: 1
     path: Assets/Scenes/Level/Boss01-2.unity
     guid: a7df91d13ecfc154d9e8cca4ffe89885
   - enabled: 1
