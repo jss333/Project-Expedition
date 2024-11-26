@@ -1,3 +1,4 @@
+using FMODUnity;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -50,6 +51,11 @@ public class AudioManagerNoMixers : MonoBehaviour {
         PlayFirstPartMusic();
     }
 
+    public void PlayOneShot(EventReference sound, Vector3 worldPos)
+    {
+        RuntimeManager.PlayOneShot(sound, worldPos);
+    }
+
     public void LoadSFXScriptableObjects()
     {
         SFXAudioDataSO[] sfxAudioDataSOs = Resources.LoadAll<SFXAudioDataSO>("SFXSOs");
@@ -62,14 +68,14 @@ public class AudioManagerNoMixers : MonoBehaviour {
 
     public void PlaySFXByName(string sfxName)
     {
-        if(!sfxSOByName.ContainsKey(sfxName))
+        /*if(!sfxSOByName.ContainsKey(sfxName))
         {
             Debug.LogError("Cannot play audio clip - SFXAudioDataSO with name " + sfxName + "not found");
             return;
         }
 
         RandomPitchAudioSource audioSrc = GetOrCreateAudioSource(sfxSOByName[sfxName]);
-        audioSrc.PlayAssociatedAudio();
+        audioSrc.PlayAssociatedAudio(); */
     }
 
     private RandomPitchAudioSource GetOrCreateAudioSource(SFXAudioDataSO sfxSO)
@@ -95,35 +101,35 @@ public class AudioManagerNoMixers : MonoBehaviour {
 
     public void PlayFirstPartMusic()
     {
-        musicAudioSource.Stop();
+        /*musicAudioSource.Stop();
         musicAudioSource.clip = firstHalfBGM;
-        musicAudioSource.Play();
+        musicAudioSource.Play(); */
     }
 
     public void PlaySecondPartMusic()
     {
-        musicAudioSource.Stop();
+        /*musicAudioSource.Stop();
         musicAudioSource.clip = secondHalfBGM;
-        musicAudioSource.Play();
+        musicAudioSource.Play();  */
     }
 
     public void PlayVictroyMusic()
     {
-        musicAudioSource.Stop();
+        /*musicAudioSource.Stop();
         musicAudioSource.clip = victoryBGM;
-        musicAudioSource.Play();
+        musicAudioSource.Play(); */
     }
 
     public void PlayDefeatMusic()
     {
-        musicAudioSource.Stop();
+        /*musicAudioSource.Stop();
         musicAudioSource.clip = defeatBGM;
-        musicAudioSource.Play();
+        musicAudioSource.Play();  */
     }
 
     public void ControlMusicVolume(float volume)
     {
-        musicAudioSource.volume = volume;
+        //musicAudioSource.volume = volume;
     }
 
     public void ControlSFXVolume(float volume)
