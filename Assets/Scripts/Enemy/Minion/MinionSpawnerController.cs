@@ -8,6 +8,7 @@ public class MinionSpawnerController : MonoBehaviour
     private int activeEntityInstances = 0;
     public int entityCount = 2;
     //private float timer = 0;
+    [SerializeField] private VisualLinkController visualLink;
     [SerializeField] private List<GameObject> freeAnchors; //without minion
     [SerializeField] private List<GameObject> activeAnchors; //with minion
 
@@ -40,6 +41,11 @@ public class MinionSpawnerController : MonoBehaviour
             int randomIndex = Random.Range(0, freeAnchors.Count);
             activeAnchors.Add(freeAnchors[randomIndex]);
             GameObject newMinion = Instantiate(entityToSpawn, bossTransform.position, this.transform.rotation);
+
+            VisualLinkController visualLinkInstance = Instantiate(visualLink, bossTransform.position, Quaternion.identity).GetComponent<VisualLinkController>();
+            visualLinkInstance.SetUpPoints(bossTransform, newMinion.transform);
+
+
             newMinion.GetComponent<MinionController>().anchor = freeAnchors[randomIndex];
             newMinion.GetComponent<EnemyShootingController>().SetStunBulletChance(RoundManager.Singleton.RoundSettings.MinionStunBulletChance);
             freeAnchors.RemoveAt(randomIndex);
