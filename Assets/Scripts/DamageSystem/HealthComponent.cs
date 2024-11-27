@@ -22,8 +22,19 @@ public class HealthComponent : MonoBehaviour
     // [SerializeField] private Transform popupLabelSource;
 
 
+    private bool isDead = false;
 
-    public bool IsDead => currentHealth <= 0;
+    public bool IsDead 
+    { 
+        get 
+        { 
+            return currentHealth <= 0;
+        }
+        private set 
+        {
+            isDead = value;
+        } 
+    }
 
     public virtual void Awake()
     {
@@ -33,16 +44,26 @@ public class HealthComponent : MonoBehaviour
     {
         PublishHealthPercentage(); 
     }
+
+
     public virtual void TakeDamage(int damage)
     {
         if(!isImmune)
         {
-            currentHealth -= damage;
-            healthChange.Invoke();
-            PublishHealthPercentage();
+            if(currentHealth > 0)
+            {
+                currentHealth -= damage;
+                healthChange.Invoke();
+                PublishHealthPercentage();
+            }
+            
             if (IsDead)
             {
+                Debug.Log("Deathhhhhhhhhhh Eveeeeeeeeeeeeeeeeeeeeeeent");
                 death.Invoke();
+                isDead = false;
+
+                return;
             }
             if (OnHealthChanged != null)
             {

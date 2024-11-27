@@ -113,7 +113,7 @@ MonoBehaviour:
     type: 3}
   stunProjectile: {fileID: 2522101524757786263, guid: 0527df31c6317ea47beffde434f173ed,
     type: 3}
-  attackPeriod: 2
+  attackPeriod: 0
   attackTimer: 0
   burstSize: 3
   burstDensity: 0.2
@@ -218,7 +218,7 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 449684760226055840}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -292,6 +292,30 @@ MonoBehaviour:
   death:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 2358549528649128718}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4909417910734677740}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 862526121453958950}
         m_TargetAssemblyTypeName: MinionController, Assembly-CSharp
         m_MethodName: DeathSFX
