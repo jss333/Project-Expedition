@@ -9,7 +9,7 @@ public class RoundSettingsSO : ScriptableObject
     [SerializeField] private int bossHealth;
 
     [Range(0, 100)]
-    [SerializeField] private int stunBulletChance;
+    [SerializeField] private int bossStunBulletChance;
 
     [Header("Minions")]
     [Range(0, 100)]
@@ -26,7 +26,7 @@ public class RoundSettingsSO : ScriptableObject
 
     public int BossHealth => bossHealth;
 
-    public int StunBulletChance => stunBulletChance;
+    public int BossStunBulletChance => bossStunBulletChance;
     public int MinionStunBulletChance => minionStunBulletChance;
 
     public int PlayerHealth => playerHealth;

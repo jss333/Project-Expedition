@@ -21,26 +21,22 @@ public class RoundManager : MonoBehaviour
     }
     #endregion
 
-
     [SerializeField] private RoundSettingsSO roundSettings;
 
     private BossHealthComponent bossHealthComponent;
     private PlayerHealthComponent playerHealthComponent;
-    private EnemyShootingController enemyShootingController;
+    private EnemyShootingController bossShootingController;
 
     public RoundSettingsSO RoundSettings => roundSettings;
 
     private void Start()
     {
         bossHealthComponent = FindFirstObjectByType<BossHealthComponent>();
-        playerHealthComponent = FindFirstObjectByType<PlayerHealthComponent>();
-        enemyShootingController = bossHealthComponent.GetComponent<EnemyShootingController>();
-
+        bossShootingController = bossHealthComponent.GetComponent<EnemyShootingController>();
         bossHealthComponent.InitializeHealth(roundSettings.BossHealth);
+        bossShootingController.SetStunBulletChance(roundSettings.BossStunBulletChance);
+
+        playerHealthComponent = FindFirstObjectByType<PlayerHealthComponent>();
         playerHealthComponent.InitializeHealth(roundSettings.PlayerHealth);
-
-        enemyShootingController.SetStunBulletChance(roundSettings.StunBulletChance);
     }
-
-
 }
