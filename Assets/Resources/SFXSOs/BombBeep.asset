@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: BombBeep
   m_EditorClassIdentifier: 
   audioClip: {fileID: 8300000, guid: 3eb05cd0b64bb5f4aad748aba33030c4, type: 3}
-  minPitch: 0.95
-  maxPitch: 1.05
+  minPitch: 1
+  maxPitch: 1
   soundEffectVolume: 1
