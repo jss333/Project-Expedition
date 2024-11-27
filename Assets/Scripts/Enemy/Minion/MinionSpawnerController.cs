@@ -4,19 +4,18 @@ using UnityEngine;
 
 public class MinionSpawnerController : MonoBehaviour
 {
-    [Header("References")]
-    [SerializeField] private GameObject entityToSpawn;
-
     [Header("Parameters")]
-    [SerializeField] private int numEntitiesToSpawn = 2;
-    public int NumEntitiesToSpawn => numEntitiesToSpawn;
-
-    [Header("State")]
-    private Transform bossTransform;
-    [SerializeField] private int activeEntityInstances = 0;
+    [SerializeField] private GameObject entityToSpawn;
     [SerializeField] private VisualLinkController visualLink;
     [SerializeField] private List<GameObject> freeAnchors; //without minion
+
+    [Header("State")]
+    [SerializeField] private int numEntitiesToSpawn = 2;
+    [SerializeField] private int activeEntityInstances = 0;
     [SerializeField] private List<GameObject> activeAnchors; //with minion
+    private Transform bossTransform;
+
+    public int NumEntitiesToSpawn => numEntitiesToSpawn;
 
     void Awake()
     {
@@ -26,6 +25,7 @@ public class MinionSpawnerController : MonoBehaviour
     private void Start()
     {
         bossTransform = FindFirstObjectByType<BossController>().transform;
+        numEntitiesToSpawn = RoundManager.Singleton.RoundSettings.NumMinionsToSpawn;
 
         if (FindAnyObjectByType<BossInformation>().GetImmune() == true) 
         {
