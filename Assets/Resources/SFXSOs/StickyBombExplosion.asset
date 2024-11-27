@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 497986f42411ebd4c8e757f3b1cba09d, type: 3}
   m_Name: StickyBombExplosion
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: db68a39b3366621409988371d43cc80f, type: 3}
+  audioClip: {fileID: 8300000, guid: ca23c21f16d0eec449904625b904158c, type: 3}
   minPitch: 0.95
   maxPitch: 1.05
   soundEffectVolume: 1
