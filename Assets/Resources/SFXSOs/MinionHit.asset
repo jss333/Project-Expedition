@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 497986f42411ebd4c8e757f3b1cba09d, type: 3}
   m_Name: MinionHit
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: b370d3a3298890641aab6144e244ac1b, type: 3}
+  audioClip: {fileID: 8300000, guid: 03256a7fbbb983e4197b4ca715c2a1f5, type: 3}
   minPitch: 1
   maxPitch: 1.05
   soundEffectVolume: 1
