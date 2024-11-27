@@ -2024,12 +2024,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 116015072}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &528917257 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6965143306446923476, guid: bfe30e0a894d02d488d00f5203b8ec9a,
-    type: 3}
-  m_PrefabInstance: {fileID: 901548166}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &548420233
 GameObject:
   m_ObjectHideFlags: 0
@@ -2655,26 +2649,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff445c267f388de4ab957baba456541b, type: 3}
---- !u!1 &790836665 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1704915921860726945, guid: bfe30e0a894d02d488d00f5203b8ec9a,
-    type: 3}
-  m_PrefabInstance: {fileID: 901548166}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &790836671
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 790836665}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nonRigidbodyVelocity: 0
-  attenuationObject: {fileID: 528917257}
 --- !u!1 &804246505
 GameObject:
   m_ObjectHideFlags: 0
@@ -2979,51 +2953,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2075273900033706106, guid: bfe30e0a894d02d488d00f5203b8ec9a,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 12.412015
-      objectReference: {fileID: 0}
-    - target: {fileID: 2075273900033706106, guid: bfe30e0a894d02d488d00f5203b8ec9a,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 6.229038
-      objectReference: {fileID: 0}
-    - target: {fileID: 2768808380936731226, guid: bfe30e0a894d02d488d00f5203b8ec9a,
-        type: 3}
-      propertyPath: shootSoundEvent.Path
-      value: event:/RobShoot
-      objectReference: {fileID: 0}
-    - target: {fileID: 2768808380936731226, guid: bfe30e0a894d02d488d00f5203b8ec9a,
-        type: 3}
-      propertyPath: shootSoundEvent.Guid.Data1
-      value: 1005277006
-      objectReference: {fileID: 0}
-    - target: {fileID: 2768808380936731226, guid: bfe30e0a894d02d488d00f5203b8ec9a,
-        type: 3}
-      propertyPath: shootSoundEvent.Guid.Data2
-      value: 1263023736
-      objectReference: {fileID: 0}
-    - target: {fileID: 2768808380936731226, guid: bfe30e0a894d02d488d00f5203b8ec9a,
-        type: 3}
-      propertyPath: shootSoundEvent.Guid.Data3
-      value: -1268020056
-      objectReference: {fileID: 0}
-    - target: {fileID: 2768808380936731226, guid: bfe30e0a894d02d488d00f5203b8ec9a,
-        type: 3}
-      propertyPath: shootSoundEvent.Guid.Data4
-      value: -1751073681
-      objectReference: {fileID: 0}
-    - target: {fileID: 4093712181282126250, guid: bfe30e0a894d02d488d00f5203b8ec9a,
-        type: 3}
-      propertyPath: orthographic size
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 5768242971741334564, guid: bfe30e0a894d02d488d00f5203b8ec9a,
-        type: 3}
-      propertyPath: m_Lens.OrthographicSize
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 6344666254820012109, guid: bfe30e0a894d02d488d00f5203b8ec9a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3084,24 +3013,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: R0B-B3RT
       objectReference: {fileID: 0}
-    - target: {fileID: 6965143306446923476, guid: bfe30e0a894d02d488d00f5203b8ec9a,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: -262626908985763109, guid: bfe30e0a894d02d488d00f5203b8ec9a, type: 3}
-    - {fileID: -644188321376576722, guid: bfe30e0a894d02d488d00f5203b8ec9a, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1704915921860726945, guid: bfe30e0a894d02d488d00f5203b8ec9a,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 790836671}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfe30e0a894d02d488d00f5203b8ec9a, type: 3}
 --- !u!4 &919777071 stripped
 Transform:
@@ -9002,6 +8917,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7144092496311828960, guid: 88669eb52a11c4f45b479ec3df6d074b,
+        type: 3}
+      propertyPath: bossSpawnMinionSoundEvent.Path
+      value: event:/BossSpawnsMinion
+      objectReference: {fileID: 0}
+    - target: {fileID: 7144092496311828960, guid: 88669eb52a11c4f45b479ec3df6d074b,
+        type: 3}
+      propertyPath: bossSpawnMinionSoundEvent.Guid.Data1
+      value: -753407197
+      objectReference: {fileID: 0}
+    - target: {fileID: 7144092496311828960, guid: 88669eb52a11c4f45b479ec3df6d074b,
+        type: 3}
+      propertyPath: bossSpawnMinionSoundEvent.Guid.Data2
+      value: 1163424644
+      objectReference: {fileID: 0}
+    - target: {fileID: 7144092496311828960, guid: 88669eb52a11c4f45b479ec3df6d074b,
+        type: 3}
+      propertyPath: bossSpawnMinionSoundEvent.Guid.Data3
+      value: -66027856
+      objectReference: {fileID: 0}
+    - target: {fileID: 7144092496311828960, guid: 88669eb52a11c4f45b479ec3df6d074b,
+        type: 3}
+      propertyPath: bossSpawnMinionSoundEvent.Guid.Data4
+      value: 1564167229
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

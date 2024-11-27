@@ -121,6 +121,13 @@ MonoBehaviour:
   shotNum: 0
   launchPoint: {fileID: 1003880002372108823}
   launchAngle: {x: 0, y: 0, z: 0, w: 0}
+  deathSoundEvent:
+    Guid:
+      Data1: -786787444
+      Data2: 1130147574
+      Data3: 299311548
+      Data4: -1236614229
+    Path: event:/Minion Death
 --- !u!70 &2358549528649128718
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -285,6 +292,18 @@ MonoBehaviour:
   death:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 862526121453958950}
+        m_TargetAssemblyTypeName: MinionController, Assembly-CSharp
+        m_MethodName: DeathSFX
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 862526121453958950}
         m_TargetAssemblyTypeName: MinionController, Assembly-CSharp
         m_MethodName: DestroyThisMinion

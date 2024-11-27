@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4093712181282126250}
   - component: {fileID: 8149031541638894947}
   - component: {fileID: 1896385174253004700}
-  - component: {fileID: -262626908985763109}
+  - component: {fileID: 4470083102564668794}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 1704915921860726945}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.078683, y: 3.2290378, z: -10}
+  m_LocalPosition: {x: 12.412015, y: 6.229038, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -70,7 +70,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 8
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &-262626908985763109
+--- !u!114 &4470083102564668794
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -177,7 +177,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nonRigidbodyVelocity: 0
-  attenuationObject: {fileID: 0}
+  attenuationObject: {fileID: 6965143306446923476}
 --- !u!1 &3072250601190182420
 GameObject:
   m_ObjectHideFlags: 0
@@ -192,7 +192,6 @@ GameObject:
   - component: {fileID: 3858255749189079412}
   - component: {fileID: 2768808380936731226}
   - component: {fileID: 7067599934470063995}
-  - component: {fileID: -644188321376576722}
   m_Layer: 0
   m_Name: B3RT
   m_TagString: Untagged
@@ -333,6 +332,13 @@ MonoBehaviour:
   shotSpeed: 20
   shotIntervalSec: 0.1
   shotSFX: {fileID: 8300000, guid: e345b7232526f2c499d89e786a1fbbac, type: 3}
+  shootSoundEvent:
+    Guid:
+      Data1: 1005277006
+      Data2: 1263023736
+      Data3: -1268020056
+      Data4: -1751073681
+    Path: event:/RobShoot
 --- !u!95 &7067599934470063995
 Animator:
   serializedVersion: 5
@@ -354,37 +360,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &-644188321376576722
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3072250601190182420}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  EventReference:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
-  Event: 
-  EventPlayTrigger: 0
-  EventStopTrigger: 0
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  NonRigidbodyVelocity: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: -1
-  OverrideMaxDistance: -1
 --- !u!1 &3288356424656655796
 GameObject:
   m_ObjectHideFlags: 0
@@ -710,6 +685,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groundCheckObj: {fileID: 7634073678044376022}
+  playerGroundJumpSFX:
+    Guid:
+      Data1: -75226516
+      Data2: 1284861638
+      Data3: 1353979544
+      Data4: -1660910513
+    Path: event:/Rob Jump
+  playerAirJumpSFX:
+    Guid:
+      Data1: 1621427736
+      Data2: 1163801611
+      Data3: 943685026
+      Data4: 817521951
+    Path: event:/RobAirJump
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
@@ -808,6 +797,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   robObj: {fileID: 5274791500926242520}
+  playerTakesDamageSFX:
+    Guid:
+      Data1: -186856176
+      Data2: 1097989128
+      Data3: -1722290012
+      Data4: 1560372356
+    Path: event:/PlayerDamageTaken
 --- !u!114 &1595794807191230174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1213,7 +1209,7 @@ MonoBehaviour:
   m_Follow: {fileID: 8216106555698841972}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 5
+    OrthographicSize: 8
     NearClipPlane: 0.5
     FarClipPlane: 1000
     Dutch: 0

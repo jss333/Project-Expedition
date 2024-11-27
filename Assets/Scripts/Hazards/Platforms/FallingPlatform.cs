@@ -1,3 +1,4 @@
+using FMODUnity;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,7 @@ public class FallingPlatform : HazardPlatform
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private bool isVanishing;
     [SerializeField] private GameObject visual;
+    [SerializeField] private EventReference fallingSoundEvent;
     float maxTime;
     float timer;
     Color color;
@@ -37,7 +39,8 @@ public class FallingPlatform : HazardPlatform
     {
         base.ActivateAction();
         Debug.Log("falling Action");
-        AudioManagerNoMixers.Singleton.PlaySFXByName("FallingPlatform");
+        //AudioManagerNoMixers.Singleton.PlaySFXByName("FallingPlatform");
+        AudioManagerNoMixers.Singleton.PlayOneShot(fallingSoundEvent, this.transform.position);
 
         spriteRenderer.enabled = false;
         color = Vector4.one;

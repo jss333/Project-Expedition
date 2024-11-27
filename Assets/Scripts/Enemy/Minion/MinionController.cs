@@ -1,3 +1,4 @@
+using FMODUnity;
 using Platformer.Mechanics;
 using System.Collections;
 using System.Collections.Generic;
@@ -35,6 +36,7 @@ public class MinionController : MonoBehaviour
     [Header("Audio")]
     private bool minionHitCooldown = false;
     private float finishHitCooldown = 0;
+    [SerializeField] private EventReference deathSoundEvent;
 
     private EnemyShootingController shootingController;
 
@@ -136,7 +138,7 @@ public class MinionController : MonoBehaviour
         //allow the taken anchor to be available again
         spawner.decrementActiveCount(anchor);
         //play death sound
-        AudioManagerNoMixers.Singleton.PlaySFXByName("MinionDeath");
+        //AudioManagerNoMixers.Singleton.PlaySFXByName("MinionDeath");
         Destroy(this.gameObject);
     }
     public void MinionHit()
@@ -157,5 +159,10 @@ public class MinionController : MonoBehaviour
                 minionHitCooldown = false;
             }
         }
+    }
+
+    public void DeathSFX()
+    {
+        AudioManagerNoMixers.Singleton.PlayOneShot(deathSoundEvent, this.transform.position);
     }
 }
