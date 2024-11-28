@@ -31,15 +31,24 @@ public class AudioManagerNoMixers : MonoBehaviour {
     [Header("SFX")]
     private Dictionary<string, SFXAudioDataSO> sfxSOByName = new Dictionary<string, SFXAudioDataSO>();
     private Dictionary<string, RandomPitchAudioSource> audioSrcByName = new Dictionary<string, RandomPitchAudioSource>();
-    [SerializeField] private float sfxVolume = 1.0f;
 
-    public float SFXVolume => sfxVolume;
 
     [Header("Music")]
     [SerializeField] private EventReference firstHalfBGM;
     [SerializeField] private EventReference secondHalfBGM;
     [SerializeField] private EventReference victoryBGM;
     [SerializeField] private EventReference defeatBGM;
+
+    [Header("Settings")]
+    [SerializeField] private float musicVolume = 1.0f;
+    [SerializeField] private float sfxVolume = 1.0f;
+    private Bus musicBus;
+    private Bus sfxBus;
+
+    
+    
+    public float SFXVolume => sfxVolume;
+
 
 
     private void Start()
@@ -49,6 +58,9 @@ public class AudioManagerNoMixers : MonoBehaviour {
         sfxVolume = 1.0f;
 
         PlayFirstPartMusic();
+
+        musicBus = RuntimeManager.GetBus("bus:/Music");
+        sfxBus = RuntimeManager.GetBus("bus:/SFX");
     }
 
     public void PlayOneShot(EventReference sound, Vector3 worldPos)
@@ -127,11 +139,13 @@ public class AudioManagerNoMixers : MonoBehaviour {
 
     public void ControlMusicVolume(float volume)
     {
-        //musicAudioSource.volume = volume;
+        musicVolume = volume;
+        musicBus.setVolume(musicVolume);
     }
 
     public void ControlSFXVolume(float volume)
     {
         sfxVolume = volume;
+        sfxBus.setVolume(sfxVolume);
     }
 }
