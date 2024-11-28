@@ -1,3 +1,4 @@
+using FMODUnity;
 using Platformer.Mechanics;
 using System.Collections;
 using System.Collections.Generic;
@@ -9,6 +10,7 @@ public class BossShield : MonoBehaviour
     [Header("References")]
     private Animator animator;
     private BossController boss;
+    [SerializeField] private EventReference bossBreakShieldSFX;
 
     void Start()
     {
@@ -43,7 +45,8 @@ public class BossShield : MonoBehaviour
     public void playShieldBreakAnimation()
     {
         animator.SetTrigger("BreakShield");
-        AudioManagerNoMixers.Singleton.PlaySFXByName("BossShieldBreaks");
+        //AudioManagerNoMixers.Singleton.PlaySFXByName("BossShieldBreaks");
+        AudioManagerNoMixers.Singleton.PlayOneShot(bossBreakShieldSFX, this.transform.position);
         boss.setHasShield(false);
     }
     public void endShieldSprite()

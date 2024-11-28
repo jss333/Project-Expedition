@@ -259,6 +259,106 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7848611814969325879, guid: cbeba7eb9bcca034e9408ec3c48d95be,
+        type: 3}
+      propertyPath: defeatBGM.Path
+      value: event:/Music/DefeatMusic
+      objectReference: {fileID: 0}
+    - target: {fileID: 7848611814969325879, guid: cbeba7eb9bcca034e9408ec3c48d95be,
+        type: 3}
+      propertyPath: victoryBGM.Path
+      value: event:/Music/VictoryMusic
+      objectReference: {fileID: 0}
+    - target: {fileID: 7848611814969325879, guid: cbeba7eb9bcca034e9408ec3c48d95be,
+        type: 3}
+      propertyPath: firstHalfBGM.Path
+      value: event:/Music/FirstHalfMusic
+      objectReference: {fileID: 0}
+    - target: {fileID: 7848611814969325879, guid: cbeba7eb9bcca034e9408ec3c48d95be,
+        type: 3}
+      propertyPath: secondHalfBGM.Path
+      value: event:/Music/SecondHalfMusic
+      objectReference: {fileID: 0}
+    - target: {fileID: 7848611814969325879, guid: cbeba7eb9bcca034e9408ec3c48d95be,
+        type: 3}
+      propertyPath: defeatBGM.Guid.Data1
+      value: 611489586
+      objectReference: {fileID: 0}
+    - target: {fileID: 7848611814969325879, guid: cbeba7eb9bcca034e9408ec3c48d95be,
+        type: 3}
+      propertyPath: defeatBGM.Guid.Data2
+      value: 1122196850
+      objectReference: {fileID: 0}
+    - target: {fileID: 7848611814969325879, guid: cbeba7eb9bcca034e9408ec3c48d95be,
+        type: 3}
+      propertyPath: defeatBGM.Guid.Data3
+      value: -949364346
+      objectReference: {fileID: 0}
+    - target: {fileID: 7848611814969325879, guid: cbeba7eb9bcca034e9408ec3c48d95be,
+        type: 3}
+      propertyPath: defeatBGM.Guid.Data4
+      value: -2079281744
+      objectReference: {fileID: 0}
+    - target: {fileID: 7848611814969325879, guid: cbeba7eb9bcca034e9408ec3c48d95be,
+        type: 3}
+      propertyPath: victoryBGM.Guid.Data1
+      value: 1194426984
+      objectReference: {fileID: 0}
+    - target: {fileID: 7848611814969325879, guid: cbeba7eb9bcca034e9408ec3c48d95be,
+        type: 3}
+      propertyPath: victoryBGM.Guid.Data2
+      value: 1261815138
+      objectReference: {fileID: 0}
+    - target: {fileID: 7848611814969325879, guid: cbeba7eb9bcca034e9408ec3c48d95be,
+        type: 3}
+      propertyPath: victoryBGM.Guid.Data3
+      value: 1645485740
+      objectReference: {fileID: 0}
+    - target: {fileID: 7848611814969325879, guid: cbeba7eb9bcca034e9408ec3c48d95be,
+        type: 3}
+      propertyPath: victoryBGM.Guid.Data4
+      value: -1961418435
+      objectReference: {fileID: 0}
+    - target: {fileID: 7848611814969325879, guid: cbeba7eb9bcca034e9408ec3c48d95be,
+        type: 3}
+      propertyPath: firstHalfBGM.Guid.Data1
+      value: -259305468
+      objectReference: {fileID: 0}
+    - target: {fileID: 7848611814969325879, guid: cbeba7eb9bcca034e9408ec3c48d95be,
+        type: 3}
+      propertyPath: firstHalfBGM.Guid.Data2
+      value: 1086441920
+      objectReference: {fileID: 0}
+    - target: {fileID: 7848611814969325879, guid: cbeba7eb9bcca034e9408ec3c48d95be,
+        type: 3}
+      propertyPath: firstHalfBGM.Guid.Data3
+      value: 1366755766
+      objectReference: {fileID: 0}
+    - target: {fileID: 7848611814969325879, guid: cbeba7eb9bcca034e9408ec3c48d95be,
+        type: 3}
+      propertyPath: firstHalfBGM.Guid.Data4
+      value: -646482154
+      objectReference: {fileID: 0}
+    - target: {fileID: 7848611814969325879, guid: cbeba7eb9bcca034e9408ec3c48d95be,
+        type: 3}
+      propertyPath: secondHalfBGM.Guid.Data1
+      value: -119581893
+      objectReference: {fileID: 0}
+    - target: {fileID: 7848611814969325879, guid: cbeba7eb9bcca034e9408ec3c48d95be,
+        type: 3}
+      propertyPath: secondHalfBGM.Guid.Data2
+      value: 1205345819
+      objectReference: {fileID: 0}
+    - target: {fileID: 7848611814969325879, guid: cbeba7eb9bcca034e9408ec3c48d95be,
+        type: 3}
+      propertyPath: secondHalfBGM.Guid.Data3
+      value: 1202014111
+      objectReference: {fileID: 0}
+    - target: {fileID: 7848611814969325879, guid: cbeba7eb9bcca034e9408ec3c48d95be,
+        type: 3}
+      propertyPath: secondHalfBGM.Guid.Data4
+      value: 104959056
+      objectReference: {fileID: 0}
     - target: {fileID: 8440126391885891598, guid: cbeba7eb9bcca034e9408ec3c48d95be,
         type: 3}
       propertyPath: m_Name

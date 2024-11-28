@@ -1,3 +1,4 @@
+using FMOD.Studio;
 using FMODUnity;
 using System;
 using System.Collections;
@@ -35,11 +36,10 @@ public class AudioManagerNoMixers : MonoBehaviour {
     public float SFXVolume => sfxVolume;
 
     [Header("Music")]
-    [SerializeField] private AudioSource musicAudioSource;
-    [SerializeField] AudioClip firstHalfBGM;
-    [SerializeField] AudioClip secondHalfBGM;
-    [SerializeField] AudioClip victoryBGM;
-    [SerializeField] AudioClip defeatBGM;
+    [SerializeField] private EventReference firstHalfBGM;
+    [SerializeField] private EventReference secondHalfBGM;
+    [SerializeField] private EventReference victoryBGM;
+    [SerializeField] private EventReference defeatBGM;
 
 
     private void Start()
@@ -99,32 +99,30 @@ public class AudioManagerNoMixers : MonoBehaviour {
         }
     }
 
+    private void PlayEventInstance(EventReference eventReference)
+    {
+        EventInstance eventInstance = RuntimeManager.CreateInstance(eventReference);
+        eventInstance.start();
+    }
+
     public void PlayFirstPartMusic()
     {
-        /*musicAudioSource.Stop();
-        musicAudioSource.clip = firstHalfBGM;
-        musicAudioSource.Play(); */
+        PlayEventInstance(firstHalfBGM);
     }
 
     public void PlaySecondPartMusic()
     {
-        /*musicAudioSource.Stop();
-        musicAudioSource.clip = secondHalfBGM;
-        musicAudioSource.Play();  */
+        PlayEventInstance(secondHalfBGM);
     }
 
     public void PlayVictroyMusic()
     {
-        /*musicAudioSource.Stop();
-        musicAudioSource.clip = victoryBGM;
-        musicAudioSource.Play(); */
+        PlayEventInstance(victoryBGM);
     }
 
     public void PlayDefeatMusic()
     {
-        /*musicAudioSource.Stop();
-        musicAudioSource.clip = defeatBGM;
-        musicAudioSource.Play();  */
+        PlayEventInstance(defeatBGM);
     }
 
     public void ControlMusicVolume(float volume)
