@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 497986f42411ebd4c8e757f3b1cba09d, type: 3}
   m_Name: PlayerAirJumps
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: c9992c8fee114aa44bb6bae1ba5a60d4, type: 3}
-  minPitch: 0.95
+  audioClip: {fileID: 8300000, guid: 17630538857038542856cbee6ef46724, type: 3}
+  minPitch: 1
   maxPitch: 1.05
   soundEffectVolume: 1

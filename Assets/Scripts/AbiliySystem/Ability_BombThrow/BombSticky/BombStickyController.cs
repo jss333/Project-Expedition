@@ -1,3 +1,4 @@
+using FMODUnity;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,6 +17,12 @@ public class BombStickyController : MonoBehaviour
     [Header("References")]
     SpriteRenderer spriteRenderer;
     Animator animator;
+
+    [Header("SFX")]
+    [SerializeField] private EventReference bombExplosionSFX;
+    [SerializeField] private EventReference bombLaunchSFX;
+    [SerializeField] private EventReference bombBeepSFX;
+    [SerializeField] private EventReference bombAttachSFX;
 
     [Header("Variables")]
     private Vector2 spawnLocation;
@@ -228,19 +235,19 @@ public class BombStickyController : MonoBehaviour
     }
     public void PlayExplodeAudio()
     {
-        AudioManagerNoMixers.Singleton.PlaySFXByName("StickyBombExplosion");
+        AudioManagerNoMixers.Singleton.PlayOneShot(bombExplosionSFX, this.transform.position);
     }
     public void PlayLaunchAudio()
     {
-        AudioManagerNoMixers.Singleton.PlaySFXByName("StickyBombLaunch");
+        AudioManagerNoMixers.Singleton.PlayOneShot(bombLaunchSFX, this.transform.position);
     }
     public void PlayBeepAudio()
     {
-        AudioManagerNoMixers.Singleton.PlaySFXByName("StickyBombBeep");
+        AudioManagerNoMixers.Singleton.PlayOneShot(bombBeepSFX, this.transform.position);
     }
     public void PlayBombStickAudio()
     {
-        AudioManagerNoMixers.Singleton.PlaySFXByName("StickyBombAttach");
+        AudioManagerNoMixers.Singleton.PlayOneShot(bombAttachSFX, this.transform.position);
     }
     public void BeepingLogic()
     {

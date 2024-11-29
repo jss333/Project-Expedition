@@ -1,3 +1,4 @@
+using FMODUnity;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -13,6 +14,7 @@ public abstract class HazardPlatform : MonoBehaviour
     [SerializeField] protected Animator animator;
     [SerializeField] protected TextMeshProUGUI timerText;
     [SerializeField] protected GameObject timerHolder;
+    [SerializeField] protected EventReference shakingSFX;
 
     private Transform startPoint;
     protected bool isAlreadyTriggered;
@@ -34,7 +36,11 @@ public abstract class HazardPlatform : MonoBehaviour
         {
             if (isAlreadyTriggered) return;
             TiggerAction();
-            AudioManagerNoMixers.Singleton.PlaySFXByName("ShakingPlatform");
+            
+            if(!shakingSFX.IsNull)
+            {
+                AudioManagerNoMixers.Singleton.PlayOneShot(shakingSFX, this.transform.position);
+            }
         }
     }
 

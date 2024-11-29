@@ -1,3 +1,4 @@
+using FMODUnity;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -194,7 +195,8 @@ namespace AbilitySystem
         public GameObject abilityPrefab;
         public float radius;
         public float reverseSpeed;
-        public AudioClip chargeClip;
+        //public AudioClip chargeClip;
+        public EventReference chargeSoundEvent;
         public bool shouldDestroyProjectileOnImpact;
 
         [Range(5, 300)]

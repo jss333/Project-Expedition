@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{95c871b2-afa7-4280-be3e-8fdf4e2e9d84}">
+		<property name="assetPath">
+			<value>Bomb_Sticking_SFX.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.19736961451247165</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{891151a9-cf74-4c01-ac60-f5ee52821010}</destination>
+		</relationship>
+	</object>
+</objects>

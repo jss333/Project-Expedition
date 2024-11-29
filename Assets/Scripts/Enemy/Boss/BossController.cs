@@ -1,3 +1,4 @@
+using FMODUnity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,6 +32,7 @@ public class BossController : MonoBehaviour
     [SerializeField] private float delayEndScreen = 10f;
 
     [Header("Parameters - Minion/shield respawn")]
+    [SerializeField] private EventReference bossSpawnMinionSoundEvent;
     [SerializeField] private List<float> minionRespawnThreasholds;
 
     [Header("Parameters - Orb")]
@@ -243,7 +245,8 @@ public class BossController : MonoBehaviour
                     instantiateBossShield();
                     minionRespawnThreasholds.RemoveAt(i);
                     FindAnyObjectByType<MinionSpawnerController>().handleMinionRespawn();
-                    AudioManagerNoMixers.Singleton.PlaySFXByName("BossSpawnsMinions");
+                    //AudioManagerNoMixers.Singleton.PlaySFXByName("BossSpawnsMinions");
+                    AudioManagerNoMixers.Singleton.PlayOneShot(bossSpawnMinionSoundEvent, this.transform.position);
                     bossHealthComponent.SetIsImmune(true);
                 }
             }

@@ -36,6 +36,7 @@ public class PlayerProjectile : MonoBehaviour
     {
         if (collision.GetComponent<HealthComponent>() != null && !collision.CompareTag("Player"))
          {
+            Debug.Log("Colliiiiiiiiiiiiiiision Eveeeeeeeeeeeeent");
             collision.GetComponent<HealthComponent>().TakeDamage(10);
             Destroy(this.gameObject);
          }

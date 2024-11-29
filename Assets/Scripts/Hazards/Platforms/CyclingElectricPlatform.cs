@@ -1,3 +1,4 @@
+using FMODUnity;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -9,6 +10,7 @@ public class CyclingElectricPlatform : MonoBehaviour
     [SerializeField] private TextMeshProUGUI timerText;
     [SerializeField] private GameObject timerHolder;
     [SerializeField] private PlatformElectricCaster electricityCaster;
+    [SerializeField] private EventReference triggeredEventSound;
 
     [Header("Settings")]
     [SerializeField] private float timeToStartCycling;
@@ -51,6 +53,7 @@ public class CyclingElectricPlatform : MonoBehaviour
             if(!spawned)
             {
                 Debug.Log("Spawned");
+                AudioManagerNoMixers.Singleton.PlayOneShot(triggeredEventSound, this.transform.position);
                 PlatformElectricCaster platformElectricCaster = Instantiate(electricityCaster, transform);
                 platformElectricCaster.Configure(this, damage, 0.25f, timeToStayElectrified);
                 spawned = true;

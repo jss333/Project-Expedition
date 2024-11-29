@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{9062d01d-2b19-4748-9b55-c0ae5e652501}">
+		<property name="assetPath">
+			<value>Boss_Shield_Breaks.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>3.528</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{891151a9-cf74-4c01-ac60-f5ee52821010}</destination>
+		</relationship>
+	</object>
+</objects>

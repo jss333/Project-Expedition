@@ -1,3 +1,4 @@
+using FMODUnity;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -9,6 +10,8 @@ public class PlayerMovement : MonoBehaviour
     [Header("References")]
     public Transform groundCheckObj;
     private AbilityToggleUI toggleUI;
+    [SerializeField] private EventReference playerGroundJumpSFX;
+    [SerializeField] private EventReference playerAirJumpSFX;
 
     [Tooltip("Layer to define what is considered 'ground'")]
     public LayerMask groundLayer;
@@ -169,20 +172,20 @@ public class PlayerMovement : MonoBehaviour
     {
         if (isGrounded)
         {
-            EffectJump(groundJumpForce, "PlayerGroundJumps");
+            EffectJump(groundJumpForce, playerGroundJumpSFX);
         }
         else if (isAirJumpSkillAcquired && (jumpCount < maxTotalNumberOfJumps))
         {
-            EffectJump(airJumpForce, "PlayerAirJumps");
+            EffectJump(airJumpForce, playerAirJumpSFX);
         }
     }
 
-    private void EffectJump(float jumpForce, string sfxSoName)
+    private void EffectJump(float jumpForce, EventReference sfx)
     {
         playerRb.velocity = new Vector2(playerRb.velocity.x, jumpForce);
         jumpCount++;
         playerAnimator.SetTrigger("jumped");
-        AudioManagerNoMixers.Singleton.PlaySFXByName(sfxSoName);
+        AudioManagerNoMixers.Singleton.PlayOneShot(sfx, this.transform.position);
     }
 
 

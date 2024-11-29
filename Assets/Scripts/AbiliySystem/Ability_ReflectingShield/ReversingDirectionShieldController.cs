@@ -1,3 +1,4 @@
+using FMODUnity;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,7 +15,8 @@ namespace AbilitySystem
         private int damageValue;
         private AbilityType abilityType;
         private Vector3 initialDirection;
-        private AudioClip rechargeClip;
+        //private AudioClip rechargeClip;
+        private EventReference chargeSoundEvent;
 
         ReflectingShieldProperties shieldProperties;
 
@@ -29,7 +31,7 @@ namespace AbilitySystem
             abilityType = reflectingShieldProperties.abilityType;
             damageValue = reflectingShieldProperties.newDamageValue;
             reverseSpeed = reflectingShieldProperties.reverseSpeed;
-            rechargeClip = reflectingShieldProperties.chargeClip;
+            chargeSoundEvent = reflectingShieldProperties.chargeSoundEvent;
 
             shieldProperties = reflectingShieldProperties;
 
@@ -108,7 +110,7 @@ namespace AbilitySystem
 
         IEnumerator PlaySoundAndDestroyObject()
         {
-            AudioManagerNoMixers.Singleton.PlaySFXByName("ShieldCharged");
+            AudioManagerNoMixers.Singleton.PlayOneShot(chargeSoundEvent, this.transform.position);
 
 
             yield return new WaitForSeconds(1.2f);
