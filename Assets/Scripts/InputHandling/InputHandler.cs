@@ -35,13 +35,12 @@ public class InputHandler : MonoBehaviour, IStdActions , IUIActions
 
     private void Awake()
     {
-        if (Singleton != null)
-        {
-            Destroy(Singleton);
-        }
+        if (Singleton == null)
+            Singleton = this;
         else
         {
-            Singleton = this;
+            if (Singleton != this)
+                Destroy(gameObject);
         }
 
         OnUIMenuActivated += DisablePlayerGameplayInput;

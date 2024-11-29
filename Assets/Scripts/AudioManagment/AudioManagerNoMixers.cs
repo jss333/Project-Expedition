@@ -5,6 +5,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
 
 public class AudioManagerNoMixers : MonoBehaviour {
 
@@ -34,6 +35,7 @@ public class AudioManagerNoMixers : MonoBehaviour {
 
 
     [Header("Music")]
+    [SerializeField] private EventReference mainMenuMusic;
     [SerializeField] private EventReference firstHalfBGM;
     [SerializeField] private EventReference secondHalfBGM;
     [SerializeField] private EventReference victoryBGM;
@@ -44,7 +46,7 @@ public class AudioManagerNoMixers : MonoBehaviour {
     [SerializeField] private float sfxVolume = 1.0f;
     private Bus musicBus;
     private Bus sfxBus;
-
+    private EventInstance eventInstance;
     
     
     public float SFXVolume => sfxVolume;
@@ -57,10 +59,18 @@ public class AudioManagerNoMixers : MonoBehaviour {
 
         sfxVolume = 1.0f;
 
-        PlayFirstPartMusic();
+        if(SceneManager.GetActiveScene().buildIndex != 0)
+        {
+            PlayFirstPartMusic();
+        }
 
         musicBus = RuntimeManager.GetBus("bus:/Music");
         sfxBus = RuntimeManager.GetBus("bus:/SFX");
+    }
+
+    private void OnDestroy()
+    {
+        StopMusic();
     }
 
     public void PlayOneShot(EventReference sound, Vector3 worldPos)
@@ -111,10 +121,22 @@ public class AudioManagerNoMixers : MonoBehaviour {
         }
     }
 
+    [ContextMenu("StopMusic")]
+    private void StopMusic()
+    {
+        eventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+    }
+
     private void PlayEventInstance(EventReference eventReference)
     {
-        EventInstance eventInstance = RuntimeManager.CreateInstance(eventReference);
+        StopMusic();
+        eventInstance = RuntimeManager.CreateInstance(eventReference);
         eventInstance.start();
+    }
+
+    public void PlayMainMenuMusic()
+    {
+        PlayEventInstance(mainMenuMusic);
     }
 
     public void PlayFirstPartMusic()

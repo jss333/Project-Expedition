@@ -162,8 +162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9430db0feca1d44aacac3426648fdfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  durationInAir: 2
-  durationAfterStick: 2
+  duration: 4
   bombExplosionDamage: 200
   bombExplosionRadius: 0.9
   bombSpeedCurve:
@@ -224,6 +223,34 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   speedMultiplier: 20
+  bombExplosionSFX:
+    Guid:
+      Data1: -315501367
+      Data2: 1243626089
+      Data3: 1986891447
+      Data4: 1540566797
+    Path: event:/StickyBombExplosion
+  bombLaunchSFX:
+    Guid:
+      Data1: -1040826503
+      Data2: 1101965248
+      Data3: -1240158326
+      Data4: 226773919
+    Path: event:/StickyBombLaunch
+  bombBeepSFX:
+    Guid:
+      Data1: 2110823174
+      Data2: 1224294792
+      Data3: -1679662462
+      Data4: 1506284752
+    Path: event:/StickyBombBeep
+  bombAttachSFX:
+    Guid:
+      Data1: -1113340857
+      Data2: 1138578732
+      Data3: 1646599320
+      Data4: -299919885
+    Path: event:/StickyBombAttach
 --- !u!95 &2782691068923512639
 Animator:
   serializedVersion: 5

@@ -22,7 +22,7 @@ public class ScenesGetter : MonoBehaviour
             }
         }
 
-        foreach (EditorBuildSettingsScene scene in EditorBuildSettings.scenes)
+        /*foreach (EditorBuildSettingsScene scene in EditorBuildSettings.scenes)
         {
             string sceneName = System.IO.Path.GetFileNameWithoutExtension(scene.path);
 
@@ -31,6 +31,6 @@ public class ScenesGetter : MonoBehaviour
             {
                 loadLevelButton.Initialize(sceneName);
             }
-        } 
+        } */
     }
 }

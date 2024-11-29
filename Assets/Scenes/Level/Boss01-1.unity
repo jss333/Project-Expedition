@@ -254,130 +254,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7848611814969325879, guid: cbeba7eb9bcca034e9408ec3c48d95be,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7848611814969325879, guid: cbeba7eb9bcca034e9408ec3c48d95be,
-        type: 3}
-      propertyPath: defeatBGM.Path
-      value: event:/Music/DefeatMusic
-      objectReference: {fileID: 0}
-    - target: {fileID: 7848611814969325879, guid: cbeba7eb9bcca034e9408ec3c48d95be,
-        type: 3}
-      propertyPath: victoryBGM.Path
-      value: event:/Music/VictoryMusic
-      objectReference: {fileID: 0}
-    - target: {fileID: 7848611814969325879, guid: cbeba7eb9bcca034e9408ec3c48d95be,
-        type: 3}
-      propertyPath: firstHalfBGM.Path
-      value: event:/Music/FirstHalfMusic
-      objectReference: {fileID: 0}
-    - target: {fileID: 7848611814969325879, guid: cbeba7eb9bcca034e9408ec3c48d95be,
-        type: 3}
-      propertyPath: secondHalfBGM.Path
-      value: event:/Music/SecondHalfMusic
-      objectReference: {fileID: 0}
-    - target: {fileID: 7848611814969325879, guid: cbeba7eb9bcca034e9408ec3c48d95be,
-        type: 3}
-      propertyPath: defeatBGM.Guid.Data1
-      value: 611489586
-      objectReference: {fileID: 0}
-    - target: {fileID: 7848611814969325879, guid: cbeba7eb9bcca034e9408ec3c48d95be,
-        type: 3}
-      propertyPath: defeatBGM.Guid.Data2
-      value: 1122196850
-      objectReference: {fileID: 0}
-    - target: {fileID: 7848611814969325879, guid: cbeba7eb9bcca034e9408ec3c48d95be,
-        type: 3}
-      propertyPath: defeatBGM.Guid.Data3
-      value: -949364346
-      objectReference: {fileID: 0}
-    - target: {fileID: 7848611814969325879, guid: cbeba7eb9bcca034e9408ec3c48d95be,
-        type: 3}
-      propertyPath: defeatBGM.Guid.Data4
-      value: -2079281744
-      objectReference: {fileID: 0}
-    - target: {fileID: 7848611814969325879, guid: cbeba7eb9bcca034e9408ec3c48d95be,
-        type: 3}
-      propertyPath: victoryBGM.Guid.Data1
-      value: 1194426984
-      objectReference: {fileID: 0}
-    - target: {fileID: 7848611814969325879, guid: cbeba7eb9bcca034e9408ec3c48d95be,
-        type: 3}
-      propertyPath: victoryBGM.Guid.Data2
-      value: 1261815138
-      objectReference: {fileID: 0}
-    - target: {fileID: 7848611814969325879, guid: cbeba7eb9bcca034e9408ec3c48d95be,
-        type: 3}
-      propertyPath: victoryBGM.Guid.Data3
-      value: 1645485740
-      objectReference: {fileID: 0}
-    - target: {fileID: 7848611814969325879, guid: cbeba7eb9bcca034e9408ec3c48d95be,
-        type: 3}
-      propertyPath: victoryBGM.Guid.Data4
-      value: -1961418435
-      objectReference: {fileID: 0}
-    - target: {fileID: 7848611814969325879, guid: cbeba7eb9bcca034e9408ec3c48d95be,
-        type: 3}
-      propertyPath: firstHalfBGM.Guid.Data1
-      value: -259305468
-      objectReference: {fileID: 0}
-    - target: {fileID: 7848611814969325879, guid: cbeba7eb9bcca034e9408ec3c48d95be,
-        type: 3}
-      propertyPath: firstHalfBGM.Guid.Data2
-      value: 1086441920
-      objectReference: {fileID: 0}
-    - target: {fileID: 7848611814969325879, guid: cbeba7eb9bcca034e9408ec3c48d95be,
-        type: 3}
-      propertyPath: firstHalfBGM.Guid.Data3
-      value: 1366755766
-      objectReference: {fileID: 0}
-    - target: {fileID: 7848611814969325879, guid: cbeba7eb9bcca034e9408ec3c48d95be,
-        type: 3}
-      propertyPath: firstHalfBGM.Guid.Data4
-      value: -646482154
-      objectReference: {fileID: 0}
-    - target: {fileID: 7848611814969325879, guid: cbeba7eb9bcca034e9408ec3c48d95be,
-        type: 3}
-      propertyPath: secondHalfBGM.Guid.Data1
-      value: -119581893
-      objectReference: {fileID: 0}
-    - target: {fileID: 7848611814969325879, guid: cbeba7eb9bcca034e9408ec3c48d95be,
-        type: 3}
-      propertyPath: secondHalfBGM.Guid.Data2
-      value: 1205345819
-      objectReference: {fileID: 0}
-    - target: {fileID: 7848611814969325879, guid: cbeba7eb9bcca034e9408ec3c48d95be,
-        type: 3}
-      propertyPath: secondHalfBGM.Guid.Data3
-      value: 1202014111
-      objectReference: {fileID: 0}
-    - target: {fileID: 7848611814969325879, guid: cbeba7eb9bcca034e9408ec3c48d95be,
-        type: 3}
-      propertyPath: secondHalfBGM.Guid.Data4
-      value: 104959056
-      objectReference: {fileID: 0}
     - target: {fileID: 8440126391885891598, guid: cbeba7eb9bcca034e9408ec3c48d95be,
         type: 3}
       propertyPath: m_Name
       value: AudioManager
       objectReference: {fileID: 0}
-    - target: {fileID: 8440126391885891598, guid: cbeba7eb9bcca034e9408ec3c48d95be,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 0}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8996763672806107192, guid: cbeba7eb9bcca034e9408ec3c48d95be,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 269066324}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cbeba7eb9bcca034e9408ec3c48d95be, type: 3}
 --- !u!1001 &43150483
 PrefabInstance:
@@ -821,43 +706,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c7491ae35180c748a31c1151ab5b1e5, type: 3}
---- !u!1 &269066321 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8996763672806107192, guid: cbeba7eb9bcca034e9408ec3c48d95be,
-    type: 3}
-  m_PrefabInstance: {fileID: 10951411}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &269066324
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 269066321}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  EventReference:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
-  Event: 
-  EventPlayTrigger: 0
-  EventStopTrigger: 0
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  NonRigidbodyVelocity: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: -1
-  OverrideMaxDistance: -1
 --- !u!4 &402679794 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2430612247497346835, guid: ff445c267f388de4ab957baba456541b,
@@ -8967,6 +8815,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Boss
+      objectReference: {fileID: 0}
+    - target: {fileID: 1135948589728832962, guid: 88669eb52a11c4f45b479ec3df6d074b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3062474991226534520, guid: 88669eb52a11c4f45b479ec3df6d074b,
         type: 3}

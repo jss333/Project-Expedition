@@ -47,12 +47,43 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   randomPitchAudioSourcePrefab: {fileID: 2854293015688605026, guid: 82ce30ab0cfbfad428fe181e46659794,
     type: 3}
+  mainMenuMusic:
+    Guid:
+      Data1: -1670029119
+      Data2: 1174603088
+      Data3: -879948392
+      Data4: -1681901675
+    Path: event:/Music/MainMenuMusic
+  firstHalfBGM:
+    Guid:
+      Data1: -259305468
+      Data2: 1086441920
+      Data3: 1366755766
+      Data4: -646482154
+    Path: event:/Music/FirstHalfMusic
+  secondHalfBGM:
+    Guid:
+      Data1: -119581893
+      Data2: 1205345819
+      Data3: 1202014111
+      Data4: 104959056
+    Path: event:/Music/SecondHalfMusic
+  victoryBGM:
+    Guid:
+      Data1: 1194426984
+      Data2: 1261815138
+      Data3: 1645485740
+      Data4: -1961418435
+    Path: event:/Music/VictoryMusic
+  defeatBGM:
+    Guid:
+      Data1: 611489586
+      Data2: 1122196850
+      Data3: -949364346
+      Data4: -2079281744
+    Path: event:/Music/DefeatMusic
+  musicVolume: 1
   sfxVolume: 1
-  musicAudioSource: {fileID: 0}
-  firstHalfBGM: {fileID: 8300000, guid: 77a4e245bcc6a4a4f8176c6ce12c925e, type: 3}
-  secondHalfBGM: {fileID: 8300000, guid: 4981800a94a2f4d42934ade672c41767, type: 3}
-  victoryBGM: {fileID: 8300000, guid: 17447c87425e0ee49be88dc04b8db6b8, type: 3}
-  defeatBGM: {fileID: 8300000, guid: 1fb13e6e3a25c594db3766d90b7571bf, type: 3}
 --- !u!1 &8996763672806107192
 GameObject:
   m_ObjectHideFlags: 0
@@ -63,6 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 117804532672121310}
   - component: {fileID: 7389082532009931114}
+  - component: {fileID: 1050434135037610458}
   m_Layer: 0
   m_Name: Music
   m_TagString: Untagged
@@ -86,6 +118,37 @@ Transform:
   m_Father: {fileID: 4344868066763769398}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7389082532009931114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8996763672806107192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: -1
+  OverrideMaxDistance: -1
+--- !u!114 &1050434135037610458
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -1,3 +1,4 @@
+using FMODUnity;
 using Platformer.Mechanics;
 using System.Collections;
 using System.Collections.Generic;
@@ -15,6 +16,11 @@ public class BombThrowController : MonoBehaviour
     [SerializeField] private AnimationCurve beepingSpeedCurve;
 
     private Animator animator;
+
+    [Header("SFX")]
+    [SerializeField] private EventReference bombExplosionSFX;
+    [SerializeField] private EventReference bombLaunchSFX;
+    [SerializeField] private EventReference bombBeepSFX;
 
     [Header("Variables")]
     private Vector2 spawnLocation;
@@ -133,15 +139,15 @@ public class BombThrowController : MonoBehaviour
     }
     public void PlayExplodeAudio()
     {
-        AudioManagerNoMixers.Singleton.PlaySFXByName("BombExplosion");
+        AudioManagerNoMixers.Singleton.PlayOneShot(bombExplosionSFX, this.transform.position);
     }
     public void PlayLaunchAudio()
     {
-        AudioManagerNoMixers.Singleton.PlaySFXByName("BombLaunch");
+        AudioManagerNoMixers.Singleton.PlayOneShot(bombLaunchSFX, this.transform.position);
     }
     public void PlayBeepAudio()
     {
-        AudioManagerNoMixers.Singleton.PlaySFXByName("BombBeep");
+        AudioManagerNoMixers.Singleton.PlayOneShot(bombBeepSFX, this.transform.position);
     }
     public void BeepingLogic()
     {

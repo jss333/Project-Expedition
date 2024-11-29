@@ -164,6 +164,13 @@ MonoBehaviour:
   animator: {fileID: 9073713607978684701}
   timerText: {fileID: 5464560325331894871}
   timerHolder: {fileID: 1850485061182054760}
+  shakingSFX:
+    Guid:
+      Data1: -1494948800
+      Data2: 1258528152
+      Data3: -1968900975
+      Data4: 1740654210
+    Path: event:/PlatformShaking
   spriteRenderer: {fileID: 8925341933722814228}
   isVanishing: 1
   visual: {fileID: 49605767642497622}

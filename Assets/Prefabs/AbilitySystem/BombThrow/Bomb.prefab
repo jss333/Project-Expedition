@@ -245,6 +245,27 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  bombExplosionSFX:
+    Guid:
+      Data1: 389200165
+      Data2: 1276600165
+      Data3: 1582281123
+      Data4: 40280086
+    Path: event:/BombExplosion
+  bombLaunchSFX:
+    Guid:
+      Data1: 626762578
+      Data2: 1197301271
+      Data3: 1958654336
+      Data4: -269771489
+    Path: event:/BombLaunch
+  bombBeepSFX:
+    Guid:
+      Data1: -1678078463
+      Data2: 1160420738
+      Data3: -1380084831
+      Data4: -656413706
+    Path: event:/BombBeep
 --- !u!95 &4116049600442538960
 Animator:
   serializedVersion: 5
