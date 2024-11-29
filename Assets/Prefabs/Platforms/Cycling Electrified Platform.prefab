@@ -395,6 +395,13 @@ MonoBehaviour:
   timerHolder: {fileID: 1695975339236828906}
   electricityCaster: {fileID: 1210012526053372111, guid: 2230af13ba58f56428061b95d0ea1e02,
     type: 3}
+  triggeredEventSound:
+    Guid:
+      Data1: 691181554
+      Data2: 1201147792
+      Data3: -2127106138
+      Data4: 896375758
+    Path: event:/EPlatformTriggered
   timeToStartCycling: 1
   timeToShowElectricity: 3
   timeToStayElectrified: 3

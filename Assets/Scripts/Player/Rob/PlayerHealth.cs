@@ -1,3 +1,4 @@
+using FMODUnity;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -9,6 +10,7 @@ public class PlayerHealth : MonoBehaviour
     public HealthBar healthBar;
     public GameObject robBertParentObj;
     public ChallengeRoomBGM challengeRoomBGM;
+    [SerializeField] private EventReference playerTakesDamageSFX;
     private EntityActionVisualController entityActionVisualController;
     private Animator animator;
 
@@ -30,7 +32,9 @@ public class PlayerHealth : MonoBehaviour
     {
         currentHealth -= healthdamage;
         //healthBar.SetHealth(currentHealth);
-        AudioManagerNoMixers.Singleton.PlaySFXByName("PlayerTakesDamage");
+        //AudioManagerNoMixers.Singleton.PlaySFXByName("PlayerTakesDamage");
+        AudioManagerNoMixers.Singleton.PlayOneShot(playerTakesDamageSFX, this.transform.position);
+
         entityActionVisualController.ApplyGettingHitVisuals();
         DamageEventsManager.OnPlayerDamaged?.Invoke((float)healthdamage / maxHealth);
         PlayHitAnim();

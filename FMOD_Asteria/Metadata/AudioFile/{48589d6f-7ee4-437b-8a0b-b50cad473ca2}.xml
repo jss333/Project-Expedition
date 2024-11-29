@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{48589d6f-7ee4-437b-8a0b-b50cad473ca2}">
+		<property name="assetPath">
+			<value>BGM/boss-round-start.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>82.400000000000006</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{891151a9-cf74-4c01-ac60-f5ee52821010}</destination>
+		</relationship>
+	</object>
+</objects>

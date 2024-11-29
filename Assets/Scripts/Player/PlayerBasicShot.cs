@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using FMODUnity;
+using Unity.VisualScripting;
 
 public class PlayerBasicShot : MonoBehaviour
 {
@@ -17,6 +19,7 @@ public class PlayerBasicShot : MonoBehaviour
     public float shotIntervalSec = 0.05f;
     private float timeOfLastShot;
     public AudioClip shotSFX;
+    [SerializeField] private EventReference shootSoundEvent;
 
     private bool isFired;
 
@@ -54,7 +57,6 @@ public class PlayerBasicShot : MonoBehaviour
         {
             timeOfLastShot = Time.time;
             LaunchProjectile();
-            AudioManagerNoMixers.Singleton.PlaySFXByName("PlayerShoots");
         }
 
         bool CanFireAgain()
@@ -77,6 +79,8 @@ public class PlayerBasicShot : MonoBehaviour
     private void LaunchProjectile()
     {
         PlayerProjectile proj = Instantiate(projectilePrefab, shootPoint.position, shootPoint.rotation);
+        AudioManagerNoMixers.Singleton.PlayOneShot(shootSoundEvent, proj.transform.position);
+
         proj.SetVelocityAndDamageAmt(shotSpeed, shotDmg);
     }
 }

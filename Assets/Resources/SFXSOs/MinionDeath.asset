@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 497986f42411ebd4c8e757f3b1cba09d, type: 3}
   m_Name: MinionDeath
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: 26e1002d5cb46b3469374866ec6eb0d7, type: 3}
+  audioClip: {fileID: 8300000, guid: 7a968ab23f2afd34a964ed6b5382ff24, type: 3}
   minPitch: 0.95
   maxPitch: 1.05
   soundEffectVolume: 1

@@ -1,8 +1,11 @@
+using FMOD.Studio;
+using FMODUnity;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
 
 public class AudioManagerNoMixers : MonoBehaviour {
 
@@ -29,16 +32,25 @@ public class AudioManagerNoMixers : MonoBehaviour {
     [Header("SFX")]
     private Dictionary<string, SFXAudioDataSO> sfxSOByName = new Dictionary<string, SFXAudioDataSO>();
     private Dictionary<string, RandomPitchAudioSource> audioSrcByName = new Dictionary<string, RandomPitchAudioSource>();
-    [SerializeField] private float sfxVolume = 1.0f;
 
-    public float SFXVolume => sfxVolume;
 
     [Header("Music")]
-    [SerializeField] private AudioSource musicAudioSource;
-    [SerializeField] AudioClip firstHalfBGM;
-    [SerializeField] AudioClip secondHalfBGM;
-    [SerializeField] AudioClip victoryBGM;
-    [SerializeField] AudioClip defeatBGM;
+    [SerializeField] private EventReference mainMenuMusic;
+    [SerializeField] private EventReference firstHalfBGM;
+    [SerializeField] private EventReference secondHalfBGM;
+    [SerializeField] private EventReference victoryBGM;
+    [SerializeField] private EventReference defeatBGM;
+
+    [Header("Settings")]
+    [SerializeField] private float musicVolume = 1.0f;
+    [SerializeField] private float sfxVolume = 1.0f;
+    private Bus musicBus;
+    private Bus sfxBus;
+    private EventInstance eventInstance;
+    
+    
+    public float SFXVolume => sfxVolume;
+
 
 
     private void Start()
@@ -47,7 +59,23 @@ public class AudioManagerNoMixers : MonoBehaviour {
 
         sfxVolume = 1.0f;
 
-        PlayFirstPartMusic();
+        if(SceneManager.GetActiveScene().buildIndex != 0)
+        {
+            PlayFirstPartMusic();
+        }
+
+        musicBus = RuntimeManager.GetBus("bus:/Music");
+        sfxBus = RuntimeManager.GetBus("bus:/SFX");
+    }
+
+    private void OnDestroy()
+    {
+        StopMusic();
+    }
+
+    public void PlayOneShot(EventReference sound, Vector3 worldPos)
+    {
+        RuntimeManager.PlayOneShot(sound, worldPos);
     }
 
     public void LoadSFXScriptableObjects()
@@ -62,14 +90,14 @@ public class AudioManagerNoMixers : MonoBehaviour {
 
     public void PlaySFXByName(string sfxName)
     {
-        if(!sfxSOByName.ContainsKey(sfxName))
+        /*if(!sfxSOByName.ContainsKey(sfxName))
         {
             Debug.LogError("Cannot play audio clip - SFXAudioDataSO with name " + sfxName + "not found");
             return;
         }
 
         RandomPitchAudioSource audioSrc = GetOrCreateAudioSource(sfxSOByName[sfxName]);
-        audioSrc.PlayAssociatedAudio();
+        audioSrc.PlayAssociatedAudio(); */
     }
 
     private RandomPitchAudioSource GetOrCreateAudioSource(SFXAudioDataSO sfxSO)
@@ -93,41 +121,53 @@ public class AudioManagerNoMixers : MonoBehaviour {
         }
     }
 
+    [ContextMenu("StopMusic")]
+    private void StopMusic()
+    {
+        eventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+    }
+
+    private void PlayEventInstance(EventReference eventReference)
+    {
+        StopMusic();
+        eventInstance = RuntimeManager.CreateInstance(eventReference);
+        eventInstance.start();
+    }
+
+    public void PlayMainMenuMusic()
+    {
+        PlayEventInstance(mainMenuMusic);
+    }
+
     public void PlayFirstPartMusic()
     {
-        musicAudioSource.Stop();
-        musicAudioSource.clip = firstHalfBGM;
-        musicAudioSource.Play();
+        PlayEventInstance(firstHalfBGM);
     }
 
     public void PlaySecondPartMusic()
     {
-        musicAudioSource.Stop();
-        musicAudioSource.clip = secondHalfBGM;
-        musicAudioSource.Play();
+        PlayEventInstance(secondHalfBGM);
     }
 
     public void PlayVictroyMusic()
     {
-        musicAudioSource.Stop();
-        musicAudioSource.clip = victoryBGM;
-        musicAudioSource.Play();
+        PlayEventInstance(victoryBGM);
     }
 
     public void PlayDefeatMusic()
     {
-        musicAudioSource.Stop();
-        musicAudioSource.clip = defeatBGM;
-        musicAudioSource.Play();
+        PlayEventInstance(defeatBGM);
     }
 
     public void ControlMusicVolume(float volume)
     {
-        musicAudioSource.volume = volume;
+        musicVolume = volume;
+        musicBus.setVolume(musicVolume);
     }
 
     public void ControlSFXVolume(float volume)
     {
         sfxVolume = volume;
+        sfxBus.setVolume(sfxVolume);
     }
 }

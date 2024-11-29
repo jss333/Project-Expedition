@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abilityName: 
   abilityIcon: {fileID: 0}
+  iconColor: {r: 1, g: 1, b: 1, a: 1}
   maxDuration: 0
   maxCoolDownTime: 0
   reflectingShieldProperties:
@@ -21,5 +22,12 @@ MonoBehaviour:
     abilityPrefab: {fileID: 0}
     radius: 0
     reverseSpeed: 0
-    chargeClip: {fileID: 0}
+    chargeSoundEvent:
+      Guid:
+        Data1: -82288882
+        Data2: 1115913229
+        Data3: 588378260
+        Data4: 1797590500
+      Path: event:/cannotfindShieldCharged
+    shouldDestroyProjectileOnImpact: 0
     newDamageValue: 5

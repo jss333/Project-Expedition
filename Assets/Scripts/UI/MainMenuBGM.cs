@@ -13,12 +13,17 @@ public class MainMenuBGM : MonoBehaviour
         {
             // If not, set this as the instance and don't destroy it on load
             instance = this;
-            DontDestroyOnLoad(instance);
+            //DontDestroyOnLoad(instance);
         }
         else
         {
             // If an instance already exists, destroy this one to avoid duplicates
             Destroy(this.gameObject);
         }
+    }
+
+    private void Start()
+    {
+        AudioManagerNoMixers.Singleton.PlayMainMenuMusic();
     }
 }

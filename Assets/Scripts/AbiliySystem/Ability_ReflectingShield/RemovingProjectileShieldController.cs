@@ -1,4 +1,5 @@
 using AbilitySystem;
+using FMODUnity;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,7 +11,8 @@ public class RemovingProjectileShieldController : MonoBehaviour
     [SerializeField] private SpriteRenderer spriteRenderer;
     private float radius;
     private Vector3 initialDirection;
-    private AudioClip rechargeClip;
+    //private AudioClip rechargeClip;
+    private EventReference chargeSoundEvent;
 
     private void OnDestroy()
     {
@@ -20,7 +22,7 @@ public class RemovingProjectileShieldController : MonoBehaviour
     public void SetReflectionShieldProperties(ReflectingShieldProperties reflectingShieldProperties)
     {
         radius = reflectingShieldProperties.radius;
-        rechargeClip = reflectingShieldProperties.chargeClip;
+        chargeSoundEvent = reflectingShieldProperties.chargeSoundEvent;
 
         SetUpRadiusDependencies();
     }
@@ -77,7 +79,7 @@ public class RemovingProjectileShieldController : MonoBehaviour
 
     IEnumerator PlaySoundAndDestroyObject()
     {
-        audioSource.PlayOneShot(rechargeClip);
+        AudioManagerNoMixers.Singleton.PlayOneShot(chargeSoundEvent, this.transform.position);
 
 
         yield return new WaitForSeconds(1.2f);
