@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b1d48ee55e026148aabc5faf8f0f4c0, type: 3}
   m_Name: Boss01-2RoundSettings
   m_EditorClassIdentifier: 
-  bossHealth: 1500
+  bossHealth: 500
   bossStunBulletChance: 20
+  numMinionsToSpawn: 3
   minionStunBulletChance: 20
   playerHealth: 200
   currentLevel: Boss01-2
