@@ -36,6 +36,7 @@ public class MinionController : MonoBehaviour
     [Header("Audio")]
     private bool minionHitCooldown = false;
     private float finishHitCooldown = 0;
+    [SerializeField] private EventReference minionHitSFX;
     [SerializeField] private EventReference deathSoundEvent;
 
     private EnemyShootingController shootingController;
@@ -154,7 +155,7 @@ public class MinionController : MonoBehaviour
             {
                 finishHitCooldown = Time.time + 1f;
                 minionHitCooldown = true;
-                AudioManagerNoMixers.Singleton.PlaySFXByName("MinionHit");
+                AudioManagerNoMixers.Singleton.PlayOneShot(minionHitSFX, this.transform.position);
             }
             //the sfx cooldown is finished
             if (finishHitCooldown < Time.time)

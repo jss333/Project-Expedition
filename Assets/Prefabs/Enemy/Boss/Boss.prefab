@@ -171,6 +171,13 @@ MonoBehaviour:
   hurtStateHealthPercent: 40
   hurtStateTriggered: 0
   bgmChangeHealthPercent: 40
+  bossTamageTakenSFX:
+    Guid:
+      Data1: -829171626
+      Data2: 1308577578
+      Data3: 1550038679
+      Data4: 411759962
+    Path: event:/BossTakesDamage
   damageTakenSFXCooldown: 0.2
   delayEndScreen: 3
   bossSpawnMinionSoundEvent:
@@ -187,6 +194,13 @@ MonoBehaviour:
     type: 3}
   singleStunOrbPrefab: {fileID: 2522101524757786263, guid: 9f7996eeba3e81441b191c10b6576979,
     type: 3}
+  bossSingleShootSFX:
+    Guid:
+      Data1: -1907208604
+      Data2: 1277651631
+      Data3: 1637865139
+      Data4: 258933474
+    Path: event:/BossShoot
   minShotIntervalSec: 1.2
   maxShotIntervalSec: 1.5
   nextShotTime: 0
@@ -194,6 +208,13 @@ MonoBehaviour:
   maxSingleOrbSpeed: 2.5
   multipleOrbPrefab: {fileID: 2522101524757786263, guid: d92236d97d3171d4384564f908974f71,
     type: 3}
+  bossMultipleShootSFX:
+    Guid:
+      Data1: 1237470999
+      Data2: 1303788262
+      Data3: -1773865590
+      Data4: -2024577859
+    Path: event:/BossMultiShoot
   multipleOrbsPercent: 5
   numMultipleOrbs: 5
   multipleOrbsAngleSpreadDeg: 75
@@ -222,13 +243,6 @@ MonoBehaviour:
       Data3: -571224141
       Data4: 17328623
     Path: event:/BossArmAttackDeploy
-  bossArmGroundPunctureSFX:
-    Guid:
-      Data1: -88837855
-      Data2: 1099073635
-      Data3: -1736705656
-      Data4: 917131235
-    Path: event:/BossArmAttackGroundPuncture
 --- !u!114 &1863408600527210321
 MonoBehaviour:
   m_ObjectHideFlags: 0

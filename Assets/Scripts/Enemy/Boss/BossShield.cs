@@ -10,7 +10,10 @@ public class BossShield : MonoBehaviour
     [Header("References")]
     private Animator animator;
     private BossController boss;
-    [SerializeField] private EventReference bossBreakShieldSFX;
+    [SerializeField] private EventReference bossShieldCracksFirstSFX;
+    [SerializeField] private EventReference bossShieldCracksNextSFX;
+    [SerializeField] private EventReference bossShieldBreaksSFX;
+
 
     void Start()
     {
@@ -26,12 +29,12 @@ public class BossShield : MonoBehaviour
         if (spriteNum == 1)
         {
             animator.SetTrigger("ShieldBreak1");
-            AudioManagerNoMixers.Singleton.PlaySFXByName("BossShieldCracksFirst");
+            AudioManagerNoMixers.Singleton.PlayOneShot(bossShieldCracksFirstSFX, this.transform.position);
         }
         else if (spriteNum == 2)
         {
             animator.SetTrigger("ShieldBreak2");
-            AudioManagerNoMixers.Singleton.PlaySFXByName("BossShieldCracksNext");
+            AudioManagerNoMixers.Singleton.PlayOneShot(bossShieldCracksNextSFX, this.transform.position);
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -45,8 +48,7 @@ public class BossShield : MonoBehaviour
     public void playShieldBreakAnimation()
     {
         animator.SetTrigger("BreakShield");
-        //AudioManagerNoMixers.Singleton.PlaySFXByName("BossShieldBreaks");
-        AudioManagerNoMixers.Singleton.PlayOneShot(bossBreakShieldSFX, this.transform.position);
+        AudioManagerNoMixers.Singleton.PlayOneShot(bossShieldBreaksSFX, this.transform.position);
         boss.setHasShield(false);
     }
     public void endShieldSprite()

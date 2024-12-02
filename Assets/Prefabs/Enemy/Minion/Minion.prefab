@@ -122,6 +122,13 @@ MonoBehaviour:
   shotNum: 0
   launchPoint: {fileID: 1003880002372108823}
   launchAngle: {x: 0, y: 0, z: 0, w: 0}
+  minionHitSFX:
+    Guid:
+      Data1: 752979372
+      Data2: 1340124350
+      Data3: 572594597
+      Data4: 2001978686
+    Path: event:/MinionGetsHit
   deathSoundEvent:
     Guid:
       Data1: -786787444

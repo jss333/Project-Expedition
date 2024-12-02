@@ -25,6 +25,7 @@ public class BossController : MonoBehaviour
     public bool hurtStateTriggered = false;
     [SerializeField] private float bgmChangeHealthPercent = 40f;
     private bool bgmChangeTriggered = false;
+    [SerializeField] private EventReference bossTamageTakenSFX;
     [SerializeField] private float damageTakenSFXCooldown = 0.2f;
     private float lastDamageTakenSFXPlayTime = -Mathf.Infinity;
 
@@ -37,6 +38,7 @@ public class BossController : MonoBehaviour
     [Header("Parameters - Orb")]
     [SerializeField] private GameObject singleOrbPrefab;
     [SerializeField] private GameObject singleStunOrbPrefab;
+    [SerializeField] private EventReference bossSingleShootSFX;
     [SerializeField] private float minShotIntervalSec = 1f;
     [SerializeField] private float maxShotIntervalSec = 2f;
     [SerializeField] private float nextShotTime = 0f;
@@ -45,6 +47,7 @@ public class BossController : MonoBehaviour
 
     [Header("Parameters - Multiple orbs")]
     [SerializeField] private GameObject multipleOrbPrefab;
+    [SerializeField] private EventReference bossMultipleShootSFX;
     [SerializeField] private float multipleOrbsPercent = 10f;
     [SerializeField] private float numMultipleOrbs = 5;
     [SerializeField] private float multipleOrbsAngleSpreadDeg = 60;
@@ -226,7 +229,7 @@ public class BossController : MonoBehaviour
             if (WillShootMultipleOrbs() && numMultipleOrbs > 1)
             {
                 ShootMultipleOrbs(GetDirectionToPlayer(), GetRandomizedSpeed(minMultipleOrbSpeed, maxMultipleOrbSpeed));
-                AudioManagerNoMixers.Singleton.PlaySFXByName("BossShootsMultipleProjectiles");
+                AudioManagerNoMixers.Singleton.PlayOneShot(bossMultipleShootSFX, this.transform.position);
             }
             else
             {
@@ -240,7 +243,7 @@ public class BossController : MonoBehaviour
                     targetSingleOrb = singleOrbPrefab;
                 }
                 ShootSingleOrb(GetDirectionToPlayer(), GetRandomizedSpeed(minSingleOrbSpeed, maxSingleOrbSpeed), targetSingleOrb);
-                AudioManagerNoMixers.Singleton.PlaySFXByName("BossShootsSingleProjectile");
+                AudioManagerNoMixers.Singleton.PlayOneShot(bossMultipleShootSFX, this.transform.position);
             }
 
             nextShotTime = Time.time + GetRandomFloat(minShotIntervalSec, maxShotIntervalSec);
@@ -331,7 +334,7 @@ public class BossController : MonoBehaviour
     {
         if (Time.time >= lastDamageTakenSFXPlayTime + damageTakenSFXCooldown)
         {
-            AudioManagerNoMixers.Singleton.PlaySFXByName("BossTakesDamage");
+            AudioManagerNoMixers.Singleton.PlayOneShot(bossTamageTakenSFX, this.transform.position);
             lastDamageTakenSFXPlayTime = Time.time;
         }
     }

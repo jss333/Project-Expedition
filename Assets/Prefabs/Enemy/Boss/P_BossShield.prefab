@@ -120,7 +120,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02492d296b5116348bb7798a8e48d3ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bossBreakShieldSFX:
+  bossShieldCracksFirstSFX:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  bossShieldCracksNextSFX:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  bossShieldBreaksSFX:
     Guid:
       Data1: -933807384
       Data2: 1085711363
