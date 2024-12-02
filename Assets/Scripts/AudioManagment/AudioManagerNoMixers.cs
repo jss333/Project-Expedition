@@ -1,3 +1,4 @@
+using Cinemachine.Examples;
 using FMOD.Studio;
 using FMODUnity;
 using System;
@@ -51,10 +52,12 @@ public class AudioManagerNoMixers : MonoBehaviour {
     
     public float SFXVolume => sfxVolume;
 
-
+    PlayerMovement playerMovement;
 
     private void Start()
     {
+        playerMovement = FindFirstObjectByType<PlayerMovement>();
+
         LoadSFXScriptableObjects();
 
         sfxVolume = 1.0f;
@@ -75,6 +78,7 @@ public class AudioManagerNoMixers : MonoBehaviour {
 
     public void PlayOneShot(EventReference sound, Vector3 worldPos)
     {
+        //worldPos = playerMovement.transform.position;
         RuntimeManager.PlayOneShot(sound, worldPos);
     }
 
