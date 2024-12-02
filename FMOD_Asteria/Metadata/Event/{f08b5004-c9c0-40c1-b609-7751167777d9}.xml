@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{f08b5004-c9c0-40c1-b609-7751167777d9}">
+		<property name="color">
+			<value>Cyan</value>
+		</property>
 		<property name="name">
 			<value>FirstHalfMusic</value>
 		</property>
@@ -95,11 +98,17 @@
 		<property name="length">
 			<value>82.400000000000006</value>
 		</property>
+		<property name="volume">
+			<value>4.5</value>
+		</property>
 		<relationship name="audioFile">
 			<destination>{48589d6f-7ee4-437b-8a0b-b50cad473ca2}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{a7b23a81-3810-4c7b-ad63-016749c3e451}">
+		<property name="volume">
+			<value>4.5</value>
+		</property>
 		<property name="name">
 			<value>Audio 1</value>
 		</property>

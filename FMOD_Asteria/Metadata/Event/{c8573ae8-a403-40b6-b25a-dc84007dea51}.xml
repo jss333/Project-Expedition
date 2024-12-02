@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{c8573ae8-a403-40b6-b25a-dc84007dea51}">
+		<property name="color">
+			<value>Purple</value>
+		</property>
 		<property name="name">
 			<value>BossShieldBreaks</value>
 		</property>

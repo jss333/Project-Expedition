@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{255ba352-5e17-475d-80b1-be741f9debef}">
+		<property name="color">
+			<value>Red</value>
+		</property>
 		<property name="name">
 			<value>BombLaunch</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{7549509f-5e7a-472c-9dc0-19a5034f9348}</destination>
@@ -76,7 +79,7 @@
 	</object>
 	<object class="SingleSound" id="{a79cd5b6-9473-4415-8e35-566786d3e649}">
 		<property name="length">
-			<value>5.5</value>
+			<value>0.11609977324263039</value>
 		</property>
 		<relationship name="audioFile">
 			<destination>{aaf2492b-0d0c-49d8-bf2d-289f6232f569}</destination>
@@ -91,9 +94,15 @@
 	<object class="MixerBusEffectChain" id="{8e88bebc-30b0-4e74-a3d9-31188ebb01f7}">
 		<relationship name="effects">
 			<destination>{9958f87b-1b2f-489a-8046-b005a3e3d5dd}</destination>
+			<destination>{f1170d41-3985-48b8-98ef-70c582ba5352}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{e27d220c-f57c-4ccf-84b6-84a25dbea248}" />
 	<object class="MixerBusFader" id="{9e34473b-61b6-471e-b4f1-6e9ec6c6085b}" />
 	<object class="MixerBusFader" id="{9958f87b-1b2f-489a-8046-b005a3e3d5dd}" />
+	<object class="SpatialiserEffect" id="{f1170d41-3985-48b8-98ef-70c582ba5352}">
+		<property name="distanceRolloffType">
+			<value>1</value>
+		</property>
+	</object>
 </objects>

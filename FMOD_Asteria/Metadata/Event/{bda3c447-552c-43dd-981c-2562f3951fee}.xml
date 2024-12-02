@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{bda3c447-552c-43dd-981c-2562f3951fee}">
+		<property name="color">
+			<value>Yellow</value>
+		</property>
 		<property name="name">
 			<value>StickyBombAttach</value>
 		</property>
@@ -39,7 +42,7 @@
 	</object>
 	<object class="MasterTrack" id="{f31800a7-9c8c-465c-a571-2b6bc6107572}">
 		<relationship name="modules">
-			<destination>{fb8a3c38-b5d0-47f4-b4a9-7af7c70fe137}</destination>
+			<destination>{34b57be6-5a9f-40aa-ac82-f3b706d7e882}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{2ef37dbe-4e91-4e7c-b838-a3759c7a1241}</destination>
@@ -60,7 +63,7 @@
 	<object class="MarkerTrack" id="{58780cbe-0cbf-4377-8949-b74bec4b128d}" />
 	<object class="Timeline" id="{b4c2b27b-4a50-49a5-9e04-4772c4f2d5fa}">
 		<relationship name="modules">
-			<destination>{fb8a3c38-b5d0-47f4-b4a9-7af7c70fe137}</destination>
+			<destination>{34b57be6-5a9f-40aa-ac82-f3b706d7e882}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{2ef37dbe-4e91-4e7c-b838-a3759c7a1241}">
@@ -74,12 +77,12 @@
 			<destination>{65d0a34e-1150-49ca-a29a-e1000b8ec2e7}</destination>
 		</relationship>
 	</object>
-	<object class="SingleSound" id="{fb8a3c38-b5d0-47f4-b4a9-7af7c70fe137}">
+	<object class="SingleSound" id="{34b57be6-5a9f-40aa-ac82-f3b706d7e882}">
 		<property name="length">
-			<value>0.19736961451247165</value>
+			<value>0.16072562358276643</value>
 		</property>
 		<relationship name="audioFile">
-			<destination>{95c871b2-afa7-4280-be3e-8fdf4e2e9d84}</destination>
+			<destination>{4394d759-7f86-4ddf-ae71-0d3178d0f51a}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{cbbd400f-5e75-4cfc-8171-2e352211433f}">

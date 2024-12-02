@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{fb84226c-6ec6-4c95-9816-b4504f84009d}">
+		<property name="color">
+			<value>Green</value>
+		</property>
 		<property name="name">
 			<value>Rob Jump</value>
 		</property>
@@ -43,6 +46,7 @@
 	<object class="MasterTrack" id="{38c0b94f-a487-403e-91c9-7f8b34c04678}">
 		<relationship name="modules">
 			<destination>{bfe45f6e-6e1c-4aff-9c2c-2a3f0ad74ddc}</destination>
+			<destination>{d065b001-53e2-467d-91d8-c8ae0a8e33a5}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{644accd8-1998-44b3-87d0-5ad72942e4b8}</destination>
@@ -62,9 +66,9 @@
 	<object class="EventAutomatableProperties" id="{564c8d87-03ab-4cc0-bc27-449b2946afa8}" />
 	<object class="MarkerTrack" id="{10562ba2-0e8e-40e9-ac2a-c68666f9caf7}" />
 	<object class="Timeline" id="{0e471fa0-0aa8-42d6-ab2c-353f5011430e}">
-		<property name="isProxyEnabled">
-			<value>false</value>
-		</property>
+		<relationship name="modules">
+			<destination>{d065b001-53e2-467d-91d8-c8ae0a8e33a5}</destination>
+		</relationship>
 	</object>
 	<object class="ActionSheet" id="{90cbb0d3-853b-4813-ad88-982898dc2918}">
 		<relationship name="modules">
@@ -82,9 +86,16 @@
 			<destination>{0b393658-2250-470f-90be-046762da3cff}</destination>
 		</relationship>
 	</object>
-	<object class="MultiSound" id="{bfe45f6e-6e1c-4aff-9c2c-2a3f0ad74ddc}">
-		<relationship name="sounds">
-			<destination>{f79cf140-0df9-4533-bf52-adf1d6c1b1cc}</destination>
+	<object class="MultiSound" id="{bfe45f6e-6e1c-4aff-9c2c-2a3f0ad74ddc}" />
+	<object class="SingleSound" id="{d065b001-53e2-467d-91d8-c8ae0a8e33a5}">
+		<property name="length">
+			<value>0.38392290249433109</value>
+		</property>
+		<relationship name="modulators">
+			<destination>{b9408c31-7756-4279-abfb-80383e9bfe1e}</destination>
+		</relationship>
+		<relationship name="audioFile">
+			<destination>{daf3986b-cfb5-4847-9c0f-191b1301cc0b}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{937b6e0f-6099-47a2-8cd0-9261664d75a0}">
@@ -99,10 +110,10 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{11ce2b06-4737-4e51-ab23-3fb38b41cd5e}" />
-	<object class="SingleSound" id="{f79cf140-0df9-4533-bf52-adf1d6c1b1cc}">
-		<relationship name="audioFile">
-			<destination>{b6ef2091-0292-4f29-b5b9-a93235292d69}</destination>
-		</relationship>
+	<object class="RandomizerModulator" id="{b9408c31-7756-4279-abfb-80383e9bfe1e}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>pitch</value>
+		</property>
 	</object>
 	<object class="MixerBusFader" id="{812b3ddc-2408-4b53-9d1d-437568b5d1fc}" />
 	<object class="MixerBusFader" id="{8a8b9178-7590-4265-bb26-88883388cc07}" />

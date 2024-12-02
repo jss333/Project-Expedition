@@ -1,32 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8838087839645977845
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/BossSingleShoot
-  m_EditorClassIdentifier: 
-  Path: event:/BossSingleShoot
-  Guid:
-    Data1: -1907208604
-    Data2: 1277651631
-    Data3: 1637865139
-    Data4: 258933474
-  Banks:
-  - {fileID: 1485403085339700464}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &-8022398725237381565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54,6 +27,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-7554233224821561871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/PlatformShaking
+  m_EditorClassIdentifier: 
+  Path: event:/PlatformShaking
+  Guid:
+    Data1: -1494948800
+    Data2: 1258528152
+    Data3: -1968900975
+    Data4: 1740654210
+  Banks:
+  - {fileID: 1485403085339700464}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1812
 --- !u!114 &-6873599594485482053
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80,7 +80,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 383
 --- !u!114 &-6188143702937501092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96,12 +96,12 @@ MonoBehaviour:
   Path: FMOD_Asteria/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638682547130857244
+  lastModified: 638687090931871792
   FileSizes:
   - Name: Desktop
-    Value: 1574
+    Value: 1340
   Exists: 1
---- !u!114 &-5435034799943882818
+--- !u!114 &-3606612034441031897
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -111,23 +111,50 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/BossMultiShoot original
+  m_Name: event:/Music/SecondHalfMusic
   m_EditorClassIdentifier: 
-  Path: event:/BossMultiShoot original
+  Path: event:/Music/SecondHalfMusic
   Guid:
-    Data1: 1635761388
-    Data2: 1324177545
-    Data3: -1600179307
-    Data4: 1592632038
+    Data1: -119581893
+    Data2: 1205345819
+    Data3: 1202014111
+    Data4: 104959056
   Banks:
-  - {fileID: -6188143702937501092}
-  IsStream: 0
+  - {fileID: 4771980321942613136}
+  IsStream: 1
   Is3D: 0
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 87024
+--- !u!114 &-3598343953125747279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/VictoryMusic
+  m_EditorClassIdentifier: 
+  Path: event:/Music/VictoryMusic
+  Guid:
+    Data1: 1194426984
+    Data2: 1261815138
+    Data3: 1645485740
+    Data4: -1961418435
+  Banks:
+  - {fileID: 4771980321942613136}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 36192
 --- !u!114 &-3310673574949447437
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -154,7 +181,115 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 785
+--- !u!114 &-2973806421592535323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/MainMenuMusic
+  m_EditorClassIdentifier: 
+  Path: event:/Music/MainMenuMusic
+  Guid:
+    Data1: -1670029119
+    Data2: 1174603088
+    Data3: -879948392
+    Data4: -1681901675
+  Banks:
+  - {fileID: 4771980321942613136}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 132048
+--- !u!114 &-2731393970116794626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BombLaunch
+  m_EditorClassIdentifier: 
+  Path: event:/BombLaunch
+  Guid:
+    Data1: 626762578
+    Data2: 1197301271
+    Data3: 1958654336
+    Data4: -269771489
+  Banks:
+  - {fileID: 1485403085339700464}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 116
+--- !u!114 &-2669033527615182608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BossArmAttackDeploy
+  m_EditorClassIdentifier: 
+  Path: event:/BossArmAttackDeploy
+  Guid:
+    Data1: -2125872997
+    Data2: 1226088892
+    Data3: -571224141
+    Data4: 17328623
+  Banks:
+  - {fileID: 1485403085339700464}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1254
+--- !u!114 &-1867364709834732943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BossTakesDamage
+  m_EditorClassIdentifier: 
+  Path: event:/BossTakesDamage
+  Guid:
+    Data1: -829171626
+    Data2: 1308577578
+    Data3: 1550038679
+    Data4: 411759962
+  Banks:
+  - {fileID: 1485403085339700464}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 482
 --- !u!114 &-1716594824903422681
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -176,12 +311,66 @@ MonoBehaviour:
   Banks:
   - {fileID: 1485403085339700464}
   IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1410
+--- !u!114 &-848392234554231256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/StickyBombExplosion
+  m_EditorClassIdentifier: 
+  Path: event:/StickyBombExplosion
+  Guid:
+    Data1: -315501367
+    Data2: 1243626089
+    Data3: 1986891447
+    Data4: 1540566797
+  Banks:
+  - {fileID: 1485403085339700464}
+  IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 1076
+--- !u!114 &-591497159539280879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BombExplosion
+  m_EditorClassIdentifier: 
+  Path: event:/BombExplosion
+  Guid:
+    Data1: 389200165
+    Data2: 1276600165
+    Data3: 1582281123
+    Data4: 40280086
+  Banks:
+  - {fileID: 1485403085339700464}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1280
 --- !u!114 &-565982642824968848
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -209,33 +398,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-545789404390813571
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/BossMultiShoot
-  m_EditorClassIdentifier: 
-  Path: event:/BossMultiShoot
-  Guid:
-    Data1: 1237470999
-    Data2: 1303788262
-    Data3: -1773865590
-    Data4: -2024577859
-  Banks:
-  - {fileID: 1485403085339700464}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -252,27 +414,45 @@ MonoBehaviour:
   - {fileID: 2484768403107550633}
   - {fileID: -6188143702937501092}
   - {fileID: 1485403085339700464}
+  - {fileID: 4771980321942613136}
   EditorEvents:
-  - {fileID: -5435034799943882818}
   - {fileID: 6639228789769576235}
   - {fileID: 3428573476194872814}
-  - {fileID: -545789404390813571}
   - {fileID: 9020298310794372962}
   - {fileID: -565982642824968848}
   - {fileID: 6978041036252724882}
-  - {fileID: -8838087839645977845}
   - {fileID: -6873599594485482053}
   - {fileID: -1716594824903422681}
   - {fileID: -3310673574949447437}
   - {fileID: -8022398725237381565}
   - {fileID: 135165720392876003}
   - {fileID: 628298552363879137}
+  - {fileID: 6480931433471353854}
+  - {fileID: 1124214050082164594}
+  - {fileID: -3606612034441031897}
+  - {fileID: -3598343953125747279}
+  - {fileID: -2973806421592535323}
+  - {fileID: 990661824129945265}
+  - {fileID: 9168481858133133180}
+  - {fileID: -591497159539280879}
+  - {fileID: -7554233224821561871}
+  - {fileID: 2638294100930419150}
+  - {fileID: -2731393970116794626}
+  - {fileID: 3439298861131738339}
+  - {fileID: -848392234554231256}
+  - {fileID: 911102235226922569}
+  - {fileID: -1867364709834732943}
+  - {fileID: 3778721448197335464}
+  - {fileID: -2669033527615182608}
+  - {fileID: 7103944815942256086}
+  - {fileID: 2718172165154019958}
+  - {fileID: 8887412143041861843}
   EditorParameters: []
   MasterBanks:
   - {fileID: -6188143702937501092}
   StringsBanks:
   - {fileID: 2484768403107550633}
-  cacheTime: 638682547133703100
+  cacheTime: 638687090933142102
   cacheVersion: 131621
 --- !u!114 &135165720392876003
 MonoBehaviour:
@@ -295,12 +475,12 @@ MonoBehaviour:
   Banks:
   - {fileID: 1485403085339700464}
   IsStream: 0
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 626
 --- !u!114 &628298552363879137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -328,6 +508,87 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &911102235226922569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BossArmAttackGroundPuncture
+  m_EditorClassIdentifier: 
+  Path: event:/BossArmAttackGroundPuncture
+  Guid:
+    Data1: -88837855
+    Data2: 1099073635
+    Data3: -1736705656
+    Data4: 917131235
+  Banks:
+  - {fileID: 1485403085339700464}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1071
+--- !u!114 &990661824129945265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BombBeep
+  m_EditorClassIdentifier: 
+  Path: event:/BombBeep
+  Guid:
+    Data1: -1678078463
+    Data2: 1160420738
+    Data3: -1380084831
+    Data4: -656413706
+  Banks:
+  - {fileID: 1485403085339700464}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 104
+--- !u!114 &1124214050082164594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/DefeatMusic
+  m_EditorClassIdentifier: 
+  Path: event:/Music/DefeatMusic
+  Guid:
+    Data1: 611489586
+    Data2: 1122196850
+    Data3: -949364346
+    Data4: -2079281744
+  Banks:
+  - {fileID: 4771980321942613136}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 34377
 --- !u!114 &1485403085339700464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -343,10 +604,10 @@ MonoBehaviour:
   Path: FMOD_Asteria/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638682547133703100
+  lastModified: 638687090933142102
   FileSizes:
   - Name: Desktop
-    Value: 184256
+    Value: 296768
   Exists: 1
 --- !u!114 &2484768403107550633
 MonoBehaviour:
@@ -363,11 +624,65 @@ MonoBehaviour:
   Path: FMOD_Asteria/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638682547130867246
+  lastModified: 638687090931898842
   FileSizes:
   - Name: Desktop
-    Value: 1430
+    Value: 2390
   Exists: 1
+--- !u!114 &2638294100930419150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/StickyBombAttach
+  m_EditorClassIdentifier: 
+  Path: event:/StickyBombAttach
+  Guid:
+    Data1: -1113340857
+    Data2: 1138578732
+    Data3: 1646599320
+    Data4: -299919885
+  Banks:
+  - {fileID: 1485403085339700464}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 160
+--- !u!114 &2718172165154019958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BossMultiShoot
+  m_EditorClassIdentifier: 
+  Path: event:/BossMultiShoot
+  Guid:
+    Data1: 1237470999
+    Data2: 1303788262
+    Data3: -1773865590
+    Data4: -2024577859
+  Banks:
+  - {fileID: 1485403085339700464}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 486
 --- !u!114 &3428573476194872814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -394,7 +709,108 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
+  Length: 500
+--- !u!114 &3439298861131738339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/StickyBombLaunch
+  m_EditorClassIdentifier: 
+  Path: event:/StickyBombLaunch
+  Guid:
+    Data1: -1040826503
+    Data2: 1101965248
+    Data3: -1240158326
+    Data4: 226773919
+  Banks:
+  - {fileID: 1485403085339700464}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
   Length: 0
+--- !u!114 &3778721448197335464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BossArmAttackSiren
+  m_EditorClassIdentifier: 
+  Path: event:/BossArmAttackSiren
+  Guid:
+    Data1: -404493679
+    Data2: 1094157287
+    Data3: -1977256039
+    Data4: 714451820
+  Banks:
+  - {fileID: 1485403085339700464}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1035
+--- !u!114 &4771980321942613136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Music.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD_Asteria/Build/Desktop/Music.bank
+  Name: Music
+  StudioPath: bank:/Music
+  lastModified: 638687090932616944
+  FileSizes:
+  - Name: Desktop
+    Value: 4853504
+  Exists: 1
+--- !u!114 &6480931433471353854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/FirstHalfMusic
+  m_EditorClassIdentifier: 
+  Path: event:/Music/FirstHalfMusic
+  Guid:
+    Data1: -259305468
+    Data2: 1086441920
+    Data3: 1366755766
+    Data4: -646482154
+  Banks:
+  - {fileID: 4771980321942613136}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 82400
 --- !u!114 &6639228789769576235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -448,7 +864,61 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 232
+--- !u!114 &7103944815942256086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/MinionGetsHit
+  m_EditorClassIdentifier: 
+  Path: event:/MinionGetsHit
+  Guid:
+    Data1: 752979372
+    Data2: 1340124350
+    Data3: 572594597
+    Data4: 2001978686
+  Banks:
+  - {fileID: 1485403085339700464}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 361
+--- !u!114 &8887412143041861843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BossShoot
+  m_EditorClassIdentifier: 
+  Path: event:/BossShoot
+  Guid:
+    Data1: -1907208604
+    Data2: 1277651631
+    Data3: 1637865139
+    Data4: 258933474
+  Banks:
+  - {fileID: 1485403085339700464}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 455
 --- !u!114 &9020298310794372962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -467,6 +937,33 @@ MonoBehaviour:
     Data2: 1163801611
     Data3: 943685026
     Data4: 817521951
+  Banks:
+  - {fileID: 1485403085339700464}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 352
+--- !u!114 &9168481858133133180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/StickyBombBeep
+  m_EditorClassIdentifier: 
+  Path: event:/StickyBombBeep
+  Guid:
+    Data1: 2110823174
+    Data2: 1224294792
+    Data3: -1679662462
+    Data4: 1506284752
   Banks:
   - {fileID: 1485403085339700464}
   IsStream: 0

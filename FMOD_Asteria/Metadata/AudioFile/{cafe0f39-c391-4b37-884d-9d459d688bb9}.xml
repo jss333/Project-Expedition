@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
-	<object class="AudioFile" id="{55896e8a-8d50-4a96-b6bf-57a2f45fe606}">
+	<object class="AudioFile" id="{cafe0f39-c391-4b37-884d-9d459d688bb9}">
 		<property name="assetPath">
-			<value>Minion_Death.wav</value>
+			<value>Rob_Gets_Hit_final.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>44.0999985</value>
@@ -11,7 +11,7 @@
 			<value>2</value>
 		</property>
 		<property name="length">
-			<value>0.83999999999999997</value>
+			<value>0.36160997732426303</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{891151a9-cf74-4c01-ac60-f5ee52821010}</destination>

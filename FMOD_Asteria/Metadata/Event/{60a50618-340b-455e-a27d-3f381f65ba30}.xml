@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{60a50618-340b-455e-a27d-3f381f65ba30}">
+		<property name="color">
+			<value>Green</value>
+		</property>
 		<property name="name">
 			<value>RobAirJump</value>
 		</property>
@@ -43,6 +46,7 @@
 	<object class="MasterTrack" id="{e587f352-ab14-4cef-87a3-ea9dd7392e59}">
 		<relationship name="modules">
 			<destination>{c57c5838-cd40-4448-b1df-50c13f567064}</destination>
+			<destination>{143f8362-38bc-4fec-98dc-c4a0d13be7bd}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{e2650e03-4f87-4dbf-aa27-4bcf1da85ad6}</destination>
@@ -62,9 +66,9 @@
 	<object class="EventAutomatableProperties" id="{d2d0ad6c-c852-4d01-9f0b-e00b4d7c9c04}" />
 	<object class="MarkerTrack" id="{0982ac66-6520-40a7-989a-241d5a9950b1}" />
 	<object class="Timeline" id="{5cd7e0cc-fdc5-473a-b4a4-bf5ac25a60da}">
-		<property name="isProxyEnabled">
-			<value>false</value>
-		</property>
+		<relationship name="modules">
+			<destination>{143f8362-38bc-4fec-98dc-c4a0d13be7bd}</destination>
+		</relationship>
 	</object>
 	<object class="ActionSheet" id="{13a91062-65fe-4721-a24a-b51c1547721f}">
 		<relationship name="modules">
@@ -82,9 +86,13 @@
 			<destination>{78dc76da-2402-4533-9e6e-684040ad5adb}</destination>
 		</relationship>
 	</object>
-	<object class="MultiSound" id="{c57c5838-cd40-4448-b1df-50c13f567064}">
-		<relationship name="sounds">
-			<destination>{d9fea4cc-94f3-4fc3-af40-655aff5cb81a}</destination>
+	<object class="MultiSound" id="{c57c5838-cd40-4448-b1df-50c13f567064}" />
+	<object class="SingleSound" id="{143f8362-38bc-4fec-98dc-c4a0d13be7bd}">
+		<property name="length">
+			<value>0.35267573696145127</value>
+		</property>
+		<relationship name="audioFile">
+			<destination>{2ed162d4-2fec-4291-a778-2b84f5f20e1b}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{37d28cdb-276a-4bf5-9554-a13ea55c3c45}">
@@ -99,11 +107,6 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{9914d03a-7ba0-47a1-8b64-b09b36389d4d}" />
-	<object class="SingleSound" id="{d9fea4cc-94f3-4fc3-af40-655aff5cb81a}">
-		<relationship name="audioFile">
-			<destination>{c0b8f815-eae1-45e9-afcb-d848982bac97}</destination>
-		</relationship>
-	</object>
 	<object class="MixerBusFader" id="{ef132b36-ae10-4a1a-bca9-30bc1cccac79}" />
 	<object class="MixerBusFader" id="{5bd00f5f-1449-4c66-bdde-669d4d9c11dc}" />
 </objects>
