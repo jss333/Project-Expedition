@@ -199,13 +199,36 @@ MonoBehaviour:
   multipleOrbsAngleSpreadDeg: 75
   minMultipleOrbSpeed: 4.5
   maxMultipleOrbSpeed: 5.5
-  drillArmPrefab: {fileID: 9031200602480503699}
+  bossArmAttackEnabled: 0
+  drillArmPrefab: {fileID: 8553392828084817251, guid: e10a110b31eb5a546acdb78bbb6ea718,
+    type: 3}
   drillArmAnimator: {fileID: 4788370499382024829}
   shootingArmPrefab: {fileID: 8553392828084817251, guid: 815ae8db5e605b84aa7ad5e0e8bb4ee6,
     type: 3}
   spawnPoints: {fileID: 0}
   initialWaitTime: 15
   loopWaitTime: 20
+  bossArmStartSirenSFX:
+    Guid:
+      Data1: -404493679
+      Data2: 1094157287
+      Data3: -1977256039
+      Data4: 714451820
+    Path: event:/BossArmAttackSiren
+  bossArmDeploySFX:
+    Guid:
+      Data1: -2125872997
+      Data2: 1226088892
+      Data3: -571224141
+      Data4: 17328623
+    Path: event:/BossArmAttackDeploy
+  bossArmGroundPunctureSFX:
+    Guid:
+      Data1: -88837855
+      Data2: 1099073635
+      Data3: -1736705656
+      Data4: 917131235
+    Path: event:/BossArmAttackGroundPuncture
 --- !u!114 &1863408600527210321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -521,12 +544,6 @@ Transform:
 --- !u!95 &4788370499382024829 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 5302199067938028685, guid: e10a110b31eb5a546acdb78bbb6ea718,
-    type: 3}
-  m_PrefabInstance: {fileID: 857518381278586608}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &9031200602480503699 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8553392828084817251, guid: e10a110b31eb5a546acdb78bbb6ea718,
     type: 3}
   m_PrefabInstance: {fileID: 857518381278586608}
   m_PrefabAsset: {fileID: 0}

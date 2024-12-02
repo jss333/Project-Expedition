@@ -184,13 +184,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orbSourcePosition: {fileID: 394627052895255666}
+  bossArmShootSFX:
+    Guid:
+      Data1: -1907208604
+      Data2: 1277651631
+      Data3: 1637865139
+      Data4: 258933474
+    Path: event:/BossShoot
   singleOrbPrefab: {fileID: 2522101524757786263, guid: e674bad8a510a2641abf80d586d7d163,
     type: 3}
-  minShotIntervalSec: 1.5
-  maxShotIntervalSec: 1.5
+  minShotIntervalSec: 1
+  maxShotIntervalSec: 1
   nextShotTime: 1
-  minSingleOrbSpeed: 3.5
-  maxSingleOrbSpeed: 5.5
+  minSingleOrbSpeed: 4.5
+  maxSingleOrbSpeed: 6
   orbSize: {x: 1, y: 1}
   maxOrbsToFire: 5
   animationWaitTime: 1.3

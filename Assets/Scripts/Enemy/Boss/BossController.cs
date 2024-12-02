@@ -57,12 +57,15 @@ public class BossController : MonoBehaviour
     private EnemyShootingController enemyShootingController;
 
     [Header("Parameters - Arms")]
+    [SerializeField] private bool bossArmAttackEnabled;
     [SerializeField] private GameObject drillArmPrefab;
     [SerializeField] private Animator drillArmAnimator;
     [SerializeField] private GameObject shootingArmPrefab;
     [SerializeField] private Transform spawnPoints = null;
     [SerializeField] private float initialWaitTime = 15;
     [SerializeField] private float loopWaitTime = 15;
+    [SerializeField] private EventReference bossArmStartSirenSFX;
+    [SerializeField] private EventReference bossArmDeploySFX;
 
 
     private List<Transform> verticalSpawnPoints = new List<Transform>();
@@ -92,7 +95,10 @@ public class BossController : MonoBehaviour
             instantiateBossShield();
         }
 
-        StartCoroutine(StartArmLoop());
+        if (bossArmAttackEnabled)
+        {
+            StartCoroutine(StartArmLoop());
+        }
     }
 
     void Update()
@@ -109,15 +115,14 @@ public class BossController : MonoBehaviour
 
         ObtainShootingArmSpawnPoints();
 
-        // TODO play Boss Arm Attack Siren
+        AudioManagerNoMixers.Singleton.PlayOneShot(bossArmStartSirenSFX, this.transform.position);
+        yield return new WaitForSeconds(1.0f);
 
         drillArmAnimator.Play("DrillStart");
 
-        // TODO play Boss Arm Attack Deploy
+        AudioManagerNoMixers.Singleton.PlayOneShot(bossArmDeploySFX, this.transform.position);
 
         yield return new WaitForSeconds(2.02f);
-
-        // TODO play Boss Arm Attack Ground
 
         drillArmAnimator.Play("DrillLoop");
 
@@ -132,23 +137,20 @@ public class BossController : MonoBehaviour
             if (rightArm == null && leftArm == null)
             {
                 drillArmAnimator.Play("DrillEnd");
-
-                // TODO play Boss Arm Attack Deploy (For when it retreats)
+                AudioManagerNoMixers.Singleton.PlayOneShot(bossArmDeploySFX, this.transform.position);
 
                 yield return new WaitForSeconds(2.02f);
                 drillArmAnimator.Play("DrillIdle");
 
                 yield return new WaitForSeconds(loopWaitTime);
 
-                // TODO play Boss Arm Attack Siren
-                
-                drillArmAnimator.Play("DrillStart");
+                AudioManagerNoMixers.Singleton.PlayOneShot(bossArmStartSirenSFX, this.transform.position);
+                yield return new WaitForSeconds(1.0f);
 
-                // TODO play Boss Arm Attack Deploy
+                drillArmAnimator.Play("DrillStart");
+                AudioManagerNoMixers.Singleton.PlayOneShot(bossArmDeploySFX, this.transform.position);
 
                 yield return new WaitForSeconds(2.02f);
-
-                // TODO play Boss Arm Attack Ground
 
                 drillArmAnimator.Play("DrillLoop");
 

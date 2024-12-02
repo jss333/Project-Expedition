@@ -1,10 +1,12 @@
 using System.Collections;
 using UnityEngine;
+using FMODUnity;
 
 public class BossArmController : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private Transform orbSourcePosition;
+    [SerializeField] private EventReference bossArmShootSFX;
     private System.Random random;
 
     [Header("Parameters - Orb")]
@@ -63,7 +65,7 @@ public class BossArmController : MonoBehaviour
             targetSingleOrb = singleOrbPrefab;
             ShootSingleOrb(GetRandomFloat(minSingleOrbSpeed, maxSingleOrbSpeed), targetSingleOrb);
 
-            // TODO play Boss Arm Orb Shoot
+            AudioManagerNoMixers.Singleton.PlayOneShot(bossArmShootSFX, this.transform.position);
 
             nextShotTime = Time.time + GetRandomFloat(minShotIntervalSec, maxShotIntervalSec);
         }
