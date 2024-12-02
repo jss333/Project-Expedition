@@ -541,67 +541,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'CREDITS
-
-    
-
-    Producer
-
-    James Singi Siqueira (@jss333)
-
-    
-
-    Audio
-
-    Arpi
-    Vardanyan : Sound Designer/Composer
-
-    Prnc Amin (@prncamin) : Composer
-
-    
-
-    Art
-
-    Bibi
-    Tavares
-
-    CJ Tugade (@cjtugade) : UI
-
-    Emma Randall : Animation
-
-    Jasmine
-    Modeste (@jasminem4980)
-
-    Jessica Rivas : Character Artist (R0-B and B3RT)
-
-    
-
-    Game
-    Design
-
-    Doryan Lewis
-
-    @kizma
-
-    Magdalena Jordanovska
-
-    
-
-    Programming
-
-    Astrounaut
-
-    Jacob
-    Hooten (@surilexa)
-
-    James Singi Siqueira (@jss333)
-
-    @mostafaebeed
-
-    Rakshaan
-
-    Tanha
-    Patel'
+  m_text: "CREDITS\n\nProduction\nJames Singi Siqueira (@jss333) : Producer/Team
+    Lead\n\nAudio\nArpi Vardanyan : Sound Designer/Composer\r\nHugo Silva (@hyugo95)
+    : Sound Designer\r\nPrnc Amin (@prncamin) : Composer\nShibo Wu (@c4ff_) : Sound
+    designer\n\nArt\nAshton Musielewicz (@ashhh4048) : Concept Artist\nBibi Tavares\nCJ
+    Tugade (@cjtugade) : UI\nEmma Randall : Animation\nJasmine Modeste (@jasminem4980)
+    : 2D Animation/Artist\nJessica Rivas : Character Artist (R0-B and B3RT)\nNazl\u0131can
+    Ezginer : Concept Artist\n\nGame Design\nDoryan Lewis\nKenet Jets (@kizma)\nMagdalena
+    Jordanovska\n@starchance\n\nProgramming\nAstronaut\nCristian Garc\xE9s (@crissalexis18)\nJacob
+    Hooten (@surilexa)\nJames Singi Siqueira (@jss333)\nMostafa Ebeed (@mostafaebeed)\nRakshaan\nTanha
+    Patel"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
