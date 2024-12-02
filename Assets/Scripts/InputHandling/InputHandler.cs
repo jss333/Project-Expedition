@@ -167,7 +167,7 @@ public class InputHandler : MonoBehaviour, IStdActions , IUIActions
 
     public void OnAbility_1(InputAction.CallbackContext context)
     {
-        if (context.phase == InputActionPhase.Started)
+        if (context.phase == InputActionPhase.Canceled)
         {
             OnAbilityTriggered_1?.Invoke(1);
         }
@@ -175,7 +175,7 @@ public class InputHandler : MonoBehaviour, IStdActions , IUIActions
 
     public void OnAbility_2(InputAction.CallbackContext context)
     {
-        if (context.phase == InputActionPhase.Started)
+        if (context.phase == InputActionPhase.Canceled)
         {
             OnAbilityTriggered_2?.Invoke(2);
         }
@@ -183,7 +183,7 @@ public class InputHandler : MonoBehaviour, IStdActions , IUIActions
 
     public void OnAbility_3(InputAction.CallbackContext context)
     {
-        if (context.phase == InputActionPhase.Started)
+        if (context.phase == InputActionPhase.Canceled)
         {
             OnAbilityTriggered_3?.Invoke(3);
         }
@@ -191,7 +191,7 @@ public class InputHandler : MonoBehaviour, IStdActions , IUIActions
 
     public void OnAbility_4(InputAction.CallbackContext context)
     {
-        if (context.phase == InputActionPhase.Started)
+        if (context.phase == InputActionPhase.Canceled)
         {
             OnAbilityTriggered_4?.Invoke(4);
         }

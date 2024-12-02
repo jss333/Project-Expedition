@@ -9,6 +9,8 @@ public class EnemyShootingController : MonoBehaviour
 
     public bool CanShootStunBullet()
     { 
+        if(stunShotChance <= 0) return false;
+
         int randomNumber = Random.Range(0,101);
         return randomNumber <= stunShotChance;
     }
