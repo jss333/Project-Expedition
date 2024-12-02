@@ -44,7 +44,7 @@ namespace AbilitySystem
                 ability.InitializeAbility();
             }
 
-            SelectFirstAbilityAsCurrent();
+            //SelectFirstAbilityAsCurrent();
 
             InputHandler.Singleton.OnAbilityActivate += UseCurrentAbility;
             InputHandler.Singleton.OnCycleForward += CycleForwardThroughAbilities;
