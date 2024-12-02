@@ -122,18 +122,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bossShieldCracksFirstSFX:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 402191564
+      Data2: 1080640649
+      Data3: 913907901
+      Data4: -303221321
+    Path: event:/BossShieldCracks
   bossShieldCracksNextSFX:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 402191564
+      Data2: 1080640649
+      Data3: 913907901
+      Data4: -303221321
+    Path: event:/BossShieldCracks
   bossShieldBreaksSFX:
     Guid:
       Data1: -933807384
