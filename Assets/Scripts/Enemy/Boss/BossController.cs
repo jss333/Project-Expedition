@@ -191,7 +191,7 @@ public class BossController : MonoBehaviour
         //spawn popup label
         if(trackOldHealth != bossHealthComponent.getCurrentHealth())
         {
-            bossHealthComponent.SpawnDamageNumberPopupLabel(bossHealthComponent.getMaxHealth() - bossHealthComponent.getCurrentHealth());
+            bossHealthComponent.SpawnDamageNumberPopupLabel(bossHealthComponent.GetCurrentDamageReceived());
             trackOldHealth = bossHealthComponent.getCurrentHealth();
         }
         minionRespawn();

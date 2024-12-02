@@ -17,7 +17,7 @@ public class HealthComponent : MonoBehaviour
     public UnityEvent Immune;
 
     private bool isImmune = false;
-
+    private int recentDamage;
     // [SerializeField] private PopupLabel damageNumberPopupPrefab;
     // [SerializeField] private Transform popupLabelSource;
 
@@ -53,6 +53,7 @@ public class HealthComponent : MonoBehaviour
             if(currentHealth > 0)
             {
                 currentHealth -= damage;
+                recentDamage = damage;
                 healthChange.Invoke();
                 PublishHealthPercentage();
             }
@@ -99,6 +100,11 @@ public class HealthComponent : MonoBehaviour
     public bool GetIsImmune()
     {
         return isImmune;
+    }
+
+    public int GetCurrentDamageReceived()
+    {
+        return recentDamage;
     }
 
     public void SetIsImmune(bool value)
