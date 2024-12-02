@@ -9,7 +9,10 @@ public class RoundSettingsSO : ScriptableObject
     [SerializeField] private int bossHealth;
 
     [Range(0, 100)]
-    [SerializeField] private int stunBulletChance;
+    [SerializeField] private int bossStunBulletChance;
+
+    [SerializeField] private int numMinionsToSpawn;
+
 
     [Header("Minions")]
     [Range(0, 100)]
@@ -25,12 +28,10 @@ public class RoundSettingsSO : ScriptableObject
     [SerializeField] private string nextLevel;
 
     public int BossHealth => bossHealth;
-
-    public int StunBulletChance => stunBulletChance;
+    public int BossStunBulletChance => bossStunBulletChance;
+    public int NumMinionsToSpawn => numMinionsToSpawn;
     public int MinionStunBulletChance => minionStunBulletChance;
-
     public int PlayerHealth => playerHealth;
-
     public string CurrentLevel => currentLevel;
     public string NextLevel => nextLevel;
 

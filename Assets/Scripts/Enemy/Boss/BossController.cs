@@ -244,8 +244,7 @@ public class BossController : MonoBehaviour
 
                     instantiateBossShield();
                     minionRespawnThreasholds.RemoveAt(i);
-                    FindAnyObjectByType<MinionSpawnerController>().handleMinionRespawn();
-                    //AudioManagerNoMixers.Singleton.PlaySFXByName("BossSpawnsMinions");
+                    FindAnyObjectByType<MinionSpawnerController>().HandleMinionRespawn();
                     AudioManagerNoMixers.Singleton.PlayOneShot(bossSpawnMinionSoundEvent, this.transform.position);
                     bossHealthComponent.SetIsImmune(true);
                 }

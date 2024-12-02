@@ -23,7 +23,7 @@ public class PlayerState
 
     public virtual void OnUpdate()
     {
-        Debug.Log(this);
+        //Debug.Log(this);
     }
 
     public virtual void OnExit()

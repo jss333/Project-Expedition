@@ -167,14 +167,20 @@ MonoBehaviour:
   p_BossShield: {fileID: 3970724019627321346, guid: 2a484caf907ff66468343981d89f3cbe,
     type: 3}
   p_BossShieldSpawnPoint: {fileID: 7062830983435623817}
-  hurtStateHealthPercent: 50
+  hurtStateHealthPercent: 40
   hurtStateTriggered: 0
   bgmChangeHealthPercent: 40
   damageTakenSFXCooldown: 0.2
   delayEndScreen: 3
+  bossSpawnMinionSoundEvent:
+    Guid:
+      Data1: -753407197
+      Data2: 1163424644
+      Data3: -66027856
+      Data4: 1564167229
+    Path: event:/BossSpawnsMinion
   minionRespawnThreasholds:
-  - 80
-  - 50
+  - 70
   - 30
   singleOrbPrefab: {fileID: 2522101524757786263, guid: e674bad8a510a2641abf80d586d7d163,
     type: 3}
@@ -204,6 +210,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 304f249561e138f4c99b408ef40a63dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bossShield: {fileID: 0}
+  msController: {fileID: 0}
+  immune: 0
+  minionCount: 0
 --- !u!114 &5027129401144850634
 MonoBehaviour:
   m_ObjectHideFlags: 0

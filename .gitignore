@@ -75,6 +75,8 @@ crashlytics-build.properties
 
 ### FMOD
 
+fmod_editor.log
+
 # Never ignore DLLs in the FMOD subfolder.
 !/[Aa]ssets/Plugins/FMOD/**/lib/*
 

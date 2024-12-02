@@ -4,32 +4,22 @@ using UnityEngine;
 
 public class BossInformation : MonoBehaviour
 {
-    // Start is called before the first frame update
-    
-    private bool immune = false;
-    private int minionCount;
-    private MinionSpawnerController msController;
-    private BossShield bossShield;
+    [Header("State")]
+    [SerializeField] private BossShield bossShield;
+    [SerializeField] private MinionSpawnerController msController;
+    [SerializeField] private bool immune = false;
+    [SerializeField] private int minionCount;
 
     void Start()
     {
         msController = FindFirstObjectByType<MinionSpawnerController>();
-        minionCount = msController.entityCount;
+        minionCount = msController.NumEntitiesToSpawn;
         Debug.Log("Initial minions: " + minionCount);
     }
 
-    // Update is called once per frame
-    public bool GetImmune()
-    {
-        return immune;
-    }
-    public void SetImmune(bool i)
-    {
-        immune = i;
-    }
     public bool MinionDestroyed()
     {
-        if(FindFirstObjectByType<BossShield>()!= null)
+        if(FindFirstObjectByType<BossShield>() != null)
         {
             bossShield = FindFirstObjectByType<BossShield>();
             minionCount--;
@@ -40,6 +30,7 @@ public class BossInformation : MonoBehaviour
                 return true;
             }
         }
+
         if (minionCount >= 2)
         {
             bossShield.shieldDamaged(1);
@@ -48,10 +39,22 @@ public class BossInformation : MonoBehaviour
         {
             bossShield.shieldDamaged(2);
         }
+
         return false;
     }
+
     public void SetMinionCount(int count)
     {
         minionCount = count;
+    }
+
+    public bool GetImmune()
+    {
+        return immune;
+    }
+
+    public void SetImmune(bool i)
+    {
+        immune = i;
     }
 }

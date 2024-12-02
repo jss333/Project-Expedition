@@ -48,6 +48,9 @@ public class MinionController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         shootingController = GetComponent<EnemyShootingController>();
 
+        RoundManager roundManager = FindFirstObjectByType<RoundManager>();
+        shootingController.SetStunBulletChance(roundManager.RoundSettings.MinionStunBulletChance);
+
         if (projectile == null || launchPoint == null)
         {
             Debug.Log("Minion Controller: projectile spawn parameters null -- component disabled...");
@@ -136,7 +139,7 @@ public class MinionController : MonoBehaviour
     {
         bossInfo.MinionDestroyed();
         //allow the taken anchor to be available again
-        spawner.decrementActiveCount(anchor);
+        spawner.DecrementActiveCount(anchor);
         //play death sound
         //AudioManagerNoMixers.Singleton.PlaySFXByName("MinionDeath");
         Destroy(this.gameObject);
