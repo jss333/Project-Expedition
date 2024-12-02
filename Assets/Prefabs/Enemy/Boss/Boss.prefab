@@ -41,6 +41,7 @@ Transform:
   - {fileID: 4769236345242613906}
   - {fileID: 569214277671105002}
   - {fileID: 7062830983435623817}
+  - {fileID: 3600379120455714958}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &3482684991801677572
@@ -198,6 +199,36 @@ MonoBehaviour:
   multipleOrbsAngleSpreadDeg: 75
   minMultipleOrbSpeed: 4.5
   maxMultipleOrbSpeed: 5.5
+  bossArmAttackEnabled: 0
+  drillArmPrefab: {fileID: 8553392828084817251, guid: e10a110b31eb5a546acdb78bbb6ea718,
+    type: 3}
+  drillArmAnimator: {fileID: 4788370499382024829}
+  shootingArmPrefab: {fileID: 8553392828084817251, guid: 815ae8db5e605b84aa7ad5e0e8bb4ee6,
+    type: 3}
+  spawnPoints: {fileID: 0}
+  initialWaitTime: 15
+  loopWaitTime: 20
+  bossArmStartSirenSFX:
+    Guid:
+      Data1: -404493679
+      Data2: 1094157287
+      Data3: -1977256039
+      Data4: 714451820
+    Path: event:/BossArmAttackSiren
+  bossArmDeploySFX:
+    Guid:
+      Data1: -2125872997
+      Data2: 1226088892
+      Data3: -571224141
+      Data4: 17328623
+    Path: event:/BossArmAttackDeploy
+  bossArmGroundPunctureSFX:
+    Guid:
+      Data1: -88837855
+      Data2: 1099073635
+      Data3: -1736705656
+      Data4: 917131235
+    Path: event:/BossArmAttackGroundPuncture
 --- !u!114 &1863408600527210321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -416,3 +447,103 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3062474991226534520}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &857518381278586608
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3062474991226534520}
+    m_Modifications:
+    - target: {fileID: 2580316495778215516, guid: e10a110b31eb5a546acdb78bbb6ea718,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.4215745
+      objectReference: {fileID: 0}
+    - target: {fileID: 2580316495778215516, guid: e10a110b31eb5a546acdb78bbb6ea718,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5574864
+      objectReference: {fileID: 0}
+    - target: {fileID: 2580316495778215516, guid: e10a110b31eb5a546acdb78bbb6ea718,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 2580316495778215516, guid: e10a110b31eb5a546acdb78bbb6ea718,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.425
+      objectReference: {fileID: 0}
+    - target: {fileID: 4184294650305408638, guid: e10a110b31eb5a546acdb78bbb6ea718,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4184294650305408638, guid: e10a110b31eb5a546acdb78bbb6ea718,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4184294650305408638, guid: e10a110b31eb5a546acdb78bbb6ea718,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4184294650305408638, guid: e10a110b31eb5a546acdb78bbb6ea718,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4184294650305408638, guid: e10a110b31eb5a546acdb78bbb6ea718,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4184294650305408638, guid: e10a110b31eb5a546acdb78bbb6ea718,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4184294650305408638, guid: e10a110b31eb5a546acdb78bbb6ea718,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4184294650305408638, guid: e10a110b31eb5a546acdb78bbb6ea718,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4184294650305408638, guid: e10a110b31eb5a546acdb78bbb6ea718,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4184294650305408638, guid: e10a110b31eb5a546acdb78bbb6ea718,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8553392828084817251, guid: e10a110b31eb5a546acdb78bbb6ea718,
+        type: 3}
+      propertyPath: m_Name
+      value: DrillArm
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e10a110b31eb5a546acdb78bbb6ea718, type: 3}
+--- !u!4 &3600379120455714958 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4184294650305408638, guid: e10a110b31eb5a546acdb78bbb6ea718,
+    type: 3}
+  m_PrefabInstance: {fileID: 857518381278586608}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &4788370499382024829 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5302199067938028685, guid: e10a110b31eb5a546acdb78bbb6ea718,
+    type: 3}
+  m_PrefabInstance: {fileID: 857518381278586608}
+  m_PrefabAsset: {fileID: 0}
