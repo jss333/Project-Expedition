@@ -65,10 +65,10 @@ namespace AbilitySystem
             InputHandler.Singleton.OnCycleForward -= CycleForwardThroughAbilities;
             InputHandler.Singleton.OnCycleBackward -= CycleBackwardThroughAbilities;
 
-            InputHandler.Singleton.OnAbilityTriggered_1 += ActivateAbility;
-            InputHandler.Singleton.OnAbilityTriggered_2 += ActivateAbility;
-            InputHandler.Singleton.OnAbilityTriggered_3 += ActivateAbility;
-            InputHandler.Singleton.OnAbilityTriggered_4 += ActivateAbility;
+            InputHandler.Singleton.OnAbilityTriggered_1 -= ActivateAbility;
+            InputHandler.Singleton.OnAbilityTriggered_2 -= ActivateAbility;
+            InputHandler.Singleton.OnAbilityTriggered_3 -= ActivateAbility;
+            InputHandler.Singleton.OnAbilityTriggered_4 -= ActivateAbility;
 
             OnAbilityEnabledAndDisabled -= ControlAbilityAvailability;
         }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerStunState : PlayerState
 {
-    private float maxStuntime = 3f;
+    private float maxStuntime = 1.5f;
     private float stuntime;
 
     //private SpriteRenderer spriteRenderer;

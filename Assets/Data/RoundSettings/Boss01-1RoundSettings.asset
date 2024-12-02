@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b1d48ee55e026148aabc5faf8f0f4c0, type: 3}
   m_Name: Boss01-1RoundSettings
   m_EditorClassIdentifier: 
-  bossHealth: 500
+  bossHealth: 10
   bossStunBulletChance: 0
   numMinionsToSpawn: 2
   minionStunBulletChance: 0
