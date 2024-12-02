@@ -1,9 +1,8 @@
 using FMODUnity;
-using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class BossController : MonoBehaviour
 {
@@ -56,7 +55,21 @@ public class BossController : MonoBehaviour
     private BossHealthComponent bossHealthComponent;
     private int trackOldHealth;
     private EnemyShootingController enemyShootingController;
-    
+
+    [Header("Parameters - Arms")]
+    [SerializeField] private GameObject drillArmPrefab;
+    [SerializeField] private Animator drillArmAnimator;
+    [SerializeField] private GameObject shootingArmPrefab;
+    [SerializeField] private Transform spawnPoints = null;
+    [SerializeField] private float initialWaitTime = 15;
+    [SerializeField] private float loopWaitTime = 15;
+
+
+    private List<Transform> verticalSpawnPoints = new List<Transform>();
+    private List<Transform> horizontalSpawnPoints = new List<Transform>();
+    private GameObject leftArm = null;
+    private GameObject rightArm = null;
+
     void Start()
     {
         random = new System.Random();
@@ -74,10 +87,12 @@ public class BossController : MonoBehaviour
 
         nextShotTime = Time.time + 3f;
 
-        if(minionRespawnThreasholds.Count == 0 && trackOldHealth == bossHealthComponent.getMaxHealth())
+        if (minionRespawnThreasholds.Count == 0 && trackOldHealth == bossHealthComponent.getMaxHealth())
         {
             instantiateBossShield();
         }
+
+        StartCoroutine(StartArmLoop());
     }
 
     void Update()
@@ -85,6 +100,115 @@ public class BossController : MonoBehaviour
         if (PlayerIsAlive() && !bossDeath)
         {
             ShootOrbIfTimeForNextShot();
+        }
+    }
+
+    private IEnumerator StartArmLoop()
+    {
+        yield return new WaitForSeconds(initialWaitTime);
+
+        ObtainShootingArmSpawnPoints();
+
+        // TODO play Boss Arm Attack Siren
+
+        drillArmAnimator.Play("DrillStart");
+
+        // TODO play Boss Arm Attack Deploy
+
+        yield return new WaitForSeconds(2.02f);
+
+        // TODO play Boss Arm Attack Ground
+
+        drillArmAnimator.Play("DrillLoop");
+
+        SpawnShootingArms();
+        StartCoroutine(ArmLoop());
+    }
+
+    private IEnumerator ArmLoop()
+    {
+        while (true)
+        {
+            if (rightArm == null && leftArm == null)
+            {
+                drillArmAnimator.Play("DrillEnd");
+
+                // TODO play Boss Arm Attack Deploy (For when it retreats)
+
+                yield return new WaitForSeconds(2.02f);
+                drillArmAnimator.Play("DrillIdle");
+
+                yield return new WaitForSeconds(loopWaitTime);
+
+                // TODO play Boss Arm Attack Siren
+                
+                drillArmAnimator.Play("DrillStart");
+
+                // TODO play Boss Arm Attack Deploy
+
+                yield return new WaitForSeconds(2.02f);
+
+                // TODO play Boss Arm Attack Ground
+
+                drillArmAnimator.Play("DrillLoop");
+
+                ObtainShootingArmSpawnPoints();
+                SpawnShootingArms();
+ 
+            }
+            yield return null;
+        }
+    }
+
+    public void SpawnShootingArms()
+    {
+        if ((verticalSpawnPoints.Count + horizontalSpawnPoints.Count) < 2)
+        {
+            Debug.LogWarning("At least 2 spawn points are required in the arm spawn points list.");
+            return;
+        }
+
+        Transform firstSpawnPoint = GetRandomSpawnPoint(BossArmSpawnPoint.SpawnType.Vertical);
+        Transform secondSpawnPoint = GetRandomSpawnPoint(BossArmSpawnPoint.SpawnType.Horizontal);
+
+        leftArm = Instantiate(shootingArmPrefab, firstSpawnPoint.position, firstSpawnPoint.rotation);
+        rightArm = Instantiate(shootingArmPrefab, secondSpawnPoint.position, secondSpawnPoint.rotation);
+
+    }
+    private void ObtainShootingArmSpawnPoints()
+    {
+        verticalSpawnPoints.Clear();
+        horizontalSpawnPoints.Clear();
+
+        foreach (Transform spawnPointChild in spawnPoints)
+        {
+            BossArmSpawnPoint spawnPoint = spawnPointChild.GetComponent<BossArmSpawnPoint>();
+            if (spawnPoint != null)
+            {
+                if (spawnPoint.spawnType == BossArmSpawnPoint.SpawnType.Vertical)
+                    verticalSpawnPoints.Add(spawnPointChild);
+                else if (spawnPoint.spawnType == BossArmSpawnPoint.SpawnType.Horizontal)
+                    horizontalSpawnPoints.Add(spawnPointChild);
+            }
+        }
+    }
+
+    private Transform GetRandomSpawnPoint(BossArmSpawnPoint.SpawnType spawnType)
+    {
+
+        if (spawnType == BossArmSpawnPoint.SpawnType.Vertical)
+        {
+            int randomIndex = random.Next(0, verticalSpawnPoints.Count);
+            return verticalSpawnPoints[randomIndex];
+        } 
+        else if (spawnType == BossArmSpawnPoint.SpawnType.Horizontal)
+        {
+            int randomIndex = random.Next(0, horizontalSpawnPoints.Count);
+            return horizontalSpawnPoints[randomIndex];
+        } 
+        else
+        {
+            return null;
         }
     }
 
@@ -189,7 +313,7 @@ public class BossController : MonoBehaviour
     public void BossHit()
     {
         //spawn popup label
-        if(trackOldHealth != bossHealthComponent.getCurrentHealth())
+        if (trackOldHealth != bossHealthComponent.getCurrentHealth())
         {
             bossHealthComponent.SpawnDamageNumberPopupLabel(trackOldHealth - bossHealthComponent.getCurrentHealth());
             trackOldHealth = bossHealthComponent.getCurrentHealth();

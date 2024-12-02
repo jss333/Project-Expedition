@@ -1,0 +1,1874 @@
+fileFormatVersion: 2
+guid: 95f9cf2a81f39f5419542b20f7e16d2e
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bossarm-drill-animation_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 15000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06f5464423a712849973da39f892d5f1
+      internalID: -609555048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_1
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 15000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6ecc993dc235f544b44bf82afe57c20
+      internalID: -98205995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_2
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 15000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93c8e72c1db111241a97ba08eafa46f2
+      internalID: 1200888559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_3
+      rect:
+        serializedVersion: 2
+        x: 9000
+        y: 15000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c4b95027d156cb4cae37cef45fb0e74
+      internalID: -848969974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_4
+      rect:
+        serializedVersion: 2
+        x: 12000
+        y: 15000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e3e175d2923eb64b8a8cbca86b1197e
+      internalID: 876758159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 14000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e0d9e01c67475342bbc34a7a5ebe7f0
+      internalID: 217898437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_6
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 14000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 314ae8547d75b9d46aa4bf0078f545c6
+      internalID: -2013735863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_7
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 14000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33ebf96e6b03cd848bbc39dac0e64bf2
+      internalID: -588844131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_8
+      rect:
+        serializedVersion: 2
+        x: 9000
+        y: 14000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4c52277240e8984cb5bbdc9be15bd81
+      internalID: 1258799190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_9
+      rect:
+        serializedVersion: 2
+        x: 12000
+        y: 14000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccb3b8aac50f4db43a9be52f792b0877
+      internalID: 883148880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 13000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16d38c3d0f9af544aba52aca9330e74b
+      internalID: -114454946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_11
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 13000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3ab6384febdcf14990e235a18085df7
+      internalID: 1183952948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_12
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 13000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c25726c087c30534e99fab895f56615d
+      internalID: -1635745769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_13
+      rect:
+        serializedVersion: 2
+        x: 9000
+        y: 13000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13ca17df33ee6bb4ca39ace84d519fe7
+      internalID: -1557710650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_14
+      rect:
+        serializedVersion: 2
+        x: 12000
+        y: 13000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc2dd075ac0470a4dbc68390e3d8c5e8
+      internalID: 590152534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 12000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b7d71e78939c6f4aa6e6f59d43df476
+      internalID: -450381374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_16
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 12000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 217ce50e5c094234bb75855111f2daea
+      internalID: -1078535575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_17
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 12000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30b236de7e7448b4996029bd1a1d977d
+      internalID: -1726985180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_18
+      rect:
+        serializedVersion: 2
+        x: 9000
+        y: 12000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a69dcd61e7bd32948b277fbe6a811d9e
+      internalID: 1033845602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_19
+      rect:
+        serializedVersion: 2
+        x: 12000
+        y: 12000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bda8df4d924201a40b0133409702b0d0
+      internalID: -2080450737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 11000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1603e44f080f944f98719d1275c13e6
+      internalID: 317255568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_21
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 11000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 525b8d2411efd6246ad27cf3b205acb7
+      internalID: -613458379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_22
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 11000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5db5c4d0a7bde3439b9352a4aad2931
+      internalID: -1361796255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_23
+      rect:
+        serializedVersion: 2
+        x: 9000
+        y: 11000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9fea401db904804f883b8e9378d56e8
+      internalID: -2061809255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_24
+      rect:
+        serializedVersion: 2
+        x: 12000
+        y: 11000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80db4e28ea77ec34e902a52d33ae8e74
+      internalID: -474525085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 10000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c318493c4fe3be243b83ee96a12169a1
+      internalID: -650044235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_26
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 10000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc8de12d0485f4742bbb2963b8106d13
+      internalID: -1019762854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_27
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 10000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a16331534db0f2741b406e6873c0c909
+      internalID: 478575812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_28
+      rect:
+        serializedVersion: 2
+        x: 9000
+        y: 10000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 590d65c8fa978d64c8cf6338aea0e5d0
+      internalID: 998566856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_29
+      rect:
+        serializedVersion: 2
+        x: 12000
+        y: 10000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fde5b6798635294788bb714609c6334
+      internalID: 62824956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 9000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03b4568aa3ec82e408c11d837ce8c55c
+      internalID: -1317093987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_31
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 9000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c097d9e76b962eb4db65a91eba323102
+      internalID: 2064789560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_32
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 9000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2e5a91843d35f9418edec227083fc5c
+      internalID: -1094847679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_33
+      rect:
+        serializedVersion: 2
+        x: 9000
+        y: 9000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ab23fe285401ea4db8d3ba2ea4fb7de
+      internalID: -286116650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_34
+      rect:
+        serializedVersion: 2
+        x: 12000
+        y: 9000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 123715e65289a20459bad548c0f90147
+      internalID: 91119189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abf9803f7b5a3b14d9ff70890a4744c6
+      internalID: -49451060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_36
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 8000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cbbef91c6034d14fa5c32ebe88154b2
+      internalID: 2105217300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_37
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 8000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94e8f5c170d145847881f8978ef00a56
+      internalID: 1723007169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_38
+      rect:
+        serializedVersion: 2
+        x: 9000
+        y: 8000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9486afd9e60642f40aed36f4f488e27f
+      internalID: -1302459268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_39
+      rect:
+        serializedVersion: 2
+        x: 12000
+        y: 8000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df5e1fb53ce348141a75cd90c2027173
+      internalID: 610175099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 950073303f103e149b809aabf6ccc3a7
+      internalID: -267148044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_41
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 7000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ead618e174ac20a4f92e2aad653c48ea
+      internalID: 735493900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_42
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 7000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38b5c83343f55e945b4864a1bdf3da0e
+      internalID: 30462209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_43
+      rect:
+        serializedVersion: 2
+        x: 9000
+        y: 7000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5efeef9abd1684488e38cbaac6a8c96
+      internalID: 1068590505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_44
+      rect:
+        serializedVersion: 2
+        x: 12000
+        y: 7000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: feb5a6a9330e9bf45a7c01f938bf55aa
+      internalID: 403956082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e37d50e1d6d116d42848d315e93bedca
+      internalID: -223762313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_46
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 6000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87432fcc063894f43aa29af4eb95e170
+      internalID: 1443725121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_47
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 6000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27885b53e2bf3a645bacf91052525429
+      internalID: 1551091720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_48
+      rect:
+        serializedVersion: 2
+        x: 9000
+        y: 6000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8911bc408620edc41aa0121805c341ff
+      internalID: -1519436371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_49
+      rect:
+        serializedVersion: 2
+        x: 12000
+        y: 6000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7194b03fd88bb3b46bfc79e0734ced2e
+      internalID: 817077583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df807f0f280f9dd4293cfb5897f2a97b
+      internalID: -1593423024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_51
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 5000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dfe2eff4b181934f9c86d9f5187b62b
+      internalID: -749111462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_52
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 5000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5551cdc4f7ef2541b5fc6a417277027
+      internalID: 278719667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_53
+      rect:
+        serializedVersion: 2
+        x: 9000
+        y: 5000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8564b7488220ea44da0f8acd3dcf2f2f
+      internalID: -1309070902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_54
+      rect:
+        serializedVersion: 2
+        x: 12000
+        y: 5000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efde542472472024aaeaccc371d21bc1
+      internalID: -1911137236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_55
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ccad7759ec74c545acd76553e17fd4a
+      internalID: 2008968271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_56
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 4000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94e1dc77b96828d489c77bef5bfac907
+      internalID: 684628291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_57
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 4000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3564f4cbad1053d48be9c12d21d74b0f
+      internalID: 131178863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_58
+      rect:
+        serializedVersion: 2
+        x: 9000
+        y: 4000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 487ea2651baaee24bbf982b30bb8d25b
+      internalID: 365513602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_59
+      rect:
+        serializedVersion: 2
+        x: 12000
+        y: 4000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7c1844cf45f809479e4950b1598d68d
+      internalID: -332692850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 075efe2ec84ebe14d9eff63e2548e57e
+      internalID: 452422031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_61
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 3000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 686752ccf05af4341b89d40c6ed3695f
+      internalID: -1766078422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_62
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 3000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 982b3aebcc714aa47a4db0aa0142e9c4
+      internalID: -499817142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_63
+      rect:
+        serializedVersion: 2
+        x: 9000
+        y: 3000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1aa2bda73d071fc40bd3ac626fcc51d0
+      internalID: -511786456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_64
+      rect:
+        serializedVersion: 2
+        x: 12000
+        y: 3000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac2c49dbc2caa9b4186bc3818b7b0a20
+      internalID: -790452973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_65
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10ce7c0138eeb5948893ca5fa445e070
+      internalID: 1044333932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_66
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 2000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31facbfbeb6ebde4a9f227ca975eb488
+      internalID: 1224208282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_67
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 2000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a7a1a8364e6d83488aeefae13d9ae11
+      internalID: -1273707540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_68
+      rect:
+        serializedVersion: 2
+        x: 9000
+        y: 2000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 146a372e2dc1a4c4685114c306056035
+      internalID: -1286066575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_69
+      rect:
+        serializedVersion: 2
+        x: 12000
+        y: 2000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff6a985e6033c0c4282f630c8772e0a7
+      internalID: -2039406929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_70
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b61ea4a1d0a3e6444b8b44a671b4b070
+      internalID: -1360376223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_71
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 1000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00213a6f842a37846930992064820fea
+      internalID: -1290580896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_72
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 1000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ceb799384d6c93044af5634e949fb634
+      internalID: 2012808437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_73
+      rect:
+        serializedVersion: 2
+        x: 9000
+        y: 1000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 695f2bca64c0c3044a28cfb545c7df7e
+      internalID: -1576535048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_74
+      rect:
+        serializedVersion: 2
+        x: 12000
+        y: 1000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1f375941ac593043941023b2c478c40
+      internalID: 638063155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_75
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f77a72778bde7f478ac8f9b504f9f40
+      internalID: 1414472409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_76
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 0
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef2d99da85058cb40a9e2a4fcaa73ef9
+      internalID: -87685150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_77
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 0
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71d7f8492102f0345a9e737b07f6789f
+      internalID: -1457502928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_78
+      rect:
+        serializedVersion: 2
+        x: 9000
+        y: 0
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a77bda0ed899e549a72f7a810ad777b
+      internalID: -609290371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossarm-drill-animation_79
+      rect:
+        serializedVersion: 2
+        x: 12000
+        y: 0
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee4b5a7435217584d83020c5136d9701
+      internalID: 1449823277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      bossarm-drill-animation_0: -609555048
+      bossarm-drill-animation_1: -98205995
+      bossarm-drill-animation_10: -114454946
+      bossarm-drill-animation_11: 1183952948
+      bossarm-drill-animation_12: -1635745769
+      bossarm-drill-animation_13: -1557710650
+      bossarm-drill-animation_14: 590152534
+      bossarm-drill-animation_15: -450381374
+      bossarm-drill-animation_16: -1078535575
+      bossarm-drill-animation_17: -1726985180
+      bossarm-drill-animation_18: 1033845602
+      bossarm-drill-animation_19: -2080450737
+      bossarm-drill-animation_2: 1200888559
+      bossarm-drill-animation_20: 317255568
+      bossarm-drill-animation_21: -613458379
+      bossarm-drill-animation_22: -1361796255
+      bossarm-drill-animation_23: -2061809255
+      bossarm-drill-animation_24: -474525085
+      bossarm-drill-animation_25: -650044235
+      bossarm-drill-animation_26: -1019762854
+      bossarm-drill-animation_27: 478575812
+      bossarm-drill-animation_28: 998566856
+      bossarm-drill-animation_29: 62824956
+      bossarm-drill-animation_3: -848969974
+      bossarm-drill-animation_30: -1317093987
+      bossarm-drill-animation_31: 2064789560
+      bossarm-drill-animation_32: -1094847679
+      bossarm-drill-animation_33: -286116650
+      bossarm-drill-animation_34: 91119189
+      bossarm-drill-animation_35: -49451060
+      bossarm-drill-animation_36: 2105217300
+      bossarm-drill-animation_37: 1723007169
+      bossarm-drill-animation_38: -1302459268
+      bossarm-drill-animation_39: 610175099
+      bossarm-drill-animation_4: 876758159
+      bossarm-drill-animation_40: -267148044
+      bossarm-drill-animation_41: 735493900
+      bossarm-drill-animation_42: 30462209
+      bossarm-drill-animation_43: 1068590505
+      bossarm-drill-animation_44: 403956082
+      bossarm-drill-animation_45: -223762313
+      bossarm-drill-animation_46: 1443725121
+      bossarm-drill-animation_47: 1551091720
+      bossarm-drill-animation_48: -1519436371
+      bossarm-drill-animation_49: 817077583
+      bossarm-drill-animation_5: 217898437
+      bossarm-drill-animation_50: -1593423024
+      bossarm-drill-animation_51: -749111462
+      bossarm-drill-animation_52: 278719667
+      bossarm-drill-animation_53: -1309070902
+      bossarm-drill-animation_54: -1911137236
+      bossarm-drill-animation_55: 2008968271
+      bossarm-drill-animation_56: 684628291
+      bossarm-drill-animation_57: 131178863
+      bossarm-drill-animation_58: 365513602
+      bossarm-drill-animation_59: -332692850
+      bossarm-drill-animation_6: -2013735863
+      bossarm-drill-animation_60: 452422031
+      bossarm-drill-animation_61: -1766078422
+      bossarm-drill-animation_62: -499817142
+      bossarm-drill-animation_63: -511786456
+      bossarm-drill-animation_64: -790452973
+      bossarm-drill-animation_65: 1044333932
+      bossarm-drill-animation_66: 1224208282
+      bossarm-drill-animation_67: -1273707540
+      bossarm-drill-animation_68: -1286066575
+      bossarm-drill-animation_69: -2039406929
+      bossarm-drill-animation_7: -588844131
+      bossarm-drill-animation_70: -1360376223
+      bossarm-drill-animation_71: -1290580896
+      bossarm-drill-animation_72: 2012808437
+      bossarm-drill-animation_73: -1576535048
+      bossarm-drill-animation_74: 638063155
+      bossarm-drill-animation_75: 1414472409
+      bossarm-drill-animation_76: -87685150
+      bossarm-drill-animation_77: -1457502928
+      bossarm-drill-animation_78: -609290371
+      bossarm-drill-animation_79: 1449823277
+      bossarm-drill-animation_8: 1258799190
+      bossarm-drill-animation_9: 883148880
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

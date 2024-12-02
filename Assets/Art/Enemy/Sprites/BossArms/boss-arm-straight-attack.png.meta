@@ -1,0 +1,818 @@
+fileFormatVersion: 2
+guid: d11a1584e8079c64ba04d02cd1249237
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 1
+  spritePivot: {x: 0, y: 1}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: boss-arm-straight-attack_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1071
+        width: 802
+        height: 357
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd975505377415f49bcd3f13ba09c3a8
+      internalID: 2060704404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-arm-straight-attack_1
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 1071
+        width: 802
+        height: 357
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1862c9fb221666d42807a1dad2d7b33a
+      internalID: 185958464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-arm-straight-attack_2
+      rect:
+        serializedVersion: 2
+        x: 1604
+        y: 1071
+        width: 802
+        height: 357
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e06ad846bc4397e4e8e0726809cf392c
+      internalID: -918692741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-arm-straight-attack_3
+      rect:
+        serializedVersion: 2
+        x: 2406
+        y: 1071
+        width: 802
+        height: 357
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1f7646faf3226d489db0b83dcb79e11
+      internalID: -305922531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-arm-straight-attack_4
+      rect:
+        serializedVersion: 2
+        x: 3208
+        y: 1071
+        width: 802
+        height: 357
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be966dc2cb950d54daa9aa50ee2c7c80
+      internalID: -2033070788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-arm-straight-attack_5
+      rect:
+        serializedVersion: 2
+        x: 4010
+        y: 1071
+        width: 802
+        height: 357
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3823e362d4d9844094ae0d7a6fd0375
+      internalID: -706394061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-arm-straight-attack_6
+      rect:
+        serializedVersion: 2
+        x: 4812
+        y: 1071
+        width: 802
+        height: 357
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0bba89ebe9770e468822bbc0c38599d
+      internalID: 528990839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-arm-straight-attack_7
+      rect:
+        serializedVersion: 2
+        x: 5614
+        y: 1071
+        width: 802
+        height: 357
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9e72b95a61ec854ba7459373061eb23
+      internalID: 1662453096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-arm-straight-attack_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 714
+        width: 802
+        height: 357
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4370ba81be848184b8b2d39db0bae799
+      internalID: -479689373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-arm-straight-attack_9
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 714
+        width: 802
+        height: 357
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d69578b46a5ec241b63a36cd58ac9e3
+      internalID: 177536356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-arm-straight-attack_10
+      rect:
+        serializedVersion: 2
+        x: 1604
+        y: 714
+        width: 802
+        height: 357
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d5720aca9272a94f8cde815c936148d
+      internalID: 875174364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-arm-straight-attack_11
+      rect:
+        serializedVersion: 2
+        x: 2406
+        y: 714
+        width: 802
+        height: 357
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1507c715807ecea48ae2c898da0b9bac
+      internalID: -1451865784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-arm-straight-attack_12
+      rect:
+        serializedVersion: 2
+        x: 3208
+        y: 714
+        width: 802
+        height: 357
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92369020f6638ee478b6cbb0664e6df6
+      internalID: 1354018391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-arm-straight-attack_13
+      rect:
+        serializedVersion: 2
+        x: 4010
+        y: 714
+        width: 802
+        height: 357
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fa5d8ab6f0889145a2194f1127251b6
+      internalID: 1594513223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-arm-straight-attack_14
+      rect:
+        serializedVersion: 2
+        x: 4812
+        y: 714
+        width: 802
+        height: 357
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad1808af6eb6f9b4e9c2f8e6e17b8ca8
+      internalID: 172669612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-arm-straight-attack_15
+      rect:
+        serializedVersion: 2
+        x: 5614
+        y: 714
+        width: 802
+        height: 357
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db4cc2b88ef100f4e99e7b1201854160
+      internalID: -1786707881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-arm-straight-attack_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 357
+        width: 802
+        height: 357
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14916e8025f89014f98bea1db622a1b7
+      internalID: 1724849399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-arm-straight-attack_17
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 357
+        width: 802
+        height: 357
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7cbf46488b00834c84ee7b915ba2340
+      internalID: -815521978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-arm-straight-attack_18
+      rect:
+        serializedVersion: 2
+        x: 1604
+        y: 357
+        width: 802
+        height: 357
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef2c6204e71e5a24085330963d968a42
+      internalID: 1667575563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-arm-straight-attack_19
+      rect:
+        serializedVersion: 2
+        x: 2406
+        y: 357
+        width: 802
+        height: 357
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e0304723fb317344a4166d5a7b5b554
+      internalID: 1991008741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-arm-straight-attack_20
+      rect:
+        serializedVersion: 2
+        x: 3208
+        y: 357
+        width: 802
+        height: 357
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0572adb0d93fa74a96f03ad6c1225a5
+      internalID: -1802017037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-arm-straight-attack_21
+      rect:
+        serializedVersion: 2
+        x: 4010
+        y: 357
+        width: 802
+        height: 357
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5041367d9eea27c438b22a3ecd570691
+      internalID: -1860235693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-arm-straight-attack_22
+      rect:
+        serializedVersion: 2
+        x: 4812
+        y: 357
+        width: 802
+        height: 357
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d6966d0a0eb48d47ae823b3ac432e11
+      internalID: -294548846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-arm-straight-attack_23
+      rect:
+        serializedVersion: 2
+        x: 5614
+        y: 357
+        width: 802
+        height: 357
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cf6ff28c2ee01046b8a3f9bceaee37c
+      internalID: -1193167045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-arm-straight-attack_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 802
+        height: 357
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5261e780c7eb24b44aa3ff18df427851
+      internalID: -136205372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-arm-straight-attack_25
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 0
+        width: 802
+        height: 357
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13fdaa85b1b3ae74695477a6c904db56
+      internalID: -787179964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-arm-straight-attack_26
+      rect:
+        serializedVersion: 2
+        x: 1604
+        y: 0
+        width: 802
+        height: 357
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb3715f0f5176a64db8bbd7928f48a4f
+      internalID: 208184192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-arm-straight-attack_27
+      rect:
+        serializedVersion: 2
+        x: 2406
+        y: 0
+        width: 802
+        height: 357
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c718b3c92bec7fd4aa41d85cf117200a
+      internalID: 1660238019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-arm-straight-attack_28
+      rect:
+        serializedVersion: 2
+        x: 3208
+        y: 0
+        width: 802
+        height: 357
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 212dfbca5d552de448eb46119733f1f6
+      internalID: 1042787122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-arm-straight-attack_29
+      rect:
+        serializedVersion: 2
+        x: 4010
+        y: 0
+        width: 802
+        height: 357
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3d223274329a8c4aba1030cdd56a103
+      internalID: -773298644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-arm-straight-attack_30
+      rect:
+        serializedVersion: 2
+        x: 4812
+        y: 0
+        width: 802
+        height: 357
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d387c6f3fab18d49ab82889b22e200a
+      internalID: 1090680389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-arm-straight-attack_31
+      rect:
+        serializedVersion: 2
+        x: 5614
+        y: 0
+        width: 802
+        height: 357
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26e4cf8823a60024f90ea254188bcd76
+      internalID: 1894203466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 1537655665
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      boss-arm-straight-attack_0: 2060704404
+      boss-arm-straight-attack_1: 185958464
+      boss-arm-straight-attack_10: 875174364
+      boss-arm-straight-attack_11: -1451865784
+      boss-arm-straight-attack_12: 1354018391
+      boss-arm-straight-attack_13: 1594513223
+      boss-arm-straight-attack_14: 172669612
+      boss-arm-straight-attack_15: -1786707881
+      boss-arm-straight-attack_16: 1724849399
+      boss-arm-straight-attack_17: -815521978
+      boss-arm-straight-attack_18: 1667575563
+      boss-arm-straight-attack_19: 1991008741
+      boss-arm-straight-attack_2: -918692741
+      boss-arm-straight-attack_20: -1802017037
+      boss-arm-straight-attack_21: -1860235693
+      boss-arm-straight-attack_22: -294548846
+      boss-arm-straight-attack_23: -1193167045
+      boss-arm-straight-attack_24: -136205372
+      boss-arm-straight-attack_25: -787179964
+      boss-arm-straight-attack_26: 208184192
+      boss-arm-straight-attack_27: 1660238019
+      boss-arm-straight-attack_28: 1042787122
+      boss-arm-straight-attack_29: -773298644
+      boss-arm-straight-attack_3: -305922531
+      boss-arm-straight-attack_30: 1090680389
+      boss-arm-straight-attack_31: 1894203466
+      boss-arm-straight-attack_4: -2033070788
+      boss-arm-straight-attack_5: -706394061
+      boss-arm-straight-attack_6: 528990839
+      boss-arm-straight-attack_7: 1662453096
+      boss-arm-straight-attack_8: -479689373
+      boss-arm-straight-attack_9: 177536356
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
