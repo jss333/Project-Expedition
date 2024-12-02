@@ -96,7 +96,7 @@ MonoBehaviour:
   Path: FMOD_Asteria/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638687090931871792
+  lastModified: 638686716788937608
   FileSizes:
   - Name: Desktop
     Value: 1340
@@ -452,7 +452,7 @@ MonoBehaviour:
   - {fileID: -6188143702937501092}
   StringsBanks:
   - {fileID: 2484768403107550633}
-  cacheTime: 638687090933142102
+  cacheTime: 638686716814458461
   cacheVersion: 131621
 --- !u!114 &135165720392876003
 MonoBehaviour:
@@ -604,10 +604,10 @@ MonoBehaviour:
   Path: FMOD_Asteria/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638687090933142102
+  lastModified: 638686716814458461
   FileSizes:
   - Name: Desktop
-    Value: 296768
+    Value: 309280
   Exists: 1
 --- !u!114 &2484768403107550633
 MonoBehaviour:
@@ -624,7 +624,7 @@ MonoBehaviour:
   Path: FMOD_Asteria/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638687090931898842
+  lastModified: 638686716788949385
   FileSizes:
   - Name: Desktop
     Value: 2390
@@ -779,10 +779,10 @@ MonoBehaviour:
   Path: FMOD_Asteria/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638687090932616944
+  lastModified: 638686716812908316
   FileSizes:
   - Name: Desktop
-    Value: 4853504
+    Value: 4736832
   Exists: 1
 --- !u!114 &6480931433471353854
 MonoBehaviour:
