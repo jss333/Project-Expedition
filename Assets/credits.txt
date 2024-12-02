@@ -1,27 +1,32 @@
 CREDITS
 
-Producer
-James Singi Siqueira (@jss333)
+Production
+James Singi Siqueira (@jss333) : Producer/Team Lead
 
 Audio
 Arpi Vardanyan : Sound Designer/Composer
+Hugo Silva (@hyugo95) : Sound Designer
 Prnc Amin (@prncamin) : Composer
+Shibo Wu (@c4ff_) : Sound designer
 
 Art
+Ashton Musielewicz (@ashhh4048) : Concept Artist
 Bibi Tavares
 CJ Tugade (@cjtugade) : UI
 Emma Randall : Animation
-Jasmine Modeste (@jasminem4980)
+Jasmine Modeste (@jasminem4980) : 2D Animation/Artist
 Jessica Rivas : Character Artist (R0-B and B3RT)
 Nazlıcan Ezginer : Concept Artist
 
 Game Design
 Doryan Lewis
-@kizma
+Kenet Jets (@kizma)
 Magdalena Jordanovska
+@starchance
 
 Programming
-Astrounaut
+Astronaut
+Cristian Garcés (@crissalexis18)
 Jacob Hooten (@surilexa)
 James Singi Siqueira (@jss333)
 Mostafa Ebeed (@mostafaebeed)
