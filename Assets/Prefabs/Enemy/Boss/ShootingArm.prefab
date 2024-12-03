@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 4560697087421860142}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: 0.7071068, w: -0.7071068}
-  m_LocalPosition: {x: 0, y: 3.3594, z: 0}
+  m_LocalPosition: {x: 0, y: 2.64, z: 0}
   m_LocalScale: {x: 1.022, y: 4.9195, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1724849399, guid: d11a1584e8079c64ba04d02cd1249237, type: 3}
+  m_Sprite: {fileID: 1944983182, guid: 9edc9d60fad916f4ebf5f06e1d01978c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -131,7 +131,7 @@ Transform:
   m_GameObject: {fileID: 7380377204246119395}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.82, y: 6.36, z: 0}
+  m_LocalPosition: {x: 0.82, y: 6.1538463, z: 0}
   m_LocalScale: {x: 1, y: 0.16065806, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -200,5 +200,5 @@ MonoBehaviour:
   maxSingleOrbSpeed: 6
   orbSize: {x: 1, y: 1}
   maxOrbsToFire: 5
-  animationWaitTime: 1.01
+  animationWaitTime: 1
   shootingArmAnimator: {fileID: 945177399622110755}

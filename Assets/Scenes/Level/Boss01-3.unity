@@ -3989,7 +3989,7 @@ PrefabInstance:
     - target: {fileID: 2075273900033706106, guid: bfe30e0a894d02d488d00f5203b8ec9a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.57647
+      value: 11.572015
       objectReference: {fileID: 0}
     - target: {fileID: 2075273900033706106, guid: bfe30e0a894d02d488d00f5203b8ec9a,
         type: 3}
@@ -10510,6 +10510,16 @@ PrefabInstance:
       propertyPath: spawnPoints
       value: 
       objectReference: {fileID: 1433548526}
+    - target: {fileID: 7144092496311828960, guid: 88669eb52a11c4f45b479ec3df6d074b,
+        type: 3}
+      propertyPath: loopWaitTime
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7144092496311828960, guid: 88669eb52a11c4f45b479ec3df6d074b,
+        type: 3}
+      propertyPath: initialWaitTime
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 7144092496311828960, guid: 88669eb52a11c4f45b479ec3df6d074b,
         type: 3}
       propertyPath: bossArmAttackEnabled
